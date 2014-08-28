@@ -9,6 +9,7 @@
   "author": "morenoh149@gmail.com",
   "license": "copyright harry moreno",
   "devDependencies": {
-    "gulp": "^3.8.7"
+    "gulp": "^3.8.7",
+    "gulp-gh-pages": "^0.3.3"
   }
 }

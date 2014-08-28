@@ -30,3 +30,6 @@ img.feedly-icon {
   height: 25;
   margin: -6px 0 0 -4px;
 }
+img {
+  max-width: 300px;
+}
