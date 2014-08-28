@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Harry Moreno | About</title>
+    {% include meta-tags.html %}
+
+  </head>
+  <body>
+    <div class="container">
+
+      {% include header.html %}
+
+      <div class="row">
+        <div class="col-sm-12 col-sm-offset-0
+                    col-md-8 col-md-offset-2
+                    col-lg-7 col-lg-offset-2">
+          {{ content }}
+        </div>
+      </div>
+
+      {% include gallery.html %}
+
+      {% include footer.html %}
+
+    </div><!-- container -->
+
+    {% include navbar.html %}
+
+  </body>
+</html>
