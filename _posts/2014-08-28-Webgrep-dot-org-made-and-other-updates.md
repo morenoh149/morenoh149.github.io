@@ -7,7 +7,7 @@ So I haven't been able to work on a solid blog post on any specific technology. 
 articles to be a lot like the articles you see on nettuts or sitepoint, just haven't found tech I'm
 super passionate about like that this month.
 
-![Webgrep screenshot]({{ site.url }}/img/webgrep.png)
+[![Webgrep screenshot]({{ site.url }}/img/webgrep.png)](http://webgrep.org/)
 
 The other day I was doing market research and was searching for affiliate marketing programs in different
 industries. After opening a bunch of website tabs and ctrl-F-ing on every page for 'affiilate' I look at rick
