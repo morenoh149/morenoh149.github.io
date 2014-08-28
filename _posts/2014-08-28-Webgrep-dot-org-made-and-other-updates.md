@@ -15,6 +15,7 @@ and ask him, "why isn't there a chrome extension or something that'll do this fo
 [wordgrep.org](wordgrep.org) the next day. Some friendly people on `##javascript` (freenode irc channel)
 told me about [Yahoo query language](https://developer.yahoo.com/yql/) which acts as a free proxy for us.
 Next things I'd like to add are
+
 * ability to point the tool at a url
 * ability to drop in a word/excel doc
 * infer if the found word is inside a link and return that instead
