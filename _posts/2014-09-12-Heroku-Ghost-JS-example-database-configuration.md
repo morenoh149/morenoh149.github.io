@@ -11,8 +11,7 @@ Here's our config file. Hopefully it saves some new devs some trouble. [1](http:
 The cool things to note are:
 
 1) since heroku provides an environment variable `DATABASE_URL` you can specify your
-production database by passing it in. This is thanks to a dependent project [knexjs](http://knexjs.org) which was
-a pleasure to discover existed.
+production database by passing it in. This is thanks to project [knexjs](http://knexjs.org) which is a dependency of ghost.
 
 2) heroku doesn't support storing files. But you're probably better off storing those in Amazon S3 + cdn anyway. This way just store the resulting urls in your heroku database.
 
