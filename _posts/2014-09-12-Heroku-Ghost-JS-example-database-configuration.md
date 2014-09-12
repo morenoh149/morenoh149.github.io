@@ -4,7 +4,7 @@ title: Heroku Ghost.js example configuration
 ---
 
 We're evaluating [Ghost.js](http://ghost.io) for our upcoming project at [r3dm.com](http://r3dm.com).
-It's pretty cool. Explicitly NOT a CMS for node. We'll be using it on a new project for a non-profit.
+It's pretty cool. Explicitly NOT a CMS for node.
 
 Here's our config file. Hopefully it saves some new devs some trouble. [1](http://www.howtoinstallghost.com/how-to-install-ghost-on-heroku/) [2](http://shuvankar.com/install-ghost-heroku/) [3](http://ryanbrink.com/ghost-plus-heroku/) [4](http://www.allaboutghost.com/example-config-js-heroku-postgres-database/)
 
