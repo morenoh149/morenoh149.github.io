@@ -129,3 +129,5 @@ config = {
 // Export config
 module.exports = config;
 {% endhighlight %}
+
+:o)
