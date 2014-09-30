@@ -13,7 +13,7 @@ node_modules
 {% endhighlight %}
 
 If you would like to remove any node_modules directories you've added accidentally you can use something like
-`git rm --cached */node_modules -r` ymmmv.
+`git rm --cached */node_modules -r` (ymmv).
 
 Why did this warrant a blog post? I was searching around online and on irc for the solution to my problem
 and there were a lot of misleading solutions such as `/***/node_modules` `**/node_modules` or even `**/*node_modules`.
