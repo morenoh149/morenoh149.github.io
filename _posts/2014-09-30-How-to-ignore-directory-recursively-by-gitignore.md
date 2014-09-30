@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Heroku Ghost.js example configuration
+title: Why is it so damn hard to gitignore recursively
 ---
 
 I have a directory where I'm storing all my solution to [nodeschool.io](http://www.nodeschool.io/) courses.
