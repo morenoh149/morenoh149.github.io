@@ -1,3 +1,8 @@
+---
+layout: post
+title: Heroku Ghost.js example configuration
+---
+
 I have a directory where I'm storing all my solution to [nodeschool.io](http://www.nodeschool.io/) courses.
 For many of these solutions I have installed node dependencies. These are stored in a `node_modules` directory
 in each folder. To ignore a directory recursively you can use the following `.gitignore` file
