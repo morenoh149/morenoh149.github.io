@@ -13,4 +13,4 @@ Machine learning, and Unix.
 Born and raised in NYC The Bronx. Went to WPI and recieved my Bachelors Degree
 in Computer Science (2012). Then moved out to SF to live the dream.
 
-I'm interested in freelancing opportunities. Or job opportunities in San Francisco, New York City or any major city. I'm fluent in Spanish and hope to travel extensively someday. My resume is at the bottom. Also check out my activities on github, add me on linkedIn or follow my tweets.
+I'm interested in freelancing opportunities. Or job opportunities in New York City or Los Angeles $120K+ minus relocation expenses. I'm fluent in Spanish and hope to travel extensively someday. My resume is at the bottom. Also check out my activities on github, add me on linkedIn or follow my tweets.
