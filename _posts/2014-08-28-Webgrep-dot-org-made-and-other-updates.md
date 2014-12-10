@@ -12,7 +12,7 @@ super passionate about like that this month.
 The other day I was doing market research and was searching for affiliate marketing programs in different
 industries. After opening a bunch of website tabs and ctrl-F-ing on every page for 'affiilate' I look at rick
 and ask him, "why isn't there a chrome extension or something that'll do this for me?". I whipped up
-[wordgrep.org](wordgrep.org) the next day. Some friendly people on `##javascript` (freenode irc channel)
+[webgrep.org](http://www.webgrep.org) the next day. Some friendly people on `##javascript` (freenode irc channel)
 told me about [Yahoo query language](https://developer.yahoo.com/yql/) which acts as a free proxy for us.
 Next things I'd like to add are
 
