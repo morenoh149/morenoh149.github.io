@@ -13,3 +13,6 @@ github_username: morenoh149
 markdown: kramdown
 highlighter: pygments
 exclude: [app]
+
+gems:
+  - jekyll-sitemap
