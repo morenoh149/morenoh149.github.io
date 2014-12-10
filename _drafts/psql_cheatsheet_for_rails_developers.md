@@ -23,3 +23,6 @@ The new branch will have a migration that attempts to create the same column in 
 column already exists. use this:
 
 `ALTER TABLE "users" drop COLUMN "username";` inside the psql utility
+
+`\connect DBNAME` or `\c DBNAME` to switch to another database with the currently running instance of psql.
+Note your machine may have multiple databases (for different projects). Each db holds many tables (or relations).
