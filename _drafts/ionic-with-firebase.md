@@ -34,7 +34,7 @@ $scope.toggleTask = function(key) {
       finished: !clickedTask.finished
     });
   };
-{% highlight javascript %}
+{% endhighlight %}
 
 Another way is to alter the local variable copy and run `$save` instead. This is the way I went with ultimately.
 {% highlight javascript %}
@@ -43,7 +43,7 @@ $scope.toggleTask = function(key) {
     clickedTask.finished = !clickedTask.finished;
     clickedTask.$save();
   };
-{% highlight javascript %}
+{% endhighlight %}
 
 
 * cover ui-router
