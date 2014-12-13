@@ -36,6 +36,7 @@ We also originally built our frontend using [Pure.css](http://purecss.io). At th
 Other things we used:
 
 + The events slider is built using [slick](https://kenwheeler.github.io/slick/) - the last carousel you'll ever need.
++ The stylus port of Bootstrap [bootstrap-stylus](https://github.com/Acquisio/bootstrap-stylus) - why isn't there an official port? @mdo
 + For the gallery [Bootstrap Image Gallery](https://blueimp.github.io/Bootstrap-Image-Gallery/)
 + The date selector in our forms is [pickadate.js](http://amsul.ca/pickadate.js/) and amazing find.
 + The forms also use [bootstrapvalidator](http://bootstrapvalidator.com/) to let the user know if any fields are obviously wrong right away.
