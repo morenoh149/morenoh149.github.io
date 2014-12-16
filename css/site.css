@@ -39,3 +39,7 @@ img {
     max-width: 300px;
   }
 }
+
+dd p {
+  text-align: justify;
+}
