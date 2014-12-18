@@ -21,6 +21,13 @@ li.needs_top_padding { padding-top: 15px; }
   border: solid #ccc 2px;
   border-radius: 20px;
 }
+
+.navbar-inverse .navbar-brand {
+  color: #eee;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #ddd;
+}
 i.fa {
   font-size: 1.5em;
 }
