@@ -3,7 +3,7 @@ layout: post
 title: SHPE site makeover
 ---
 
-I'm happy to announce that [R3DM](http://r3dm.com/)'s first project is done! It's live at [sfbayareashpe.org](http://sfbayareashpe.org/).
+I'm happy to announce that [R3DM](http://r3dm.com/)'s first project is done! It's live at [sfbayareashpe.org](http://shpedev.herokuapp.org/).
 
 ### Stack
 For this project we originally went with [ghostjs](http://ghost.io/). We ran into issues in two main ways. When we first asked the developers about how to get ghost going on [heroku](http://heroku.com/) we didn't get much help. There are many blog posts floating around the blogosphere regarding how to accomplish this but it didn't seem like the project was interested in this usecase. Secondly, once we got past the cosmetic stage - implementing our design as a ghost theme - we found that adding custom server side code fell under **App** territory. And that ghost's App api was still under heavy development. Since then it seems like they've made more progress on that front [Ghost App](https://github.com/TryGhost/Ghost-App).
