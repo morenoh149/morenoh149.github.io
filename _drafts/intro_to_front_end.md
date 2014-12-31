@@ -39,3 +39,11 @@ pin it in your browser, have it always open
 tasks
 * add text 'hello world' to `index.html` google if necessary. make sure you can see it in a browser
 * setup github account. add branch gh-pages to your project.
+
+
+tools
+http://www.paciellogroup.com/resources/contrastanalyser/
+http://paletton.com
+
+## tips
+
