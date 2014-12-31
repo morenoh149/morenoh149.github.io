@@ -6,8 +6,12 @@ title: Scraping links with just your browser
 I recently came across a page with lots of links to txt files. I got frustrated when I wanted to look up
 something in these files but couldn't because I'd have to download each one by one.
 
-### ENTER THE BROWSER CONSOLE
-*plus js friends*
+<br>
+
+###  - ENTER THE BROWSER CONSOLE -
+<small>*plus js friends*</small>
+
+<br>
 
 {% highlight javascript %}
 // Run all this code in your browser console aka dev tools
@@ -21,7 +25,11 @@ Sadly javascript doesn't have a `.values()` method like
 function
 
 {% highlight javascript %}
-values = function(obj){ return Object.keys(obj).map(function(key){ return obj[key] }) }
+values = function(obj){
+  return Object.keys(obj).map(function(key){
+    return obj[key];
+  });
+}
 {% endhighlight %}
 
 See [this stackoverflow question](http://stackoverflow.com/questions/7306669/how-to-get-all-properties-values-of-a-javascript-object-without-knowing-the-key).
