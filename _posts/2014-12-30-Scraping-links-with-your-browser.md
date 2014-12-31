@@ -36,11 +36,11 @@ See [this stackoverflow question](http://stackoverflow.com/questions/7306669/how
 
 Then
 {% highlight javascript %}
-// make links a bunch of DOM anchor elements
-links = values(links)
+// make links an array of DOM anchor elements
+links = values(links);
 
 // Regex with criteria we're looking for
-var myregex = /txt/
+var myregex = /txt/;
 
 // Filter using the regex
 links = links.filter(function(element) {
@@ -48,7 +48,7 @@ links = links.filter(function(element) {
 });
 
 // You can tell your browser to download these files by executing the click() method
-links[0].click()
+links[0].click();
 {% endhighlight %}
 
 But what if there are too many?
@@ -70,4 +70,4 @@ for(var i=0; i<20; i++) {
   links[i+start].click();
 }
 {% endhighlight %}
-and repeat calls to this after incrementing start.
+and repeat calls to this after incrementing start. Say `start = 20` then `start = 40` and so on.
