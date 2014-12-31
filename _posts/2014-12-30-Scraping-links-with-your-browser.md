@@ -71,3 +71,5 @@ for(var i=0; i<20; i++) {
 }
 {% endhighlight %}
 and repeat calls to this after incrementing start. Say `start = 20` then `start = 40` and so on.
+
+Now on to building a [Full-text search engine with Postgres](http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/).
