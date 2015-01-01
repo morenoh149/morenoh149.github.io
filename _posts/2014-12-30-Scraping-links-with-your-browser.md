@@ -8,6 +8,7 @@ something in these files but couldn't because I'd have to download each one by o
 
 <br>
 
+{:.center}
 ###  - ENTER THE BROWSER CONSOLE -
 <small>*plus js friends*</small>
 

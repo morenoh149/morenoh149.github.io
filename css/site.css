@@ -50,3 +50,7 @@ img {
 dd p {
   text-align: justify;
 }
+
+.center {
+  text-align: center;
+}
