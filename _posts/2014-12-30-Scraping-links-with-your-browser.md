@@ -46,8 +46,8 @@ links = values(links);
 var myregex = /txt/;
 
 // Filter using the regex
-links = links.filter(function(element) {
-  return myregex.exec(element.href);
+links = links.filter(function(anchor) {
+  return myregex.exec(anchor.href);
 });
 
 // You can tell your browser to download these files by executing the click() method
@@ -70,7 +70,7 @@ If your browser is preventing too many tabs to open, or the site is throttling y
 var start = 0;
 for(var i=0; i<20; i++) {
   links[i + start].target = "_blank";
-  links[i+start].click();
+  links[i + start].click();
 }
 {% endhighlight %}
 and repeat calls to this after incrementing start. Say `start = 20` then `start = 40` and so on.
