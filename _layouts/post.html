@@ -18,6 +18,7 @@
           <strong>{{ page.date | date: "%d %B %Y" }}</strong>
 
           <p>{{ content }}</p>
+          {% include tweet_this.html %}
 
           {% if site.github %}
             <div id="disqus_thread"></div>
