@@ -26,3 +26,7 @@ so `ps | grep weechat` will give you all processes mentioning weechat. Then you 
 Found a cool utility by mistake `rs` reshapes an array passed in.
 
 Use top to identify process that are spawning too many threads `top -o th` sorts the process on your machine by the number of threads.
+
+## on OSX
+to send some text to your clipboard for pasting outside the terminal
+`echo foo | pbcopy` pbcopy is the clipboard on osx
