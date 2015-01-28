@@ -30,3 +30,6 @@ Use top to identify process that are spawning too many threads `top -o th` sorts
 ## on OSX
 to send some text to your clipboard for pasting outside the terminal
 `echo foo | pbcopy` pbcopy is the clipboard on osx
+
+# search within directory for phrase and display file/linenumber
+`grep -rn 'phrase' .`
