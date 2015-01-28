@@ -58,3 +58,5 @@ dd p {
 .right {
   text-align: right;
 }
+
+.sidebar { overflow-x: hidden }
