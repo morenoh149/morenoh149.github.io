@@ -7,7 +7,7 @@ Harry Moreno is a Software Engineer living in San Francisco.
 
 I'm currently freelancing and working on my ideas/startups.
 Fluent in Ruby Javascript Python and Java. I grok Rails, AngularJS, Twitter
-Bootstrap, SASS, Heroku, Amazon Web Services, . I want to learn clojure, Android
+Bootstrap, SASS, Heroku and Amazon Web Services. I want to learn clojure, Android
 native development, C++ and openCV. I'm also good at math, statistics, Machine
 learning and Unix.
 
