@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React.js link roundup
--
+---
 
 Here's a small collection of links for developers looking to learn react.js.
 
