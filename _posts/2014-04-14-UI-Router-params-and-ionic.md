@@ -9,7 +9,7 @@ Let's say you have an abstract state with a child and another state and you want
 controller to the other state. The following is a concrete example. I was building an ionic app that would grab a photo
 from the phones photolibrary and transition to another view, passing the fetched uri to the new view.
 
-###app.js
+### app.js
 {% highlight javascript %}
 'use strict';
 
@@ -87,7 +87,7 @@ state declared in `app.js`. Notice how we are fetching a uri from the photolibra
 `CropController`. We must first call `encodeURIComponent()` on this uri to pass the value around. Otherwise ui-router
 get's confused - loading `CropController` but failing to change the url or load the template.
 
-###camera-service.js
+### camera-service.js
 {% highlight javascript %}
 'use strict';
 

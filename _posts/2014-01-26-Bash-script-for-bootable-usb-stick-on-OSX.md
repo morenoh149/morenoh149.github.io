@@ -8,7 +8,7 @@ Many times you have to create a bootable usb stick on a mac. I always follow the
 bash script that makes this process faster 
 
 {% highlight bash linenos %}
-#!/bin/bash
+###!/bin/bash
 HELP_STR="please provide location of .iso"
 if [ "$#" -lt 1 ]; then
   echo $HELP_STR

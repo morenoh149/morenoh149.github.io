@@ -8,7 +8,7 @@ For many of these solutions I have installed node dependencies. These are stored
 in each folder. To ignore a directory recursively you can use the following `.gitignore` file
 
 {% highlight bash %}
-# .gitignore file
+### .gitignore file
 node_modules
 {% endhighlight %}
 

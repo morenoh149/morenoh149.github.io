@@ -5,7 +5,7 @@ title: React.js and Flux link roundup
 
 Here's a small collection of links for developers looking to learn.
 
-## React.js
+### React.js
 * The official Facebook [React docs](http://facebook.github.io/react/docs/getting-started.html).
 * Do the official [Tutorial](http://facebook.github.io/react/docs/tutorial.html).
 * Read [Thinking in React](http://facebook.github.io/react/docs/thinking-in-react.html).
@@ -21,7 +21,7 @@ is useful.
 contains some errata due to the changes in react's api since this tutorial was
 written. But it's what I used personally to learn react.
 
-## Flux
+### Flux
 * This article was heavily circulated [What the Flux?](http://jonathancreamer.com/what-the-flux/)
 * There are many implementations and takes on the Flux architecture
   * Yahoo's [Fluxible](http://www.fluxible.io/)
@@ -29,7 +29,7 @@ written. But it's what I used personally to learn react.
   * [TuxedoJS](http://www.tuxedojs.org/) bills itself as a react+flux quickstarter of sorts
   * [rx-flux](https://github.com/fdecampredon/rx-flux) relies heavily on Microsoft's [Reactive Extensions](https://reactive-extensions.github.io/RxJS/)
 
-## Relay
+### Relay
 Relay was announced at this weeks react.js conf. It sounds very cool promising the ability
 to colocate you components logic and data-fetching logic. Something like Relay
 would encompass flux.
@@ -38,7 +38,7 @@ would encompass flux.
 * [Relay FAQ](https://gist.github.com/wincent/598fa75e22bdfa44cf47?) by a facebook
 engineer. Read after watching the keynote.
 
-## Other
+### Other
 * egghead.io has may videos concerning [react and flux](https://egghead.io/technologies/react)
 
 If you have any other links that were useful to you for learning react.js
