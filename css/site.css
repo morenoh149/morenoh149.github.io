@@ -47,32 +47,67 @@ img {
   }
 }
 
-dd p {
+p {
   text-align: justify;
-  font-size: 2.5vw;
+}
+dd p {
+  font-size: 2.6vw;
 }
 dd li {
-  font-size: 2.5vw;
+  font-size: 2.6vw;
+}
+.post p {
+  font-size: 2.6vw;
+}
+.post li {
+  font-size: 2.6vw;
 }
 .highlight code {
   font-size: 2.4vw;
 }
 .sidebar li {
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 
 @media (min-width: 768px) {
   dd p {
-    font-size: 1.6vw;
+    font-size: 1.7vw;
   }
   dd li {
-    font-size: 1.6vw;
+    font-size: 1.7vw;
+  }
+  .post p {
+    font-size: 1.7vw;
+  }
+  .post li {
+    font-size: 1.7vw;
   }
   .highlight code {
     font-size: 1.5vw;
   }
   .sidebar li {
     font-size: 1.5vw;
+  }
+}
+
+@media (min-width: 992px) {
+  dd p {
+    font-size: 1.5vw;
+  }
+  dd li {
+    font-size: 1.5vw;
+  }
+  .post p {
+    font-size: 1.5vw;
+  }
+  .post li {
+    font-size: 1.5vw;
+  }
+  .highlight code {
+    font-size: 1.4vw;
+  }
+  .sidebar li {
+    font-size: 1.4vw;
   }
 }
 

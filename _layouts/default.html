@@ -12,7 +12,8 @@
       {% include header.html %}
 
       <div class="row">
-        <div class="col-sm-8 col-sm-offset-1">
+        <div class="col-sm-8 col-sm-offset-1
+                    col-md-7 col-md-offset-2">
           <dl>
             {% for post in site.posts %}
               <dt>
@@ -24,7 +25,7 @@
 
               </dt>
               <dd>
-                {{ post.content }}
+                {{ post.excerpt }}
               </dd>
             {% endfor %}
           </dl>
