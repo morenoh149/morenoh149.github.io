@@ -65,9 +65,7 @@ dd li {
 .highlight code {
   font-size: 2.4vw;
 }
-.sidebar li {
-  font-size: 2.5vw;
-}
+
 
 @media (min-width: 768px) {
   dd p {
@@ -83,9 +81,6 @@ dd li {
     font-size: 1.7vw;
   }
   .highlight code {
-    font-size: 1.5vw;
-  }
-  .sidebar li {
     font-size: 1.5vw;
   }
 }
@@ -106,9 +101,6 @@ dd li {
   .highlight code {
     font-size: 1.4vw;
   }
-  .sidebar li {
-    font-size: 1.4vw;
-  }
 }
 
 .center {
@@ -119,4 +111,11 @@ dd li {
   text-align: right;
 }
 
-.sidebar { overflow-x: hidden }
+.sidebar { overflow-x: hidden; }
+.sidebar li {
+  font-size: 14px;
+  border-top: solid 1px grey;
+}
+.sidebar a {
+  color: rgb(129, 19, 19);
+}

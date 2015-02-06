@@ -14,7 +14,7 @@
                     col-sm-8 col-sm-offset-1
                     col-md-7 col-md-offset-2">
 
-          <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+          <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
           <strong>{{ page.date | date: "%d %B %Y" }}</strong>
 
           <p>{{ content }}</p>
@@ -41,7 +41,7 @@
         </div>
 
         <div class="sidebar
-                    col-sm-3">
+                    col-sm-2">
           {% include sidebar.html %}
         </div>
 
