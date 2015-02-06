@@ -114,7 +114,7 @@ dd li {
 .sidebar { overflow-x: hidden; }
 .sidebar li {
   font-size: 14px;
-  border-top: solid 1px grey;
+  border-top: solid 1px lightgrey;
 }
 .sidebar a {
   color: rgb(129, 19, 19);
