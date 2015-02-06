@@ -123,7 +123,9 @@ dd li {
 .page-header {
   margin-top: 0px;
 }
-.page-header h1 {
-  font-style: italic;
-  font-size: 60px;
+@media (min-width: 768px) {
+  .page-header h1 {
+    font-style: italic;
+    font-size: 60px;
+  }
 }
