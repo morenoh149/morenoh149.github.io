@@ -33,3 +33,6 @@ to send some text to your clipboard for pasting outside the terminal
 
 # search within directory for phrase and display file/linenumber
 `grep -rn 'phrase' .`
+
+search for a file by filename part
+`find . -name 'foo*'`
