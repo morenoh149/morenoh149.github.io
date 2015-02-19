@@ -3,6 +3,8 @@ layout: post
 title: Setting up Postgres for a Rails site
 ---
 
+Here's a quick solution adding a specific user (aka role) in Postgres.
+
 If your rake complains
 ```
 ActiveRecord::NoDatabaseError (FATAL:  role "<appName>" does not exist
