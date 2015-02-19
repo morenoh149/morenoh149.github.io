@@ -7,9 +7,14 @@ Here's a quick solution adding a specific user (aka role) in Postgres.
 
 If your rake complains
 
-`ActiveRecord::NoDatabaseError role "<appName>" does not exist`
+```
+ActiveRecord::NoDatabaseError (FATAL:  role "<appName>" does not exist
+Run $ bin/rake db:create db:migrate to create your database):
+```
 
-Run `$ bin/rake db:create db:migrate` to create your database
+or similar. Try the following.
+
+`createdb <appName>`
 
 You may need to setup a user in Postgres for the project.
 
@@ -19,3 +24,5 @@ Add `-s` if you get an error about the user not
 being able to create databases `createuser <appName> -s`.
 
 If you need to delete this user run `dropuser <appName>`.
+
+And for completeness to drop a database `dropdb <appName>`.
