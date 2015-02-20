@@ -62,6 +62,9 @@ dd li {
 .post li {
   font-size: 2.6vw;
 }
+.post img {
+  margin: 0 auto;
+}
 .highlight code {
   font-size: 2.4vw;
 }
@@ -128,4 +131,9 @@ dd li {
     font-style: italic;
     font-size: 60px;
   }
+}
+
+span.caption {
+  font-style: italic;
+  font-size: 1.5em;
 }
