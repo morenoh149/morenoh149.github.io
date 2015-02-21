@@ -3,14 +3,14 @@ layout: post
 title: SHPE San Francisco site makeover
 ---
 
-#### La versión Español de este post esta [aqui](../../../2014/12/12/shpe-sf-site-makeover.html).
-
 I'm happy to announce that [R3DM](http://the.r3dm.com/)'s first project is done!
 It's live at [Shpesfba.org](http://www.shpesfba.org/).
 
+#### La versión Español de este post esta [aqui](../../../2014/12/12/shpe-sf-site-makeover.html).
+
 <div class="center">
-  <a href="http://www.SHPEsfba.org">
-    <img src="/img/SHPE-landing.png" alt="SHPE landing page" />
+  <a href="http://shpesfba.org/">
+    <img src="http://harrymoreno.com/img/shpe-landing.png" />
   </a>
 </div>
 
@@ -72,7 +72,7 @@ a Compass-like response for Stylus. We used Kuoto-Swiss to handle css vendor
 prefixing for styling our form's placeholder text.
 
 <div class="center">
-  <img src="/img/SHPE-placeholdertext.png" alt="styling placeholder text" >
+  <img src="http://harrymoreno.com/img/shpe-placeholdertext.png" alt="styling placeholder text" >
   <br>
   <span class="caption">Italicized placeholder text</span>
 </div>
@@ -100,7 +100,7 @@ let the user know if any fields are obviously wrong right away.
 One of the single most attractive features of Keystonejs is it's AdminUI.
 
 <div class="center">
-  <img src="/img/SHPE-adminui.png" alt="Keystone's admin ui" >
+  <img src="http://harrymoreno.com/img/shpe-adminui.png" alt="Keystone's admin ui" >
   <br>
   <span class="caption">Keystonejs's adminUI</span>
 </div>

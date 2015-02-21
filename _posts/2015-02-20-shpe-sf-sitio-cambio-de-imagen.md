@@ -3,14 +3,14 @@ layout: post
 title: SHPE San Francisco Pagina Web Cambio de Imagen
 ---
 
-#### The English version of this post is available [here](../../../2014/12/12/shpe-sf-site-makeover.html).
-
 Estoy feliz de anunciar [R3DM](http://the.r3dm.com/) ha completado su primer
 proyecto. Esta vivo [shpesfba.org](http://www.shpesfba.org/).
 
+#### The English version of this post is available [here](../../../2014/12/12/shpe-sf-site-makeover.html).
+
 <div class="center">
-  <a href="http://www.SHPEsfba.org">
-    <img src="/img/SHPE-landing.png" alt="SHPE página de inicio" />
+  <a href="http://shpesfba.org/">
+    <img src="http://harrymoreno.com/img/shpe-landing.png" />
   </a>
 </div>
 
@@ -67,7 +67,7 @@ css mucho mas facil. Por ejemplo, se uso para añadir estilos al text del
 formulario.
 
 <div class="center">
-  <img src="/img/SHPE-placeholdertext.png" alt="estilo para texto del formulario" >
+  <img src="http://harrymoreno.com/img/shpe-placeholdertext.png" alt="estilo para texto del formulario" >
   <br>
   <span class="caption">Texto Cursiva para el formulario</span>
 </div>
@@ -94,7 +94,7 @@ que le indica al usuario si la información que dieron esta incorrecto.
 La característica mas importante de KeystoneJS es la página de administración.
 
 <div class="center">
-  <img src="/img/SHPE-adminui.png" alt="página de administración Keystone" >
+  <img src="http://harrymoreno.com/img/shpe-adminui.png" alt="página de administración Keystone" >
   <br>
   <span class="caption">página de administración Keystone</span>
 </div>
