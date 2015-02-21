@@ -3,6 +3,8 @@ layout: post
 title: SHPE San Francisco Pagina Web Cambio de Imagen
 ---
 
+#### The English version of this post is available [here](../../../2014/12/12/shpe-sf-site-makeover.html).
+
 Estoy feliz de anunciar [R3DM](http://the.r3dm.com/) ha completado su primer
 proyecto. Esta vivo [shpesfba.org](http://www.shpesfba.org/).
 

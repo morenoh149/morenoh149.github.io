@@ -3,6 +3,8 @@ layout: post
 title: SHPE San Francisco site makeover
 ---
 
+#### La versión Español de este post esta [aqui](../../../2014/12/12/shpe-sf-site-makeover.html).
+
 I'm happy to announce that [R3DM](http://the.r3dm.com/)'s first project is done!
 It's live at [Shpesfba.org](http://www.shpesfba.org/).
 
