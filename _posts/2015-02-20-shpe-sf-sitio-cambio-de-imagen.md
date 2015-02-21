@@ -4,7 +4,7 @@ title: SHPE San Francisco Pagina Web Cambio de Imagen
 ---
 
 Estoy feliz de anunciar [R3DM](http://the.r3dm.com/) ha completado su primer
-proyecto. Esta vivo [Shpesfba.org](http://www.shpesfba.org/).
+proyecto. Esta vivo [shpesfba.org](http://www.shpesfba.org/).
 
 <div class="center">
   <a href="http://www.SHPEsfba.org">
@@ -14,7 +14,7 @@ proyecto. Esta vivo [Shpesfba.org](http://www.shpesfba.org/).
 
 ### Stack
 Para este proyecto originalmente usamos [GhostJS](http://ghost.io/). Encontramos
-dos problemas. Cuando pregunatmos nosotros como se lanza Ghost en Heroku no nos
+dos problemas. Cuando pregunatmos como se lanza Ghost en Heroku no nos
 dieron ayuda. Hay muchas paginas de web que relatan como lanzar Ghost a Heroku
 pero nos dieron el sentido que no era algo que querian soportar.
 
@@ -27,23 +27,23 @@ Con estos problemas entonces probamos [KeystoneJS](http://Keystonejs.com/).
 Keystone es un framework nuevo de puro Javascript. Es compuesto de Node.js,
 Mongoose, MongoDB y Express - tecnologías que ya conocíamos.
 
-El primer paso fue transladando nuestra tema para Ghost desde Handlebars a
+El primer paso fue transladando nuestra tema para Ghost de Handlebars a
 Jade. Keystone usa [Jade](http://jade-lang.com/). Despues limpiamos el proyecto
 generado y empezamos a familiarizarnos con la estructura de un proyecto
 Keystone.
 
-Nuestro primer mayor funcionalidad fue importación de Eventos Facebook usando el
+Nuestro primer funcionalidad fue importación de Eventos Facebook usando el
 [Graph API](https://developers.facebook.com/docs/graph-api/reference/v2.2).
 Originalmente intentamos crear un Facebook App para poder mantener los eventos
-de SHPE completamento via nuestro sito de web. Pero fue muy difícil el proceso
+de SHPE completamente via nuestro sito de web. Pero fue muy difícil el proceso
 para applicar y aprobar (nos negaron dos veces). Pues cambiamos entonces a
-desarrollar usando sólo usando las partes del API que son públicos. El resultado
-es un administrador tiene crear el evento primero en Facebook y entonces usando
+desarrollar usando sólo las partes del API que son públicos. El resultado
+es un administrador crea el evento primero en Facebook y entonces usando
 el `event_id` lo añade a nuestro sitio. Sin mas trabajo para el administrador.
 
 Para re-generar nuestro app usamos [Gulp](http://gulpjs.com) y [Bower](http://bower.io).
 
-Los imágenes estan grabados en [Cloudinary](http://cloudinary.com/). Que nos
+Las imágenes estan grabados en [Cloudinary](http://cloudinary.com/). Que nos
 impresiono. Usan un modelo Freemium y puedes hacer cambios dinámicos simplemente
 cambiando el URL que usas para solicitar el imagen.
 
@@ -73,47 +73,41 @@ formulario.
 
 Espero aprender mucho mas Stylus en el futuro.
 
-We also originally built our frontend using [Pure.css](http://purecss.io). At
-the time it seemed like a good framework. Small and simple. We quickly
-switched over to [Bootstrap](http://getbootstrap.com) due to it's responsive
-navigation bar. I'm all for learning a lot but it seemed silly to rebuild a
-responsive navbar when Bootstrap's is already so great.
-
 Tambien originalmente desarrollamos el frontend usando [Pure.css](http://purecss.io).
 En ese instante parecía como la mejor solution. Chiquito y simple. Rápidamente
-cambiamos a [Bootstrap](http://getbootstrap.com) debido a que su barra de
+cambiamos a [Bootstrap](http://getbootstrap.com) debido a su barra de
 navegación *responsive*. Yo soy un fan de aprendiendo cosas nuevas pero me
-pareció
+pareció un gasto do tiempo desarrollar otra barra de navegación.
 
-Other things we used:
+Otra cosas que usamos:
 
-+ The events slider is built using [slick](https://kenwheeler.github.io/slick/) - the last carousel you'll ever need.
-+ The stylus port of Bootstrap [bootstrap-stylus](https://github.com/Acquisio/bootstrap-stylus)
-+ For the gallery [Bootstrap Image Gallery](https://blueimp.github.io/Bootstrap-Image-Gallery/)
-+ The date selector in our forms is [pickadate.js](http://amsul.ca/pickadate.js/) an amazing find.
-+ The forms also use [bootstrapvalidator](http://bootstrapvalidator.com/) to
-let the user know if any fields are obviously wrong right away.
++ Para el Slider usamos [slick](https://kenwheeler.github.io/slick/)
++ Bootstrap tranladado a Stylus [bootstrap-stylus](https://github.com/Acquisio/bootstrap-stylus)
++ Para la gallería [Bootstrap Image Gallery](https://blueimp.github.io/Bootstrap-Image-Gallery/)
++ Para seleccionar la fetcha en la forma [pickadate.js](http://amsul.ca/pickadate.js/)
++ Las formas tambien usan [bootstrapvalidator](http://bootstrapvalidator.com/)
+que le indica al usuario si la información que dieron esta incorrecto.
 
 ### AdminUI
-One of the single most attractive features of Keystonejs is it's AdminUI.
+La característica mas importante de KeystoneJS es la página de administración.
 
 <div class="center">
-  <img src="/img/SHPE-adminui.png" alt="Keystone's admin ui" >
+  <img src="/img/SHPE-adminui.png" alt="página de administración Keystone" >
   <br>
-  <span class="caption">Keystonejs's adminUI</span>
+  <span class="caption">página de administración Keystone</span>
 </div>
 <br>
 
-[Keystone](http://www.Keystonejs.com/) bills itself as a **Content Management
-System**. If it achieves even a fraction of how big Wordpress is, that would be
-amazing. Delivering a site with a CMS is amazing for client work. You're
-basically delivering a piece of software - a website or mobile app - that can be
-used by a nontechnical person. This keeps costs low for the client. And the
-developers aren't bogged down by small changes desired by the clients.
-It empowers the customer!
+[Keystone](http://www.Keystonejs.com/) es un **Content Management System** o
+CMS. Si algun dia llega a ser tan popular cómo Wordpress lo es, eso seria algo
+increíble. Desarrollando un sito con un CMS is muy bueno para proyectos que se
+tienen que entregar a un cliente. Estas dando un pedazo de software - un sitio
+o applicación - que se puede usar por una persona que no es téchnico. Esto
+mantiene los costos bajo para el cliente porque entonces no tienen que pedir
+mas funcionalidad. Y los desarrolladores tienen menos tares muy simple. ¡Los CMS
+nos hacen todo felizes!
 
 ### About
-If you're interested in a custom built site - perhaps you have an idea for a
-cool new phone app or would like to automate some task so your employees can do
-real work - get in touch. [R3DM](http://r3dm.com) is always looking for new and
-interesting work.
+Si estas interesado en un sitio costumbre para tu compañia pongase en contacto.
+[R3DM](http://r3dm.com) siempre esta vuscando nuevos clientes y proyectos
+interesantes.
