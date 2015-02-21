@@ -6,7 +6,7 @@ title: SHPE San Francisco site makeover
 I'm happy to announce that [R3DM](http://the.r3dm.com/)'s first project is done!
 It's live at [Shpesfba.org](http://www.shpesfba.org/).
 
-#### La versión Español de este post esta [aqui](../../../2014/12/12/shpe-sf-site-makeover.html).
+#### La versión Español de este post esta [aqui](../../../2015/02/20/shpe-sf-sitio-cambio-de-imagen.html).
 
 <div class="center">
   <a href="http://shpesfba.org/">
