@@ -16,7 +16,7 @@ proyecto. Esta disponible en [shpesfba.org](http://www.shpesfba.org/).
 
 ### Stack
 Para este proyecto originalmente usamos [GhostJS](http://ghost.io/). Encontramos
-dos problemas. Cuando pregunatmos como se lanza Ghost en Heroku no nos
+dos problemas. Cuando preguntamos como se lanza Ghost en Heroku no nos
 dieron ayuda. Hay muchas paginas de web que relatan como lanzar Ghost a Heroku
 pero nos dieron el sentido que no era algo que querian soportar.
 
