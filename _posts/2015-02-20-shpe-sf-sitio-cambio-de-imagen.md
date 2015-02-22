@@ -114,4 +114,4 @@ Si estás interesado en un sitio personalizado para tu compañía ponte en conta
 [R3DM](http://r3dm.com) siempre esta buscando nuevos clientes y proyectos
 interesantes.
 
-*Thanks to Berkeley Martinez and Johnny Estilles for proof reading this post*
+*Gracias a Berkeley Martinez y Johnny Estilles para la revisión de este post.*
