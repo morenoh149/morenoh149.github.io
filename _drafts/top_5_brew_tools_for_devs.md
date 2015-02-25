@@ -4,6 +4,7 @@ title: Top 5 brew tools you should install on OSX
 ---
 
 * jq - Like sed for json data `brew install jq`
+https://stedolan.github.io/jq/tutorial/
 * Ag - A fast deep searching tool. Useful for finding files that contain some
 word `brew install the_silver_searcher`
 * bro - Crowdsourced man pages `brew install bro`
