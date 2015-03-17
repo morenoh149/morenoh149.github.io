@@ -23,4 +23,5 @@ $(document).click(function(event) {
         console.log(myClicked.text());
         });
 
-        the css style that will put a red outline on anything you hover
+the css style that will put a red outline on anything you hover
+`* { border: 1px solid pink; }`

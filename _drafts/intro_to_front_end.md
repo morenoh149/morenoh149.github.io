@@ -46,4 +46,7 @@ http://www.paciellogroup.com/resources/contrastanalyser/
 http://paletton.com
 
 ## tips
-
+* learn when not to use bootstrap grid. If you need to place items very close
+together figuring out how to remove 15px worth of margin overlappage isn't very
+fun. Instead place items in plain old divs and they items will touch.
+* `* { border: 1px solid pink; }`
