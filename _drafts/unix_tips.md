@@ -36,3 +36,5 @@ to send some text to your clipboard for pasting outside the terminal
 
 search for a file by filename part
 `find . -name 'foo*'`
+
+units - util for converting units
