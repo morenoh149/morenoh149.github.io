@@ -10,8 +10,10 @@ Run `npm install babel babel-eslint eslint eslint-plugin-react`
 Then set in your `.eslintrc` file
 {% highlight javascript %}
 {
-"parser": "babel-eslint",
-"plugins": ["eslint-plugin-react"]
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ]
 }
 {% endhighlight %}
 
