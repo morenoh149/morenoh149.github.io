@@ -25,3 +25,9 @@ Add to your `.package.json`
 {% endhighlight %}
 
 Now you can lint your project by running `npm run lint`.
+
+Ignore any files from linting by adding `.eslintignore` file
+{% highlight javascript %}
+bundle.js
+{% endhighlight %}
+
