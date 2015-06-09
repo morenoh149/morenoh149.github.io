@@ -5,12 +5,14 @@ title: How to add ESLint to a React Project
 
 This is how I add eslint to a javascript project. It also lints `.jsx` files.
 
-Run `npm install babel, babel-eslint, eslint, eslint-plugin-react`
+Run `npm install babel babel-eslint eslint eslint-plugin-react`
 
 Then set in your `.eslintrc` file
 {% highlight javascript %}
+{
 "parser": "babel-eslint",
 "plugins": ["eslint-plugin-react"]
+}
 {% endhighlight %}
 
 Also enable whatever rules you'd like from [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react).
