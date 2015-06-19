@@ -22,14 +22,17 @@ Also enable whatever rules you'd like from [eslint-plugin-react](https://www.npm
 Add to your `.package.json`
 {% highlight javascript %}
 "scripts": {
-  "lint": "eslint --ext=.js,.jsx ."
+  "pretest": "eslint --ext=.js,.jsx ."
 }
 {% endhighlight %}
 
-Now you can lint your project by running `npm run lint`.
+Now you can lint your project by running `npm test`. Note, this is npm
+package.json convention. Alternatively you could name the task `lint` then run
+`npm run lint`.
 
 Ignore any files from linting by adding `.eslintignore` file
 {% highlight javascript %}
 bundle.js
 {% endhighlight %}
 
+See also [NPM Scripts](https://docs.npmjs.com/misc/scripts)

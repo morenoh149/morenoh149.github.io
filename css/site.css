@@ -41,6 +41,9 @@ img {
   max-width: 600px;
   text-align: right;
 }
+.thumbnail img {
+  max-height: 400px;
+}
 @media (max-width: 480px) {
   img {
     max-width: 300px;
