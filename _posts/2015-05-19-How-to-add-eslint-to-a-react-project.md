@@ -26,7 +26,7 @@ Add to your `.package.json`
 }
 {% endhighlight %}
 
-Now you can lint your project by running `npm test`. Note, this is npm
+Now you can lint your project by running `npm test`. Note, this is an npm
 package.json convention. Alternatively you could name the task `lint` then run
 `npm run lint`.
 
