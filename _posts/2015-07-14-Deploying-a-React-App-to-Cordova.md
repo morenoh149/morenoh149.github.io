@@ -17,7 +17,7 @@ Specifically, we must delay execution of our webapp until `deviceready()`
 executes. Wrap your applications entry point like so
 
 {% highlight javascript %}
-function startApp () {
+function startApp() {
   // your app logic
 }
 if (window.cordova) {
