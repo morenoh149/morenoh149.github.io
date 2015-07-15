@@ -10,7 +10,7 @@ twitter_username: morenoh149
 github_username: morenoh149
 
 # Build settings
-markdown: kramdown
+# markdown: kramdown
 highlighter: pygments
 exclude: [app]
 
