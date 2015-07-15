@@ -54,58 +54,58 @@ p {
   text-align: justify;
 }
 dd p {
-  font-size: 2.6vw;
+  font-size: 1.1em;
 }
 dd li {
-  font-size: 2.6vw;
+  font-size: 1.1em;
 }
 .post p {
-  font-size: 2.6vw;
+  font-size: 1.1em;
 }
 .post li {
-  font-size: 2.6vw;
+  font-size: 1.1em;
 }
 .post img {
   margin: 0 auto;
 }
 .highlight code {
-  font-size: 2.4vw;
+  font-size: 0.9em;
 }
 
 
 @media (min-width: 768px) {
   dd p {
-    font-size: 1.7vw;
+    font-size: 1.3em;
   }
   dd li {
-    font-size: 1.7vw;
+    font-size: 1.3em;
   }
   .post p {
-    font-size: 1.7vw;
+    font-size: 1.3em;
   }
   .post li {
-    font-size: 1.7vw;
+    font-size: 1.3em;
   }
   .highlight code {
-    font-size: 1.5vw;
+    font-size: 1.1em;
   }
 }
 
 @media (min-width: 992px) {
   dd p {
-    font-size: 1.5vw;
+    font-size: 1.5em;
   }
   dd li {
-    font-size: 1.5vw;
+    font-size: 1.5em;
   }
   .post p {
-    font-size: 1.5vw;
+    font-size: 1.5em;
   }
   .post li {
-    font-size: 1.5vw;
+    font-size: 1.5em;
   }
   .highlight code {
-    font-size: 1.4vw;
+    font-size: 1.3em;
   }
 }
 
