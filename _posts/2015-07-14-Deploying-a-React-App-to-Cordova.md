@@ -8,13 +8,13 @@ developed in mobile emulation mode.
 
 Once I was happy with it's behavior in browsers I decided it was time to port it
 as a native mobile app. Below we assume the whole application has been compiled
-with Browserify or Webpack into an `app.js` file.
+with Browserify or Webpack into an *app.js* file.
 
 ### index.html
-* declare `cordova.js` before your bundle. This is automatically injected by
+* declare *cordova.js* before your bundle. This is automatically injected by
 Cordova at runtime.
-* declare a viewport meta tag to prevent resizing
-* declare a Content Security Policy. Read [Cordova-plugin-whitelist](https://github.com/apache/cordova-plugin-whitelist#content-security-policy).
+* declare a *viewport* meta tag to prevent resizing
+* declare a *Content Security Policy*. Read [Cordova-plugin-whitelist](https://github.com/apache/cordova-plugin-whitelist#content-security-policy).
 
 {% highlight html %}
 <html>
@@ -43,7 +43,7 @@ Cordova at runtime.
 First thing to note is that cordova has it's own hooks for device lifecycle
 events. Checkout [Cordova Events](http://devdocs.io/cordova/cordova_events_events.md).
 
-Specifically, we must delay execution of our webapp until the `deviceready`
+Specifically, we must delay execution of our webapp until the *deviceready*
 event executes. Wrap your applications entry point like so
 
 {% highlight javascript %}
@@ -65,7 +65,7 @@ if(window.device && device.platform === 'iOS') {
 }
 {% endhighlight %}
 
-* wherever you have `onClick` handlers you'll have to add an `onTouchEnd`
+* wherever you have *onClick* handlers you'll have to add an *onTouchEnd*
 handler. See
 [React.js Events](https://facebook.github.io/react/docs/events.html#touch-events)
 {% highlight javascript %}
@@ -74,7 +74,7 @@ handler. See
   onTouchEnd={() => this.transition()} >
 </i>
 {% endhighlight %}
-* declare `React.initializeTouchEvents(true)`
+* declare *React.initializeTouchEvents(true)*
 
 ### Cordova project setup
 Install the cordova cli tool `npm install -g cordova`
@@ -86,15 +86,15 @@ From your project directory
 3. `cd <dirname>`
 4. `cordova platform add ios && cordova platform add android`
 5. `cordova plugin add cordova-plugin-device && cordova plugin add cordova-plugin-whitelist`
-6. Backup and rename the `www` directory. Then symlink
-the original project to `www`. `ln -s ../project www`
-7. Finally we can test the app in the simulator `cordova emulate ios`
+6. Backup or rename the *www* directory
+7. Symlink the original project to *www* `ln -s ../reactProject www`
+8. Finally we can test the app in the simulator `cordova emulate ios`
 
 You'll want to edit [config.xml](http://cordova.apache.org/docs/en/5.1.1/config_ref_index.md.html).
-Especially the `name`, `description` and `author` tags.
+Especially the *name*, *description* and *author* tags.
 
-If you plan using git for this I recommend gitignoring `plugins/` and
-`platforms/` folders.
+If you plan using git for this I recommend gitignoring *plugins/* and
+*platforms/* folders.
 
 Actually deploying to app stores will require signing. See
 [Publishing Android](http://ionicframework.com/docs/guide/publishing.html) and
