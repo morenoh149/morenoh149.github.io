@@ -65,10 +65,16 @@ if(window.device && device.platform === 'iOS') {
 }
 {% endhighlight %}
 
-* wherever you have onClick handlers you'll have to add an onTouchEnd handler or
-similar for mobile touch events
-* if you haven't already declare `React.initializeTouchEvents(true)`. See
+* wherever you have `onClick` handlers you'll have to add an `onTouchEnd`
+handler. See
 [React.js Events](https://facebook.github.io/react/docs/events.html#touch-events)
+{% highlight javascript %}
+<i
+  onClick={() => this.transition()}
+  onTouchEnd={() => this.transition()} >
+</i>
+{% endhighlight %}
+* declare `React.initializeTouchEvents(true)`
 
 ### Cordova project setup
 Install the cordova cli tool `npm install -g cordova`
@@ -76,8 +82,8 @@ Install the cordova cli tool `npm install -g cordova`
 From your project directory
 
 1. `cd ..`
-2. `cordova create <cordova project name>`
-3. `cd <cordova project name>`
+2. `cordova create <dirname>`
+3. `cd <dirname>`
 4. `cordova platform add ios && cordova platform add android`
 5. `cordova plugin add cordova-plugin-device && cordova plugin add cordova-plugin-whitelist`
 6. Backup and rename the `www` directory. Then symlink
