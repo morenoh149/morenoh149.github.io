@@ -6,8 +6,6 @@ title: SHPE San Francisco Pagina Web Cambio de Imagen
 Estoy feliz de anunciar que el [R3DM](http://the.r3dm.com/) ha completado su primer
 proyecto. Esta disponible en [shpesfba.org](http://www.shpesfba.org/).
 
-#### The English version of this post is available [here](../../../2014/12/12/shpe-sf-site-makeover.html).
-
 <div class="center">
   <a href="http://shpesfba.org/">
     <img src="http://harrymoreno.com/img/shpe-landing.png" />
