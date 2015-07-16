@@ -21,5 +21,5 @@ Some Mongoose Videos
 * [post display route](https://www.youtube.com/watch?v=uFcg8nMkxF8)
 * [revisiting home page](https://www.youtube.com/watch?v=OR0g_r13hok)
 * [deleting posts](https://www.youtube.com/watch?v=WmnsjuMmesw)
-* [editing](posts https://www.youtube.com/watch?v=LMSkdsHUsKY)
+* [editing posts](https://www.youtube.com/watch?v=LMSkdsHUsKY)
 * [comments](https://www.youtube.com/watch?v=q0-duqCwORk)
