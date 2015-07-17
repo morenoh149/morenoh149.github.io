@@ -93,8 +93,9 @@ From your project directory
 You'll want to edit [config.xml](http://cordova.apache.org/docs/en/5.1.1/config_ref_index.md.html).
 Especially the *name*, *description* and *author* tags.
 
-If you plan using git for this I recommend gitignoring *plugins/* and
-*platforms/* folders.
+If you plan on using git for this ignore the *plugins/* and *platforms/* folders.
+
+Then customize your [Icons and Splash screens](http://cordova.apache.org/docs/en/5.1.1/config_ref_images.md.html).
 
 Actually deploying to app stores will require signing. See
 [Publishing Android](http://ionicframework.com/docs/guide/publishing.html) and
