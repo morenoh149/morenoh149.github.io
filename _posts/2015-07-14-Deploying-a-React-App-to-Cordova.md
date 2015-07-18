@@ -111,6 +111,6 @@ Useful links:
 * [Android Launch Checklist](https://developer.android.com/distribute/tools/launch-checklist.html)
 * [cordova-plugin-console](https://github.com/apache/cordova-plugin-console)
 * [cordova-plugin-geolocation](https://github.com/apache/cordova-plugin-geolocation)
-* [Publishing to Android](http://ionicframework.com/docs/guide/publishing.html)
+* [cordova-plugin-network-information](https://github.com/apache/cordova-plugin-network-information)
 * [ios-sim](https://github.com/phonegap/ios-sim)
 * [react-fastclick](https://github.com/JakeSidSmith/react-fastclick)
