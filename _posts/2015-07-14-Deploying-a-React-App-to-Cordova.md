@@ -4,11 +4,12 @@ title: Deploying a React App to Cordova
 ---
 
 I've been building out a webapp using react. It's completely responsive and
-developed in mobile emulation mode.
+developed in [device mode](https://developer.chrome.com/devtools/docs/device-mode).
 
 Once I was happy with it's behavior in browsers I decided it was time to port it
 as a native mobile app. Below we assume the whole application has been compiled
-with Browserify or Webpack into an *app.js* file.
+with Browserify or Webpack into an *app.js* file. I'm also assuming es6 syntax
+and [inline styles](https://facebook.github.io/react/tips/inline-styles.html).
 
 ### index.html
 * declare *cordova.js* before your bundle. This is automatically injected by
@@ -82,29 +83,34 @@ Install the cordova cli tool `npm install -g cordova`
 From your project directory
 
 1. `cd ..`
-2. `cordova create <dirname>`
-3. `cd <dirname>`
+2. `cordova create <new dirname>`
+3. `cd <new dirname>`
 4. `cordova platform add ios && cordova platform add android`
 5. `cordova plugin add cordova-plugin-device && cordova plugin add cordova-plugin-whitelist`
 6. Backup or rename the *www* directory
 7. Symlink the original project to *www* `ln -s ../reactProject www`
 8. Finally we can test the app in the simulator `cordova emulate ios`
 
-You'll want to edit [config.xml](http://cordova.apache.org/docs/en/5.1.1/config_ref_index.md.html).
+You'll want to customize [config.xml](http://cordova.apache.org/docs/en/5.1.1/config_ref_index.md.html).
 Especially the *name*, *description* and *author* tags.
 
 If you plan on using git for this ignore the *plugins/* and *platforms/* folders.
 
 Then customize your [Icons and Splash screens](http://cordova.apache.org/docs/en/5.1.1/config_ref_images.md.html).
+Also see Androids [Graphics Assets](https://support.google.com/googleplay/android-developer/answer/1078870)
+page.
 
 Actually deploying to app stores will require signing. See
-[Publishing Android](http://ionicframework.com/docs/guide/publishing.html) and
+[Signing Android](https://developer.android.com/tools/publishing/app-signing.html#signing-manually) and
 [Publishing iOS](http://forum.ionicframework.com/t/how-to-submit-ios-app-to-app-store-using-xcode/1795/6).
+For these run `cordova build --release <platform>`.
 
 Useful links:
 
 * [Cordova tutorial](https://ccoenraets.github.io/cordova-tutorial/create-cordova-project.html)
+* [Android Launch Checklist](https://developer.android.com/distribute/tools/launch-checklist.html)
 * [cordova-plugin-console](https://github.com/apache/cordova-plugin-console)
 * [cordova-plugin-geolocation](https://github.com/apache/cordova-plugin-geolocation)
+* [Publishing to Android](http://ionicframework.com/docs/guide/publishing.html)
 * [ios-sim](https://github.com/phonegap/ios-sim)
 * [react-fastclick](https://github.com/JakeSidSmith/react-fastclick)
