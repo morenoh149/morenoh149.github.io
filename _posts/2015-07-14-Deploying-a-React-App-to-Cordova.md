@@ -101,14 +101,14 @@ Also see Androids [Graphics Assets](https://support.google.com/googleplay/androi
 page.
 
 Actually deploying to app stores will require signing. See
-[Signing Android](https://developer.android.com/tools/publishing/app-signing.html#signing-manually) and
+[Signing Android](http://ionicframework.com/docs/guide/publishing.html) and
 [Publishing iOS](http://forum.ionicframework.com/t/how-to-submit-ios-app-to-app-store-using-xcode/1795/6).
 For these run `cordova build --release <platform>`.
 
 Useful links:
 
 * [Cordova tutorial](https://ccoenraets.github.io/cordova-tutorial/create-cordova-project.html)
-* [Android Launch Checklist](https://developer.android.com/distribute/tools/launch-checklist.html)
+* [Android Signing Manually](https://developer.android.com/tools/publishing/app-signing.html#signing-manually)
 * [cordova-plugin-console](https://github.com/apache/cordova-plugin-console)
 * [cordova-plugin-geolocation](https://github.com/apache/cordova-plugin-geolocation)
 * [cordova-plugin-network-information](https://github.com/apache/cordova-plugin-network-information)
