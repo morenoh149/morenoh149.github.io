@@ -44,6 +44,13 @@ img {
 .thumbnail img {
   max-height: 400px;
 }
+#templogo {
+  max-height: 150px;
+}
+.storebtn {
+  padding-bottom: 20px;
+}
+
 @media (max-width: 480px) {
   img {
     max-width: 300px;
