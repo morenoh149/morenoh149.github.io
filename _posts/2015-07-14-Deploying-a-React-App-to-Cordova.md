@@ -114,3 +114,4 @@ Useful links:
 * [cordova-plugin-network-information](https://github.com/apache/cordova-plugin-network-information)
 * [ios-sim](https://github.com/phonegap/ios-sim)
 * [react-fastclick](https://github.com/JakeSidSmith/react-fastclick)
+* [react-localstorage](https://github.com/STRML/react-localstorage)
