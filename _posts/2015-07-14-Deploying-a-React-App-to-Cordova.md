@@ -76,6 +76,8 @@ handler. See
 </i>
 {% endhighlight %}
 * declare *React.initializeTouchEvents(true)*
+* On mobile you have to be aware of the user's connectivity. Use [window.navigator.onLine](http://devdocs.io/dom/navigatoronline/online)
+and provide feedback to the user if they are offline.
 
 ### Cordova project setup
 Install the cordova cli tool `npm install -g cordova`
