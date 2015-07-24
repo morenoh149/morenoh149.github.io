@@ -114,7 +114,7 @@ pixels and a splash image 1242 × 2208 pixels.
 #### Android
 To build an Android release `cordova build --release <platform>`.
 
-Actually deploying to app stores will require signing. See
+Then you have to sign the app
 [Signing Android](http://ionicframework.com/docs/guide/publishing.html)
 
 #### iOS
