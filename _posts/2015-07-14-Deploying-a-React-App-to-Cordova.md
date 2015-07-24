@@ -99,13 +99,17 @@ Especially the *name*, *description* and *author* tags.
 If you plan on using git for this ignore the *plugins/* and *platforms/* folders.
 
 Then customize your [Icons and Splash screens](http://cordova.apache.org/docs/en/5.1.1/config_ref_images.md.html).
-Also see Androids [Graphics Assets](https://support.google.com/googleplay/android-developer/answer/1078870)
-page.
+See Androids [Graphics Assets](https://support.google.com/googleplay/android-developer/answer/1078870)
+page. [Cordova Icon](https://github.com/AlexDisler/cordova-icon) and
+[Cordova Splash](https://github.com/AlexDisler/cordova-splash) are useful here.
 
 Actually deploying to app stores will require signing. See
 [Signing Android](http://ionicframework.com/docs/guide/publishing.html) and
 [Publishing iOS](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SubmittingYourApp/SubmittingYourApp.html).
 For these run `cordova build --release <platform>`.
+
+For ios you'll want to make and app ID and an iTunes Connect app profile. Both
+are accessible from [developer.apple.com](http://developer.apple.com).
 
 Useful links:
 
