@@ -132,7 +132,7 @@ know `cmd + S` in the iOS simulator saves a screenshot to your desktop.
 
 Apple's developer program costs $100.
 
-Useful links:
+### Useful links:
 
 * [Cordova tutorial](https://ccoenraets.github.io/cordova-tutorial/create-cordova-project.html)
 * [Android Signing Manually](https://developer.android.com/tools/publishing/app-signing.html#signing-manually)
