@@ -115,7 +115,9 @@ pixels and a splash image 1242 × 2208 pixels.
 To build an Android release `cordova build --release <platform>`.
 
 Then you have to sign the app
-[Signing Android](http://ionicframework.com/docs/guide/publishing.html)
+[Signing Android](http://ionicframework.com/docs/guide/publishing.html).
+
+Google's developer program costs $25.
 
 #### iOS
 For iOS I find it easier to use xcode to push to the app store.
@@ -127,6 +129,8 @@ accessible from [developer.apple.com](http://developer.apple.com).
 
 When you are uploading screenshots for your iOS store listing it's useful to
 know `cmd + S` in the iOS simulator saves a screenshot to your desktop.
+
+Apple's developer program costs $100.
 
 Useful links:
 
