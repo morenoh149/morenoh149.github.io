@@ -102,16 +102,17 @@ Then customize your [Icons and Splash screens](http://cordova.apache.org/docs/en
 See Androids [Graphics Assets](https://support.google.com/googleplay/android-developer/answer/1078870)
 page. [Cordova Icon](https://github.com/AlexDisler/cordova-icon) and
 [Cordova Splash](https://github.com/AlexDisler/cordova-splash) are useful here.
+You're going to want an icon of size 1024 x 1024 pixels.
 
 Actually deploying to app stores will require signing. See
 [Signing Android](http://ionicframework.com/docs/guide/publishing.html) and
 [Publishing iOS](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SubmittingYourApp/SubmittingYourApp.html).
 For these run `cordova build --release <platform>`.
 
-For ios you'll want to make and app ID and an iTunes Connect app profile. Both
+For ios you'll want to make an app ID and an iTunes Connect app profile. Both
 are accessible from [developer.apple.com](http://developer.apple.com).
 
-When you are uploading screenshots for you iOS store listing it's useful to
+When you are uploading screenshots for your iOS store listing it's useful to
 know `cmd + S` in the iOS simulator saves a screenshot to your desktop.
 
 Useful links:
