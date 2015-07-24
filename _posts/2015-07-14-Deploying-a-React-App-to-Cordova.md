@@ -94,7 +94,8 @@ From your project directory
 8. Finally we can test the app in the simulator `cordova emulate ios`
 
 You'll want to customize [config.xml](http://cordova.apache.org/docs/en/5.1.1/config_ref_index.md.html).
-Especially the *name*, *description* and *author* tags.
+Especially the *id*, *name*, *description* and *author* tags. Read about ids
+under `Additional Versioning`.
 
 If you plan on using git for this ignore the *plugins/* and *platforms/* folders.
 
