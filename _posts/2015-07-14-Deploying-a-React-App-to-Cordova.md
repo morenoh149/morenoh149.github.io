@@ -104,7 +104,7 @@ page.
 
 Actually deploying to app stores will require signing. See
 [Signing Android](http://ionicframework.com/docs/guide/publishing.html) and
-[Publishing iOS](http://forum.ionicframework.com/t/how-to-submit-ios-app-to-app-store-using-xcode/1795/6).
+[Publishing iOS](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SubmittingYourApp/SubmittingYourApp.html).
 For these run `cordova build --release <platform>`.
 
 Useful links:
