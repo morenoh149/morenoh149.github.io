@@ -99,19 +99,31 @@ under `Additional Versioning`.
 
 If you plan on using git for this ignore the *plugins/* and *platforms/* folders.
 
-Then customize your [Icons and Splash screens](http://cordova.apache.org/docs/en/5.1.1/config_ref_images.md.html).
-See Androids [Graphics Assets](https://support.google.com/googleplay/android-developer/answer/1078870)
-page. [Cordova Icon](https://github.com/AlexDisler/cordova-icon) and
-[Cordova Splash](https://github.com/AlexDisler/cordova-splash) are useful here.
-You're going to want an icon of size 1024 x 1024 pixels.
+### App Store Listing
+The Google and Apple App Stores require additional information from your app.
+
+Customize your [Icons and Splash screens](http://cordova.apache.org/docs/en/5.1.1/config_ref_images.md.html).
+Read Androids [Graphics Assets](https://support.google.com/googleplay/android-developer/answer/1078870) page.
+Read iTunes Connect's [Screenshot Properties](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html) *scroll to it*.
+
+[Cordova Icon](https://github.com/AlexDisler/cordova-icon) and
+[Cordova Splash](https://github.com/AlexDisler/cordova-splash) are useful for
+generating the images needed. You're going to want an icon of size 1024 x 1024
+pixels and a splash image 1242 × 2208 pixels.
+
+#### Android
+To build an Android release `cordova build --release <platform>`.
 
 Actually deploying to app stores will require signing. See
-[Signing Android](http://ionicframework.com/docs/guide/publishing.html) and
-[Publishing iOS](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SubmittingYourApp/SubmittingYourApp.html).
-For these run `cordova build --release <platform>`.
+[Signing Android](http://ionicframework.com/docs/guide/publishing.html)
 
-For ios you'll want to make an app ID and an iTunes Connect app profile. Both
-are accessible from [developer.apple.com](http://developer.apple.com).
+#### iOS
+For iOS I find it easier to use xcode to push to the app store.
+
+Read [Publishing iOS](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SubmittingYourApp/SubmittingYourApp.html).
+
+You'll want to make an app ID and an iTunes Connect app profile. Both are
+accessible from [developer.apple.com](http://developer.apple.com).
 
 When you are uploading screenshots for your iOS store listing it's useful to
 know `cmd + S` in the iOS simulator saves a screenshot to your desktop.
