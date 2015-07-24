@@ -111,6 +111,9 @@ For these run `cordova build --release <platform>`.
 For ios you'll want to make and app ID and an iTunes Connect app profile. Both
 are accessible from [developer.apple.com](http://developer.apple.com).
 
+When you are uploading screenshots for you iOS store listing it's useful to
+know `cmd + S` in the iOS simulator saves a screenshot to your desktop.
+
 Useful links:
 
 * [Cordova tutorial](https://ccoenraets.github.io/cordova-tutorial/create-cordova-project.html)
