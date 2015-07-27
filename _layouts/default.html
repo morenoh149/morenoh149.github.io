@@ -32,14 +32,14 @@
                 <li class="previous">
                   <a href="{{ paginator.previous_page_path }}">
                     <span aria-hidden="true">&larr;</span>
-                    Older
+                    Newer
                   </a>
                 </li>
               {% else %}
                 <li class="previous disabled">
                   <a>
                     <span aria-hidden="true">&larr;</span>
-                    Older
+                    Newer
                   </a>
                 </li>
               {% endif %}
@@ -47,14 +47,14 @@
               {% if paginator.next_page %}
                 <li class="next">
                   <a href="{{ paginator.next_page_path }}">
-                    Newer
+                    Older
                     <span aria-hidden="true">&rarr;</span>
                   </a>
                 </li>
               {% else %}
                 <li class="next disabled">
                   <a>
-                    Newer
+                    Older
                     <span aria-hidden="true">&rarr;</span>
                   </a>
                 </li>
