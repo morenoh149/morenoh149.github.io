@@ -136,7 +136,7 @@ Apple's developer program costs $100.
 
 * [Cordova tutorial](https://ccoenraets.github.io/cordova-tutorial/create-cordova-project.html)
 * [Android Signing Manually](https://developer.android.com/tools/publishing/app-signing.html#signing-manually)
-* [Apple App store Marketing Guidlines](https://developer.apple.com/app-store/marketing/guidelines/)
+* [Apple App store Marketing Guidelines](https://developer.apple.com/app-store/marketing/guidelines/)
 * [cordova-plugin-console](https://github.com/apache/cordova-plugin-console)
 * [cordova-plugin-geolocation](https://github.com/apache/cordova-plugin-geolocation)
 * [cordova-plugin-network-information](https://github.com/apache/cordova-plugin-network-information)
