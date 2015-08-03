@@ -10,4 +10,4 @@ Fluent in Ruby Javascript Python and Java. I grok Rails, AngularJS, Twitter
 Bootstrap, SASS, Heroku and Amazon Web Services. I'm also good at math,
 statistics, Machine learning and Unix.
 
-Check out my activities on github, add me on LinkedIn or follow my tweets.
+Check out my activities on github or add me on LinkedIn.
