@@ -51,7 +51,18 @@ img {
   max-height: 150px;
 }
 .storebtn {
-  padding-bottom: 20px;
+  max-width: 140px;
+}
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.googleAnchor {
+  flex-grow: 1;
+}
+.appleAnchor {
+  flex-grow: 2;
 }
 
 @media (max-width: 480px) {
