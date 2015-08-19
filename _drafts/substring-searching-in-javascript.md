@@ -70,6 +70,7 @@ function iterativeIndexOf(T, P, i) {
 
 On my machine the above code can run on `/usr/share/dict/words` in 10ms
 whereas my rabin-karp algo takes 238ms. File is [test.js](https://github.com/morenoh149/rabin-karp-search/blob/master/test.js)
+So why is V8 so fast? Under the hood V8 implements `indexOf` using the [Boyer-Moore algorithm](https://github.com/v8/v8/blob/master/src/string-search.h#L283) along with some heuristics for different input sizes.
 
 I'd like to mention [JSInspect](https://www.npmjs.com/package/jsinspect) which
 is a very cool tool in the same spirit.
