@@ -161,3 +161,13 @@ span.caption {
   font-style: italic;
   font-size: 1.5em;
 }
+
+.pager {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.pager li a {
+  background-color: pink;
+  color: rgb(129, 19, 19);
+}
