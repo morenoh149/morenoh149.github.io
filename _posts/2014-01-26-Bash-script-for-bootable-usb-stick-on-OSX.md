@@ -7,7 +7,7 @@ Many times you have to create a bootable usb stick on a mac. I always follow the
 [How to create a bootable USB stick on OS X](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx). I created a quick
 bash script that makes this process faster 
 
-{% highlight bash linenos %}
+{% highlight bash %}
 ###!/bin/bash
 HELP_STR="please provide location of .iso"
 if [ "$#" -lt 1 ]; then
@@ -15,13 +15,13 @@ if [ "$#" -lt 1 ]; then
 else
   echo "`diskutil list`"
   echo "==============="
-  echo "enter disk to eject"
+  echo "enter disk to eject, e.g., /dev/disk1"
   echo -e ">> \c"
   read word
-  echo "ejecting: $word"
-  echo "`diskutil unmountDisk $word`"
-  echo "copying $1 to $word note this may take a while and there won't be a progress bar"
-  echo "`sudo dd if=$1 of=$word bs=1m`"
+  echo "ejecting: \"$word\""
+  diskutil unmountDisk "$word"
+  echo "copying "$1" to "$word" note this may take a while and there wont be a progress bar"
+  sudo dd if="$1" of="$word" bs=1m
 fi
 {% endhighlight %}
 
