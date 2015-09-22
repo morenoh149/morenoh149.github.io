@@ -54,9 +54,10 @@ CHANGED - INNER VALUE
 
 Three different scopes are included in a closure.  Therefore,  variables from
 each scope are accessible (this is where variable hoisting comes into play).
-   1. Variables within the function.
-   2. Variables within its containing functions.
-   3. Variables from the global object.
+
+1. Variables within the function.
+2. Variables within its containing functions.
+3. Variables from the global object.
 
 
 ###Step 3:  So... who cares!!  How does this help me?
@@ -74,7 +75,7 @@ utilize the variables from my current scope simply by binding them to my functio
 {% highlight javascript %}
 //Using Immediately Invoked Function Expression (IIFE)
 //to create a single closure to explain this point.
-var x = (function (primitive, object) {
+var x = (function () {
     var scope = "UNCHANGED";
     return function () {
         return {
@@ -110,3 +111,5 @@ function foo() {
   }
 }
 {% endhighlight %}
+
+Post the answer in the comments so I know you read it ;)
