@@ -4,7 +4,7 @@ title: What is a javascript closure
 ---
 
 *This is a guest post By Cory Parrish. A developer currently working at ADP.
-It's an explaination of what closures are from a javascript perspective*
+It's an explanation of what closures are from a javascript perspective*
 
 ###Step 1:  How can you create a closure?
 
