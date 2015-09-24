@@ -171,3 +171,18 @@ span.caption {
   background-color: pink;
   color: rgb(129, 19, 19);
 }
+
+.tweet-btn {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  background: transparent linear-gradient(#54C5FE, #5C95B6);
+  box-shadow: 0px 2px 1px silver;
+}
+.tweet-btn a {
+  color: white;
+}
+.tweet-btn a:hover {
+  text-decoration: none;
+}
