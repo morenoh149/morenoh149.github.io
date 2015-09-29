@@ -28,5 +28,5 @@ var hoisted2 = function(){
 A common pitfall is when you know about hoisting but expect an expression to
 also be hoisted. See hoisted1 is a function declaration and gets hoisted.
 hoisted2 is a variable declaration and gets hoisted but the expression does not.
-I ran into this myself during an interview and could not figure out why the
-expression was not available within demo.
+Futher, hoisted2's expression value is not computed and made available until
+after it's original place in the script.
