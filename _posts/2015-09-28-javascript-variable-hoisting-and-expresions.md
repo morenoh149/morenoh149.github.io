@@ -4,8 +4,10 @@ title: Variable Hoisting and expressions
 ---
 
 When javascript runs it first parses the entire file for variable and function
-declarations. Say you have learned about this and think you understand how it
-works. You write the following script and it fails
+declarations. This is a process called
+[hoisting](http://johnkpaul.com/blog/2013/02/11/what-is-hoisting-really/).
+Say you have learned about this and think you understand how it works. You write
+the following script and it fails
 
 {% highlight javascript %}
 function demo(){
