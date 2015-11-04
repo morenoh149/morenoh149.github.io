@@ -15,7 +15,7 @@ function ParentClass() { // constructor function
 
 var p = new ParentClass(); // make an instance
 
-console.log('e is typeof', e.constructor.name); // query constructor object to get typeof
+console.log('p is typeof', p.constructor.name); // query constructor object to get typeof
 
 try {
   p.global('aye');
