@@ -7,7 +7,7 @@ Today I ran into a friend. He was complaining that his iOS engineer made
 horrible API design decisions. So I started looking up materials so I know
 what makes a good API.
 
-In order of percieved quality
+In order of perceived quality
 
 * [Matt Gemmell on API Design](http://mattgemmell.com/api-design/)
 * [Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)

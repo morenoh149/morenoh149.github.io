@@ -27,7 +27,7 @@ try {
 ParentClass.prototype.global = function(arg) {
   console.log('method on the prototype chain:', arg);
 }
-p.global('aye'); // availabe even to already created instances
+p.global('aye'); // available even to already created instances
 
 // subclassing
 function SubClass() {
