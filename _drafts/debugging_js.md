@@ -26,3 +26,6 @@ $(document).click(function(event) {
 
 css rule that will put a red outline on anything you hover
 `* { border: 1px solid pink; }`
+
+* use watch expressions
+* 
