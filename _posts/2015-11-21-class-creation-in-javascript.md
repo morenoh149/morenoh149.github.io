@@ -61,6 +61,8 @@ modules.
 
 * use `this` keyword for public fields
 * use `var` to instantiate things only available within this closure.
+* use `this.methodName` to define a *privileged* function, a public function that
+can access private variables. Similar to getters.
 
 {% highlight javascript %}
 // module.js
@@ -68,8 +70,9 @@ function Module() {
   this.public = 'foo'
   var private = 'bar'
 
-  this.calc = function() { console.log('calculated: ', helper()) }
-  var helper = function() { return 42 }
+  var privateHelper = function() { return 42 }
+  this.calc = function() { console.log('calculated: ', privateHelper()) }
+  this.privileged = function() { return private }
 }
 module.exports = Module
 {% endhighlight %}
@@ -83,12 +86,14 @@ function Module() {
   var public = 'foo'
   var private = 'bar'
 
-  var calc = function() { console.log('calculated: ', helper()) }
-  var helper = function() { return 42 }
+  var privateHelper = function() { return 42 }
+  var calc = function() { console.log('calculated: ', privateHelper()) }
+  var privileged = function() { return private }
 
   return {
     public: public,
-    calc: calc
+    calc: calc,
+    privileged: privileged
   }
 }
 module.exports = Module
