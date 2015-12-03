@@ -55,6 +55,10 @@ c instanceof ParentClass // true
 c instanceof SubClass // true
 {% endhighlight %}
 
+If you are confused by the *setup prototype chain* step I highly recommend watching
+[The Definitive Guide to Object-Oriented Javascript](https://youtu.be/PMfcsYzj-9M?t=19m32s)
+starting at 19:32.
+
 Another common feature leveraged with classes is privacy of variables and functions.
 The less we expose in our classes and APIs the less coupling we get between
 modules.
