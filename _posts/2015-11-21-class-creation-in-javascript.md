@@ -81,6 +81,9 @@ function Module() {
 module.exports = Module
 {% endhighlight %}
 
+Alternatively, it is common practice to prefix private variables with `_`. But you
+wont have any guarantees that users of  your software will respect not to use them.
+
 You could also explicitly return the object returned by the constructor but
 it is not encouraged javascript style. The following produces the same object.
 
