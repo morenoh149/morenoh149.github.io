@@ -68,6 +68,7 @@ utilizing a constructor function for our prototype allows us to leverage
 encapsulation of the _val variable
 
 # using the new keyword
+
 function Answer(value) {
 	this._val = value;
 }
@@ -84,5 +85,45 @@ function FirmAnswer(value) {
 	Answer.call(this.value);
 }
 FirmAnswer.prototype = Object.create(Answer.prototype);
+FirmAnswer.prototype.constructor = FirmAnswer;
 
+FirmAnswer.prototype.get = function fn2() {
+	return Answer.prototype.get.call(this) + "!!";
+};
 
+var luckyAnswer = new FirmAnswer(7);
+luckyAnswer.get(); // '7!!'
+
+# using es6 class syntax
+
+class Answer {
+	constructor(value) {
+		this._val = value;
+	}
+
+	get() {
+		return this._val;
+	}
+}
+
+var lifeAnswer = new Answer(42);
+lifeAnswer.get() // 42
+
+var dessertAnswer = new Answer(3.14)
+dessertAnswer.get() // 3.14
+
+class FirmAnswer extends Answer {
+	constructor(value) {
+		super(value);
+	}
+
+	get() {
+		return super() + '!!';
+	}
+};
+
+var luckyAnswer = new FirmAnswer(7);
+luckyAnswer.get() // '7!!'
+
+var magicAnswer = new FirmAnswer(3);
+magicAnswer.get() // '3!!'
