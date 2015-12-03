@@ -127,3 +127,17 @@ luckyAnswer.get() // '7!!'
 
 var magicAnswer = new FirmAnswer(3);
 magicAnswer.get() // '3!!'
+
+# polymorphism and prototypes
+
+you can also override prototype fields in your instances. Javascript always
+consults the lower members in the prototype chain and walks up the chain until
+it finds a match
+
+function C() {}
+var c = new C
+C.prototype.color = 'blue'
+c.color // 'blue'
+c.color = 'red'
+c.color // 'red'
+C.prototype.color // still blue
