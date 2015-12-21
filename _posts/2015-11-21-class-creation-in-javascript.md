@@ -3,11 +3,11 @@ layout: post
 title: Class creation in javascript
 ---
 
-Javascript isn't generally considered a very object oriented language. It allows
+Javascript is not generally considered a very object oriented language. It allows
 a lot of flexibility in approaches. The following notes detail how to create an
 object in javascript utilizing constructor functions.
 
-We create one object, then add a function to it's prototype chain to avoid
+We create one object, then add a function to its prototype chain to avoid
 having it copied many times, then we subclass it and detail how to set up the
 prototype chain.
 
@@ -105,3 +105,5 @@ function Module() {
 }
 module.exports = Module
 {% endhighlight %}
+
+More reading: [Introduction to Object Oriented Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
