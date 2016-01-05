@@ -97,8 +97,8 @@ normalization features consider the following lighter weight implementations of 
 ## React
 React provides a
 [Synthetic Event](https://facebook.github.io/react/docs/events.html#syntheticevent)
-api for events which attempts to provide a more uniform interface for events.
-For example it sets all event to bubble by default.
+api which attempts to provide a more uniform interface for events.
+For example it sets all events to bubble by default.
 
 To define listeners that execute during the capture phase simply append
 `Capture` to the function name, e.g., `onFocusCapture` will execute the
