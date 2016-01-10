@@ -40,12 +40,15 @@ img {
   text-align: right;
 }
 .thumbnail img { max-height: 400px; }
-#templogo { max-height: 150px; }
+.thumbnail img.applogo { max-height: 150px; }
+img.disabled { opacity: 0.3; }
 .storebtn { max-width: 140px; }
 .flexRow {
   display: flex;
   flex-direction: row;
-  text-align: center;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
 }
 .googleAnchor { flex-grow: 1; }
 .appleAnchor { flex-grow: 2; }
