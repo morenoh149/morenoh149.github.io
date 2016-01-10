@@ -47,11 +47,16 @@ img.disabled { opacity: 0.3; }
   display: flex;
   flex-direction: row;
   justify-content: center;
-  -ms-align-items: center;
   align-items: center;
 }
-.googleAnchor { flex-grow: 1; }
-.appleAnchor { flex-grow: 2; }
+.googleAnchor {
+  flex-grow: 1;
+  text-align: center;
+}
+.appleAnchor {
+  flex-grow: 1;
+  text-align: center;
+}
 
 @media (max-width: 480px) {
   img { max-width: 300px; }
