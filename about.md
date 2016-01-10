@@ -14,4 +14,3 @@ Check out my activities on
 <a href="http://www.github.com/morenoh149"><i class="fa fa-github-square"></i></a>
 or add me on
 <a href="http://www.linkedin.com/in/harrymoreno"><i class="fa fa-linkedin-square"></i></a>
-.
