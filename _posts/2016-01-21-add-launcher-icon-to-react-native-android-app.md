@@ -6,8 +6,10 @@ title: How to add app icons in React Native Android
 During the development of my most recent app. I realized the
 [React Native docs](https://facebook.github.io/react-native/docs/signed-apk-android.html#content)
 do not cover how to add an app icon. I love the little android icon as much as
-the next person but we need our own logo. Here we have opted to not use Android
-Studio as it may want to fiddle with our gradle configs.
+the next person but we need our own logo.
+
+Here we have opted to not use Android Studio as it may want to fiddle with
+our gradle configs.
 
 Upload your image to
 [Android asset Studio](http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html).
