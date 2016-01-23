@@ -50,7 +50,7 @@ img.disabled { opacity: 0.3; }
 .flexRow {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .googleAnchor {
@@ -115,11 +115,17 @@ span.caption {
   font-size: 1.2em;
   font-weight: bold;
 }
-
-.pager li a {
-  background-color: pink;
+.pager div a {
+  background-color: #eee;
+  border-radius: 10px;
+  border: 2px solid rgb(115, 65, 60);
   color: rgb(129, 19, 19);
+  padding: 0.6em;
+  text-decoration: none;
 }
+
+.pager { display: flex; }
+.pager div.active a { background-color: rgb(249, 188, 84); }
 
 .tweet-btn {
   display: inline-block;

@@ -10,46 +10,7 @@
       {% include header.html %}
 
       <div class="row">
-        <div class="col-sm-8 col-sm-offset-2
-                    col-md-7 col-md-offset-2">
-          <dl>
-            {% for post in paginator.posts %}
-              <dt>
-                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                {{ post.date | date: "%d %B %Y" }}
-              </dt>
-
-              <dd>
-                {{ post.excerpt }}
-              </dd>
-            {% endfor %}
-          </dl>
-
-          <!-- pagination -->
-          <nav>
-            <ul class="pager">
-              {% if paginator.previous_page %}
-                <li class="previous">
-                  <a href="{{ paginator.previous_page_path }}">
-                    <span aria-hidden="true">&larr;</span>
-                    Newer
-                  </a>
-                </li>
-              {% endif %}
-
-              {% if paginator.next_page %}
-                <li class="next">
-                  <a href="{{ paginator.next_page_path }}">
-                    Older
-                    <span aria-hidden="true">&rarr;</span>
-                  </a>
-                </li>
-              {% endif %}
-            </ul>
-          </nav>
-
-        </div>
-
+        {{ content }}
         <div class="sidebar
                     col-sm-8 col-sm-offset-2
                     col-md-2 col-md-offset-0">
