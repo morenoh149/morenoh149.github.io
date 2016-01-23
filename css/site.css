@@ -34,6 +34,8 @@ li.needs_top_padding { padding-top: 15px; }
 .navbar-inverse .navbar-nav>li>a { color: #ddd; }
 i.fa { font-size: 1.5em; }
 
+.pager li.active a { background-color: pink; }
+
 img.feedly-icon {
   width: 25;
   height: 25;
@@ -117,7 +119,7 @@ span.caption {
 }
 
 .pager li a {
-  background-color: pink;
+  background-color: #eee;
   color: rgb(129, 19, 19);
 }
 
