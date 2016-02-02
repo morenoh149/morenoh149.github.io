@@ -26,3 +26,7 @@ being able to create databases `createuser <appName> -s`.
 If you need to delete this user run `dropuser <appName>`.
 
 And for completeness to drop a database `dropdb <appName>`.
+
+There's a very convenient util `pg_ctl`. Use `pg_ctl init <database name>.`
+to make a new database. `pg_ctl start -l logfile` to start postgres
+and move it to the background.
