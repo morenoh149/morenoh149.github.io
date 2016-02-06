@@ -3,7 +3,7 @@ layout: about
 title: About Harry Moreno
 ---
 
-Harry Moreno is a Software Engineer and pretty cool guy.
+Harry Moreno is a Software Engineer 🌊
 
 I'm currently contracting and working on open source.
 Fluent in Ruby, Javascript, Python and Java. I grok Rails, React.js, Twitter
