@@ -13,8 +13,6 @@ paginate: 10
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
 exclude: [app]
 
-gems:
-  - jekyll-sitemap
+gems: [jekyll-sitemap, jekyll-paginate]
