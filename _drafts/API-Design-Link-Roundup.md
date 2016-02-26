@@ -19,3 +19,12 @@ Bonus video:
 
 * [Google Talk: Good API Design and why it matters](https://www.youtube.com/watch?v=aAb7hSCtvGw)
 with accompanying [Slides](http://lcsd05.cs.tamu.edu/slides/keynote.pdf)
+
+
+
+* http://restful-api-design.readthedocs.org/en/latest/
+* https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf
+
+to read not sure if worth including 
+* http://restlet.com/blog/2015/03/16/designing-a-web-api/
+* https://templth.wordpress.com/2014/12/15/designing-a-web-api/
