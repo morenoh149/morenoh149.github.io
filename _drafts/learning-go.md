@@ -17,3 +17,9 @@ https://en.wikipedia.org/wiki/Guarded_Command_Language
 https://en.wikipedia.org/wiki/Communicating_sequential_processes
 
 http://whipperstacker.com/2015/10/05/3-trivial-concurrency-exercises-for-the-confused-newbie-gopher/
+
+OO go https://nathany.com/good/
+
+an incindiary post that trended earlier this year http://www.jtolds.com/writing/2016/03/go-channels-are-bad-and-you-should-feel-bad/
+
+very good guide https://gobyexample.com/hello-world
