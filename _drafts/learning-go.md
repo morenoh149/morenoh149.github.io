@@ -23,3 +23,5 @@ OO go https://nathany.com/good/
 an incindiary post that trended earlier this year http://www.jtolds.com/writing/2016/03/go-channels-are-bad-and-you-should-feel-bad/
 
 very good guide https://gobyexample.com/hello-world
+
+https://deadlockempire.github.io/
