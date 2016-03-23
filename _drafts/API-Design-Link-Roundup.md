@@ -28,3 +28,7 @@ with accompanying [Slides](http://lcsd05.cs.tamu.edu/slides/keynote.pdf)
 to read not sure if worth including 
 * http://restlet.com/blog/2015/03/16/designing-a-web-api/
 * https://templth.wordpress.com/2014/12/15/designing-a-web-api/
+
+on software apis:
+
+* the little manual of api Design "/assets/the-little-manual-of-api-design.pdf"
