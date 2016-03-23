@@ -32,3 +32,4 @@ to read not sure if worth including
 on software apis:
 
 * the little manual of api Design "/assets/the-little-manual-of-api-design.pdf"
+* the unix philosophy http://www.faqs.org/docs/artu/ch01s06.html
