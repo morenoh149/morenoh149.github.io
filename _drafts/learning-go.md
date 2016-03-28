@@ -25,3 +25,5 @@ an incindiary post that trended earlier this year http://www.jtolds.com/writing/
 very good guide https://gobyexample.com/hello-world
 
 https://deadlockempire.github.io/
+
+a good self contained resource http://openmymind.net/The-Little-Go-Book/
