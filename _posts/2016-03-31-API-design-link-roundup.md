@@ -14,7 +14,8 @@ on what makes a good API.
 * [Web API Design ebook](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf) **recommended**
 * [Designing a web api](https://templth.wordpress.com/2014/12/15/designing-a-web-api/)
 * If you're hardcore you can read Roy Fieldings dissertation [Architectural Styles and
-the Design of Network-based Software Architectures](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) wher he derives (and coins) [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) in chapter 5
+the Design of Network-based Software Architectures](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) where he 
+derives (and coins) [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) in chapter 5
 
 on software apis:
 
@@ -22,9 +23,13 @@ on software apis:
 * [The little manual of api Design](/assets/the-little-manual-of-api-design.pdf)
 * [The unix philosophy](http://www.faqs.org/docs/artu/ch01s06.html)
 
-Its great if you invest in a way to play with your api like [Swagger](http://swagger.io/). At Capsule Health we
+At Capsule Health we
 have followed [jsonapi](http://jsonapi.org/) as a way to structure the api. Future directions may
 include [GraphQL](http://graphql.org/) and [API Gateway](http://microservices.io/patterns/apigateway.html).
+
+Its great if you invest in a way to interact with your api for members on the mobile team or other services. 
+Technologies like [Swagger](http://swagger.io/), [RAML](http://raml.org/) and [Api Blueprint](https://apiblueprint.org/)
+allow you to spec out apis in a highlevel language and, in some instances, generate production code.
 
 Bonus video:
 
