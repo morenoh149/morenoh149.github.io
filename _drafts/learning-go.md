@@ -27,3 +27,9 @@ very good guide https://gobyexample.com/hello-world
 https://deadlockempire.github.io/
 
 a good self contained resource http://openmymind.net/The-Little-Go-Book/
+
+if you're dealing with JSON (and it's hard not to be) read http://blog.golang.org/json-and-go
+
+go channel axioms http://dave.cheney.net/2014/03/19/channel-axioms
+
+go slices usage and internals https://blog.golang.org/go-slices-usage-and-internals
