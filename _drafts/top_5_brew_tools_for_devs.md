@@ -17,3 +17,5 @@ install gist`
 
 Bonus:
 * cowsay - Useful for display funny messages `brew install cowsay`
+
+* cloc - Count, and compute differences of, lines of source code and comments.
