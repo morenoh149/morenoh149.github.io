@@ -33,3 +33,5 @@ if you're dealing with JSON (and it's hard not to be) read http://blog.golang.or
 go channel axioms http://dave.cheney.net/2014/03/19/channel-axioms
 
 go slices usage and internals https://blog.golang.org/go-slices-usage-and-internals
+
+chrome extension to make the go playground more pleasant https://chrome.google.com/webstore/detail/better-go-playground/odfhkelcmblecfdnboahphiafolojmpl
