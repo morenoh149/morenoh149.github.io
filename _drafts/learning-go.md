@@ -35,3 +35,9 @@ go channel axioms http://dave.cheney.net/2014/03/19/channel-axioms
 go slices usage and internals https://blog.golang.org/go-slices-usage-and-internals
 
 chrome extension to make the go playground more pleasant https://chrome.google.com/webstore/detail/better-go-playground/odfhkelcmblecfdnboahphiafolojmpl
+
+constants in Go https://blog.golang.org/constants
+
+advanced testing https://youtu.be/yszygk1cpEc
+
+reflection in Go http://blog.golang.org/laws-of-reflection
