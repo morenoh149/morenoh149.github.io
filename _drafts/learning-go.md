@@ -41,3 +41,5 @@ constants in Go https://blog.golang.org/constants
 advanced testing https://youtu.be/yszygk1cpEc
 
 reflection in Go http://blog.golang.org/laws-of-reflection
+
+styleguide beyond goimports https://github.com/golang/go/wiki/CodeReviewComments
