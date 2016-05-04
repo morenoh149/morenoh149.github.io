@@ -40,6 +40,10 @@ constants in Go https://blog.golang.org/constants
 
 advanced testing https://youtu.be/yszygk1cpEc
 
-reflection in Go http://blog.golang.org/laws-of-reflection
-
 styleguide beyond goimports https://github.com/golang/go/wiki/CodeReviewComments
+
+6 years of go, best practices https://peter.bourgon.org/go-best-practices-2016/#configuration
+
+advanced:
+
+llvm in go https://blog.felixangell.com/an-introduction-to-llvm-in-go/
