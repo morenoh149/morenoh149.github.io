@@ -9,8 +9,10 @@ you spend enough time there they'll inevitably tell you do to the [tour](https:/
 
 https://gobyexample.com/hello-world
 
-stdlib sql tutorial http://go-database-sql.org/index.html
+Do https://golang.org/doc/code.html to get some basic environment issues out of the way and learn how to call things from different
+packages. Doing this first would have saved me some headaches.
 
+stdlib sql tutorial http://go-database-sql.org/index.html
 
 theory
 https://en.wikipedia.org/wiki/Guarded_Command_Language
@@ -44,6 +46,21 @@ styleguide beyond goimports https://github.com/golang/go/wiki/CodeReviewComments
 
 6 years of go, best practices https://peter.bourgon.org/go-best-practices-2016/#configuration
 
+how to use the `flag` stdlib package to give your software arguments https://robots.thoughtbot.com/where-to-define-command-line-flags-in-go
+
 advanced:
 
 llvm in go https://blog.felixangell.com/an-introduction-to-llvm-in-go/
+
+contrast go linking with C linking http://cs-fundamentals.com/c-programming/static-and-dynamic-linking-in-c.php
+
+Use godoc to document your programs, it's very good https://blog.golang.org/godoc-documenting-go-code
+
+All the articles listed at https://golang.org/doc/ are very good and essential actually for many useful go tools, like `go test` and `go doc`.
+The Go team has developed a very good blog.
+
+go wiki learn page https://github.com/golang/go/wiki/Learn
+
+video: golang testing sydjs 2014 https://www.youtube.com/watch?v=ndmB0bj7eyw
+
+video: web apps in go "Code that grows with grace" https://vimeo.com/53221560
