@@ -64,3 +64,5 @@ go wiki learn page https://github.com/golang/go/wiki/Learn
 video: golang testing sydjs 2014 https://www.youtube.com/watch?v=ndmB0bj7eyw
 
 video: web apps in go "Code that grows with grace" https://vimeo.com/53221560
+
+strings: https://blog.golang.org/strings
