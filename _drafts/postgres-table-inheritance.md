@@ -30,3 +30,6 @@ approach we can adopt in our projects?
 
 https://github.com/disqus/pg_audit
 
+
+scaling:
+http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from
