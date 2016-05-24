@@ -1,7 +1,9 @@
+---
+layout: post
+title: Fix Ruby OpenSSL missing
+---
 
-Today I was starting work on a new project that relied on Ruby. After using rvm for the latest
-
-if you see
+Today I was starting work on a new project that relied on Ruby. I saw the following error
 
 gem install bundle
 ERROR:  While executing gem ... (Gem::Exception)

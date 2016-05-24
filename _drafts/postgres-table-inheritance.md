@@ -22,3 +22,11 @@ Postgres supports partitioning via table inheritance, thus the two topics are de
 
 
 * [mysql vs postgres](http://www.wikivs.com/wiki/MySQL_vs_PostgreSQL#bodyContent)
+
+How to keep track of stuff:
+
+if you're a serious company you're going to want to keep track of changes in your database. Is there a generic enough
+approach we can adopt in our projects?
+
+https://github.com/disqus/pg_audit
+
