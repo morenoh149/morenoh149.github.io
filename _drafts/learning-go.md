@@ -54,6 +54,8 @@ llvm in go https://blog.felixangell.com/an-introduction-to-llvm-in-go/
 
 contrast go linking with C linking http://cs-fundamentals.com/c-programming/static-and-dynamic-linking-in-c.php
 
+go concurrency pattern: piplines https://blog.golang.org/pipelines *actually used at work!*
+
 Use godoc to document your programs, it's very good https://blog.golang.org/godoc-documenting-go-code
 
 All the articles listed at https://golang.org/doc/ are very good and essential actually for many useful go tools, like `go test` and `go doc`.
