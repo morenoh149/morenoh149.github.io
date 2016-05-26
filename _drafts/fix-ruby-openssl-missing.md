@@ -13,4 +13,17 @@ run
 
 `brew install chruby ruby-install`
 `ruby-install ruby -- --with-openssl-dir=/usr/local/bin/openssl`
+then switch to it with
+`chruby <ruby version>`
 https://medium.com/@heidar/switching-from-rbenv-to-postmodern-s-ruby-install-and-chruby-f0daa24b36e6#.sx932c8to
+
+I still got another related error
+
+gem install eventmachine -v '1.2.0.1'
+Building native extensions.  This could take a while...
+ERROR:  Error installing eventmachine:
+	ERROR: Failed to build gem native extension.
+
+to fix this
+`brew link openssl`
+and follow the instructions. Which told me to unlink another package and rerun the command.
