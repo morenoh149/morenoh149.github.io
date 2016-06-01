@@ -60,6 +60,7 @@ Use godoc to document your programs, it's very good https://blog.golang.org/godo
 
 All the articles listed at https://golang.org/doc/ are very good and essential actually for many useful go tools, like `go test` and `go doc`.
 The Go team has developed a very good blog.
+`The cover story` https://blog.golang.org/cover
 
 go wiki learn page https://github.com/golang/go/wiki/Learn
 
@@ -71,4 +72,4 @@ strings: https://blog.golang.org/strings
 
 dealing with json https://eager.io/blog/go-and-json/ note: this resource actually demos using field tags to unmarshal json with odd key names like "_foo"
 
-
+demo unmarshal json https://play.golang.org/p/7FnyUrH_EV ""
