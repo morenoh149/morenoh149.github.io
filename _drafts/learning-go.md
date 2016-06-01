@@ -68,3 +68,7 @@ video: golang testing sydjs 2014 https://www.youtube.com/watch?v=ndmB0bj7eyw
 video: web apps in go "Code that grows with grace" https://vimeo.com/53221560
 
 strings: https://blog.golang.org/strings
+
+dealing with json https://eager.io/blog/go-and-json/ note: this resource actually demos using field tags to unmarshal json with odd key names like "_foo"
+
+
