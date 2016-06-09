@@ -7,7 +7,7 @@ https://learnxinyminutes.com/docs/go/
 freenode #go-nuts
 you spend enough time there they'll inevitably tell you do to the [tour](https://tour.golang.org/basics/3)
 
-https://gobyexample.com/hello-world
+Learn Go by following examples https://gobyexample.com/hello-world
 
 Do https://golang.org/doc/code.html to get some basic environment issues out of the way and learn how to call things from different
 packages. Doing this first would have saved me some headaches.
@@ -23,8 +23,6 @@ http://whipperstacker.com/2015/10/05/3-trivial-concurrency-exercises-for-the-con
 OO go https://nathany.com/good/
 
 an incindiary post that trended earlier this year http://www.jtolds.com/writing/2016/03/go-channels-are-bad-and-you-should-feel-bad/
-
-very good guide https://gobyexample.com/hello-world
 
 https://deadlockempire.github.io/
 
@@ -56,8 +54,17 @@ contrast go linking with C linking http://cs-fundamentals.com/c-programming/stat
 
 go concurrency pattern: piplines https://blog.golang.org/pipelines *actually used at work!*
 
+## use godoc
 Use godoc to document your programs, it's very good https://blog.golang.org/godoc-documenting-go-code
+Then read the doc on the tool for usage https://godoc.org/golang.org/x/tools/cmd/godoc We use it at Capsule to generate our internal api
+documentation.
 
+## how to use godocs on your project
+`godoc -http=:6060 -goroot=.` assuming you're in this project's directory.
+
+godoc docs are designed to give you a snapshot of all go code on your machine. Once you have this running you can see the docs by navigating to http://localhost:6060/
+
+# read the official blog
 All the articles listed at https://golang.org/doc/ are very good and essential actually for many useful go tools, like `go test` and `go doc`.
 The Go team has developed a very good blog.
 `The cover story` https://blog.golang.org/cover
