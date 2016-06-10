@@ -14,9 +14,11 @@ packages. Doing this first would have saved me some headaches.
 
 stdlib sql tutorial http://go-database-sql.org/index.html
 
-theory
+## Theory
 https://en.wikipedia.org/wiki/Guarded_Command_Language
 https://en.wikipedia.org/wiki/Communicating_sequential_processes
+https://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html
+https://talks.golang.org/2012/splash.article
 
 http://whipperstacker.com/2015/10/05/3-trivial-concurrency-exercises-for-the-confused-newbie-gopher/
 
@@ -80,3 +82,4 @@ strings: https://blog.golang.org/strings
 dealing with json https://eager.io/blog/go-and-json/ note: this resource actually demos using field tags to unmarshal json with odd key names like "_foo"
 
 demo unmarshal json https://play.golang.org/p/7FnyUrH_EV ""
+
