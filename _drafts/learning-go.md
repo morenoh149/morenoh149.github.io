@@ -84,3 +84,9 @@ dealing with json https://eager.io/blog/go-and-json/ note: this resource actuall
 
 demo unmarshal json https://play.golang.org/p/7FnyUrH_EV ""
 
+* post idea explore http://devdocs.io/go/go/parser/index to parse Go programs with extended custom syntax, say a harry keyword that increments a counter
+https://golang.org/pkg/go/
+
+# advanced exercises
+* [Go examples](https://github.com/golang/example)
+* type checking https://github.com/golang/example/tree/master/gotypes
