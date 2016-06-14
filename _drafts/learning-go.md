@@ -19,6 +19,7 @@ https://en.wikipedia.org/wiki/Guarded_Command_Language
 https://en.wikipedia.org/wiki/Communicating_sequential_processes
 https://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html
 https://talks.golang.org/2012/splash.article
+http://research.swtch.com/interfaces <-- read this harry
 
 http://whipperstacker.com/2015/10/05/3-trivial-concurrency-exercises-for-the-confused-newbie-gopher/
 
