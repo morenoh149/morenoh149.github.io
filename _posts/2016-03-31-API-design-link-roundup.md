@@ -16,6 +16,7 @@ on what makes a good API.
 * If you're hardcore you can read Roy Fieldings dissertation [Architectural Styles and
 the Design of Network-based Software Architectures](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) where he 
 derives (and coins) [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) in chapter 5
+* [Learn REST: Tutorial](http://www.restapitutorial.com/)
 
 on software apis:
 
