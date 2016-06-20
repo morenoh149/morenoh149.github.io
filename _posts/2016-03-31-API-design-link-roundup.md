@@ -17,6 +17,7 @@ on what makes a good API.
 the Design of Network-based Software Architectures](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) where he 
 derives (and coins) [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) in chapter 5
 * [Learn REST: Tutorial](http://www.restapitutorial.com/)
+* [Rest API Design Resource Modeling](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling)
 
 on software apis:
 
@@ -27,6 +28,11 @@ on software apis:
 At Capsule Health we
 have followed [jsonapi](http://jsonapi.org/) as a way to structure the api. Future directions may
 include [GraphQL](http://graphql.org/) and [API Gateway](http://microservices.io/patterns/apigateway.html).
+
+An interesting topic is what granularity size do you use when choosing your resources. We found that blindly using
+JSONAPI essentially gives us an API that is no more than a wrapper around a database. Increasingly the (javascript)
+community has been reevaluating REST as a dogma. Projects like GraphQL and Falcor deviate from strict REST with
+the goal of allowing clients to be more declarative in their interactions with the backend.
 
 Its great if you invest in a way to interact with your api for members on the mobile team or other services. 
 Technologies like [Swagger](http://swagger.io/), [RAML](http://raml.org/) and [Api Blueprint](https://apiblueprint.org/)
