@@ -74,9 +74,14 @@ The Go team has developed a very good blog.
 
 go wiki learn page https://github.com/golang/go/wiki/Learn
 
-video: golang testing sydjs 2014 https://www.youtube.com/watch?v=ndmB0bj7eyw
+## Videos
+golang testing sydjs 2014 https://www.youtube.com/watch?v=ndmB0bj7eyw
 
-video: web apps in go "Code that grows with grace" https://vimeo.com/53221560
+web apps in go "Code that grows with grace" https://vimeo.com/53221560
+
+Go: a simple programming environment https://vimeo.com/53221558 goes over some small go programs and interesting parts of the standard library
+I would transcribe the larger example he goes over towards the end. It's a router that reads in a config file. It also demonstrates how to test such a
+server. https://github.com/nf/webfront
 
 strings: https://blog.golang.org/strings
 
