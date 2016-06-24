@@ -12,6 +12,7 @@ Learn Go by following examples https://gobyexample.com/hello-world
 Do https://golang.org/doc/code.html to get some basic environment issues out of the way and learn how to call things from different
 packages. Doing this first would have saved me some headaches.
 
+## Exercises
 stdlib sql tutorial http://go-database-sql.org/index.html
 
 ## Theory
