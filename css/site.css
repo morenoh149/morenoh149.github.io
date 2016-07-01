@@ -77,14 +77,12 @@ dd li { font-size: 1.1em; }
   dd p { font-size: 1.3em; }
   dd li { font-size: 1.3em; }
   .post p { font-size: 1.3em; }
-  .post li { font-size: 1.3em; }
 }
 
 @media (min-width: 992px) {
   dd p { font-size: 1.5em; }
   dd li { font-size: 1.5em; }
   .post p { font-size: 1.5em; }
-  .post li { font-size: 1.5em; }
 }
 
 .center { text-align: center; }
