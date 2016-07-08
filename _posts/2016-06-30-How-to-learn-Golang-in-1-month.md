@@ -5,7 +5,23 @@ title: Learn Golang in 1 Month
 
 At my new job we have a Go backend. It's a nice language with familiar syntax. Someone with C, C++, C# or Java experience
 will feel right at home. A language designed to make Software Engineering easier. At the same time it's being sought out to address
-bottlenecks in Ruby, Node.js and [Python](https://www.reddit.com/r/golang/comments/2aup1g/why_are_people_ditching_python_for_go/ciyzj2o) codebases.
+bottlenecks in Ruby, Perl, Node.js and Python codebases.
+
+We chose Go because it seemed like a useful tool to understand for building large software systems. The Scripting languages
+are among the slowest, Go is compiled into a binary so no runtime is spent interpreting. A binary also makes the
+deployment process painless as you can just scp the file around. Go is a modern language with first-class concurrency primitives.
+It's been designed to leverage modern hardware with multiple cores.
+
+Go is a language designed in the service of software engineering. Other programming languages come from academia Haskell, OCAML, ML, etc.
+Go on the otherhand was designed to solve problems faced at Google. One such problem is software management. Meaning, how do we deal with
+codebases which are millions of lines long? How do we deal with version skew over time? Go is designed to be a very concise language. It's
+spec is among the smallest of any language. Such conciseness allows for the creation of code reading tools. Tools like `gofmt`, `gofix` and
+`godoc`. The language also lacks class-inheritance favoring the gang-of-four's 
+[Composition over Inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance) pattern.
+
+![Go: 90% Perfect, 100% of the time](http://pbs.twimg.com/media/Ckhu1oJWYAAcG4t.jpg)
+
+*Source: [Program your next server in Go](https://talks.golang.org/2016/applicative.slide#1)*
 
 ### Syntax
 * [Learn X in Y Minutes - Go](https://learnxinyminutes.com/docs/go/)
@@ -38,6 +54,7 @@ essential actually for many useful go tools like `go test` and `go doc`. Useful 
 * [Go concurrency patterns: Pipelines](https://blog.golang.org/pipelines)
 * [Strings](https://blog.golang.org/strings)
 * [Go wiki learn page](https://github.com/golang/go/wiki/Learn)
+* [Introducing gofix](https://blog.golang.org/introducing-gofix)
 
 ### Web applications
 * [Writing Web applications](https://golang.org/doc/articles/wiki/) build a web app with just the standard library
