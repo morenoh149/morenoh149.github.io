@@ -13,6 +13,7 @@ TODO
 	* make gallery smaller
 * figure out how to add alt and titles to all images
 * create easteregg for when visitors click on my logo
+* replace social buttons with http://sharingbuttons.io/
 
 ## Running
 ```
