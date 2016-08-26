@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Great Emails in Computer Science
+title: Great Papers in Computer Science
 ---
 
 Back in SF I found a great volume *Great Papers in Computer Science*.
@@ -9,7 +9,7 @@ missed it and decided to see if I could recreate it from freely available
 sources.
 
 Here it is. As links and a zip file at the end. I find this collection quite fascinating
-it traces out important discoveries of out field by the discoverers. It's pretty much a CS
+as it traces out important discoveries of our field by the discoverers. It's pretty much a CS
 degree in a book.
 
 Some papers I could not find. If you can share an open copy of any of
@@ -21,24 +21,24 @@ the internet. Some copies of Pascal's letters for example. 🤔
 I also included some bonus papers I personally like and people should be aware of.
 
 ### Algorithms and Data Structures
-* The Complexity of Theorem Proving Procedures By Stephen A. Cook
-* On the Conceptual Complexity of Algorithms By J. Hartmanis and R. E. Stearns
-* Quicksort By C. A. R. Hoare
-* Finite Automata and Their Decision Problems By M. O. Rabin and D. Scott
+* [The Complexity of Theorem Proving Procedures]() By Stephen A. Cook
+* On the Conceptual Complexity of Algorithms]() By J. Hartmanis and R. E. Stearns
+* Quicksort]() By C. A. R. Hoare
+* Finite Automata and Their Decision Problems]() By M. O. Rabin and D. Scott
 
 ### Programming Languages
-* The FORTRAN Automatic Coding System By J. W. Backus, et al.
-* An Axiomatic Basis for Computer Programming By C. A. R. Hoare
-* An Axiomatic Definition of the Programming Language Pascal By C. A. R. Hoare and N. Wirth
-* The Contour Model of Block Structured Processes By John B. Johnston
-* On the Translation of Languages from Left to Right By Donald E. Knuth
-* Revised Report on the Algorithmic Language ALGOL 60 By Peter Naur, et al.
+* The FORTRAN Automatic Coding System]() By J. W. Backus, et al.
+* An Axiomatic Basis for Computer Programming]() By C. A. R. Hoare
+* An Axiomatic Definition of the Programming Language Pascal]() By C. A. R. Hoare and N. Wirth
+* The Contour Model of Block Structured Processes]() By John B. Johnston
+* On the Translation of Languages from Left to Right]() By Donald E. Knuth
+* Revised Report on the Algorithmic Language ALGOL 60]() By Peter Naur, et al.
 
 ### Architecture
-* First Draft of a Report on the EFVAC By John von Neumann
-* A Symbolic Analysis of Relay and Switching Circuits By Claude E. Shannon
-* Alto: A Personal Computer By C. P. Thacker, E. M. McCreight, B. W. Lampson, R. F. Sproull, and D. R Boggs
-* The Best Way to Design an Automatic Calculating Machine By M. V. Wilkes
+* First Draft of a Report on the EFVAC]() By John von Neumann
+* A Symbolic Analysis of Relay and Switching Circuits]() By Claude E. Shannon
+* Alto: A Personal Computer]() By C. P. Thacker, E. M. McCreight, B. W. Lampson, R. F. Sproull, and D. R Boggs
+* The Best Way to Design an Automatic Calculating Machine]() By M. V. Wilkes
 
 ### Numerical and Scientific Computing
 * On Computable Numbers, with an Application to the Entscheidungsproblem By A. M. Turing
