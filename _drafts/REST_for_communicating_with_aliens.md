@@ -27,3 +27,4 @@ Refs:
 * [Man-Computer Symbiosis](http://worrydream.com/refs/Licklider%20-%20Man-Computer%20Symbiosis.pdf)
 * https://en.wikipedia.org/wiki/Representational_state_transfer
 * https://en.wikipedia.org/wiki/Media_type
+* http://groups.csail.mit.edu/mac/users/gjs/6.945/readings/robust-systems.pdf
