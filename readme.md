@@ -5,15 +5,17 @@ This blog is built using github pages, twitter bootstrap, jekyll, yeoman jekyllr
 
 TODO
 * prevent sidebar horizontal scroll on mobile
-* add archives sections so visitors know I have been writing for a while
+* add archives so visitors know I have been writing for a while
 * revise about page
 	* should double as a CV
 	* should have things that would not fit onto a CV but are CV worthy
 	* add OSS list to about page
 	* make gallery smaller
 * figure out how to add alt and titles to all images
-* create easteregg for when visitors click on my logo
+* create easteregg for when visitors click
 * replace social buttons with http://sharingbuttons.io/
+* add mailinglist
+  * use AWS SES https://aws.amazon.com/ses/
 
 ## Running
 ```
