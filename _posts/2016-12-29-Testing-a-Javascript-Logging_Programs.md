@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Testing a Javascript Logging Program
+title: Testing Javascript Logging Programs
 ---
 
 This turned out to be more time consuming than I'd like. I was testing a Node.js program that would log to stdout as prescribed by
