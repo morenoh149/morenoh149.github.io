@@ -4,7 +4,7 @@ title: Testing Javascript Logging Programs
 ---
 
 This turned out to be more time consuming than I'd like. I was testing a Node.js program that would log to stdout as prescribed by
-[The 12 Factor Apps - Logs](https://12factor.net/logs).
+[The 12 Factor Apps - Logs](https://12factor.net/logs) page.
 
 Say you have something like
 {% highlight javascript %}
@@ -12,9 +12,8 @@ Say you have something like
 setInterval(() => console.log(Date.now()), 1000);
 {% endhighlight %}
 
-We want to have a test where the program under test is executed, allowed to
-print items to `stdout` and then we want to make assertions about what was
-logged out.
+We want to execute the program under test, allow it to
+print to `stdout` and then make assertions about the output.
 {% highlight javascript %}
 // test.js
 import test from 'ava';
@@ -57,7 +56,7 @@ test('another test to illustrate parallelism', t => {
 });
 {% endhighlight %}
 
-Some key things that sunk me time:
+Some tips:
 
 * [AVA test runner](https://github.com/avajs/ava) would report a passing test if it reached the end of
 the test without error. To avoid this I would have to wrap the `exec` call
