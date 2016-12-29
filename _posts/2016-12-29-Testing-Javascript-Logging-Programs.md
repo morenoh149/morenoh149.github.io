@@ -59,10 +59,9 @@ test('another test to illustrate parallelism', t => {
 
 Some key things that sunk me time:
 
-* [AVA test runner](https://github.com/avajs/ava) would report the success passed if it reached the end of
+* [AVA test runner](https://github.com/avajs/ava) would report a passing test if it reached the end of
 the test without error. To avoid this I would have to wrap the `exec` call
 in a Promise.
-* utilize `exec`'s `option.SERVER_PORT` option with different port values for every test to allow your test suite to run many tests and server processes in parallel.
+* utilize `exec`'s `option.SERVER_PORT` option with different port values for every test to allow your test suite to run tests and server processes in parallel.
 * `exec`'s callback is executed after the process terminates. Since we are
-testing a long running process we should start it, interact with it and
-finally terminate it by sending it a `SIGTERM` signal. Above we do so in a `setTimeout`.
+testing a long running process we need to explicitly terminate the server by sending it a `SIGTERM` signal. Above we do so in a `setTimeout`.
