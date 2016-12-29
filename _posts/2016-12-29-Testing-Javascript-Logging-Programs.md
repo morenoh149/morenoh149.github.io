@@ -65,3 +65,5 @@ in a Promise.
 * utilize `exec`'s `option.SERVER_PORT` option with different port values for every test to allow your test suite to run tests and server processes in parallel.
 * `exec`'s callback is executed after the process terminates. Since we are
 testing a long running process we need to explicitly terminate the server by sending it a `SIGTERM` signal. Above we do so in a `setTimeout`.
+
+[Source on Github](https://github.com/morenoh149/jsLoggingExample)
