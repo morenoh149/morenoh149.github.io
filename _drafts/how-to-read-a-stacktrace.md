@@ -41,3 +41,10 @@ Error: value is undefined
 ```
 
 what are these?
+
+make these and explain them
+?? django-traceback.html
+?? stacktrace.js
+?? stacktrace.py
+?? stacktrace.rb
+
