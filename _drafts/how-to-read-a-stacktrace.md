@@ -53,3 +53,6 @@ for very large output you may like the following tip,
 in vim you can navigate to "11:20000" like so
 * `[line number]gg` so for the above `11gg` will jump to the 11th line
 * `[column number]l` so for the above `20000l` will advance the cursor to the 200000th column
+
+other times you may have a dump but the newlines aren't respected for whatever reason
+* `%s/,/,\r/g` will do a global replace on commas and insert and carriage return after them
