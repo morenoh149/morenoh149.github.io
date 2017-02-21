@@ -48,3 +48,8 @@ make these and explain them
 ?? stacktrace.py
 ?? stacktrace.rb
 
+for very large output you may like the following tip,
+
+in vim you can navigate to "11:20000" like so
+* `[line number]gg` so for the above `11gg` will jump to the 11th line
+* `[column number]l` so for the above `20000l` will advance the cursor to the 200000th column
