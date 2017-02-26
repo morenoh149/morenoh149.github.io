@@ -67,22 +67,22 @@ img.disabled { opacity: 0.3; }
 }
 
 p { text-align: justify; }
-dd p { font-size: 1.1em; }
-dd li { font-size: 1.1em; }
-.post p { font-size: 1.1em; }
-.post li { font-size: 1.1em; }
+dd p { font-size: 14px; }
+dd li { font-size: 14px; }
+.post p { font-size: 14px; }
+.post li { font-size: 14px; }
 .post img { margin: 0 auto; }
 
 @media (min-width: 768px) {
-  dd p { font-size: 1.3em; }
-  dd li { font-size: 1.3em; }
-  .post p { font-size: 1.3em; }
+  dd p { font-size: 18px; }
+  dd li { font-size: 18px; }
+  .post p { font-size: 18px; }
 }
 
 @media (min-width: 992px) {
-  dd p { font-size: 1.5em; }
-  dd li { font-size: 1.5em; }
-  .post p { font-size: 1.5em; }
+  dd p { font-size: 21px; }
+  dd li { font-size: 21px; }
+  .post p { font-size: 21px; }
 }
 
 .center { text-align: center; }
