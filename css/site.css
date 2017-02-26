@@ -135,3 +135,13 @@ span.caption {
 }
 .tweet-btn a { color: white; }
 .tweet-btn a:hover { text-decoration: none; }
+
+/* code blocks */
+figure.highlight > pre {
+  padding: 5px;
+}
+
+figure.highlight pre {
+  margin: 0;
+  border: none;
+}

@@ -3,17 +3,16 @@ layout: post
 title: How to read a Javascript Stack Trace
 ---
 
-A Stack Trace as a report of the active stack frames at a certain point in time during the execution of a program.
+A Stack Trace is a report of the active stack frames at a certain point in time during the execution of a program.
 You should learn how to interpret these to debug live systems because in many cases a stack trace is all you have to solve a customer's issue.
 
 You can think of a stack trace as a timeline of function calls that lead up to the error. Software programs typically have a runtime stack. When a function is
 invoked the runtime will create a new activation record and place that on "top" of the stack. In this
-way a software can weave in and out of function calls, many times entering the same function in a particular trace if
-its a reusable function.
+way a program can weave in and out of function calls, many times entering the same function in a particular trace.
 
 ### Example
-The following is a minimal example of a program that encounters an error and shows a stacktrace.
-{% highlight javascript %}
+The following is a minimal example of a program that encounters an error and shows a stack trace.
+{% highlight javascript linenos %}
 // stacktrace.js
 a = () => {
   b();
@@ -30,15 +29,15 @@ a();
 this program would produce the output
 {% highlight shell %}
 $ node stacktrace.js
-/Users/harrymoreno/stacktrace.js:28
+/Users/harrymoreno/stacktrace.js:9
   notDefined();
   ^
 
 ReferenceError: notDefined is not defined
-    at c (/Users/harrymoreno/stacktrace.js:28:3)
-    at b (/Users/harrymoreno/stacktrace.js:25:3)
-    at a (/Users/harrymoreno/stacktrace.js:22:3)
-    at Object.<anonymous> (/Users/harrymoreno/stacktrace.js:30:1)
+    at c (/Users/harrymoreno/stacktrace.js:9:3)
+    at b (/Users/harrymoreno/stacktrace.js:6:3)
+    at a (/Users/harrymoreno/stacktrace.js:3:3)
+    at Object.<anonymous> (/Users/harrymoreno/stacktrace.js:11:1)
     at Module._compile (module.js:541:32)
     at Object.Module._extensions..js (module.js:550:10)
     at Module.load (module.js:456:32)
@@ -92,12 +91,12 @@ Notes:
 
 * Many folks run their program through a compression step like [UglifyJS](https://github.com/mishoo/UglifyJS2#usage).
 This reduces the size of the file downloaded by your visitors.
-One downside is that the stack traces produced by this optimized build becomes much harder to read as the function
-names are swapped for single character names. Functions like `notifyAllUsers` would be renamed to `l` for example.
+One downside is that the stack trace produced becomes much harder to read as the function
+names are swapped for single character names. For example, functions like `notifyAllUsers` would be renamed to `l`.
 * To avoid having the browser download every one of the .js files in your codebase we typically put them all into a
 single bundle. This reduces the number of http requests the browser needs to perform (and their associated overheads).
   * However, when you get a stack trace it'll now point to code regions that are very deep in the file like line 14, column
-20,000 for example.
+20,000.
   * The bundle itself may be over 1 MB in size. This is large enough to crash many code editors.
 
 #### Stack Trace reading in VIM
@@ -105,13 +104,20 @@ Thankfully vim is able to handle large files well enough. Some tips:
 
 * navigate to a deep region of a file (`11:20000`) like so
   * `[line number]gg` so for the above `11gg` will jump to the 11th line
-  * `[column number]l` so for the above `20000l` will advance the cursor to the 200000th column
+  * `[column number]l` so for the above `20000l` will advance the cursor to the 20000th column
 * you may have a dump but the newlines aren't respected for whatever reason
-  * `%s/,/,\r/g` will do a global replace on commas and insert and carriage return after them
+  * `%s/,/,\r/g` will do a global replace on commas and insert a newline after
 
 #### Stringify Error objects with a stack trace
 One thing I was surprised to discover was stringification of javascript Error object don't include the related stack
-trace by default. Instead it's made available as a property `myError.stack`. When logging a client's state a naive
+trace by default. Instead it's made available as a property `myError.stack`.
+
+{% highlight javascript %}
+var error = new Error('testing');
+JSON.stringify(error);  // produces {}
+{% endhighlight %}
+
+When logging a client's state a naive
 solution may be to process all objects through `JSON.stringify()` but this will omit any Error object's stack traces.
 You can solve this by adding a small `replacer` function as an argument to `stringify`
 
@@ -120,16 +126,17 @@ You can solve this by adding a small `replacer` function as an argument to `stri
 function replaceErrors(key, value) {
     if (value instanceof Error) {
         var error = {};
-        Object.getOwnPropertyNames(value).forEach(function (key) {
+        Object.
+          getOwnPropertyNames(value).
+          forEach(function (key) {
             error[key] = value[key];
-        });
+          });
         return error;
     }
     return value;
 }
 var error = new Error('testing');
-error.detail = 'foo bar';
-console.log(JSON.stringify(error, replaceErrors));
+JSON.stringify(error, replaceErrors);
 {% endhighlight %}
 
 will return a string representation of the Error object along with it's stack trace. Making any sort of clientside
