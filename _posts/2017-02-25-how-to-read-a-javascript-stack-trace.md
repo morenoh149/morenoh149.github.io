@@ -46,17 +46,25 @@ ReferenceError: notDefined is not defined
     at Function.Module.runMain (module.js:575:10)
 {% endhighlight %}
 
-From Wikipedia _"The stack trace shows where the error occurs, namely in the c function. It also shows that the c function was called by b, which was called by a, which was in turn called by the code on the last line of the program. The activation records for each of these three functions would be arranged in a stack such that the a function would occupy the bottom of the stack and the c function would occupy the top of the stack."_
+From [Wikipedia](https://en.wikipedia.org/wiki/Stack_trace) _"The stack trace shows where the error occurs, namely in the c function. It also shows that the c function was called by b, which was called by a, which was in turn called by the code on the last line of the program. The activation records for each of these three functions would be arranged in a stack such that the a function would occupy the bottom of the stack and the c function would occupy the top of the stack."_
 
 Notice that our code is near the top of the stack trace. Typically when reading a stack trace I do the following:
 
 1. **Identify the frames that belong to me.** Towards the bottom you'll see module related frames from nodejs. When working
-with frameworks or libraries like Angular or lodash, you'll want to ignore frames that don't belong to you. As it's
+with frameworks or libraries you'll want to ignore frames that don't belong to you. As it's
 unlikely the issue lays in the dependencies. (Unless you've found a bug in your dependency in which case you should
 report the issue with the maintainers!).
 1. **Start reading from the top.** The stack trace will include all frames up to the error encountered, but that
 doesn't always mean the problem lays there. The end of the stack trace is only a starting point in your search to fix
 the bug.
+1. **The Type of Error.** The type of error caught is listed. Above the runtime is complaining that `notDefined` was
+asked to be executed, but no such function is defined in the program. A `ReferenceError` is then raised.
+  - _Note_ there are 5 [Native Error Types](http://www.ecma-international.org/ecma-262/6.0/#sec-native-error-types-used-in-this-standard) in Javascript,
+  `EvalError`, `RangeError`, `ReferenceError`, `SyntaxError`, `TypeError` and `URIError`.
+1. **Stack Frame entry point.** Finally, the actual stack frame descriptions are listed. Each line is comprised of the
+filename where the function was executed (`/Users/harrymoreno/stacktrace.js`) as well as the line number in the
+file and the exact column in the line. Above you see `9:3` which indicates the final error was caught on line 9 of the
+file `stackrace.js` at column 3.
 
 ### Practical Example
 In modern Single Page Applications certain optimizations are done that will make interpreting a stack trace much
@@ -91,34 +99,26 @@ Notes:
 
 * Many folks run their program through a compression step like [UglifyJS](https://github.com/mishoo/UglifyJS2#usage).
 This reduces the size of the file downloaded by your visitors.
-One downside is that the stack trace produced becomes much harder to read as the function
+  * However, the stack trace produced becomes much harder to read as the function
 names are swapped for single character names. For example, functions like `notifyAllUsers` would be renamed to `l`.
+  * you can prettify your bundle but then the line and columns noted in the stack trace become meaningless
 * To avoid having the browser download every one of the .js files in your codebase we typically put them all into a
 single bundle. This reduces the number of http requests the browser needs to perform (and their associated overheads).
   * However, when you get a stack trace it'll now point to code regions that are very deep in the file like line 14, column
 20,000.
   * The bundle itself may be over 1 MB in size. This is large enough to crash many code editors.
 
-#### Stack Trace reading in VIM
-Thankfully vim is able to handle large files well enough. Some tips:
-
-* navigate to a deep region of a file (`11:20000`) like so
-  * `[line number]gg` so for the above `11gg` will jump to the 11th line
-  * `[column number]l` so for the above `20000l` will advance the cursor to the 20000th column
-* you may have a dump but the newlines aren't respected for whatever reason
-  * `%s/,/,\r/g` will do a global replace on commas and insert a newline after
-
 #### Stringify Error objects with a stack trace
-One thing I was surprised to discover was stringification of javascript Error object don't include the related stack
-trace by default. Instead it's made available as a property `myError.stack`.
+When logging a client's state a naive
+solution may be to process all objects through `JSON.stringify()`.
+One thing I was surprised to discover was stringification of Javascript Error objects don't include the related stack
+trace by default. Instead it's made available as a property `.stack`.
 
 {% highlight javascript %}
 var error = new Error('testing');
 JSON.stringify(error);  // produces {}
 {% endhighlight %}
 
-When logging a client's state a naive
-solution may be to process all objects through `JSON.stringify()` but this will omit any Error object's stack traces.
 You can solve this by adding a small `replacer` function as an argument to `stringify`
 
 {% highlight javascript %}
@@ -137,7 +137,18 @@ function replaceErrors(key, value) {
 }
 var error = new Error('testing');
 JSON.stringify(error, replaceErrors);
+// produces
+// '{"stack":"Error: testing\\n    at repl:1:13\\n    at REPLServer.defaultEval (repl.js:272:27)\\n    at bound (domain.js:280:14)\\n    at REPLServer.runBound [as eval] (domain.js:293:12)\\n    at REPLServer.<anonymous> (repl.js:441:10)\\n    at emitOne (events.js:101:20)\\n    at REPLServer.emit (events.js:188:7)\\n    at REPLServer.Interface._onLine (readline.js:219:10)\\n    at REPLServer.Interface._line (readline.js:561:8)\\n    at REPLServer.Interface._ttyWrite (readline.js:838:14)","message":"testing"}'
 {% endhighlight %}
 
-will return a string representation of the Error object along with it's stack trace. Making any sort of clientside
-state logging you implement much more useful.
+note it returns a serialized object with keys `message` and `stack`.
+
+#### Stack Trace reading in VIM
+I noted above that js bundles may be cumbersome to inspect in some editors. VIM is able to handle large files well enough.
+
+Some tips:
+
+* navigate to a deep region of a file (`11:20000`) like so
+  * `[line number]gg` so for the above `11gg` will jump to the 11th line
+  * `[column number]l` so for the above `20000l` will advance the cursor to the 20000th column
+* when serializing Error objects the newlines will be treated literally, `%s/,/,\r/g` will do a global replace on commas and insert a newline afterwards
