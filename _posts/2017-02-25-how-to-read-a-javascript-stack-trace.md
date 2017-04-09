@@ -46,7 +46,11 @@ ReferenceError: notDefined is not defined
     at Function.Module.runMain (module.js:575:10)
 {% endhighlight %}
 
-From [Wikipedia](https://en.wikipedia.org/wiki/Stack_trace) _"The stack trace shows where the error occurs, namely in the c function. It also shows that the c function was called by b, which was called by a, which was in turn called by the code on the last line of the program. The activation records for each of these three functions would be arranged in a stack such that the a function would occupy the bottom of the stack and the c function would occupy the top of the stack."_
+From [Wikipedia](https://en.wikipedia.org/wiki/Stack_trace) _"The stack trace shows where the error occurs, namely
+in the c function. It also shows that the c function was called by b, which was called by a, which was in turn
+called by the code on the last line of the program. The activation records for each of these three functions would
+be arranged in a stack such that the a function would occupy the bottom of the stack and the c function would
+occupy the top of the stack."_
 
 Notice that our code is near the top of the stack trace. Typically when reading a stack trace I do the following:
 
@@ -122,7 +126,6 @@ JSON.stringify(error);  // produces {}
 You can solve this by adding a small `replacer` function as an argument to `stringify`
 
 {% highlight javascript %}
-// http://stackoverflow.com/questions/18391212/is-it-not-possible-to-stringify-an-error-using-json-stringify
 function replaceErrors(key, value) {
     if (value instanceof Error) {
         var error = {};
@@ -141,7 +144,7 @@ JSON.stringify(error, replaceErrors);
 // '{"stack":"Error: testing\\n    at repl:1:13\\n    at REPLServer.defaultEval (repl.js:272:27)\\n    at bound (domain.js:280:14)\\n    at REPLServer.runBound [as eval] (domain.js:293:12)\\n    at REPLServer.<anonymous> (repl.js:441:10)\\n    at emitOne (events.js:101:20)\\n    at REPLServer.emit (events.js:188:7)\\n    at REPLServer.Interface._onLine (readline.js:219:10)\\n    at REPLServer.Interface._line (readline.js:561:8)\\n    at REPLServer.Interface._ttyWrite (readline.js:838:14)","message":"testing"}'
 {% endhighlight %}
 
-note it returns a serialized object with keys `message` and `stack`.
+note it returns a serialized object with keys `message` and `stack`. ([Source Stackoverflow](http://stackoverflow.com/questions/18391212/is-it-not-possible-to-stringify-an-error-using-json-stringify)).
 
 #### Stack Trace reading in VIM
 I noted above that js bundles may be cumbersome to inspect in some editors. VIM is able to handle large files well enough.
