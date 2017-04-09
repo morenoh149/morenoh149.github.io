@@ -1,0 +1,221 @@
+/*========================================================*/
+/*         CSS for DotNetNuke Skin - Populusion          */
+/*                   by Omar Janneh                       */
+/*             http://www.dnnstyles.net                   */
+/*========================================================*/
+
+body{
+	border-left:0px 0px 0px 0px;
+	margin:0px;
+	background-color: #EBEBEB;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	padding-left: 0px;
+	background-attachment: fixed;
+	background-image: url(/web/20110129070315im_/http://www.ciobriefings.com/Portals/_default/Skins/Populusion-Horizontal_Slate/images/main-BG.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+/* ********** Setting Text Throughout the skin ************** */
+TH,TD,DIV{ font-family:"Lucida Grande", "Lucida Sans"; font-size:14px; color:#333333; }
+A,A:link,A:visited,A:active{ color:blue; text-decoration:none; }
+A:hover{ color:#ff9356; text-decoration:none; }
+
+/*-- most of the text on site          --*/ .normal,.Normal{ font-family:"Lucida Grande", "Lucida Sans"; font-size:14px; color:#333333; }
+/*-- most of the bold text on site     --*/ .NormalBold { font-family:"Lucida Grande", "Lucida Sans"; font-family: tahoma; font-size: 14px; font-weight: bold; color: #555; }
+/*-- red text on site for errors       --*/ .NormalRed { color: #C50000; font-family:"Lucida Grande", "Lucida Sans"; font-weight: bold; font-size: 14px; }
+/*-- headings - mostly in admin        --*/ .Head{ font-family:"Lucida Grande", "Lucida Sans"; font-size:12px; font-weight:bold; color:#333333; }
+/*-- subheadings - mostly in admin     --*/ .SubHead{ font-family:"Lucida Grande", "Lucida Sans"; font-size:11px; color:#333333; }
+/*-- subheadings - mostly in admin     --*/ .SubSubHead{ font-family:"Lucida Grande", "Lucida Sans"; font-size:11px; color:#333333; }
+
+
+/* ********** Style For width setting of skin ************** */
+.StandardWidth { width:960px;}
+.FullWidth { width:98%;}
+
+
+	
+/* ********** Control Panel Style ************** */
+.controlpanel{ background:#FFFFFF; border:#ADADAD solid; border-width:0px 0px 2px; }
+.controlpanel IMG{ margin:15px 5px 0px; }
+.controlpanel TD TD TD TD IMG{ margin:0px; }
+.controlpanel TD TD TD{ width:auto; }
+.controlpanel DIV{ border:#CCCCCC solid; border-width:0px 1px; width:3px; height:100px; }
+.controlpanel TD.SubHead{ background:#CCCCCC; font-size:12px; color:#000; font-weight:bold; }
+.controlpanel TD TD TD .SubHead{ background:transparent; border:0px; font-size:11px; color:#333; font-weight:normal; }
+.controlpanel TD TD TD input{ background:#EFEFEF; font-size:11px; color:#000; font-weight:bold; padding-left:4px; }
+.controlpanel TD TD TD select{ background:#EFEFEF; font-size:11px; color:#333;}
+.controlpanel A.CommandButton{ font-size:10px; text-decoration:none;}
+.controlpanel A.CommandButton:link{ color:#000; }
+.controlpanel A.CommandButton:visited{ color:#000; }
+.controlpanel A.CommandButton:active{ color:#000; }
+.controlpanel A.CommandButton:hover{ color:#FF9900; text-decoration:underline;} 
+.CommandButton,A.CommandButton:link,A.CommandButton:visited,A.CommandButton:active{ font-size:11px; color:#8C3318; text-decoration:none; font-weight:normal; }
+A.CommandButton:hover{ color:#FB9409; text-decoration:none; font-size:11px; font-weight:normal; }
+
+
+/* ********** Search Style ************** */
+#SearchContainer input{MARGIN: 0px 0px 0px 0px; BORDER: 1px solid #000033; font-size:9px; color:#000033; BACKGROUND:#ffffff;  WIDTH: 100px;  HEIGHT: 15px;}
+.search,a.search:link,a.search:active,a.search:visited,.search{ color:#396185; text-decoration:none; font-weight:bold; font-size:10px;}
+a.search:hover{ color:#000000; text-decoration:none; font-weight:bold; font-size:10px;}
+#dnn_dnnSEARCH_txtSearch{	padding-left: 8px;	width: 158px;	Font-size: 12px;	color:#484848;	HEIGHT:20px;	border: 0px dotted #b7b8b4;	background-color: transparent;}
+
+
+/* ********** Login Button Style ************** */
+.StandardButton {color: #FFFFFF; font-family: "Lucida Grande", "Lucida Sans"; font-size: 10px; font-weight: normal; background-color: #5b7082; HEIGHT:25px; padding: 0px 12px 0px 12px; width: 99%;}
+
+
+/* ********** Pane Padding ************** */
+.BannerPane{ padding:0px 0px 0px 0px;}
+.HeaderPane{ padding:3px 0px 4px 0px;}
+.UpperPane{ padding:3px 0px 4px 0px;}
+.LeftNav2{ padding:7px 6px 0px 0px;}
+.TopPane{ padding:8px 0px 3px 0px;}
+.TopLeftPane{ padding:3px 3px 3px 0px;}
+.TopRightPane{	padding:3px 0px 3px 3px;}
+.LeftPane{	padding:3px 0px 3px 0px; width:35%;}
+.ContentPane{ padding:2px 6px 3px 6px; width:100%;}
+.RightPane{	padding:3px 0px 3px 0px; width:35%;}
+.MidLeftPane{ padding:3px 3px 3px 0px; width:100%;}
+.MiddlePane{ padding:3px 3px 3px 3px; width:100%;}
+.MidRightPane{ padding:3px 0px 3px 3px;	width:100%;}
+.BottomColumn1{	padding:3px 3px 3px 0px;}
+.BottomColumn2{ padding:3px 3px 3px 3px;}
+.BottomColumn3{ padding:3px 3px 3px 3px;}
+.BottomColumn4{	padding:3px 0px 3px 3px;}
+.BottomPane{ padding:3px 0px 3px 0px;}
+.LowerPane{ padding:3px 0px 3px 0px;}
+.FooterPane{ padding:6px 0px 3px 0px;}
+
+
+/* ********** Login Style ************** */
+.login,a.login:link,a.login:active,a.login:visited,.login{	color:#3d3d3d;	text-decoration:none;	font-weight:normal;	font-size:11px;	font-family: "Lucida Grande", "Lucida Sans";	background-image: url(/web/20110129070315im_/http://www.ciobriefings.com/Portals/_default/Skins/Populusion-Horizontal_Slate/images/login.gif);	background-repeat: no-repeat;	background-position: left bottom;	height:10px; padding: 4px 8px 0 17px; margin: 0 0px 0 6px;}
+a.login:hover{	color:#5b7082;	text-decoration:none;	font-weight:normal;	font-size:11px;	font-family: "Lucida Grande", "Lucida Sans"	;background-image: url(/web/20110129070315im_/http://www.ciobriefings.com/Portals/_default/Skins/Populusion-Horizontal_Slate/images/login.gif);	background-repeat: no-repeat;	background-position: left bottom;	height:10px;padding: 4px 8px 0 17px; margin: 0 0px 0 6px;}
+
+/* ********** User Style ************** */
+.user,a.user:link,a.user:active,a.user:visited,.user{	color:#3d3d3d;	text-decoration:none;	font-weight:normal;	font-size:11px;	font-family: "Lucida Grande", "Lucida Sans";	background-image: url(/web/20110129070315im_/http://www.ciobriefings.com/Portals/_default/Skins/Populusion-Horizontal_Slate/images/signup-pad.gif);	background-repeat: no-repeat;	background-position: left bottom;	height:10px; padding: 4px 8px 0 17px; margin: 0 0px 0 6px;}
+a.user:hover{	color:#5b7082;	text-decoration:none;	font-weight:normal;	font-size:11px;	font-family:"Lucida Grande", "Lucida Sans";	background-image: url(/web/20110129070315im_/http://www.ciobriefings.com/Portals/_default/Skins/Populusion-Horizontal_Slate/images/signup-pad.gif);	background-repeat: no-repeat;	background-position: left bottom;	height:10px;padding: 4px 8px 0 17px; margin: 0 0px 0 6px;}
+	
+/* ********** Date Style ************** */
+.date,a.date:link,a.date:active,a.date:visited{	color:#8C8C8C;	text-decoration:none;	font-weight:normal;	font-size:11px;	font-family: "Lucida Grande", "Lucida Sans"; padding: 4px 8px 0 17px;}
+a.date:hover{	color:#ff9356;}
+
+/* ********** Breadcrumb Style ************** */
+.breadcrumb,a.breadcrumb:link,a.breadcrumb:active,a.breadcrumb:visited{ font-size:10px; color:#333333; text-decoration:none; font-weight:normal; font-family: "Lucida Grande", "Lucida Sans";}
+a.breadcrumb:hover{	font-size:10px; color:#5b7082; text-decoration:underline; font-weight:normal; font-family: "Lucida Grande", "Lucida Sans";}
+
+/* ********** Footer Style ************** */
+.footer,a.footer:link,a.footer:active,a.footer:visited{	font-size:11px; color:#333333; text-decoration:none; border-bottom:1px dotted; font-weight:Normal;}
+a.footer:hover{	color:#ff9356; text-decoration:underline; font-weight:Normal;}
+
+/* ********** Copyright Style ************** */
+.copyright,a.copyright:link,a.copyright:active,a.copyright:visited{	font-size:11px; color:#333333; text-decoration:none; border-bottom:0px dotted; font-weight:Normal;}
+a.copyright:hover{	color:#ff9356; text-decoration:none; font-weight:Normal;}
+
+/* ********** Privacy/Terms Style ************** */
+.terms,a.terms:link,a.terms:active,a.terms:visited{	font-size:11px; color:#5b7082; text-decoration:none; font-weight:Normal; border-bottom:1px dotted;}
+a.terms:hover{	color:#161616; text-decoration:none; font-weight:Normal; border-bottom:0px dotted;}
+
+/* ********** Links Style ************** */
+.links,a.links:link,a.links:active,a.links:visited{	font-size:11px; color:#FFFFFF; text-decoration:none; font-weight:normal; font-family: "Lucida Grande", "Lucida Sans";}	
+a.links:hover{	color:#ff9356; text-decoration:underline; font-weight:normal;}
+
+
+/* ********** Menu Style ************** */
+.MainMenu_MenuContainer{ background:transparent; width:100%;}
+.MainMenu_MenuBar{}
+.MainMenu_MenuIcon{ display:none; }
+.MainMenu_RootMenuArrow{ display:none; }
+.MainMenu_MenuArrow{ display:none; }
+
+/*---------Root Menu Separator---------------*/
+.MainMenu_MenuBreak{ border-top-width: 0px;	border-right-width: 0px;	border-bottom-width: 0px;	border-left-width: 0px;	background-color: Transparent;}
+.ModuleTitle_MenuItemSel {background-color: transparent;}
+.MainMenu_MenuItemSel {background-color: transparent;}
+
+/*---------Sub Menu style---------------*/
+.MainMenu_MenuItem,.submenuitembreadcrumb{
+	font-family:"Lucida Grande", "Lucida Sans";color:#5b7082;	font-size:11px;	font-weight:normal;
+	padding:3px 15px 3px 10px;
+	background-repeat: repeat-x;
+	background-position: bottom;
+	border:0px #000000 solid; border-width:0px 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #c3c3c3;}
+	
+.submenuitemselected{
+	font-family:"Lucida Grande", "Lucida Sans";
+	color:#161616;
+	font-size:11px;
+	font-weight:normal;
+	padding:3px 15px 3px 10px;
+	background-repeat: repeat-x;
+	background-position: bottom;
+	background-color: #CCCCCC;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: c3c3c3;
+}
+	
+.submenu{
+	background-color:#EDEDED;
+	font-family:"Lucida Grande", "Lucida Sans";
+	color:#302C25;
+	font-size:11px;
+	font-weight:normal;
+	padding:0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-repeat: no-repeat;
+	border: 1px dotted #c3c3c3;
+}
+
+/*---------Root/Tab Menu style---------------*/
+.rootmenuitem TD{
+	font-family: Arial, Trebuchet MS, arial, Tahoma, Helvetica, sans-serif;
+	color:#ffffff;
+	font-size:11px;
+	font-weight:bold;
+	text-align:center;
+	padding: 16px 15px 4px 8px;
+	background-color: transparent;
+	background-image: url(/web/20110129070315im_/http://www.ciobriefings.com/Portals/_default/Skins/Populusion-Horizontal_Slate/images/menu.png);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	text-transform: none;
+	height: 42px;
+}
+.rootmenuitemselected TD, .rootmenuitembreadcrumb TD, .MainMenu_RootMenuItemActive TD{
+	color:#ffffff;
+	font-family: Arial, Trebuchet MS, arial, Tahoma, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight: bold;
+	text-align:center;
+	padding: 16px 15px 4px 8px;
+	background-color: Transparent;
+	background-image: url(/web/20110129070315im_/http://www.ciobriefings.com/Portals/_default/Skins/Populusion-Horizontal_Slate/images/menu_on.png);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	text-transform: none;
+	height: 42px;
+}
+
+
+/* ********** Other Style ************** */
+#wrapper{ position:relative; height:258px; }
+#logo{ position:absolute; top:29px; left:29px; width:228px; height:31px; z-index:3; }
+#user{ position:absolute; height:18px; top:8px; right:8px; text-align:right; z-index:3; }
+#header{ position:absolute; bottom:40px; z-index:2; width:100%; background:url(/web/20110129070315im_/http://www.ciobriefings.com/Portals/_default/Skins/Populusion-Horizontal_Slate/headerbg.gif); }
+#menu{ position:absolute; background:url(/web/20110129070315im_/http://www.ciobriefings.com/Portals/_default/Skins/Populusion-Horizontal_Slate/menubg.jpg); width:auto; height:54px; bottom:0px; z-index:1; }
+
+
+/*
+     FILE ARCHIVED ON 07:03:15 Jan 29, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:43:59 Apr 09, 2017.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
