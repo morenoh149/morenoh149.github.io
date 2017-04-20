@@ -1,8 +1,16 @@
-pic://pip.readthedocs.io/en/1.1/requirements.html
+pip + virutalenv together have the same functionality as npm does
 
+* `virtualenv <env directory>` creates the project environment
 
-pip is the npm of the python world
+* unlike npm it must be activated `source <env directory>/bin/activate`
 
-package.json -> requirements.txt
+you may now install dependencies like `pip install foo`, unlike `npm install foo`
 
-npm install -> pip install
+you dependencies will reside in the virtualenv directory, unlike in node_modules
+
+unlike npm where you can specify `npm install --save foo` to add the file to the project dependencies,
+with pip you must freeze out your dependencies `$ pip freeze > requirements.txt`
+
+Unlike `package.json` it is conventional to list project requirements in a `requirements.txt` file.
+
+Read http://docs.python-guide.org/en/latest/dev/virtualenvs/
