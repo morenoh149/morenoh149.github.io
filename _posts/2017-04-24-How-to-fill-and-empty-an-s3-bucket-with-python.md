@@ -61,17 +61,18 @@ def empty_s3_bucket():
     aws_secret_access_key=S3_SECRET_KEY,
   )
   response = client.list_objects_v2(Bucket=S3_BUCKET)
-  for item in response['Contents']:
-    print('deleting file', item['Key'])
-    client.delete_object(Bucket=S3_BUCKET, Key=item['Key'])
-    while response['KeyCount'] == 1000:
-      response = client.list_objects_v2(
-        Bucket=S3_BUCKET,
-        StartAfter=response['Contents'][0]['Key'],
-      )
-      for item in response['Contents']:
-        print('deleting file', item['Key'])
-        client.delete_object(Bucket=S3_BUCKET, Key=item['Key'])
+  if 'Contents' in response:
+    for item in response['Contents']:
+      print('deleting file', item['Key'])
+      client.delete_object(Bucket=S3_BUCKET, Key=item['Key'])
+      while response['KeyCount'] == 1000:
+        response = client.list_objects_v2(
+          Bucket=S3_BUCKET,
+          StartAfter=response['Contents'][0]['Key'],
+        )
+        for item in response['Contents']:
+          print('deleting file', item['Key'])
+          client.delete_object(Bucket=S3_BUCKET, Key=item['Key'])
 
 empty_s3_bucket()
 {% endhighlight %}
@@ -79,5 +80,7 @@ empty_s3_bucket()
 Here I empty the bucket. The [list_objects_v2](https://boto3.readthedocs.io/en/latest/reference/services/s3.html#S3.Client.list_objects_v2)
 function is designed to paginate and will return at most 1000 object paths. So you'll see we issue requests for more object paths
 if the number of keys in a response is 1000. The loop above will delete and paginate until all objects are deleted from the bucket.
+
+It is also [idempotent](https://en.wikipedia.org/wiki/Idempotence) and will not throw if the bucket already empty.
 
 The scripts are available in a [gist](https://gist.github.com/morenoh149/8e59b00bc48d42803f5136edceb6a663).
