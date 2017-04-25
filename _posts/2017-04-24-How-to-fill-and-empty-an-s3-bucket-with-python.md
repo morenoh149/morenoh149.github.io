@@ -27,16 +27,21 @@ def fill_s3_bucket(num_of_objects):
     client.put_object(
       Bucket=S3_BUCKET,
       Body=b'foo',
-      Key='file_' + '{0:04d}'.format(i))
+      Key='file_' + '{:04d}'.format(i))
 
 fill_s3_bucket(3000)
 {% endhighlight %}
 
 Here we are using the [Client](https://boto3.readthedocs.io/en/latest/reference/services/s3.html#client) object to put
-many small files on the s3 bucket.
+many small files in the s3 bucket.
 There's a [Bucket](https://boto3.readthedocs.io/en/latest/reference/services/s3.html#bucket) object but I didn't find it very useful
 for this task.
 The script prints out it's progress as I found writing to s3 fairly slow.
+
+Note I used the [str.format()](http://devdocs.io/python~3.5/library/string#formatexamples) method to zero-pad the path names. This
+gives the very nice effect of seeing the numbers increase monotonically. `.format` will basically replace any region between two
+curly braces with the supplied argument, formatting it as specified. So `{:04d}` will be replaced by `i` to 4 characters of length
+and padded with the `0` character.
 
 I pulled the constants from a separate file as that's closer to what I was doing in django.
 
