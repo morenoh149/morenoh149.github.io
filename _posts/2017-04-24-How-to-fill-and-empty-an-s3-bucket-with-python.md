@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to fill and empty an s3 bucket programmatically
+title: How to fill and empty an s3 bucket with Python
 ---
 
-Say you have an s3 bucket. You may want to programmatically empty it. In order to empty
+Say you have an s3 bucket on amazon web services. You may want to programmatically empty it. In order to empty
 a bucket it must have items in it. So I'll demonstrate how to put and remove items from a bucket.
 We'll use the excellent [boto3](https://boto3.readthedocs.io/) library.
 
@@ -17,14 +17,17 @@ from s3_constants import S3_ACCESS_KEY, S3_SECRET_KEY, S3_BUCKET
 
 # fill bucket with objects, assumes bucket exists already
 def fill_s3_bucket(num_of_objects):
-    client = boto3.client(
-        's3',
-        aws_access_key_id=S3_ACCESS_KEY,
-        aws_secret_access_key=S3_SECRET_KEY,
-    )
-    for i in range(num_of_objects):
-        print('creating file', '{:04d}'.format(i))
-        client.put_object(Bucket=S3_BUCKET, Body=b'foo', Key='file_' + '{0:04d}'.format(i))
+  client = boto3.client(
+    's3',
+    aws_access_key_id=S3_ACCESS_KEY,
+    aws_secret_access_key=S3_SECRET_KEY,
+  )
+  for i in range(num_of_objects):
+    print('creating file', '{:04d}'.format(i))
+    client.put_object(
+      Bucket=S3_BUCKET,
+      Body=b'foo',
+      Key='file_' + '{0:04d}'.format(i))
 
 fill_s3_bucket(3000)
 {% endhighlight %}
@@ -47,23 +50,23 @@ from s3_constants import S3_ACCESS_KEY, S3_SECRET_KEY, S3_BUCKET
 
 # empty existing bucket
 def empty_s3_bucket():
-    client = boto3.client(
-        's3',
-        aws_access_key_id=S3_ACCESS_KEY,
-        aws_secret_access_key=S3_SECRET_KEY,
-    )
-    response = client.list_objects_v2(Bucket=S3_BUCKET)
-    for item in response['Contents']:
+  client = boto3.client(
+    's3',
+    aws_access_key_id=S3_ACCESS_KEY,
+    aws_secret_access_key=S3_SECRET_KEY,
+  )
+  response = client.list_objects_v2(Bucket=S3_BUCKET)
+  for item in response['Contents']:
+    print('deleting file', item['Key'])
+    client.delete_object(Bucket=S3_BUCKET, Key=item['Key'])
+    while response['KeyCount'] == 1000:
+      response = client.list_objects_v2(
+        Bucket=S3_BUCKET,
+        StartAfter=response['Contents'][0]['Key'],
+      )
+      for item in response['Contents']:
         print('deleting file', item['Key'])
         client.delete_object(Bucket=S3_BUCKET, Key=item['Key'])
-        while response['KeyCount'] == 1000:
-            response = client.list_objects_v2(
-                Bucket=S3_BUCKET,
-                StartAfter=response['Contents'][0]['Key'],
-            )
-            for item in response['Contents']:
-                print('deleting file', item['Key'])
-                client.delete_object(Bucket=S3_BUCKET, Key=item['Key'])
 
 empty_s3_bucket()
 {% endhighlight %}
