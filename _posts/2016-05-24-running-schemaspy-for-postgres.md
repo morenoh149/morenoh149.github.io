@@ -15,6 +15,8 @@ for a remote database (say on Amazon RDS) try
 
 `java -jar <schemaspy jar> -t pgsql -db <database name> -u <user> -p <password> -host foo.bar.region.rds.amazonaws.com -o <output directory> -s "public" -dp <jdbc driver>`
 
+If you get a complaint about the schema, it defaults to the username, pass in the correct schema name after `-s`.
+
 now you can open `<output directory>/index.html` to get amazing info on your postgres database.
 
 ![Dellstore2 DataModel]({{ site.url }}/img/schemaSpy-dellstore2.png)
