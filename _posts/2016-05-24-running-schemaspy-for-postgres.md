@@ -30,3 +30,6 @@ You can test it out yourself [dellstore SchemaSpy]({{ site.url }}/assets/dellsto
 
 Hopefully someday I'll be able to get a postgres schema to load in [wwwsqldesigner](http://ondras.zarovi.cz/sql/demo/?keyword=default)
 but I couldn't figure it out. This way I could send my friends a link to my data model.
+
+For other applications, like [weka](http://www.cs.waikato.ac.nz/ml/weka/index.html) you would want to place the jdbc driver in the
+[classpath](https://jdbc.postgresql.org/documentation/92/classpath.html).
