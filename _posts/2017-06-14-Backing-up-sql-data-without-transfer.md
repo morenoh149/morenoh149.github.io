@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Backing up data without Transfer
+title: Backing up SQL data without Transfer
 ---
 
 When working with data we typically make backups in case we make a mistake. In this age of high speed connections
