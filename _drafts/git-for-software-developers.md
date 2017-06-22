@@ -12,3 +12,6 @@ topics:
   * git bisect
 * amending your commit message
   * git commit -v --amend
+* squashing your commits
+  * git rebase -i <name of branch>
+    * will allow you to consolidate your commits on <name of branch> into a single commit
