@@ -9,8 +9,8 @@ I currently work on the <a href="https://www.capsulecares.com/">Capsule Pharmacy
 project, an on-demand medicine delivery service as an early member of their
 engineering team. 
 
-I have 5 years industry experience in Technology. I have lived in
-San Francisco and started several companies.
+I have 5 years industry experience in Technology. I hold a Bachelor's
+in Computer Science, have lived in San Francisco and started several companies.
 
 Fluent in Ruby, Javascript, Python and Go. I have developed in
 Rails, Django, React.js, Twitter Bootstrap, React Native, Node.js,
