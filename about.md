@@ -19,7 +19,7 @@ Machine learning, Deep Learning and Unix.
 
 I'm open to consulting for early stage technology companies.
 Helping founders spec out MVPs, establishing company structure
-and forumlating KPIs/Northstar metrics.
+and formulating KPIs/Northstar metrics.
 
 I have two Mobile apps in the app stores under my name.
 
