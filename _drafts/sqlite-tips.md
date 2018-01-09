@@ -1,8 +1,15 @@
 
 
+Enter shell
+$ sqlite
+
+help
+
+> .help
+
 create a table
 
-create table if not exists token (
+> create table if not exists token (
 		id int primary key,
 		field string
 		)
@@ -11,8 +18,8 @@ create table if not exists token (
 
 Print current schema
 
-.schema
+> .schema
 
 Exiting
 
-.exit
+> .exit

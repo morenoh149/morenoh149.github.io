@@ -26,3 +26,5 @@ column already exists. use this:
 
 `\connect DBNAME` or `\c DBNAME` to switch to another database with the currently running instance of psql.
 Note your machine may have multiple databases (for different projects). Each db holds many tables (or relations).
+
+\e - to open a large buffer for large sql queries
