@@ -44,3 +44,8 @@ units - util for converting units
 you want to see what other shell instances have executed
 run `history`
 it's also a great way to learn about what's commonly run on this box
+
+# opening a stream throws an error
+many times you must redirect stdout to a file to read from it, do
+`cat foo 2>&1 | less`
+to pipe output to less. less is a file reader.
