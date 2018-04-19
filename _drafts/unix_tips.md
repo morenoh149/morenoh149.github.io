@@ -1,5 +1,6 @@
-tips for doing things in unix. Cover different scenarios. Basically any time you wondered how to do something
-and went to google/stackoverflow to figure things out.
+tips for doing things in unix. Cover different scenarios. Basically any time
+you wondered how to do something and went to google/stackoverflow to figure
+things out.
 
 1) you're in a shell. You're not sure what you can do or who you are. How do we orient ourselves?
 
@@ -38,3 +39,8 @@ search for a file by filename part
 `find . -name 'foo*'`
 
 units - util for converting units
+
+# view previously run commands
+you want to see what other shell instances have executed
+run `history`
+it's also a great way to learn about what's commonly run on this box
