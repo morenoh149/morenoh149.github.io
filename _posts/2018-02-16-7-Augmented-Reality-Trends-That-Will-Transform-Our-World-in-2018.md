@@ -2,9 +2,7 @@
 layout: post
 title: 7 Augmented Reality Trends That Will Transform Our World in 2018
 ---
-
-![Augmented Reality for Business]({{ site.url }}/img/augmented_reality_header.jpeg)
-
+![Augmented Reality for Business](/img/augmented_reality_header.jpeg)
 Although Pokemon Go! may have introduced the general public to augmented reality technology, it hasn’t come close to demonstrating the revolutionary impact AR will have on virtually everyone’s life. With numerous potential applications across a wide range of industries, AR is going to improve healthcare, make cities safer, and boost the efficiency of manufacturing processes (just to name a few examples).
 
 It’s not smart to try and predict every single way we’ll use AR in the future. As the technology continues to develop and improve, innovators will continue to find new ways to improve and apply it to more situations. That said, the following examples illustrate how AR is already changing the way we work and live, even if you didn’t realize it yet.

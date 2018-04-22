@@ -15,7 +15,10 @@
 
           <p>{{ content }}</p>
           <hr>
-          {% include tweet_this.html %}
+          <div>
+            {% include tweet_this.html %}
+            {% include linkedin_share.html %}
+          </div>
           <hr>
 
           {% if site.github %}

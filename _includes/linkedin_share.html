@@ -1,0 +1,10 @@
+<div class='share-btn linkedin'>
+  {{ site.url }}
+  {{ page.url }}
+  {{ page.title }}
+  {{ post.excerpt }}
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary={{ post.excerpt | uri_escape }}&source=HarryMoreno.com"
+     target="_blank">
+    LinkedIn <i class="fa fa-linkedin-square"></i>
+  </a>
+</div>

@@ -3,10 +3,16 @@ title: Harry Moreno Blog
 name: Harry Moreno Blog
 email: morenoh149@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  This is Harry Moreno's blog. He's a software engineer that loves solving problems and
-  delighting people.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://harrymoreno.com" # the base hostname & protocol for your site
+  This is Harry Moreno's blog. He's a Software Engineer that loves solving
+  problems and delighting people.
+
+# Serving
+detach:  false
+port:    4000
+host:    127.0.0.1
+baseurl: "" # does not include hostname
+show_dir_listing: false
+
 twitter_username: morenoh149
 github_username: morenoh149
 paginate: 5
@@ -15,4 +21,4 @@ paginate: 5
 markdown: kramdown
 exclude: [app]
 
-gems: [jekyll-sitemap, jekyll-paginate]
+plugins: [jekyll-sitemap, jekyll-paginate]

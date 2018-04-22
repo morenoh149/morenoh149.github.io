@@ -18,7 +18,12 @@ h1 > a:hover {
   margin: 0;
 }
 
-body { padding-bottom: 70px; }
+body {
+  padding-bottom: 70px;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  overflow-wrap: break-word;
+}
 
 li.needs_top_padding { padding-top: 15px; }
 
@@ -66,12 +71,19 @@ img.disabled { opacity: 0.3; }
   img { max-width: 300px; }
 }
 
-p { text-align: justify; }
+p {
+  text-align: justify;
+  font-family : Georgia,Cambria,"Times New Roman",Times,serif;
+  letter-spacing: -.003em;
+}
 dd p { font-size: 14px; }
 dd li { font-size: 14px; }
 .post p { font-size: 14px; }
 .post li { font-size: 14px; }
-.post img { margin: 0 auto; }
+.post img {
+  display: block;
+  margin: 0 auto;
+}
 
 @media (min-width: 768px) {
   dd p { font-size: 18px; }
@@ -96,10 +108,12 @@ dd li { font-size: 14px; }
 }
 .sidebar a { color: rgb(129, 19, 19); }
 
-.page-header { margin-top: 0px; }
+.page-header {
+  margin-top: 0px;
+  font-style: italic;
+}
 @media (min-width: 768px) {
   .page-header h1 {
-    font-style: italic;
     font-size: 60px;
   }
 }
@@ -125,16 +139,22 @@ span.caption {
 .pager { display: flex; }
 .pager div.active a { background-color: rgb(249, 188, 84); }
 
-.tweet-btn {
+.share-btn {
   display: inline-block;
   padding: 5px;
   border-radius: 5px;
   font-size: 1.1em;
-  background: transparent linear-gradient(#54C5FE, #5C95B6);
   box-shadow: 0px 2px 1px silver;
 }
-.tweet-btn a { color: white; }
-.tweet-btn a:hover { text-decoration: none; }
+.share-btn.twitter {
+  background: transparent linear-gradient(#54C5FE, #5C95B6);
+}
+.share-btn.linkedin {
+  background: transparent linear-gradient(#54C5FE, #287bbc);
+}
+.share-btn a { color: white; }
+.share-btn a:hover { text-decoration: none; }
+.share-btn:not(:first-child) { margin-left: 10px; }
 
 /* code blocks */
 figure.highlight > pre {
