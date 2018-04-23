@@ -6,10 +6,10 @@ This blog is built using github pages, twitter bootstrap, jekyll, yeoman jekyllr
 TODO
 * prevent sidebar horizontal scroll on mobile
 * revise about page
-	* should double as a CV
-	* should have things that would not fit onto a CV but are CV worthy
-	* add OSS list to about page
-	* make gallery smaller
+  * should double as a CV
+  * should have things that would not fit onto a CV but are CV worthy
+  * add OSS list to about page
+  * make gallery smaller
 * figure out how to add alt and titles to all images
 * replace social buttons with http://sharingbuttons.io/
 * add mailinglist
@@ -20,5 +20,5 @@ TODO
 ## Running
 ```
 % bundle
-% bundle exec jekyll serve --incremental
+% bundle exec jekyll s --incremental
 ```
