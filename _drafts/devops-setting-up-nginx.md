@@ -30,3 +30,10 @@ http {
 
 reload it to pick up config
 sudo nginx -s reload
+
+!! never run nginx as root user !!
+most nginx configurations start as root, bind to privileged ports
+(80 and 443 are below 1024), and then immediately drop privileges to a
+configured user.
+(except in a docker container, that's ok)
+this happens ootb in ubuntu with the installation above

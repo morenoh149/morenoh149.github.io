@@ -39,3 +39,4 @@ dist
 _site
 node_modules
 .tmp
+.jekyll-metadata

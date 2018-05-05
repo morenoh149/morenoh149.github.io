@@ -2,7 +2,7 @@
 layout: post
 title: Data Science Bowl 2018 Recap
 ---
-![Kaggle Data Science Bowl 2018](/img/kaggle-data-science-bowl-2018.png)
+![Kaggle Data Science Bowl 2018](/img/2018-05-04-kaggle-data-science-bowl-2018.png)
 Used google [Colab](https://colab.research.google.com/) so all team members can
 see what the team's progress is. I found the built in introductory material is
 a very good way to learn the tool. The
@@ -44,3 +44,7 @@ the apis available. To that end I've been learning the matplotlib api. We used
 it to do some EDA on the training data. We generated a histogram of the number
 of masks, i.e. cells, in a traning example. We were not able to solve this
 ourselves but we got some help on [Stackoverflow](https://stackoverflow.com/questions/49620411/plot-a-grid-of-images-retrieved-via-url-in-python).
+
+Thank you to teammates [Taraqur](https://www.linkedin.com/in/tqrahman/),
+[Jacob Peters](https://www.linkedin.com/in/jacobdpeters/) and
+[Cal Almodovar](https://www.linkedin.com/in/cal-orlando-almodovar-41b01258/)
