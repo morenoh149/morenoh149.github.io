@@ -20,5 +20,5 @@ TODO
 ## Running
 ```
 % bundle
-% bundle exec jekyll s --incremental
+% bundle exec jekyll s
 ```
