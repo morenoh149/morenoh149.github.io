@@ -39,6 +39,16 @@ languages. Instead of `yield` like other languages you use `_;` which I think
 is too terse.
 
 ## Lesson 4: Zombie Battle System
+This chapter shows how contracts always have a balance and how to write
+functions that can receive ether. The
+[payable](http://solidity.readthedocs.io/en/v0.4.24/miscellaneous.html?highlight=payable#modifiers)
+function modifier allows a function to receive ether, otherwise an exception is
+thrown. The subject of generating true random numbers is touched on, some
+[ideas on StackOverflow](https://ethereum.stackexchange.com/questions/191/how-can-i-securely-generate-a-random-number-in-my-smart-contract).
+For cryptozombies we opt to use vulnerable random numbers, but if your contract
+is going to be valuable you should use the more involved approaches.
+
+## Lesson 5: ERC721 & Crypto-Collectibles
 
 ## Closing Thoughts
 Something I've found frustrating is the use of the term keccak256. It's assumed
