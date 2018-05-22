@@ -42,3 +42,13 @@ then at 2018-04-23 12:32:00
 
 ## migrating to a larger volume
 On AWS.
+
+## Always return true for some command
+Say you have a test suite, but you don't want to prevent deployment of the software
+when the test suite fails. You can always add `|| true` to any commandline utility.
+
+e.g.,
+```
+// Jenkinsfile
+sh 'npm test || true'
+```
