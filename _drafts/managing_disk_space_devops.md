@@ -52,3 +52,8 @@ e.g.,
 // Jenkinsfile
 sh 'npm test || true'
 ```
+
+## systemd on ubuntu
+is the default init system on linux these days.
+the logs are stored in binary and are visible with `journalctl`.
+Read `man systemd` on a linux box.

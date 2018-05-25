@@ -15,7 +15,7 @@ show_dir_listing: false
 
 twitter_username: morenoh149
 github_username: morenoh149
-paginate: 5
+paginate: 10
 
 # Build settings
 markdown: kramdown
