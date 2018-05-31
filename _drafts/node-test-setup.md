@@ -1,4 +1,4 @@
-Minimal test setup for a node app.
+Minimal test setup for a node app. Hopefully it will save you time.
 
 npm i --save-dep nyc mocha chai
 
@@ -36,3 +36,4 @@ describe('Array', function() {
 });
 
 Now you can run your test suite with coverage via `npm run`.
+For coverage run `npm run coverage`. Uses the *text* reporter.
