@@ -49,14 +49,54 @@ For cryptozombies we opt to use vulnerable random numbers, but if your contract
 is going to be valuable you should use the more involved approaches.
 
 ## Lesson 5: ERC721 & Crypto-Collectibles
+Here we write a contract implementing
+[ERC721 (non fungible tokens)](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md).
+The contract has to implement the interface
 
-## Closing Thoughts
+{% highlight solidity %}
+contract ERC721 {
+  event Transfer(address indexed _from, address indexed _to, uint256 _tokenId);
+  event Approval(address indexed _owner, address indexed _approved, uint256 _tokenId);
+
+  function balanceOf(address _owner) public view returns (uint256 _balance);
+  function ownerOf(uint256 _tokenId) public view returns (address _owner);
+  function transfer(address _to, uint256 _tokenId) public;
+  function approve(address _to, uint256 _tokenId) public;
+  function takeOwnership(uint256 _tokenId) public;
+}
+{% endhighlight %}
+keeping in mind the there is no official ERC721 standard, so we implement
+[openzeppelin's version](https://github.com/OpenZeppelin/openzeppelin-solidity/tree/master/contracts/token/ERC721).
+Note, openzeppelin's ERC721 standard has changed since this lesson was written,
+so we implement the deprecated version. For example, an
+[ApprovalForAll](https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/token/ERC721/ERC721Basic.sol#L21)
+event has been added to the spec and the
+[transfer](https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/token/ERC721/DeprecatedERC721.sol#L13)
+function has been removed.
+[Github issue tracking updates to the lesson](https://github.com/loomnetwork/cryptozombie-lessons/issues/151).
+
+It also covers smart contract security. Mainly overflows in contract variables.
+To prevent the category of bugs we use openzepplin's
+[SafeMath library](https://openzeppelin.org/api/docs/math_SafeMath.html).
+We review solidity library syntax and write our own library to prevent variable
+overflows.
+
+You earn the H4XF13LD MORRIS cryptozombie.
+
+## Lesson 6: App Front-ends & Web3.js
+
+## Summary
 Something I've found frustrating is the use of the term keccak256. It's assumed
 knowledge but it was not clear to me that it is synonymous with
 [SHA-3](https://en.wikipedia.org/wiki/SHA-3) a successor to SHA-2. But it's not
 explained what it is and why it's used over other schemes. A single sentence
 like, "The Keccak256 hash is used throughout Ethereum, it's used for generating
 hashes and is the successor to SHA-3." would go a long way.
+
+It'd be nice to get a breakdown of tools in the ecosystem. Like how does truffle
+compare to dapp?
+
+What is the year 2038 problem?
 
 ## Fiddles
 [Declare a var and update it](https://ethfiddle.com/auxt0T8XP7)
