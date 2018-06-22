@@ -1,4 +1,19 @@
+# ETL Hello World
+setup mssql db on Azure
 
+setup mysql db on gcloud
+
+build aws pipline to load both dbs into redshift
+
+plan it out in terraform
+
+# Setting up Javascript app Testing with The Intern on CricleCI
+
+http://theintern.github.io/intern/
+
+See https://discuss.circleci.com/t/the-intern-javascript-tests/4543/2
+
+# REST for communicating with Aliens
 Summarize REST http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm#sec_5_2
 
 compare contrast to graphQL
