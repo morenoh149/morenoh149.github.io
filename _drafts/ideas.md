@@ -7,6 +7,10 @@ build aws pipline to load both dbs into redshift
 
 plan it out in terraform
 
+# How to connect DBeaver to Cloud SQL Proxy
+
+https://cloud.google.com/sql/docs/postgres/sql-proxy
+
 # Setting up Javascript app Testing with The Intern on CricleCI
 
 http://theintern.github.io/intern/
