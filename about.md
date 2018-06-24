@@ -7,7 +7,7 @@ Harry Moreno is a Software Engineer living in New York City.
 
 I consult for early stage technology companies.
 Helping founders spec out MVPs, establish company structure
-and formulate KPIss. I also manage Full Stack development
+and formulate KPIs. I also manage Full Stack development
 services with an outsourced team.
 
 Previously I  worked at <a href="https://www.capsulecares.com/">Capsule Pharmacy</a>,
@@ -19,5 +19,4 @@ in Computer Science, have lived in Silicon Valley and started several companies.
 
 Fluent in Ruby, Javascript, Python and Go. I have developed in
 Rails, Django, React.js, Twitter Bootstrap, React Native, Node.js,
-Postgres and Amazon Web Services. I'm also good at Statistics,
-Machine learning, Deep Learning and Unix.
+Postgres and Amazon Web Services. I'm also experienced in Deep Learning and DevOps.
