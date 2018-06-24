@@ -6,9 +6,9 @@ title: About Harry Moreno
 Harry Moreno is a Software Engineer living in New York City.
 
 I consult for early stage technology companies.
-Helping founders spec out MVPs, establishing company structure
-and formulating KPIs/Northstar metrics. I also provide Full Stack development
-services and can advise on establishing an outsourcing development strategy.
+Helping founders spec out MVPs, establish company structure
+and formulate KPIss. I also manage Full Stack development
+services with an outsourced team.
 
 Previously I  worked at <a href="https://www.capsulecares.com/">Capsule Pharmacy</a>,
 an on-demand medicine delivery service as an early member of their
@@ -21,10 +21,3 @@ Fluent in Ruby, Javascript, Python and Go. I have developed in
 Rails, Django, React.js, Twitter Bootstrap, React Native, Node.js,
 Postgres and Amazon Web Services. I'm also good at Statistics,
 Machine learning, Deep Learning and Unix.
-
-Feel free to follow me on <a href="https://twitter.com/morenoh149" target="_blank">Twitter</a>,
-<a href="https://www.linkedin.com/in/harrymoreno/" target="_blank">LinkedIn</a>
-or <a href="https://github.com/morenoh149" target="_blank">Github</a>.
-
-You can also email me at <a href="mailto:harry@harrymoreno.com">harry@harrymoreno.com</a>
-about your project to get a project estimate.
