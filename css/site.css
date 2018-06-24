@@ -120,11 +120,10 @@ span.caption {
   font-size: 1.5em;
 }
 
-.pager {
+.pager { display: flex; }
+.pager div a, form button {
   font-size: 1.2em;
   font-weight: bold;
-}
-.pager div a, form button {
   background-color: #eee;
   border-radius: 10px;
   border: 2px solid rgb(115, 65, 60);
@@ -137,9 +136,9 @@ span.caption {
   background-color: rgb(129, 19, 19);
   color: white;
 }
-
-.pager { display: flex; }
-.pager div.active a { background-color: rgb(249, 188, 84); }
+.pager div.active a {
+  background-color: rgb(249, 188, 84);
+}
 
 .share-btn {
   display: inline-block;
