@@ -4,8 +4,10 @@
               col-md-8 col-md-offset-0
               col-lg-8 col-lg-offset-0
               text-center">
-    <h1>
-      <a href="/">Harry Moreno <small>Blog</small></a>
-    </h1>
+    {% if page.layout == 'post' %}
+      <h2><a href="/">Harry Moreno <small>Blog</small></a></h2>
+    {% else %}
+      <h1><a href="/">Harry Moreno <small>Blog</small></a></h1>
+    {% endif %}
   </div>
 </div>

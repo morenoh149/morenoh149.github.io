@@ -1,29 +1,107 @@
-code { font-size: 14px; }
-h1 > a:link{
-  text-decoration: none;
-  color: #111;
-}
-h1 > a:visited {
-  text-decoration: none;
-  color: #111;
-}
-h1 > a:hover {
-  color: #666;
-}
-.post h4 {
-  font-size: 1.6em;
-}
-.well { padding: 10px; }
-.well h3 {
-  margin: 0;
-}
+/* TODO come up with rem / em font-size strategy */
+/* use css-grid and deprecate bootstrap layout */
 
+/* site-wide styles */
 body {
   padding-bottom: 70px;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
   overflow-wrap: break-word;
 }
+
+/* fonts styling */
+p {
+  letter-spacing: -.003em;
+  line-height: 1.58;
+  padding-top: 10px;
+  font-family : Georgia,Cambria,"Times New Roman",Times,serif;
+}
+dd p { font-size: 14px; }
+dd li { font-size: 14px; }
+.post p { font-size: 14px; }
+.post li { font-size: 14px; }
+.post img {
+  display: block;
+  margin: 10px auto;
+}
+
+@media (min-width: 768px) {
+  dd p { font-size: 18px; }
+  dd li { font-size: 18px; }
+  .post p { font-size: 18px; }
+}
+
+@media (min-width: 992px) {
+  dd p { font-size: 21px; }
+  dd li { font-size: 21px; }
+  .post p { font-size: 21px; }
+}
+
+.center { text-align: center; }
+
+.right { text-align: right; }
+
+/* page-header is the blog's title */
+/* TODO refactor page-header partial to use .page-header class on h1 and h2 */
+.page-header {
+  margin-top: 0px;
+  font-style: italic;
+}
+@media (min-width: 768px) {
+  .page-header h1, .page-header h2 {
+    font-size: 60px;
+  }
+}
+.page-header h1 > a:link, .page-header h2 > a:link {
+  text-decoration: none;
+  color: #111;
+}
+.page-header h1 > a:visited, .page-header h2 > a:visited {
+  text-decoration: none;
+  color: #111;
+}
+.page-header h1 > a:hover, .page-header h2 > a:hover {
+  color: #666;
+}
+
+/* post styling */
+.post {
+  /* this is needed because the p style above does not affect post section headers */
+  font-family : Georgia,Cambria,"Times New Roman",Times,serif;
+}
+
+/* post-title should be used on anchors */
+.post-title {
+  font-size: 30px;
+}
+.post-title:link, .post-title:visited {
+  text-decoration: none;
+  color: #111;
+}
+.post-title:hover {
+  color: #666;
+}
+
+/* post section headers */
+.post h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+.post h3 {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.post h4 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.well { padding: 10px; }
+.well h3 {
+  margin: 0;
+}
+
+code { font-size: 14px; }
 
 li.needs_top_padding { padding-top: 15px; }
 
@@ -68,36 +146,7 @@ img.disabled { opacity: 0.3; }
   text-align: center;
 }
 
-p {
-  text-align: justify;
-  font-family : Georgia,Cambria,"Times New Roman",Times,serif;
-  letter-spacing: -.003em;
-}
-dd p { font-size: 14px; }
-dd li { font-size: 14px; }
-.post p { font-size: 14px; }
-.post li { font-size: 14px; }
-.post img {
-  display: block;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  dd p { font-size: 18px; }
-  dd li { font-size: 18px; }
-  .post p { font-size: 18px; }
-}
-
-@media (min-width: 992px) {
-  dd p { font-size: 21px; }
-  dd li { font-size: 21px; }
-  .post p { font-size: 21px; }
-}
-
-.center { text-align: center; }
-
-.right { text-align: right; }
-
+/* sidebar styling */
 .sidebar { overflow-x: hidden; }
 .sidebar li {
   font-size: 14px;
@@ -105,21 +154,12 @@ dd li { font-size: 14px; }
 }
 .sidebar a { color: rgb(129, 19, 19); }
 
-.page-header {
-  margin-top: 0px;
-  font-style: italic;
-}
-@media (min-width: 768px) {
-  .page-header h1 {
-    font-size: 60px;
-  }
-}
-
 span.caption {
   font-style: italic;
   font-size: 1.5em;
 }
 
+/* pagination styling */
 .pager { display: flex; }
 .pager div a, form button {
   font-size: 1.2em;
@@ -140,11 +180,13 @@ span.caption {
   background-color: rgb(249, 188, 84);
 }
 
+/* social media post sharing links */
 .share-btn {
   display: inline-block;
   padding: 5px;
   border-radius: 5px;
   font-size: 1.1em;
+  font-family: Arial, sans-serif;
   box-shadow: 0px 2px 1px silver;
 }
 .share-btn.twitter {

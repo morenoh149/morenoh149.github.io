@@ -7,7 +7,11 @@ title: Software Consultant
   <dl>
     {% for post in paginator.posts %}
       <dt>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2>
+          <a class="post-title" href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h2>
         {{ post.date | date: "%d %B %Y" }}
       </dt>
 
