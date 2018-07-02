@@ -72,11 +72,11 @@ version of Google Analytics. You used to have to have google cloud costs in exce
 [$150,000/year](https://www.blastam.com/google-analytics-360-standard-comparison).
 They no longer state this on their pricing page.
 
-One of the advantages of Redshift was that it runs standard SQL language. Meaning all SQL tooling works out of
-the box on Redshift. Whereas BigQuery ran a SQL-like language that had it's incompatibilities. 
+One of the advantages of Redshift was that it runs standard SQL. Meaning all SQL tooling works out of
+the box on Redshift. Whereas BigQuery ran a variation of SQL that had it's incompatibilities.
 (BigQuery added
 [standard SQL support](https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql)
-via opt in in 2016.) This could
+in 2016.) This could
 explain Redshift's early dominance in the space. These days most BI tools support both platforms equally
 well.
 
@@ -86,8 +86,8 @@ well.
 show that Redshift is more popular than BigQuery in the United States. It seems that data is viewed
 as an area to invest in for many organizations. As such they are okay investing into developing
 their datawarehouse and having fulltime engineers work on this problem if it gives them
-a competitive advantage. The fact that BigQuery uses a SQL language that has incompatibilities
-with standard SQL may explain why Redshift was able to overtake BigQuery despite it's 2 year headstart.
+a competitive advantage. The fact that BigQuery used a variant of SQL may explain why Redshift
+was able to overtake BigQuery despite it's 2 year headstart.
 Investing in something that is nonstandard is viewed as more risky for an organization.
 ![Google Trends - USA by state - Redshift - BigQuery](/img/2018-06-29-trends-by-state.png)
 We see most search volume from the big tech hubs, Washington, California, New York. Interestingly, in Georgia
