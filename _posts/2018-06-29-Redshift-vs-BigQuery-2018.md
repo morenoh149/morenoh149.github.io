@@ -73,9 +73,12 @@ version of Google Analytics. You used to have to have google cloud costs in exce
 They no longer state this on their pricing page.
 
 One of the advantages of Redshift was that it runs standard SQL language. Meaning all SQL tooling works out of
-the box on Redshift. Whereas BigQuery runs a SQL-like language that may have it's incompatibilities. This could
-explain Redshift's dominance in the space. These days most BI tools support BigQuery,
-so this consideration is not relevant anymore.
+the box on Redshift. Whereas BigQuery ran a SQL-like language that had it's incompatibilities. 
+(BigQuery added
+[standard SQL support](https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql)
+via opt in in 2016.) This could
+explain Redshift's early dominance in the space. These days most BI tools support both platforms equally
+well.
 
 ## Trends
 ![Google Trends - USA - Redshift - BigQuery](/img/2018-06-29-trends-usa.png)
