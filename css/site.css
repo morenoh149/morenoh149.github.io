@@ -113,7 +113,11 @@ li.needs_top_padding { padding-top: 15px; }
 
 .navbar-inverse .navbar-brand { color: #eee; }
 .navbar-inverse .navbar-nav>li>a { color: #ddd; }
-i.fa { font-size: 1.5em; }
+i.fa, i.fab { font-size: 1.5em; }
+.nav-item-icon {
+  font-size: 1.5em;
+  padding: 0 5px;
+}
 
 img.feedly-icon {
   width: 25;
