@@ -84,6 +84,20 @@ overflows.
 You earn the H4XF13LD MORRIS cryptozombie.
 
 ## Lesson 6: App Front-ends & Web3.js
+In this Lesson we revisit web3 (we saw it briefly in lesson 1). Familiarity with
+HTML and javascript is assumed so if you aren't already I suggest doing
+[learnyouhtml](https://github.com/denysdovhan/learnyouhtml),
+[javascripting](https://github.com/workshopper/javascripting) and
+[promise-it-wont-hurt](https://github.com/stevekane/promise-it-wont-hurt).
+
+The limitations of the platform really shine in this Lesson. Equivalent
+javascript like
+`var startApp = function() {` and `function startApp() {` are considered different.
+Javascript without semicolons on every line a semicolon can be added is also
+considered incorrect.
+It seems like the site uses a string comparison after removing whitespace to
+determine solutions. This can be frustrating if you know your solution is also
+correct.
 
 ## Summary
 Something I've found frustrating is the use of the term keccak256. It's assumed
