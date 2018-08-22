@@ -116,6 +116,9 @@ compare to [dapp](https://dapp.tools/dapp/)?
 
 What is the [year 2038 problem](https://en.wikipedia.org/wiki/Year_2038_problem)?
 
+If you like CryptoZombies try [ChainShot](https://www.chainshot.com/). This platform doesn't have as much material
+as CryptoZombies but it does handle equivalent solidity better.
+
 ## Solidity Examples
 * [Declare a var and update it](https://ethfiddle.com/Q7L0zEegCA)
 * [solidity struct example](https://ethfiddle.com/Jk-pEoqwXz)
