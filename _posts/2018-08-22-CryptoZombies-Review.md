@@ -1,52 +1,59 @@
+---
+layout: post
+title: CryptoZombies Review
+---
+CryptoZombies is one of the best free beginner Solidity courses for learning Ethereum Smart Contract development.
+In this post I review the 6 lessons of the curriculum. I hope this feedback helps improve the site and motivates
+others to go through it as well.
+
 ## Lesson 1: Making the Zombie Factory
 Walks you through the creation of a simple contract written in solidity step
 by step. First impressions of the language are it uses javascript-esque
 syntax (`function` for beginning a function signature) but all variables are
 statically typed. You must declare the type when using numbers or strings.
-Structs are exposed right away and it all feels like C in javscript's clothing.
-The function signatures feel very java-esque
-with declaration of public/private functions. Functions in soldity
-are public by default, so you should make reserved functions explicitly private.
+Structs are introduced, it feels like C in Javscript's clothing.
+The function signatures feel very Java-esque
+with declaration of public/private functions. Functions in Soldity
+are public by default, so you should make reserved functions private.
 The last chapter in this lesson demos web3.js and how it would call a smart
 contract.
 
 ## Lesson 2: Zombies Attack Their Victims
 [Mappings](http://solidity.readthedocs.io/en/v0.4.23/types.html?highlight=mapping#mappings)
 are introduced. At first I thought they were functions but they are more like
-typical objects in Javascript. You treat it as an object with keys and values
-that are updatable. All indexes in a mapping are equal to `0` in a new mapping.
+plain objects in Javascript. You treat it as an object with keys and values
+that are updatable. All indexes in a Mapping are equal to `0` in a new mapping.
 A global variable
 [msg.sender](http://solidity.readthedocs.io/en/v0.4.23/units-and-global-variables.html?highlight=msg#block-and-transaction-properties)
-is introduced, touching on the topic of the security model of contracts and
-what's avialable in global scope.
+is introduced, touching on the security model of contracts and
+what's available in global scope.
 The most interesting thing about this chapter is they go over how to write a
 contract that interacts with preexisting contracts on the blockchain. You are
 walked through how to fetch a
 [cryptokitty](https://en.wikipedia.org/wiki/CryptoKitties) from their
 [contract](https://etherscan.io/address/0x06012c8cf97bead5deae237070f9587f8e7a266d#code)
-and mix the kitty's DNA with your Zombie's. We are also introduced to contract
+and mix the kitty's DNA with your Zombie. We are also introduced to contract
 inheritance.
 
 ## Lesson 3: Advanced Solidity Concepts
-We are shown how to use an `external` function to allow updating addresses to
-other contracts in the future. Inevitably contracts may have bugs and so it's a
-common requirement to be able to call newer contracts.
-They also introduce the concept of Gas to run computations and strategies to
+We see how to use an `external` function to allow updating addresses to
+other contracts in the future. Contracts may have bugs and so it's a
+common need to be able to update contracts.
+They also introduce the concept of Gas and strategies to
 minimize Gas cost in your programs.
 [Modifiers](http://solidity.readthedocs.io/en/v0.4.23/structure-of-a-contract.html#function-modifiers)
-are introduced, then behave like function decorators or mixins in other
-languages. Instead of `yield` like other languages you use `_;` which I think
-is too terse.
+are introduced, they behave like function decorators or mixins in other
+languages. Instead of `yield` like other languages you use `_;` which is too terse.
 
 ## Lesson 4: Zombie Battle System
 This chapter shows how contracts always have a balance and how to write
 functions that can receive ether. The
 [payable](http://solidity.readthedocs.io/en/v0.4.24/miscellaneous.html?highlight=payable#modifiers)
 function modifier allows a function to receive ether, otherwise an exception is
-thrown. The subject of generating true random numbers is touched on, some
-[ideas on StackOverflow](https://ethereum.stackexchange.com/questions/191/how-can-i-securely-generate-a-random-number-in-my-smart-contract).
+thrown. Generating true random numbers is an issue, some
+[solutions on StackOverflow](https://ethereum.stackexchange.com/questions/191/how-can-i-securely-generate-a-random-number-in-my-smart-contract).
 For cryptozombies we opt to use vulnerable random numbers, but if your contract
-is going to be valuable you should use the more involved approaches.
+is going to be valuable you should use the true random approach.
 
 ## Lesson 5: ERC721 & Crypto-Collectibles
 Here we write a contract implementing
@@ -65,52 +72,51 @@ contract ERC721 {
   function takeOwnership(uint256 _tokenId) public;
 }
 {% endhighlight %}
-keeping in mind the there is no official ERC721 standard, so we implement
+keeping in mind that there is no official ERC721 standard, so we implement
 [openzeppelin's version](https://github.com/OpenZeppelin/openzeppelin-solidity/tree/master/contracts/token/ERC721).
-Note, openzeppelin's ERC721 standard has changed since this lesson was written,
+Note, Openzeppelin's ERC721 standard has changed,
 so we implement the deprecated version. For example, an
 [ApprovalForAll](https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/token/ERC721/ERC721Basic.sol#L21)
-event has been added to the spec and the
+event was added to the spec and the
 [transfer](https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/token/ERC721/DeprecatedERC721.sol#L13)
-function has been removed.
-[Github issue tracking updates to the lesson](https://github.com/loomnetwork/cryptozombie-lessons/issues/151).
+function was removed.
+[Github issue](https://github.com/loomnetwork/cryptozombie-lessons/issues/151).
 
-It also covers smart contract security. Mainly overflows in contract variables.
-To prevent the category of bugs we use openzepplin's
+It also covers smart contract security. For example, overflows in contract variables.
+To prevent bugs we use openzepplin's
 [SafeMath library](https://openzeppelin.org/api/docs/math_SafeMath.html).
 We review solidity library syntax and write our own library to prevent variable
 overflows.
 
-You earn the H4XF13LD MORRIS cryptozombie.
-
 ## Lesson 6: App Front-ends & Web3.js
-In this Lesson we revisit web3 (we saw it briefly in lesson 1). Familiarity with
-HTML and javascript is assumed so if you aren't already I suggest doing
+In this Lesson we revisit web3 (we first saw it in lesson 1). Familiarity with
+HTML and Javascript is assumed so if you aren't already do
 [learnyouhtml](https://github.com/denysdovhan/learnyouhtml),
 [javascripting](https://github.com/workshopper/javascripting) and
 [promise-it-wont-hurt](https://github.com/stevekane/promise-it-wont-hurt).
 
-The limitations of the platform really shine in this Lesson. Equivalent
+The limitations of the platform shine in this Lesson. Equal
 javascript like
-`var startApp = function() {` and `function startApp() {` are considered different.
-Javascript without semicolons on every line a semicolon can be added is also
+`var startApp = function() {` and `function startApp() {` are different.
+Javascript without semicolons on every valid place is also
 considered incorrect.
 It seems like the site uses a string comparison after removing whitespace to
-determine solutions. This can be frustrating if you know your solution is also
-correct.
+determine solutions. This can be frustrating if you know your solution is correct but doesn't match theirs exactly.
 
 ## Summary
-Something I've found frustrating is the use of the term keccak256. It's assumed
-knowledge but it was not clear to me that it is synonymous with
-[SHA-3](https://en.wikipedia.org/wiki/SHA-3) a successor to SHA-2. But it's not
+I found frustrating the use of the term keccak256. It's assumed
+knowledge. It was not clear to me that it is synonymous with
+[SHA-3](https://en.wikipedia.org/wiki/SHA-3) a successor to SHA-2. It's not
 explained what it is and why it's used over other schemes. A single sentence
 like, "The Keccak256 hash is used throughout Ethereum, it's used for generating
 hashes and is the successor to SHA-3." would go a long way.
 
-It'd be nice to get a breakdown of tools in the ecosystem. Like how does truffle
-compare to dapp?
+It'd be nice to get a breakdown of tools in the ecosystem. Like how does [truffle](https://truffleframework.com/)
+compare to [dapp](https://dapp.tools/dapp/)?
 
-What is the year 2038 problem?
+What is the [year 2038 problem](https://en.wikipedia.org/wiki/Year_2038_problem)?
 
-## Fiddles
-[Declare a var and update it](https://ethfiddle.com/auxt0T8XP7)
+## Solidity Examples
+* [Declare a var and update it](https://ethfiddle.com/auxt0T8XP7)
+* [solidity struct example](https://ethfiddle.com/Jk-pEoqwXz)
+* [solidity mapping example](https://ethfiddle.com/k4LeGI8Kkd)
