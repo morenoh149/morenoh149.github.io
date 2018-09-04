@@ -105,11 +105,16 @@ determine solutions. This can be frustrating if you know your solution is correc
 
 ## Summary
 I found frustrating the use of the term keccak256. It's assumed
-knowledge. It was not clear to me that it is synonymous with
-[SHA-3](https://en.wikipedia.org/wiki/SHA-3) a successor to SHA-2. It's not
+knowledge. It's not
 explained what it is and why it's used over other schemes. A single sentence
 like, "The Keccak256 hash is used throughout Ethereum, it's used for generating
-hashes and is the successor to SHA-3." would go a long way.
+hashes and is the successor to SHA-3." would go a long way. A good explanation from [mastering ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/keys-addresses.asciidoc#ethereums-cryptographic-hash-function---keccak-256)
+
+```
+Ethereum uses the Keccak-256 cryptographic hash function in many places. Keccak-256 was designed as a candidate for the SHA-3 Cryptographic Hash Function Competition held in 2007 by the National Institute of Science and Technology. Keccak was the winning algorithm, which became standardized as Federal Information Processing Standard (FIPS) 202 in 2015.
+
+However, during the period when Ethereum was developed, the NIST standardization was not yet finalized. NIST adjusted some of the parameters of Keccak after the completion of the standards process, allegedly to improve its efficiency. This was occurring at the same time as heroic whistleblower Edward Snowden revealed documents that imply that NIST may have been improperly influenced by the National Security Agency to intentionally weaken the Dual_EC_DRBG random-number generator standard, effectively placing a backdoor in the standard random number generator. The result of this controversy was a backlash against the proposed changes and a significant delay in the standardization of SHA-3. At the time, the Ethereum Foundation decided to implement the original Keccak algorithm, as proposed by its inventors, rather than the SHA-3 standard as modified by NIST.
+```
 
 It'd be nice to get a breakdown of tools in the ecosystem. Like how does [truffle](https://truffleframework.com/)
 compare to [dapp](https://dapp.tools/dapp/)?
