@@ -32,25 +32,25 @@ title: Software Consultant
       </div>
     {% endif %}
 
-		{% for page in (1..paginator.total_pages) %}
-			{% capture page_url %}
+    {% for page in (1..paginator.total_pages) %}
+      {% capture page_url %}
         {% if page == 1 %}
           /
         {% else %}
           /page{{ page }}
         {% endif %}
       {% endcapture %}
-			{% if page == paginator.page %}
-				<div class="page-num active">
-					<a>
-			{% else %}
-				<div class="page-num">
-					<a href="{{ page_url }}">
-			{% endif %}
-						<span>{{ page }}</span>
-					</a>
-				</div>
-		{% endfor %}
+      {% if page == paginator.page %}
+        <div class="page-num active">
+          <a>
+      {% else %}
+        <div class="page-num">
+          <a href="{{ page_url }}">
+      {% endif %}
+            <span>{{ page }}</span>
+          </a>
+        </div>
+    {% endfor %}
 
     {% if not-paginator.next_page %}
       <div class="next">
@@ -61,4 +61,15 @@ title: Software Consultant
       </div>
     {% endif %}
   </nav>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- ad1_browser -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-1904572159184995"
+       data-ad-slot="4921063812"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 </div>
