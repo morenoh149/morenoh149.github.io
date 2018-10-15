@@ -72,7 +72,7 @@ LightGBM does not have to store as much working memory. Both papers mention the
 advantages of data compression and cache hits.
 
 In summary, LightGBM improves on XGBoost. The LightGBM paper uses XGBoost as a
-baseline and out performs it in training speed and the dataset sizes it can handle.
+baseline and outperforms it in training speed and the dataset sizes it can handle.
 The accuracies are comparable. LightGBM in some cases reaches it's top accuracy
 in under a minute and while only reading a fraction of the whole dataset. This
 goes to show the power of approximation algorithms and intelligently sampling
