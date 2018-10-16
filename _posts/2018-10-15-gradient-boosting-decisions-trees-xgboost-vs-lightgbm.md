@@ -2,6 +2,7 @@
 layout: post
 title: "Gradient Boosting Decision trees: XGBoost vs LightGBM"
 ---
+![AWS Redshift vs Google Big Query](/img/2018-10-15-model-performance.png)
 Gradient boosting decision trees is the state of the art for structured data problems.
 Two modern algorithms that make gradient boosted tree models are XGBoost and LightGBM.
 In this article I'll summarize their introductory papers for each algorithm's approach.
@@ -77,3 +78,7 @@ The accuracies are comparable. LightGBM in some cases reaches it's top accuracy
 in under a minute and while only reading a fraction of the whole dataset. This
 goes to show the power of approximation algorithms and intelligently sampling
 a dataset to extract the most information as fast as possible.
+
+If you need data science help for you business or know anyone that does please
+[contact me](https://harrymoreno.com/about.html). I'm always looking for interesting
+work and to help stakeholders gain insights into their data.
