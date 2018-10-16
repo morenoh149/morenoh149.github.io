@@ -3,8 +3,7 @@ title: Harry Moreno Blog
 name: Harry Moreno Blog
 email: morenoh149@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  This is Harry Moreno's blog. He's a Software Engineer that loves solving
-  problems and delighting people.
+  Harry Moreno's blog - read about making technology
 
 # Serving
 detach:  false
