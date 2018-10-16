@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Gradient Boosting Decision trees: XGBoost vs LightGBM"
+image: /img/2018-10-15-model-performance.png
 ---
 ![AWS Redshift vs Google Big Query](/img/2018-10-15-model-performance.png)
 Gradient boosting decision trees is the state of the art for structured data problems.
