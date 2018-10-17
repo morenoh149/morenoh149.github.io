@@ -80,6 +80,18 @@ in under a minute and while only reading a fraction of the whole dataset. This
 goes to show the power of approximation algorithms and intelligently sampling
 a dataset to extract the most information as fast as possible.
 
+*update:* After publishing this article some folks brought [Catboost](https://catboost.ai)
+to my attention. Catboost improves over LightGBM by handling categorical features
+better. Traditionally categorical features are one-hot-encoded, this incurs the
+curse of dimensionality if the feature has many distinct values. Previous algorithms
+tackled this issue of sparse features as we saw with EFB above. Catboost deals
+with categorical features by, "generating random permutations of the dataset and
+for each sample computing the average label value
+for the sample with the same category value placed before the given one in the
+permutation". They also process the data with GPU acceleration, and do feature
+discretization into a fixed number of bins (128 and 32). I'm looking forward
+to trying it out soon!
+
 If you need help analyzing data or know anyone that does please
 [contact me](https://harrymoreno.com/about.html). I'm always looking for interesting
 work and to help stakeholders gain insights into their data.
