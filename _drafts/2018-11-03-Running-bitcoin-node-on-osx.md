@@ -29,3 +29,5 @@ the txindex lets your bitcoin-cli check all transactions, not just the ones for 
 1. start the service `launchctl load ~/Library/LaunchAgents/org.bitcoin.bitcoind.plist`
 1. verify it's running, if you see two lines `ps aux | grep bitcoind`
 1. if for whatever reason the service errors out (check `launchctl list`) edit the config and reload with `launchctl unload` and `launchctl reload`
+
+to stop the service for whatever reason run `launchctl stop org.bitcoin.bitcoind.plist` and `launchctl unload org.bitcoin.bitcoind.plist`
