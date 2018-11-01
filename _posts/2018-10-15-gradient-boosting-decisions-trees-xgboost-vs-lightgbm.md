@@ -6,7 +6,7 @@ image: /img/2018-10-15-model-performance.png
 ![AWS Redshift vs Google Big Query](/img/2018-10-15-model-performance.png)
 Gradient boosting decision trees is the state of the art for structured data problems.
 Two modern algorithms that make gradient boosted tree models are XGBoost and LightGBM.
-In this article I'll summarize their introductory papers for each algorithm's approach.
+In this article I'll summarize each introductory paper.
 
 Gradient Boosting Decision Trees (GBDT) are currently the best techniques for building
 predictive models from structured data. Unlike models for analyzing images (for that
