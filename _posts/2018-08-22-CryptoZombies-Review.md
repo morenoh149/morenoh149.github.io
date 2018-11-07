@@ -5,6 +5,7 @@ title: CryptoZombies Review
 [CryptoZombies](https://cryptozombies.io/) is one of the best free beginner Solidity courses for learning Ethereum Smart Contract development.
 In this post I review the 6 lessons of the curriculum. I hope this feedback helps improve the site and motivates
 others to go through it as well.
+*UPDATE*: they [updated cryptozombies](https://medium.com/loom-network/cryptozombies-season-2-is-here-and-introducing-zombie-battleground-custom-game-modes-f1f09efa24f4)
 
 ## Lesson 1: Making the Zombie Factory
 Walks you through the creation of a simple contract written in solidity step
