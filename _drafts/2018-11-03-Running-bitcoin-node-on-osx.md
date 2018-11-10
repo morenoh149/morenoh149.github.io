@@ -21,13 +21,16 @@ you'll now have `bitcoind` and `bitcoin-cli` in `/usr/local/bin`
 ```
 datadir=<data location>`
 txindex=1
+rpcuser=bitcoinrpc
+rpcpassword=<your password>
 ```
 the txindex lets your bitcoin-cli check all transactions, not just the ones for this installation
 1. daemonize it `cp contrib/init/org.bitcoin.bitcoind.plist ~/Library/LaunchAgents`
-1. if you are not using the default data location add an extra arg to the config `<string>-datadir=/Volumes/DVDbay/Bitcoin</string>` under the `<string>/usr/local/bin/bitcoind</string>` line
+1. if you are not using the default data location add an extra arg to the config `<string>-datadir=/Volumes/DVDbay/Bitcoin/<string>` under the `<string>/usr/local/bin/bitcoind/<string>` line
 1. load the service file `launchctl load ~/Library/LaunchAgents/org.bitcoin.bitcoind.plist`
 1. start the service `launchctl load ~/Library/LaunchAgents/org.bitcoin.bitcoind.plist`
 1. verify it's running, if you see two lines `ps aux | grep bitcoind`
-1. if for whatever reason the service errors out (check `launchctl list`) edit the config and reload with `launchctl unload` and `launchctl reload`
+1. if for whatever reason the service errors out (check `launchctl list`) edit the config and reload with `launchctl unload ~/Library/LaunchAgents/org.bitcoin.bitcoind.plist` and `launchctl load ~/Library/LauchAgents/org.bitcoin.bitcoind.plist`
 
-to stop the service for whatever reason run `launchctl stop org.bitcoin.bitcoind.plist` and `launchctl unload org.bitcoin.bitcoind.plist`
+to stop the service for whatever reason run `launchctl unload ~/Library/LaunchAgents/org.bitcoin.bitcoind.plist`
+1. once you have a full copy of the blockchain (may take a day or two with decent internet speeds) you can use the cli to inspect the blockchain `bitcoin-cli -datadir=<data location> getrawtransaction 10d7c4e022f35288779be6713471151ede967caaa39eecd35296aa36d9c109ec`
