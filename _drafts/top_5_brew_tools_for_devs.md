@@ -13,6 +13,7 @@ word `brew install the_silver_searcher`
 wget`
 * gist - Useful for quickly sharing code snippets with people on irc `brew
 install gist`
+* q - https://harelba.github.io/q/
 
 
 Bonus:
