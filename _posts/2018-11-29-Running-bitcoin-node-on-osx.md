@@ -8,14 +8,19 @@ Running a full bitcoin node on osx is a good way to familiarize yourself with bl
 You can explore the ledger locally and you don't suffer any of the risks Simple Payment Verification
 nodes suffer from. You can "Be your own Bank" or so they say. If you have ~300 GB of free disk space you should try it out.
 
+The steps below will walk you through installing and running a bitcoin node on your osx computer.
+You will get a copy of the source code, compile it, configure it, install it to run on startup and verify it's running.
+For those installing bitcoin on a secondary harddrive there are some extra steps.
+If you are not using the default location you have to specify the install directory when using the commands, e.g. `bitcoin-cli -datadir=<data location> getrawtransaction 10d7c4e022f35288779be6713471151ede967caaa39eecd35296aa36d9c109ec`. The configuration file will be read from the install directory.
+
 * Clone [bitcoin core](https://github.com/bitcoin/bitcoin)
 * Run `./autogen.sh`
 * Run `./configure`
 * Run `make`
 * Run `sudo make install`
 you'll now have `bitcoind` and `bitcoin-cli` in `/usr/local/bin`
-* Decide where you want to store the blockchain, for me I used `/Volumes/secondDisk/Bitcoin`
-* Verify you can run `bitcoind -datadir=<data location>`, this will also begin constructing the configuration files
+* Decide where you want to store the blockchain. I used `/Volumes/secondDisk/Bitcoin`. The default location is (TODO).
+* Verify you can run `bitcoind -datadir=<data location>`, this will also begin constructing the configuration files.
 * Add file `bitcoin.conf` to your `data location`
 * Populate it with the following
 {% highlight yaml %}
