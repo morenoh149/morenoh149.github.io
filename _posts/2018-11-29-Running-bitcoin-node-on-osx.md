@@ -13,6 +13,7 @@ You will get a copy of the source code, compile it, configure it, install it to 
 For those installing bitcoin on a secondary harddrive there are some extra steps.
 If you are not using the default location you have to specify the install directory when using the commands, e.g. `bitcoin-cli -datadir=<data location> getblockchaininfo`. The configuration file will be read from the install directory.
 Note if you choose to run a lightweight node, you cannot look up arbitrary bitcoin transaction info.
+These instructions build upon the instructions in the [project](https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md).
 
 * Clone [bitcoin core](https://github.com/bitcoin/bitcoin)
 * Run `brew install automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf python qt libevent qrencode`
