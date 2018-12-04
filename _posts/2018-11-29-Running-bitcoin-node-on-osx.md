@@ -13,30 +13,33 @@ You will get a copy of the source code, compile it, configure it, install it to 
 For those installing bitcoin on a secondary harddrive there are some extra steps.
 If you are not using the default location you have to specify the install directory when using the commands, e.g. `bitcoin-cli -datadir=<data location> getblockchaininfo`. The configuration file will be read from the install directory.
 Note if you choose to run a lightweight node, you cannot look up arbitrary bitcoin transaction info.
-These instructions build upon the instructions in the [project](https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md).
+These instructions build upon the instructions in [github](https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md).
 
 * Clone [bitcoin core](https://github.com/bitcoin/bitcoin)
 * Run `brew install automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf python qt libevent qrencode`
 * Run `./contrib/install_db4.sh .`
 * Run `./autogen.sh`
 * Run `./configure`
-* Run `make` (may take 5 minutes to compile)
-* Run `sudo make install`
-you'll now have `bitcoind` and `bitcoin-cli` in `/usr/local/bin`
-* Decide where you want to store the blockchain. I used `/Volumes/secondDisk/Bitcoin`. The default location is `/Users/<user name>/Library/Application Support/Bitcoin`.
-* Verify you can run `bitcoind` this will also begin constructing the configuration files. (If you are not using the default location specify the data location as an argument `bitcoind -datadir=<data location>`.)
-* Add file `bitcoin.conf` to your `data location`
-* Populate it with the following
+* Run `make` (may take > 15 minutes to compile)
+* Run `sudo make install`. You'll now have `bitcoind` and `bitcoin-cli` in `/usr/local/bin`.
+* Decide where you want to store the blockchain. The default location is `/Users/<user name>/Library/Application Support/Bitcoin`. This will be your `<data location>` as used in the rest of these instructions. I used `/Volumes/secondDisk/Bitcoin` because I had a large secondary disk.
+* Verify you can run `bitcoind` this will also begin constructing the configuration files. (If you are not using the default location specify the data location as an argument, i.e., `bitcoind -datadir=<data location>`.)
+* Add file `bitcoin.conf` to your `data location`.
+* If you want to run a full node populate `bitcoin.conf` with:
 {% highlight yaml %}
-datadir=<data location>
 txindex=1
 rpcuser=bitcoinrpc
 rpcpassword=<your password>
 {% endhighlight %}
-TODO [show alternative conf for lightweight node](https://github.com/bitcoinbook/bitcoinbook/blob/f8b883dcd4e3d1b9adf40fed59b7e898fbd9241f/ch03.asciidoc#configuring-the-bitcoin-core-node).
-the txindex setting lets your bitcoin-cli check all transactions, otherwise it will only check transactions this node
-has made
-* Daemonize it `cp contrib/init/org.bitcoin.bitcoind.plist ~/Library/LaunchAgents`
+* If you want to run a light node populate `bitcoin.conf` with:
+{% highlight yaml %}
+prune=5000
+dbcache=300
+rpcuser=bitcoinrpc
+rpcpassword=<your password>
+{% endhighlight %}
+To learn more about configuring bitcoin see [configuring](https://github.com/bitcoinbook/bitcoinbook/blob/f8b883dcd4e3d1b9adf40fed59b7e898fbd9241f/ch03.asciidoc#configuring-the-bitcoin-core-node).
+* Daemonize bitcoin `cp contrib/init/org.bitcoin.bitcoind.plist ~/Library/LaunchAgents`
 * If you are not using the default data location add an extra line to the
 [plist](https://github.com/bitcoin/bitcoin/blob/master/contrib/init/org.bitcoin.bitcoind.plist) file you just copied, `<string>-datadir=/Volumes/<data location>/Bitcoin/</string>` as shown below:
 {% highlight xml %}
