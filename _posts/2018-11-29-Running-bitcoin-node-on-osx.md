@@ -54,9 +54,9 @@ To learn more about configuring bitcoin see [configuring](https://github.com/bit
 <true/>
 {% endhighlight %}
 * Load and start the service `launchctl load ~/Library/LaunchAgents/org.bitcoin.bitcoind.plist`
-* Verify it's running, run `ps aux | grep bitcoind` if you an entry like
-
+* Verify it's running, run `ps aux | grep bitcoind` if you see an entry like:
 `admin  83592  69.5  1.5  4592184 247812 ??  R  1:20AM  0:20.46 /usr/local/bin/bitcoind`
+it means it's running.
 * If for whatever reason the service errors out (check `launchctl list`) edit the config and reload with `launchctl unload ~/Library/LaunchAgents/org.bitcoin.bitcoind.plist` and `launchctl load ~/Library/LauchAgents/org.bitcoin.bitcoind.plist`
 * Once you have a full copy of the blockchain (may take a day or two with decent internet speeds) you can use the cli to inspect the blockchain `bitcoin-cli -datadir=<data location> getrawtransaction 10d7c4e022f35288779be6713471151ede967caaa39eecd35296aa36d9c109ec`
 * To verify a lightweight node is working try `bitcoin-cli getblockchaininfo`
