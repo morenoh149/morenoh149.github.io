@@ -16,10 +16,7 @@ p {
   padding-top: 10px;
   font-family : Georgia,Cambria,"Times New Roman",Times,serif;
 }
-dd p { font-size: 14px; }
-dd li { font-size: 14px; }
-.post p { font-size: 14px; }
-.post li { font-size: 14px; }
+.post { font-size: 16px; }
 .post img {
   display: block;
   margin: 10px auto;
@@ -87,8 +84,6 @@ dd li { font-size: 14px; }
   margin: 0;
 }
 
-code { font-size: 14px; }
-
 li.needs_top_padding { padding-top: 15px; }
 
 .site-footer {
@@ -139,7 +134,7 @@ img.disabled { opacity: 0.3; }
 /* sidebar styling */
 .sidebar { overflow-x: hidden; }
 .sidebar li {
-  font-size: 14px;
+  font-size: 16px;
   border-top: solid 1px lightgrey;
 }
 .sidebar a { color: rgb(129, 19, 19); }
