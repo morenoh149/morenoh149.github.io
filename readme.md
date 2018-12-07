@@ -16,6 +16,9 @@ TODO
   * use AWS SES https://aws.amazon.com/ses/
 * add archives so visitors know I have been writing for a while
 * add search to discover old articles
+* replace twitter with contact form
+* add portfolio to About page
+* add file uploading with https://uploadcare.com
 
 ## Running
 ```
