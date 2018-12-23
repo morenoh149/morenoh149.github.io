@@ -24,4 +24,5 @@ TODO
 ```
 % bundle
 % bundle exec jekyll s
+% bundle exec jekyll s --drafts
 ```
