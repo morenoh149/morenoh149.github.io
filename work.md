@@ -7,7 +7,7 @@ My work may not always be visible. Sometimes it's behind the scenes powering
 recommendation systems, letting you know your systems are down before your
 customers
 do or making sure different departments of your business get the insights
-they need to make business decisions.
+they need to make decisions.
 
 <!-- 
 Some projects that you _can_ see:
