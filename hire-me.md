@@ -1,12 +1,12 @@
 ---
 layout: about
-title: About Harry Moreno
+title: Hire Me
 ---
 
 <div style="text-align: center; font-size: 2em;">
   <i class="fa fa-handshake"></i>
   <br />
-  HELLO
+  Hire Me
 </div>
 
 ## Who I am

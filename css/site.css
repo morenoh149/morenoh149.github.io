@@ -216,3 +216,12 @@ form.newsletter input[name="email"] {
 form.newsletter input[type="submit"] {
   grid-column: 3;
 }
+div.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (min-width: 768px) {
+  div.work-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
