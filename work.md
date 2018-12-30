@@ -9,11 +9,73 @@ customers
 do or making sure different departments of your business get the insights
 they need to make decisions.
 
-<!-- 
 Some projects that you _can_ see:
- -->
+# Chronic Sickness
 
-Technologies I know:
+[chronicsickness.com](https://chronicsickness.com) is a Classification Model using Deep Learning. Specifically using tensorflow,
+transfer learning with the imagenet weights, AWS Sagemaker, Scrapy for scraping the images
+off forums, Flask and EC2. I presented the beta at defcon 2018.
+
+<div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
+  <a href="https://chronicsickness.com"><img class="work-tech" src="/img/work/chronicsickness.jpg" alt="SK-II Dimension Wall" title="SK-II Dimension Wall&#013;" /></a>
+  <a href="https://chronicsickness.com"><img class="work-tech" src="/img/work/chronicsickness-daisy.png" alt="SK-II Beauty Bar" title="SK-II Beauty Bar&#013;" /></a>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CsRYAUlb6_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Smart store
+
+SK-II Japan, an Asian skincare brand and subsidiary of Proctor & Gamble, wanted to open
+a popup shop in Kobe, Japan - a trendy part of the country. I worked on developing
+two web applications. One powering 10 42" vertically mounted touchscreens. The second
+website powering 5 vanity tables where customers could try out the skincare products.
+These were essentially React applications, with a node.js middleware, greensock, lottie files, interacting with
+apis for tracking customer movement throughout the store, rfid sensors and powering
+lights that synced up with CSS keyframe animations. I worked closely with world-class designers
+that would deliver pictures and video of the desired effects.
+
+<div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
+  <img class="work-tech" src="/img/work/skii-dimensionwall.png" alt="SK-II Dimension Wall" title="SK-II Dimension Wall&#013;" />
+  <img class="work-tech" src="/img/work/skii-beautybar.png" alt="SK-II Beauty Bar" title="SK-II Beauty Bar&#013;" />
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eh8DSsbXlzU?start=158" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Getaway
+
+I helped [Getaway](https://getaway.house) develop an internal employee webportal. This portal
+allowed getaway employees to peform their daily tasks. This is a common requirement in growing
+startups, that they need to build their own tooling to graduate off spreadsheets and adhoc
+processes.
+
+<a href="https://getaway.house"><img class="work-tech" src="/img/work/getaway.png" alt="Getaway House" title="Getaway House&#013;" /></a>
+
+# Capsule Pharmacy
+
+I helped start [Capsule Pharmacy](https://getaway.house) as the fifth engineer. I helped grow the
+business from 50 beta users, through launch, through series A fundraising, through +20,000 monthly
+active users. We built the consumer facing page with e-commerce flow, the internal corporate CMS
+where 30+ persons performed 40+ hours of work per week, built a go api, built a django api, wrote
+documentation for all code and processes/procedures, performed on-call duties (devops), wrote
+sql reports for stakeholders and onboarded fellow engineers.
+
+<div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
+  <a href="https://www.capsulecares.com"><img class="work-tech" src="/img/work/capsule-1.png" alt="Capsule Pharmacy landing page" title="Capsule Pharmacy landing page&#013;" /></a>
+  <a href="https://itunes.apple.com/us/app/capsule-pharmacy/id1092333652"><img class="work-tech" src="/img/work/capsule-2.png" alt="Capsule Pharmacy Mobile app" title="Capsule Pharmacy Mobile app&#013;" /></a>
+</div>
+
+# React Native Contacts
+
+[react-native-contacts](https://github.com/rt2zz/react-native-contacts) was the first api bridge
+for React Native that allowed you to load the phone's contacts. Oddly enough facebook chose
+not to bridge this api and when I realized this for an app I was developing I solved
+the problem and open sourced it. I still maintain the module and it's been interesting
+seeing how react native has evolved over the years. It is written in Java and Objective-c.
+
+<div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
+  <a href="https://github.com/rt2zz/react-native-contacts"><img class="work-tech" src="http://githubbadges.com/star.svg?user=rt2zz&repo=react-native-contacts&background=007ecg&color=bbb&style=flat"></a>
+  <a href="https://github.com/rt2zz/react-native-contacts"><img class="work-tech" src="http://githubbadges.com/fork.svg?user=rt2zz&repo=react-native-contacts&background=007ecg&color=bbb&style=flat"></a>
+</div>
+
+## Technologies I know
 <div class="work-grid">
   <img class="work-tech" src="/img/work/wordpress.png" alt="Wordpress" title="Wordpress&#013;" />
   <img class="work-tech" src="/img/work/shopify.png" alt="Shopify" title="Shopify&#013;" />
@@ -52,9 +114,10 @@ Technologies I know:
   <img class="work-tech" src="/img/work/ec2.png" alt="Amazon EC2 - Elastic Compute Cloud" title="Amazon EC2 - Elastic Compute Cloud&#013;"  />
   <img class="work-tech" src="/img/work/mongodb.png" alt="MongoDB" title="MongoDB&#013;"  />
   <img class="work-tech" src="/img/work/elasticsearch.png" alt="Elasticsearch" title="Elasticsearch&#013;"  />
-  <img class="work-tech" src="/img/work/bitcoin.jpg" alt="Bitcoin" title="Bitcoin&#013;"  />
+  <img class="work-tech" src="/img/work/bitcoin.svg" alt="Bitcoin" title="Bitcoin&#013;"  />
   <img class="work-tech" src="/img/work/ethereum.png" alt="Ethereum smart contracts" title="Ethereum smart contracts&#013;"  />
   <img class="work-tech" src="/img/work/solidity.jpg" alt="Solidity - smart contracts" title="Solidity - smart contracts&#013;"  />
+  <img class="work-tech" src="/img/work/alexa.png" alt="Amazon Alexa Skills" title="Alexa - Voice enabled skills&#013;"  />
 </div>
 
 If you want me to build you something
