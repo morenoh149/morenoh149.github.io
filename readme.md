@@ -26,3 +26,9 @@ TODO
 % bundle exec jekyll s
 % bundle exec jekyll s --drafts
 ```
+
+## Testing on mobile
+
+- start the server locally
+- `ngrok http 4000`
+- open one of the listed domain on your phone
