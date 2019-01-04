@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Top Reasons to Include Mobile App Localization"
-image: /img/2018-12-17-iphone.jpg
+image: /img/2019-01-04-iphone.jpg
 ---
 ![iphone in hand](/img/2019-01-04-iphone.jpg)
 Nearly
