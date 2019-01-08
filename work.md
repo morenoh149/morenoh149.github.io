@@ -122,6 +122,7 @@ seeing how react native has evolved over the years. It is written in Java and Ob
   <img class="work-tech" src="/img/work/alexa.png" alt="Amazon Alexa Skills" title="Alexa - Voice enabled skills&#013;" />
   <img class="work-tech" src="/img/work/phoenix-framework.png" alt="Phoenix Framework" title="Phoenix Framework&#013;Web framework" />
   <img class="work-tech" src="/img/work/scrapy.png" alt="Scrapy web scraping" title="Scrapy web scraping&#013;Python framework for web scraping and web crawling" />
+  <img class="work-tech" src="/img/work/clover.png" alt="Clover Point of Sale" title="Clover POS system&#013;Merchant register device with apps" />
 </div>
 
 If you want me to build you something
