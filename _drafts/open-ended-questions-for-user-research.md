@@ -35,4 +35,8 @@ https://www.nngroup.com/articles/open-ended-questions/
 When to Use Which User-Experience Research Methods
 https://www.nngroup.com/articles/which-ux-research-methods/
 
-
+What’s your biggest headache?
+What takes up too much of your time?
+What do you wish you could do more easily?
+What would help you serve your customers better?
+What do you wish you could fix about your current system, whether it is a computerized POS system or a paper notebook?
