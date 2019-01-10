@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Harry Moreno | {{page.title}}</title>
+  {% include meta-tags.html %}
+</head>
+
+<body>
+  <div class="container">
+
+    {% include header.html %}
+
+    <div class="row">
+      <div class="post col-sm-12 col-sm-offset-0
+                  col-md-8 col-md-offset-2
+                  col-lg-8 col-lg-offset-2"
+      >
+
+        {{ content }}
+
+        <h2>Contact Me</h2>
+        <form
+          action="https://formspree.io/morenoh149@gmail.com"
+          method="POST"
+          id="contact-form"
+        >
+          <label for="form-name">Name:</label>
+          <input id="form-name" type="text" name="name">
+          <br/>
+          <label for="form-email">Email</label>
+          <input id="form-email" type="email" name="_replyto">
+          <br/>
+          <label for="form-company-name">Company Name</label>
+          <input id="form-company-name" type="text" name="company">
+          <br/>
+          <label for="form-message">Message</label>
+          <textarea id="form-message" name="contact-form" rows="10"></textarea>
+          <br/>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  {% include navbar.html %}
+</body>
+</html>
