@@ -17,8 +17,14 @@ transfer learning with the imagenet weights, AWS Sagemaker, Scrapy for scraping 
 off forums, Flask and EC2. I presented the beta at defcon 2018.
 
 <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
-  <a href="https://chronicsickness.com"><img class="work-tech" src="/img/work/chronicsickness.png" alt="SK-II Dimension Wall" title="SK-II Dimension Wall&#013;" /></a>
-  <a href="https://chronicsickness.com"><img class="work-tech" src="/img/work/chronicsickness-daisy.png" alt="SK-II Beauty Bar" title="SK-II Beauty Bar&#013;" /></a>
+  <a href="https://chronicsickness.com">
+    <label>Sick Weed</label>
+    <img class="work-tech" src="/img/work/chronicsickness.png" alt="Chronic Sickness Sick Weed" title="Chronic Sickness Sick Weed" />
+  </a>
+  <a href="https://chronicsickness.com">
+    <label>Not Weed</label>
+    <img class="work-tech" src="/img/work/chronicsickness-daisy.png" alt="Chronic Sickness Not Weed" title="Chronic Sickness Not Weed" />
+  </a>
 </div>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CsRYAUlb6_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
