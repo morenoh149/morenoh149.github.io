@@ -24,16 +24,16 @@ off forums, Flask and EC2. I presented the beta at defcon 2018.
 
 # Smart store
 
-SK-II Japan, an Asian skincare brand and subsidiary of Proctor & Gamble, wanted to open
-a popup shop in Kobe, Japan - a trendy part of the country. I worked on developing
-two web applications. One powering 10 42" vertically mounted touchscreens. The second
+I made the websites running in the video below. One powering 10 42" vertically mounted touchscreens. The second
 website powering 5 vanity tables where customers could try out the skincare products.
 I worked closely with world-class designers
 that would deliver pictures and video of the desired effects.
 
 <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
   <img class="work-tech" src="/img/work/skii-dimensionwall.png" alt="SK-II Dimension Wall" title="SK-II Dimension Wall&#013;" />
+  <p>Dimension Wall</p>
   <img class="work-tech" src="/img/work/skii-beautybar.png" alt="SK-II Beauty Bar" title="SK-II Beauty Bar&#013;" />
+  <p>Beauty Bar</p>
 </div>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eh8DSsbXlzU?start=158" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

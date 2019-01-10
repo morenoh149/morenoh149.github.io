@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: hire-me
 title: Hire Me
 ---
 
@@ -10,7 +10,7 @@ title: Hire Me
 </div>
 
 ## Who I am
-Harry Moreno is a Software Engineer living in New York City. Since 2013 I've
+I am Harry Moreno a software engineer living in New York City. Since 2013 I've
 worked with a wide range of companies, from
 startups to world renowned marketing agencies. My focus is on delivering
 flexible reliable software that is useful to people and improves their lives.
@@ -29,8 +29,6 @@ work with the best tools for the job.
 I've done Fullstack software engineering, in Python, Go and Javascript. I like SQL, Deep Learning and launching products.
 
 ## My Process
-For a standard MVP my process is as follows.
-
 1. Elicit requirements. I sit down with you (over the phone or over coffee).
 We discuss what your needs are and I give you my thoughts.
 
@@ -43,5 +41,5 @@ project. I usually require a portion of the budget at the beginning,
 after major milestones and at the end.
 
 ## What I charge
-I almost always work on a flat fee basis for each project. For folks with
+I generally work on a flat fee basis for each project. For clients with
 smaller tasks or lower budgets we can bill by the hour as needed.
