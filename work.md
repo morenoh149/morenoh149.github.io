@@ -28,9 +28,7 @@ SK-II Japan, an Asian skincare brand and subsidiary of Proctor & Gamble, wanted 
 a popup shop in Kobe, Japan - a trendy part of the country. I worked on developing
 two web applications. One powering 10 42" vertically mounted touchscreens. The second
 website powering 5 vanity tables where customers could try out the skincare products.
-These were essentially React applications, with a node.js middleware, greensock, lottie files, interacting with
-apis for tracking customer movement throughout the store, rfid sensors and powering
-lights that synced up with CSS keyframe animations. I worked closely with world-class designers
+I worked closely with world-class designers
 that would deliver pictures and video of the desired effects.
 
 <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
