@@ -17,7 +17,7 @@ transfer learning with the imagenet weights, AWS Sagemaker, Scrapy for scraping 
 off forums, Flask and EC2. I presented the beta at defcon 2018.
 
 <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
-  <a href="https://chronicsickness.com"><img class="work-tech" src="/img/work/chronicsickness.jpg" alt="SK-II Dimension Wall" title="SK-II Dimension Wall&#013;" /></a>
+  <a href="https://chronicsickness.com"><img class="work-tech" src="/img/work/chronicsickness.png" alt="SK-II Dimension Wall" title="SK-II Dimension Wall&#013;" /></a>
   <a href="https://chronicsickness.com"><img class="work-tech" src="/img/work/chronicsickness-daisy.png" alt="SK-II Beauty Bar" title="SK-II Beauty Bar&#013;" /></a>
 </div>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CsRYAUlb6_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -30,10 +30,14 @@ I worked closely with world-class designers
 that would deliver pictures and video of the desired effects.
 
 <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
-  <img class="work-tech" src="/img/work/skii-dimensionwall.png" alt="SK-II Dimension Wall" title="SK-II Dimension Wall&#013;" />
-  <p>Dimension Wall</p>
-  <img class="work-tech" src="/img/work/skii-beautybar.png" alt="SK-II Beauty Bar" title="SK-II Beauty Bar&#013;" />
-  <p>Beauty Bar</p>
+  <div>
+    <label>Dimension Wall</label>
+    <img class="work-tech" src="/img/work/skii-dimensionwall.png" alt="SK-II Dimension Wall" title="SK-II Dimension Wall&#013;" />
+  </div>
+  <div>
+    <label>Beauty Bar</label>
+    <img class="work-tech" src="/img/work/skii-beautybar.png" alt="SK-II Beauty Bar" title="SK-II Beauty Bar&#013;" />
+  </div>
 </div>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eh8DSsbXlzU?start=158" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
