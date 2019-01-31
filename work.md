@@ -26,7 +26,15 @@ off forums, Flask and EC2. I presented the beta at defcon 2018.
     <img class="work-tech" src="/img/work/chronicsickness-daisy.png" alt="Chronic Sickness Not Weed" title="Chronic Sickness Not Weed" />
   </a>
 </div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CsRYAUlb6_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div class="videowrapper">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/CsRYAUlb6_E"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 # Smart store
 
@@ -45,7 +53,14 @@ that would deliver pictures and video of the desired effects.
     <img class="work-tech" src="/img/work/skii-beautybar.png" alt="SK-II Beauty Bar" title="SK-II Beauty Bar&#013;" />
   </div>
 </div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eh8DSsbXlzU?start=158" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="videowrapper">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/eh8DSsbXlzU?start=158"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 # Getaway
 
@@ -68,6 +83,14 @@ sql reports for stakeholders and onboarded fellow engineers.
 <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
   <a href="https://www.capsulecares.com"><img class="work-tech" src="/img/work/capsule-1.png" alt="Capsule Pharmacy landing page" title="Capsule Pharmacy landing page&#013;" /></a>
   <a href="https://itunes.apple.com/us/app/capsule-pharmacy/id1092333652"><img class="work-tech" src="/img/work/capsule-2.png" alt="Capsule Pharmacy Mobile app" title="Capsule Pharmacy Mobile app&#013;" /></a>
+</div>
+<div class="videowrapper">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/VBuBTr5YR74"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 # React Native Contacts

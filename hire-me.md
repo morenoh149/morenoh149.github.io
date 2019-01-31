@@ -16,7 +16,14 @@ startups to world renowned marketing agencies. My focus is on delivering
 flexible reliable software that is useful to people and improves their lives.
 To see what my work looks like please see my [work](/work.html) page.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UlmZ5H-UK0c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="videowrapper">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube-nocookie.com/embed/UlmZ5H-UK0c"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## What I do
 My experience is in growing small software companies into larger software
