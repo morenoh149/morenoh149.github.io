@@ -73,7 +73,7 @@ processes.
 
 # Capsule Pharmacy
 
-I helped start [Capsule Pharmacy](https://getaway.house) as the fifth engineer. I helped grow the
+I helped start [Capsule Pharmacy](https://www.capsulecares.com) as the fifth engineer. I helped grow the
 business from 50 beta users, through launch, through series A fundraising, through +20,000 monthly
 active users. We built the consumer facing page with e-commerce flow, the internal corporate CMS
 where 30+ persons performed 40+ hours of work per week, built a go api, built a django api, wrote
