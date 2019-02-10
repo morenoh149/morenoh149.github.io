@@ -29,29 +29,6 @@ p {
 
 .right { text-align: right; }
 
-/* page-header is the blog's title */
-/* TODO refactor page-header partial to use .page-header class on h1 and h2 */
-.page-header {
-  margin-top: 0px;
-  font-style: italic;
-}
-@media (min-width: 768px) {
-  .page-header h1, .page-header h2 {
-    font-size: 60px;
-  }
-}
-.page-header h1 > a:link, .page-header h2 > a:link {
-  text-decoration: none;
-  color: #111;
-}
-.page-header h1 > a:visited, .page-header h2 > a:visited {
-  text-decoration: none;
-  color: #111;
-}
-.page-header h1 > a:hover, .page-header h2 > a:hover {
-  color: #666;
-}
-
 /* post styling */
 .post {
 }
@@ -70,7 +47,7 @@ p {
 
 /* post section headers */
 .post h2 {
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 .post h3 {

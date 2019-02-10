@@ -4,20 +4,21 @@ title: "Top Reasons to Include Mobile App Localization"
 image: /img/2019-01-04-iphone.jpg
 ---
 ![iphone in hand](/img/2019-01-04-iphone.jpg)
+An app that’s tailored exclusively to English-speaking users won’t compete
+in the overall market. You could make 10x the revenue you currently make by
+adding global localization to your app. You limit your own chances of reaching a larger
+customer base if you don’t localize your business for users who speak different
+languages and live in different regions.
+
 Nearly
 [4.7 billion people](https://www.statista.com/statistics/274774/forecast-of-mobile-phone-users-worldwide/)
 worldwide own mobile phones. That number keeps on rising as more people
 gain access to these devices. Additionally, many of the countries with the
 highest
 [app download rates](https://www.statista.com/statistics/249264/countries-ranked-by-number-of-holiday-app-downloads/)
-are not English-speaking.
+are actually not English-speaking.
 
-An app that’s tailored exclusively to English-speaking users won’t compete
-in the overall market. You limit your own chances of reaching a larger
-customer base if you don’t localize it for users who speak different
-languages or live in different regions.
-
-Just make sure you coordinate with an android or iOS app developer who understands localization. This process is not as simple as
+Make sure you coordinate with an android or iOS app developer who understands localization. This process is not as simple as
 translating the user interface. In many instances, it involves
 substantially adjusting the app’s overall content. I can do most localizations see how to [hire-me](/hire-me.html).
 For more advanced cases you could work with a larger agency like [Glance](https://thisisglance.com/ios-app-development-services/).
