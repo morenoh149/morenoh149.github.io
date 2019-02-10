@@ -10,7 +10,7 @@ do or making sure different departments of your business get the insights
 they need to make decisions.
 
 Some projects that you _can_ see:
-# Chronic Sickness
+## Chronic Sickness
 
 [chronicsickness.com](https://chronicsickness.com) is a Classification Model using Deep Learning. Specifically using tensorflow,
 transfer learning with the imagenet weights, AWS Sagemaker, Scrapy for scraping the images
@@ -36,7 +36,7 @@ off forums, Flask and EC2. I presented the beta at defcon 2018.
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-# Smart store
+## Smart store
 
 I made the websites running in the video below. One powering 10 42" vertically mounted touchscreens. The second
 website powering 5 vanity tables where customers could try out the skincare products.
@@ -62,7 +62,7 @@ that would deliver pictures and video of the desired effects.
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-# Getaway
+## Getaway
 
 I helped [Getaway](https://getaway.house) develop an internal employee webportal. This portal
 allowed getaway employees to peform their daily tasks. This is a common requirement in growing
@@ -71,7 +71,7 @@ processes.
 
 <a href="https://getaway.house"><img class="work-tech" src="/img/work/getaway.png" alt="Getaway House" title="Getaway House&#013;" /></a>
 
-# Capsule Pharmacy
+## Capsule Pharmacy
 
 I helped start [Capsule Pharmacy](https://www.capsulecares.com) as the fifth engineer. I helped grow the
 business from 50 beta users, through launch, through series A fundraising, through +20,000 monthly
@@ -93,7 +93,7 @@ sql reports for stakeholders and onboarded fellow engineers.
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-# React Native Contacts
+## React Native Contacts
 
 [react-native-contacts](https://github.com/rt2zz/react-native-contacts) was the first api bridge
 for React Native that allowed you to load the phone's contacts. Oddly enough facebook chose
