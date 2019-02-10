@@ -36,12 +36,13 @@ off forums, Flask and EC2. I presented the beta at defcon 2018.
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## Smart store
+## SK-II Japan store
 
 I made the websites running in the video below. One powering 10 42" vertically mounted touchscreens. The second
 website powering 5 vanity tables where customers could try out the skincare products.
 I worked closely with world-class designers
 that would deliver pictures and video of the desired effects.
+The client was [SK-II Japan](https://www.sk-ii.com/) subsidiary of proctor & gamble.
 
 <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
   <div>
