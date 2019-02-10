@@ -1,9 +1,9 @@
 # Site settings
-title: Harry Moreno Blog
-name: Harry Moreno Blog
+title: Harry Moreno | Machine Learning Freelancer
+name: Harry Moreno | Machine Learning Freelancer
 email: morenoh149@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Harry Moreno's blog - read about making technology
+  Harry Moreno | Machine Learning Freelancer
 
 # Serving
 detach:  false
