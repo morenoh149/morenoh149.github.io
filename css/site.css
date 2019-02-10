@@ -8,6 +8,9 @@ body {
   text-size-adjust: 100%;
   overflow-wrap: break-word;
 }
+.content {
+  padding-top: 30px;
+}
 
 /* fonts styling */
 p {
