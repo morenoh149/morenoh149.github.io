@@ -95,8 +95,7 @@ img.feedly-icon {
 }
 img {
   text-align: right;
-  max-width: 100%;
-  max-height: 400px;
+  max-width: 80%;
 }
 .thumbnail img { max-height: 400px; }
 .thumbnail img.applogo { max-height: 150px; }

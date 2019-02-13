@@ -59,6 +59,8 @@ notebook. This notebook loads the
 [oxford 102 flowers](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
 dataset, trains a CNN using transfer learning and saves the model to disk.
 
+![notebook explore and train](/img/2019-02-13-explore-and-train.png)
+
 If you get any issues when downloading the dataset from the s3 bucket check
 your permissions. I struggled with this. It turns out that there are user
 permissions (IAM) but also notebook permissions. You can doublecheck these by
