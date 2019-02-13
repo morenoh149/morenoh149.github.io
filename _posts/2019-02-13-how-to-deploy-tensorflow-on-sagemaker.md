@@ -74,4 +74,13 @@ notebook. This notebook loads the model from disk, formats the model for
 serving, uploads the formatted model to S3, deploys the model and tests out the
 model by making some predictions.
 
+If everything runs correctly you should have a new entry in `Inference >
+Endpoints`. This an api endpoint you could
+[send an http request](https://docs.aws.amazon.com/sagemaker/latest/dg/API_runtime_InvokeEndpoint.html)
+to using any of the sdks (python, ruby, php, javascript, etc). This model expects
+pictures to be 226x226 pixels, so your client must perform resizing before
+querying the endpoint. You could retrain the model to use larger images.
+Creating the client requests and changing the model input dimensions are
+left as exercises for the reader.
+
 Finally remember to shutdown your instances to avoid a large aws bill! 💸
