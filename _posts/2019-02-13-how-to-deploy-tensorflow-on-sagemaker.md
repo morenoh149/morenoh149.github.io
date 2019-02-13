@@ -83,4 +83,5 @@ querying the endpoint. You could retrain the model to use larger images.
 Creating the client requests and changing the model image size are
 left as exercises for the reader.
 
-Finally remember to shutdown your instances to avoid a large aws bill! 💸
+Finally remember to shutdown your notebooks and endpoints to avoid
+a large aws bill! 💸
