@@ -3,6 +3,8 @@ layout: post
 title: Running SchemaSpy for Postgres
 ---
 
+*Note: I've since found better software for visualizing sql data models. I highly recommend [dbeaver](https://dbeaver.com) please consider buying this free software*
+
 This was harder than it should have been so I'm documenting it.
 
 0. Install Java®️

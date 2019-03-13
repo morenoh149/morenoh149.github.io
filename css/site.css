@@ -119,14 +119,21 @@ img.disabled { opacity: 0.3; }
 /* sidebar styling */
 .sidebar { overflow-x: hidden; }
 .sidebar li {
-  font-size: 16px;
-  border-top: solid 1px lightgrey;
+  font-size: 14px;
 }
-.sidebar a { color: rgb(129, 19, 19); }
+.sidebar a {
+  color: rgb(129, 19, 19);
+  text-decoration: underline;
+}
 
 span.caption {
   font-style: italic;
   font-size: 1.5em;
+}
+
+.sidebar-cta {
+  font-size: 18px;
+  text-align: justify;
 }
 
 /* pagination styling */
