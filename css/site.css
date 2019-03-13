@@ -121,16 +121,17 @@ img.disabled { opacity: 0.3; }
 .sidebar li {
   font-size: 14px;
 }
+.sidebar h2 {
+  font-size: 28px;
+}
 .sidebar a {
   color: rgb(129, 19, 19);
   text-decoration: underline;
 }
-
 span.caption {
   font-style: italic;
   font-size: 1.5em;
 }
-
 .sidebar-cta {
   font-size: 18px;
   text-align: justify;

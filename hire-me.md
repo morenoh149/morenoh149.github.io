@@ -169,7 +169,6 @@ I am Harry Moreno a software engineer living in New York City. Since 2013 I've
 worked with a wide range of companies, from
 startups to world renowned marketing agencies. My focus is on delivering
 flexible reliable software that is useful to people and improves their lives.
-To see what my work looks like please see my [work](/work.html) page.
 
 <div class="videowrapper">
   <iframe
