@@ -9,7 +9,9 @@ whatever I know about Solidity. I said yes. The audience was undergrads complete
 coursework in project management and computer science. Not all of them knew what
 bitcoin was so I covered a lot of ground in a short amount of time.
 
+<div class="videowrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/v8tRSqKFZ_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Hopefully others find the recording useful. I enjoyed doing the event as it forced
 me to clarify my thoughts and research aspects of blockchain that were not clear to me.
