@@ -15,9 +15,9 @@ Hopefully others find the recording useful. I enjoyed doing the event as it forc
 me to clarify my thoughts and research aspects of blockchain that were not clear to me.
 Below follows the notes I circulated with the audience.
 
-# Soldity Workshop
+## Soldity Workshop
 
-## Prerequisites
+### Prerequisites
 Attendees should do the following before the event to get the most out of it.
 There will be a 20 minute lecture-overview at the beginning. You can do the prerequisites during the overview if
 you have not done so by then.
@@ -32,7 +32,7 @@ you have not done so by then.
 1. get test tokens for the Ropsten network via the faucet https://blog.bankex.org/how-to-buy-ethereum-using-metamask-ccea0703daec
 1. read first page of the solidity docs https://solidity.readthedocs.io/en/v0.5.2/introduction-to-smart-contracts.html
 
-## Workshop
+### Workshop
 We will be going through the truffle tutorial https://truffleframework.com/tutorials/pet-shop
 
 Questions that were asked during the workshop:
@@ -49,15 +49,15 @@ It may have been an odd phrasing to call blockchain a game. I was trying to comm
 
 When you compile solidity, by default you get a binary and an application binary interface file (ABI). The abi is a json file describing the interface exposed by the binary. Json is just a popular file format, it could've been xml, yaml or any other format.
 
-## Lecture
+### Lecture
 The lecture-overview will provide background information on blockchain, smart contracts, the current state
 of the technology and possible future directions. The slides are at https://bit.ly/2FkePe5
 
 [EVM diagram](https://raw.githubusercontent.com/ethereumbook/ethereumbook/develop/images/evm-architecture.png)
 
-## Resources
+### Resources
 
-### Learning
+#### Learning
 * https://cryptozombies.io - free solidity online learning curriculum
 * https://github.com/chronaeon/beigepaper/blob/master/beigepaper.pdf - ethereum beige paper, an easier to read verson of the ethereum white paper
 * https://bitcoin.org/bitcoin.pdf - bitcoin white paper, the one that started it all
@@ -68,12 +68,12 @@ of the technology and possible future directions. The slides are at https://bit.
 * https://github.com/ethereum/wiki/wiki - ethereum techincal wiki, covers research topics and current problems being tackled
 * https://github.com/ePaperthereum/wiki/wiki/White-Paper - ethereum white paper
 
-### Tools
+#### Tools
 * https://remix.ethereum.org - browserbased soldity ide, very popular in the community
 * https://ethfiddle.com - like jsfiddle but for solidity, good for sharing code you're stuck on
 * https://ethgasstation.info - online gas calculator for estimating your costs
 
-### Community
+#### Community
 * http://www.cryptonyc.org - local community, join the telegram chat!
 * http://chainhaus.com - local community, join the telegram chat!
 * https://www.meetup.com/nyc-blockchain-devs/ local meetup

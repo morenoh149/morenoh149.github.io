@@ -135,6 +135,8 @@ span.caption {
 .sidebar-cta {
   font-size: 18px;
   text-align: justify;
+  background-color: rgba(211, 99, 99, 0.52);
+  border-radius: 10px;
 }
 
 /* pagination styling */
