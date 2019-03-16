@@ -165,8 +165,9 @@ seeing how react native has evolved over the years. It is written in Java and Ob
 
 
 ## Who I am
-I am Harry Moreno a software engineer living in New York City. Since 2013 I've
-worked with a wide range of companies, from
+I am Harry Moreno a software engineer living in New York City. Born and raised
+in The Bronx, I've lived in Massachusetts and San Francisco, but New York is my
+home. Since 2013 I've worked with a wide range of companies, from
 startups to world renowned marketing agencies. My focus is on delivering
 flexible reliable software that is useful to people and improves their lives.
 
