@@ -9,16 +9,25 @@ title: Hire Me
   <h1>Hire Me</h1>
 </div>
 
+<div class="row">
+<div class="col-sm-6 col-sm-offset-3">
 My work may not always be visible. Sometimes it's behind the scenes powering
 recommendation systems, letting you know your systems are down before your
 customers
 do or making sure different departments of your business get the insights
 they need to make decisions.
 
-Some projects that you _can_ see:
-## Chronic Sickness
+<br />
+<br />
+Some projects that you <i>can</i> see:
+</div>
+</div>
 
-[chronicsickness.com](https://chronicsickness.com) is a Classification Model using Deep Learning. Specifically using tensorflow,
+<div class="row">
+<div class="col-sm-6">
+<h2>Chronic Sickness</h2>
+
+<a href="https://chronicsickness.com">chronicsickness.com</a> is a Classification Model using Deep Learning. Specifically using tensorflow,
 transfer learning with the imagenet weights, AWS Sagemaker, Scrapy for scraping the images
 off forums, Flask and EC2. I presented the beta at defcon 2018.
 
@@ -41,14 +50,16 @@ off forums, Flask and EC2. I presented the beta at defcon 2018.
     frameborder="0"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+</div>
 
-## SK-II Japan store
+<div class="col-sm-6">
+<h2>SK-II Japan store</h2>
 
 I made the websites running in the video below. One powering 10 42" vertically mounted touchscreens. The second
 website powering 5 vanity tables where customers could try out the skincare products.
 I worked closely with world-class designers
 that would deliver pictures and video of the desired effects.
-The client was [SK-II Japan](https://www.sk-ii.com/) subsidiary of proctor & gamble.
+The client was <a href="https://www.sk-ii.com/">SK-II Japan</a> subsidiary of proctor & gamble.
 
 <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
   <div>
@@ -68,19 +79,25 @@ The client was [SK-II Japan](https://www.sk-ii.com/) subsidiary of proctor & gam
     frameborder="0"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+</div>
+</div>
 
-## Getaway
+<div class="row">
+<div class="col-sm-6">
+<h2>Getaway</h2>
 
-I helped [Getaway](https://getaway.house) develop an internal employee webportal. This portal
+I helped <a href="https://getaway.house">Getaway</a> develop an internal employee webportal. This portal
 allowed getaway employees to peform their daily tasks. This is a common requirement in growing
 startups, that they need to build their own tooling to graduate off spreadsheets and adhoc
 processes.
 
 <a href="https://getaway.house"><img class="work-tech" src="/img/work/getaway.png" alt="Getaway House" title="Getaway House&#013;" /></a>
+</div>
 
-## Capsule Pharmacy
+<div class="col-sm-6">
+<h2>Capsule Pharmacy</h2>
 
-I helped start [Capsule Pharmacy](https://www.capsulecares.com) as the fifth engineer. I helped grow the
+I helped start <a href="https://www.capsulecares.com">Capsule Pharmacy</a> as the fifth engineer. I helped grow the
 business from 50 beta users, through launch, through series A fundraising, through +20,000 monthly
 active users. We built the consumer facing page with e-commerce flow, the internal corporate CMS
 where 30+ persons performed 40+ hours of work per week, built a go api, built a django api, wrote
@@ -99,10 +116,14 @@ sql reports for stakeholders and onboarded fellow engineers.
     frameborder="0"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+</div>
+</div>
 
-## React Native Contacts
+<div class="row">
+<div class="col-sm-6">
+<h2>React Native Contacts</h2>
 
-[react-native-contacts](https://github.com/rt2zz/react-native-contacts) was the first api bridge
+<a href="https://github.com/rt2zz/react-native-contacts">react-native-contacts</a> was the first api bridge
 for React Native that allowed you to load the phone's contacts. Oddly enough facebook chose
 not to bridge this api and when I realized this for an app I was developing I solved
 the problem and open sourced it. I still maintain the module and it's been interesting
@@ -111,6 +132,27 @@ seeing how react native has evolved over the years. It is written in Java and Ob
 <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
   <a href="https://github.com/rt2zz/react-native-contacts"><img class="work-tech" src="http://githubbadges.com/star.svg?user=rt2zz&repo=react-native-contacts&background=007ecg&color=bbb&style=flat"></a>
   <a href="https://github.com/rt2zz/react-native-contacts"><img class="work-tech" src="http://githubbadges.com/fork.svg?user=rt2zz&repo=react-native-contacts&background=007ecg&color=bbb&style=flat"></a>
+</div>
+</div>
+
+<div class="col-sm-6">
+<h2>Kaggle NYC</h2>
+
+<a href="https://kagglenyc.com">KaggleNYC</a> is a professional organization
+dedicated to teach and connect Data Scientists through data competitions. I
+founded it out of a desire to find a teammate to do deep learning with and
+has grown
+to be one of nyc's largest software communities. Currently at 1200+ members 
+and backed by corporate sponsorship, it serves as a talent pipeline for
+data-driven organizations such as JP Morgan, Microsoft and Deloitte.
+
+<a href="https://kagglenyc.com">
+<img class="work-tech" src="/img/work/kagglenyc.png"
+  alt="Kaggle nyc landing page"
+  title="Capsule Pharmacy landing page&#013;" />
+</a>
+
+</div>
 </div>
 
 ## Technologies I know
@@ -164,13 +206,17 @@ seeing how react native has evolved over the years. It is written in Java and Ob
 </div>
 
 
-## Who I am
+<div class="col-sm-6">
+
+<h2 id="my-process">Who I am</h2>
 I am Harry Moreno a software engineer living in New York City. Born and raised
 in The Bronx, I've lived in Massachusetts and San Francisco, but New York is my
 home. Since 2013 I've worked with a wide range of companies, from
 startups to world renowned marketing agencies. My focus is on delivering
 flexible reliable software that is useful to people and improves their lives.
+</div>
 
+<div class="col-sm-6">
 <div class="videowrapper">
   <iframe
     width="560"
@@ -179,8 +225,10 @@ flexible reliable software that is useful to people and improves their lives.
     frameborder="0"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+</div>
 
-## What I do
+<div class="col-sm-8 col-sm-offset-2">
+<h2>What I do</h2>
 My experience is in growing small software companies into larger software
 companies.
 I specialize in solving unique problems with custom software. Whether that's
@@ -192,18 +240,27 @@ work with the best tools for the job.
 
 I've done Fullstack software engineering, in Python, Go and Javascript. I like SQL, Deep Learning and launching products.
 
-## My Process
-1. Elicit requirements. I sit down with you (over the phone or over coffee).
+<h2>My Process</h2>
+<ol>
+<li>
+Elicit requirements. I sit down with you (over the phone or over coffee).
 We discuss what your needs are and I give you my thoughts.
+</li>
 
-1. Estimate. After the conversation I sit down on my own and break down the
+<li>
+Estimate. After the conversation I sit down on my own and break down the
 requirements into smaller tasks with a time estimate. I get back to you with
 a proposed timeline.
+</li>
 
-1. Build. If the timeline and budget are acceptable to us we begin the
+<li>
+Build. If the timeline and budget are acceptable to us we begin the
 project. I usually require a portion of the budget at the beginning,
 after major milestones and at the end.
+</li>
+</ol>
 
-## What I charge
+<h2>What I charge</h2>
 I generally work on a flat fee basis for each project. For clients with
 smaller tasks or lower budgets we can bill by the hour as needed.
+</div>
