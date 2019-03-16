@@ -27,7 +27,7 @@ Some projects that you <i>can</i> see:
 <div class="col-sm-6">
 <h2>Chronic Sickness</h2>
 
-<a href="https://chronicsickness.com">chronicsickness.com</a> is a Classification Model using Deep Learning. Specifically using tensorflow,
+<a href="https://chronicsickness.com" target="_blank">Chronic Sickness</a> is a Classification Model using Deep Learning. Specifically using tensorflow,
 transfer learning with the imagenet weights, AWS Sagemaker, Scrapy for scraping the images
 off forums, Flask and EC2. I presented the beta at defcon 2018.
 
@@ -61,16 +61,8 @@ I worked closely with world-class designers
 that would deliver pictures and video of the desired effects.
 The client was <a href="https://www.sk-ii.com/">SK-II Japan</a> subsidiary of proctor & gamble.
 
-<div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
-  <div>
-    <label>Dimension Wall</label>
     <img class="work-tech" src="/img/work/skii-dimensionwall.png" alt="SK-II Dimension Wall" title="SK-II Dimension Wall&#013;" />
-  </div>
-  <div>
-    <label>Beauty Bar</label>
     <img class="work-tech" src="/img/work/skii-beautybar.png" alt="SK-II Beauty Bar" title="SK-II Beauty Bar&#013;" />
-  </div>
-</div>
 <div class="videowrapper">
   <iframe
     width="560"
@@ -104,10 +96,10 @@ where 30+ persons performed 40+ hours of work per week, built a go api, built a 
 documentation for all code and processes/procedures, performed on-call duties (devops), wrote
 sql reports for stakeholders and onboarded fellow engineers.
 
-<div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
-  <a href="https://www.capsulecares.com"><img class="work-tech" src="/img/work/capsule-1.png" alt="Capsule Pharmacy landing page" title="Capsule Pharmacy landing page&#013;" /></a>
-  <a href="https://itunes.apple.com/us/app/capsule-pharmacy/id1092333652"><img class="work-tech" src="/img/work/capsule-2.png" alt="Capsule Pharmacy Mobile app" title="Capsule Pharmacy Mobile app&#013;" /></a>
-</div>
+<!--
+<a href="https://www.capsulecares.com"><img class="work-tech" src="/img/work/capsule-1.png" alt="Capsule Pharmacy landing page" title="Capsule Pharmacy landing page&#013;" /></a>
+-->
+<a href="https://itunes.apple.com/us/app/capsule-pharmacy/id1092333652"><img class="work-tech" src="/img/work/capsule-2.png" alt="Capsule Pharmacy Mobile app" title="Capsule Pharmacy Mobile app&#013;" /></a>
 <div class="videowrapper">
   <iframe
     width="560"
@@ -138,7 +130,7 @@ seeing how react native has evolved over the years. It is written in Java and Ob
 <div class="col-sm-6">
 <h2>Kaggle NYC</h2>
 
-<a href="https://kagglenyc.com">KaggleNYC</a> is a professional organization
+<a href="https://kagglenyc.com" target="_blank">KaggleNYC</a> is a professional organization
 dedicated to teach and connect Data Scientists through data competitions. I
 founded it out of a desire to find a teammate to do deep learning with and
 has grown
@@ -146,7 +138,7 @@ to be one of nyc's largest software communities. Currently at 1200+ members
 and backed by corporate sponsorship, it serves as a talent pipeline for
 data-driven organizations such as JP Morgan, Microsoft and Deloitte.
 
-<a href="https://kagglenyc.com">
+<a href="https://kagglenyc.com" target="_blank">
 <img class="work-tech" src="/img/work/kagglenyc.png"
   alt="Kaggle nyc landing page"
   title="Capsule Pharmacy landing page&#013;" />
