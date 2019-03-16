@@ -10,7 +10,13 @@ coursework in project management and computer science. Not all of them knew what
 bitcoin was so I covered a lot of ground in a short amount of time.
 
 <div class="videowrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v8tRSqKFZ_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/v8tRSqKFZ_s"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
 </div>
 
 Hopefully others find the recording useful. I enjoyed doing the event as it forced
@@ -31,16 +37,16 @@ you have not done so by then.
 1. install [ganache](https://truffleframework.com/ganache)
 1. install the [chrome browser](https://www.google.com/chrome/)
 1. install the [metamask chrome extension](https://metamask.io)
-1. get test tokens for the Ropsten network via the faucet https://blog.bankex.org/how-to-buy-ethereum-using-metamask-ccea0703daec
-1. read first page of the solidity docs https://solidity.readthedocs.io/en/v0.5.2/introduction-to-smart-contracts.html
+1. get test tokens for the Ropsten network via the faucet [How to buy ethereum using metamask](https://blog.bankex.org/how-to-buy-ethereum-using-metamask-ccea0703daec)
+1. read first page of the solidity docs [Introduction to smart contrats](https://solidity.readthedocs.io/en/v0.5.2/introduction-to-smart-contracts.html)
 
 ### Workshop
-We will be going through the truffle tutorial https://truffleframework.com/tutorials/pet-shop
+We will be going through the truffle tutorial [Truffle Pet Shop](https://truffleframework.com/tutorials/pet-shop)
 
 Questions that were asked during the workshop:
 * what is truffle? is there a lowerlevel way of making contracts?
 
-Truffle suite is a popular collection of tools for smart contract development. You can think of it as ruby on rails or Django but for smart contracts. The suite makes many decisions for you. Once you learn more about smart contract development you are free to break those decisions. See [using the compiler](https://solidity.readthedocs.io/en/v0.4.24/using-the-compiler.html), https://dapp.tools/dapp/ and https://solidity.readthedocs.io/en/v0.5.2/resources.html
+Truffle suite is a popular collection of tools for smart contract development. You can think of it as ruby on rails or Django but for smart contracts. The suite makes many decisions for you. Once you learn more about smart contract development you are free to break those decisions. See [using the compiler](https://solidity.readthedocs.io/en/v0.4.24/using-the-compiler.html), [dapp.tools](https://dapp.tools/dapp/) and [solidity resources](https://solidity.readthedocs.io/en/v0.5.2/resources.html)
 * what are migrations and deploying? what's happening here?
 
 Keen audience members may ask themselves, if the blockchain is immutable how do we update our software? Migrations allow you to update your smart contracts by providing a thin abstraction that just holds a pointer (reference) to the body of your smart contract. When you want to update your smart contracts logic you can deploy the latest version as a new contract and update the reference in the original shim. For more details read [demystifying truffle migrate](https://medium.com/@blockchain101/demystifying-truffle-migrate-21afbcdf3264).
@@ -53,35 +59,35 @@ When you compile solidity, by default you get a binary and an application binary
 
 ### Lecture
 The lecture-overview will provide background information on blockchain, smart contracts, the current state
-of the technology and possible future directions. The slides are at https://bit.ly/2FkePe5
+of the technology and possible future directions. The slides are at [Solidity workshop slides](https://bit.ly/2FkePe5)
 
 [EVM diagram](https://raw.githubusercontent.com/ethereumbook/ethereumbook/develop/images/evm-architecture.png)
 
 ### Resources
 
 #### Learning
-* https://cryptozombies.io - free solidity online learning curriculum
-* https://github.com/chronaeon/beigepaper/blob/master/beigepaper.pdf - ethereum beige paper, an easier to read verson of the ethereum white paper
-* https://bitcoin.org/bitcoin.pdf - bitcoin white paper, the one that started it all
+* [cryptozombies](https://cryptozombies.io) - free solidity online learning curriculum
+* [Beigepaper](https://github.com/chronaeon/beigepaper/blob/master/beigepaper.pdf) - ethereum beige paper, an easier to read verson of the ethereum white paper
+* [Bitcoin paper](https://bitcoin.org/bitcoin.pdf) - bitcoin white paper, the one that started it all
 * [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/book.asciidoc) - unofficial subject reference
-* https://solidity.readthedocs.io - language documentation
-* https://www.chainshot.com - free soldity and aragon learning curriculum
-* https://github.com/ScottWorks/ConsenSys-Academy-Notes - notes from student during consensys academy
-* https://github.com/ethereum/wiki/wiki - ethereum techincal wiki, covers research topics and current problems being tackled
-* https://github.com/ePaperthereum/wiki/wiki/White-Paper - ethereum white paper
+* [Solidity Docs](https://solidity.readthedocs.io) - language documentation
+* [ChainShot](https://www.chainshot.com) - free soldity and aragon learning curriculum
+* [Consensys academy notes](https://github.com/ScottWorks/ConsenSys-Academy-Notes) - notes from student during consensys academy
+* [Ethereum wiki](https://github.com/ethereum/wiki/wiki) - ethereum techincal wiki, covers research topics and current problems being tackled
+* [Ethereum Whitepaper](https://github.com/ePaperthereum/wiki/wiki/White-Paper) - ethereum white paper
 
 #### Tools
-* https://remix.ethereum.org - browserbased soldity ide, very popular in the community
-* https://ethfiddle.com - like jsfiddle but for solidity, good for sharing code you're stuck on
-* https://ethgasstation.info - online gas calculator for estimating your costs
+* [Remix](https://remix.ethereum.org) - browserbased soldity ide, very popular in the community
+* [ethfiddle](https://ethfiddle.com) - like jsfiddle but for solidity, good for sharing code you're stuck on
+* [ethgasstation](https://ethgasstation.info) - online gas calculator for estimating your costs
 
 #### Community
-* http://www.cryptonyc.org - local community, join the telegram chat!
-* http://chainhaus.com - local community, join the telegram chat!
-* https://www.meetup.com/nyc-blockchain-devs/ local meetup
-* http://bit.ly/StowProtocolSlack local ethereum slack (reason I'm here)
-* https://openzeppelin.org - contract auditors based out of argentina, considered the leaders in the field
-* https://www.trailofbits.com - local security firm, have positioned themselves as leaders in smart contract security auditing
-* https://www.empirehacking.nyc - security meetup, run by trailofbits
-* https://gitter.im/ethereum/solidity - chatroom for discussing solidity code
-* https://gitcoin.co - freelance gigs paid in cryptocurrency (good for resume building)
+* [cryptonyc](http://www.cryptonyc.org) - local community, join the telegram chat!
+* [chainhaus](http://chainhaus.com) - local community, join the telegram chat!
+* [nyc blockchain devs](https://www.meetup.com/nyc-blockchain-devs/) local meetup
+* [nyc blockchain slack](http://bit.ly/StowProtocolSlack) local ethereum slack (reason I'm here)
+* [OpenZeppelin](https://openzeppelin.org) - contract auditors based out of argentina, considered the leaders in the field
+* [trail of bits](https://www.trailofbits.com) - local security firm, have positioned themselves as leaders in smart contract security auditing
+* [empire hacking](https://www.empirehacking.nyc) - security meetup, run by trailofbits
+* [Solidity gitter](https://gitter.im/ethereum/solidity) - chatroom for discussing solidity code
+* [Gitcoin](https://gitcoin.co) - freelance gigs paid in cryptocurrency (good for resume building)
