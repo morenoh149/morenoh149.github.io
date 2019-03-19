@@ -220,6 +220,12 @@ div.work-grid {
     grid-template-columns: repeat(6, 1fr);
   }
 }
+.work-grid div {
+  text-align: center;
+}
+.work-grid div span {
+  font-weight: 600;
+}
 .videowrapper {
     float: none;
     clear: both;

@@ -149,52 +149,322 @@ data-driven organizations such as JP Morgan, Microsoft and Deloitte.
 
 ## Technologies I know
 <div class="work-grid">
-  <img class="work-tech" src="/img/work/wordpress.png" alt="Wordpress" title="Wordpress&#013;" />
-  <img class="work-tech" src="/img/work/shopify.png" alt="Shopify" title="Shopify&#013;" />
-  <img class="work-tech" src="/img/work/squarespace.png" alt="Squarespace" title="Squarespace&#013;" />
-  <img class="work-tech" src="/img/work/facebook-login.jpg" alt="Facebook Login" title="Facebook Login&#013;"  />
-  <img class="work-tech" src="/img/work/react.png" alt="React js" title="React js&#013;"  />
-  <img class="work-tech" src="/img/work/react-native.png" alt="React Native" title="React Native&#013;"  />
-  <img class="work-tech" src="/img/work/android.jpg" alt="Android apps" title="Android&#013;"  />
-  <img class="work-tech" src="/img/work/ios.png" alt="iOS apps" title="iOS apps&#013;"  />
-  <img class="work-tech" src="/img/work/stripe.png" alt="Stripe api " title="Stripe api &#013;"  />
-  <img class="work-tech" src="/img/work/heroku.jpg" alt="Heroku platform" title="Heroku platform&#013;"  />
-  <img class="work-tech" src="/img/work/aws.png" alt="Amazon Web Services" title="Amazon Web Services&#013;"  />
-  <img class="work-tech" src="/img/work/gcp.jpg" alt="Google Cloud Platform" title="Google Cloud Platform&#013;"  />
-  <img class="work-tech" src="/img/work/css.jpg" alt="Cascading Style Sheets" title="Cascading Style Sheets&#013;"  />
-  <img class="work-tech" src="/img/work/django.png" alt="Django webframework" title="Django webframework&#013;"  />
-  <img class="work-tech" src="/img/work/ruby-on-rails.jpg" alt="Ruby on rails" title="Ruby on rails&#013;"  />
-  <img class="work-tech" src="/img/work/node.png" alt="Nodejs" title="Nodejs&#013;"  />
-  <img class="work-tech" src="/img/work/postgres.png" alt="Postgres sql" title="Postgres sql&#013;"  />
-  <img class="work-tech" src="/img/work/mysql.jpg" alt="MySql" title="MySql&#013;"  />
-  <img class="work-tech" src="/img/work/tensorflow.png" alt="Tensorflow" title="Tensorflow&#013;"  />
-  <img class="work-tech" src="/img/work/javascript.png" alt="Javascript" title="Javascript&#013;"  />
-  <img class="work-tech" src="/img/work/python.png" alt="Python" title="Python&#013;"  />
-  <img class="work-tech" src="/img/work/java.png" alt="Java" title="Java&#013;"  />
-  <img class="work-tech" src="/img/work/objective-c.gif" alt="Objective-c" title="Objective-c&#013;"  />
-  <img class="work-tech" src="/img/work/php.png" alt="PHP" title="PHP&#013;"  />
-  <img class="work-tech" src="/img/work/solidity.jpg" alt="Solidity - smart contracts" title="Solidity - smart contracts&#013;" />
-  <img class="work-tech" src="/img/work/elixir.png" alt="Elixir Language" title="Elixir language&#013;Functional programming language" />
-  <img class="work-tech" src="/img/work/golang.png" alt="Go Language" title="Go Language&#013;Language with built-in concurrency" />
-  <img class="work-tech" src="/img/work/sql.png" alt="SQL - Structured Query Language" title="SQL - Structured Query Language&#013;"  />
-  <img class="work-tech" src="/img/work/segment.png" alt="Segment.io" title="Segment.io&#013;"  />
-  <img class="work-tech" src="/img/work/twilio.jpg" alt="Twilio" title="Twilio&#013;"  />
-  <img class="work-tech" src="/img/work/docker.png" alt="Docker" title="Docker&#013;"  />
-  <img class="work-tech" src="/img/work/hipaa.png" alt="Health Information Privacy and Portability Act Compliance" title="Health Information Privacy and Portability Act Compliance&#013;"  />
-  <img class="work-tech" src="/img/work/ssl.png" alt="SSL - Secure Sockets Layer" title="SSL - Secure Sockets Layer&#013;"  />
-  <img class="work-tech" src="/img/work/rds.png" alt="Amazon RDS" title="Amazon RDS&#013;"  />
-  <img class="work-tech" src="/img/work/redshift.png" alt="Amazon Redshift" title="Amazon Redshift&#013;"  />
-  <img class="work-tech" src="/img/work/big-query.png" alt="Google BigQuery" title="Google BigQuery&#013;"  />
-  <img class="work-tech" src="/img/work/s3.png" alt="Amazon S3 - cloud storage" title="Amazon S3 - cloud storage&#013;" />
-  <img class="work-tech" src="/img/work/ec2.png" alt="Amazon EC2 - Elastic Compute Cloud" title="Amazon EC2 - Elastic Compute Cloud&#013;" />
-  <img class="work-tech" src="/img/work/mongodb.png" alt="MongoDB" title="MongoDB&#013;" />
-  <img class="work-tech" src="/img/work/elasticsearch.png" alt="Elasticsearch" title="Elasticsearch&#013;" />
-  <img class="work-tech" src="/img/work/bitcoin.svg" alt="Bitcoin" title="Bitcoin&#013;" />
-  <img class="work-tech" src="/img/work/ethereum.png" alt="Ethereum smart contracts" title="Ethereum smart contracts&#013;" />
-  <img class="work-tech" src="/img/work/alexa.png" alt="Amazon Alexa Skills" title="Alexa - Voice enabled skills&#013;" />
-  <img class="work-tech" src="/img/work/phoenix-framework.png" alt="Phoenix Framework" title="Phoenix Framework&#013;Web framework" />
-  <img class="work-tech" src="/img/work/scrapy.png" alt="Scrapy web scraping" title="Scrapy web scraping&#013;Python framework for web scraping and web crawling" />
-  <img class="work-tech" src="/img/work/clover.png" alt="Clover Point of Sale" title="Clover POS system&#013;Merchant register device with apps" />
+  <div>
+    <span>Wordpress</span>
+    <img
+      src="/img/work/wordpress.png"
+      alt="Wordpress"
+      title="Wordpress" />
+  </div>
+  <div>
+    <span>Shopify</span>
+    <img
+      src="/img/work/shopify.png"
+      alt="Shopify"
+      title="Shopify&#013;" />
+  </div>
+  <div>
+    <span>Squarespace</span>
+    <img
+      src="/img/work/squarespace.png"
+      alt="Squarespace"
+      title="Squarespace&#013;" />
+  </div>
+  <div>
+    <span>Facebook Login</span>
+    <img
+      src="/img/work/facebook-login.jpg"
+      alt="Facebook Login"
+      title="Facebook Login&#013;"  />
+  </div>
+  <div>
+    <span>ReactJS WebApps</span>
+    <img
+      src="/img/work/react.png"
+      alt="React js"
+      title="React js&#013;" />
+  </div>
+  <div>
+    <span>React Native Apps</span>
+    <img
+      src="/img/work/react-native.png"
+      alt="React Native"
+      title="React Native&#013;" />
+  </div>
+  <div>
+    <span>Android Apps</span>
+    <img
+      src="/img/work/android.jpg"
+      alt="Android apps"
+      title="Android&#013;" />
+  </div>
+  <div>
+    <span>iOS Apps</span>
+    <img
+      src="/img/work/ios.png"
+      alt="iOS apps"
+      title="iOS apps&#013;" />
+  </div>
+  <div>
+    <span>Stripe Credit Card processing</span>
+    <img
+      src="/img/work/stripe.png"
+      alt="Stripe Credit Card processing"
+      title="Stripe api &#013;" />
+  </div>
+  <div>
+    <span>Heroku Cloud</span>
+    <img
+      src="/img/work/heroku.jpg"
+      alt="Heroku platform"
+      title="Heroku platform&#013;" />
+  </div>
+  <div>
+    <span>Amazon Web Services</span>
+    <img
+      src="/img/work/aws.png"
+      alt="Amazon Web Services"
+      title="Amazon Web Services&#013;"  />
+  </div>
+  <div>
+    <span>Google Cloud Platform</span>
+    <img
+      src="/img/work/gcp.jpg"
+      alt="Google Cloud Platform"
+      title="Google Cloud Platform&#013;" />
+  </div>
+  <div>
+    <span>Cascading Style Sheets</span>
+    <img
+      src="/img/work/css.jpg"
+      alt="Cascading Style Sheets"
+      title="Cascading Style Sheets&#013;" />
+  </div>
+  <div>
+    <span>Django Webframework</span>
+    <img
+      src="/img/work/django.png"
+      alt="Django Webframework"
+      title="Django Webframework&#013;" />
+  </div>
+  <div>
+    <span>Ruby on Rails</span>
+    <img
+      src="/img/work/ruby-on-rails.jpg"
+      alt="Ruby on Rails"
+      title="Ruby on rails&#013;" />
+  </div>
+  <div>
+    <span>NodeJS</span>
+    <img
+      src="/img/work/node.png"
+      alt="NodeJS"
+      title="Nodejs&#013;"  />
+  </div>
+  <div>
+    <span>Postgres</span>
+    <img
+      src="/img/work/postgres.png"
+      alt="Postgres sql"
+      title="Postgres sql&#013;" />
+  </div>
+  <div>
+    <span>MySql</span>
+    <img
+      src="/img/work/mysql.jpg"
+      alt="MySql"
+      title="MySql&#013;" />
+  </div>
+  <div>
+    <span>Tensorflow</span>
+    <img
+      src="/img/work/tensorflow.png"
+      alt="Tensorflow"
+      title="Tensorflow&#013;" />
+  </div>
+  <div>
+    <span>Javascript</span>
+    <img
+      src="/img/work/javascript.png"
+      alt="Javascript"
+      title="Javascript&#013;" />
+  </div>
+  <div>
+    <span>Python</span>
+    <img
+      src="/img/work/python.png"
+      alt="Python"
+      title="Python&#013;" />
+  </div>
+  <div>
+    <span>Java</span>
+    <img
+      src="/img/work/java.png"
+      alt="Java"
+      title="Java&#013;" />
+  </div>
+  <div>
+    <span>Objective-C</span>
+    <img
+      src="/img/work/objective-c.gif"
+      alt="Objective-C"
+      title="Objective-c&#013;" />
+  </div>
+  <div>
+    <span>PHP</span>
+    <img
+      src="/img/work/php.png"
+      alt="PHP"
+      title="PHP&#013;" />
+  </div>
+  <div>
+    <span>Solidity Smart Contracts</span>
+    <img
+      src="/img/work/solidity.jpg"
+      alt="Solidity - Smart Contracts"
+      title="Solidity - smart contracts&#013;" />
+  </div>
+  <div>
+    <span>Go Language</span>
+    <img
+      src="/img/work/golang.png"
+      alt="Go Language"
+      title="Go Language&#013;Language with built-in concurrency" />
+  </div>
+  <div>
+    <span>SQL - Structured Query Language</span>
+    <img
+      src="/img/work/sql.png"
+      alt="SQL - Structured Query Language"
+      title="SQL - Structured Query Language&#013;"  />
+  </div>
+  <div>
+    <span>Segment - Conversion funnel optimization</span>
+    <img
+      src="/img/work/segment.png"
+      alt="Segment.io"
+      title="Segment.io&#013;"  />
+  </div>
+  <div>
+    <span>Twilio - Telecommunications</span>
+    <img
+      src="/img/work/twilio.jpg"
+      alt="Twilio"
+      title="Twilio&#013;"  />
+  </div>
+  <div>
+    <span>Docker</span>
+    <img
+      src="/img/work/docker.png"
+      alt="Docker"
+      title="Docker&#013;"  />
+  </div>
+  <div>
+    <span>Health Information Privacy and Portability Act Compliance</span>
+    <img
+      src="/img/work/hipaa.png"
+      alt="Health Information Privacy and Portability Act Compliance"
+      title="Health Information Privacy and Portability Act Compliance&#013;"  />
+  </div>
+  <div>
+    <span>SSL - Secure Sockets Layer</span>
+    <img
+      src="/img/work/ssl.png"
+      alt="SSL - Secure Sockets Layer"
+      title="SSL - Secure Sockets Layer&#013;"  />
+  </div>
+  <div>
+    <span>Amazon RDS</span>
+    <img
+      src="/img/work/rds.png"
+      alt="Amazon RDS"
+      title="Amazon RDS&#013;"  />
+  </div>
+  <div>
+    <span>Amazon Redshift</span>
+    <img
+      src="/img/work/redshift.png"
+      alt="Amazon Redshift"
+      title="Amazon Redshift&#013;"  />
+  </div>
+  <div>
+    <span>Google BigQuery</span>
+    <img
+      src="/img/work/big-query.png"
+      alt="Google BigQuery"
+      title="Google BigQuery&#013;"  />
+  </div>
+  <div>
+    <span>Amazon S3 - cloud storage</span>
+    <img
+      src="/img/work/s3.png"
+      alt="Amazon S3 - cloud storage"
+      title="Amazon S3 - cloud storage&#013;" />
+  </div>
+  <div>
+    <span>Amazon EC2 - Elastic Compute Cloud</span>
+    <img
+      src="/img/work/ec2.png"
+      alt="Amazon EC2 - Elastic Compute Cloud"
+      title="Amazon EC2 - Elastic Compute Cloud&#013;" />
+  </div>
+  <div>
+    <span>MongoDB</span>
+    <img
+      src="/img/work/mongodb.png"
+      alt="MongoDB"
+      title="MongoDB&#013;" />
+  </div>
+  <div>
+    <span>Elasticsearch</span>
+    <img
+      src="/img/work/elasticsearch.png"
+      alt="Elasticsearch"
+      title="Elasticsearch&#013;" />
+  </div>
+  <div>
+    <span>Bitcoin</span>
+    <img
+      class="work-tech"
+      src="/img/work/bitcoin.svg"
+      alt="Bitcoin"
+      title="Bitcoin&#013;" />
+  </div>
+  <div>
+    <span>Ethereum smart contracts</span>
+    <img
+      src="/img/work/ethereum.png"
+      alt="Ethereum smart contracts"
+      title="Ethereum smart contracts&#013;" />
+  </div>
+  <div>
+    <span>Amazon Alexa Skills</span>
+    <img
+      src="/img/work/alexa.png"
+      alt="Amazon Alexa Skills"
+      title="Alexa - Voice enabled skills&#013;" />
+  </div>
+  <div>
+    <span>Facebook GraphQL</span>
+    <img
+      src="/img/work/graphql.jpg"
+      alt="Facebook GraphQL"
+      title="Facebook GraphQL" />
+  </div>
+  <div>
+    <span>Scrapy web scraping</span>
+    <img
+      src="/img/work/scrapy.png"
+      alt="Scrapy web scraping"
+      title="Scrapy web scraping&#013;Python framework for web scraping and web crawling" />
+  </div>
+  <div>
+    <span>Clover Point of Sale</span>
+    <img
+      src="/img/work/clover.png"
+      alt="Clover Point of Sale"
+      title="Clover POS system&#013;Merchant register device with apps" />
+  </div>
 </div>
 
 
