@@ -25,6 +25,40 @@ Some projects that you <i>can</i> see:
 
 <div class="row">
 <div class="col-sm-6">
+<h2>Getaway</h2>
+
+I helped <a href="https://getaway.house">Getaway</a> develop an internal employee webportal. This portal
+allowed getaway employees to peform their daily tasks. This is a common requirement in growing
+startups, that they need to build their own tooling to graduate off spreadsheets and adhoc
+processes.
+
+<a href="https://getaway.house"><img class="work-tech" src="/img/work/getaway.png" alt="Getaway House" title="Getaway House&#013;" /></a>
+</div>
+
+<div class="col-sm-6">
+<h2>SK-II Japan store</h2>
+
+I made the websites running in the video below. One powering 10 42" vertically mounted touchscreens. The second
+website powering 5 vanity tables where customers could try out the skincare products.
+I worked closely with world-class designers
+that would deliver pictures and video of the desired effects.
+The client was <a href="https://www.sk-ii.com/">SK-II Japan</a> subsidiary of proctor & gamble.
+
+    <img class="work-tech" src="/img/work/skii-dimensionwall.png" alt="SK-II Dimension Wall" title="SK-II Dimension Wall&#013;" />
+    <img class="work-tech" src="/img/work/skii-beautybar.png" alt="SK-II Beauty Bar" title="SK-II Beauty Bar&#013;" />
+<div class="videowrapper">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/eh8DSsbXlzU?start=158"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-6">
 <h2>Chronic Sickness</h2>
 
 <a href="https://chronicsickness.com" target="_blank">Chronic Sickness</a> is a Classification Model using Deep Learning. Specifically using tensorflow,
@@ -52,39 +86,6 @@ off forums, Flask and EC2. I presented the beta at defcon 2018.
 </div>
 </div>
 
-<div class="col-sm-6">
-<h2>SK-II Japan store</h2>
-
-I made the websites running in the video below. One powering 10 42" vertically mounted touchscreens. The second
-website powering 5 vanity tables where customers could try out the skincare products.
-I worked closely with world-class designers
-that would deliver pictures and video of the desired effects.
-The client was <a href="https://www.sk-ii.com/">SK-II Japan</a> subsidiary of proctor & gamble.
-
-    <img class="work-tech" src="/img/work/skii-dimensionwall.png" alt="SK-II Dimension Wall" title="SK-II Dimension Wall&#013;" />
-    <img class="work-tech" src="/img/work/skii-beautybar.png" alt="SK-II Beauty Bar" title="SK-II Beauty Bar&#013;" />
-<div class="videowrapper">
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/eh8DSsbXlzU?start=158"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-sm-6">
-<h2>Getaway</h2>
-
-I helped <a href="https://getaway.house">Getaway</a> develop an internal employee webportal. This portal
-allowed getaway employees to peform their daily tasks. This is a common requirement in growing
-startups, that they need to build their own tooling to graduate off spreadsheets and adhoc
-processes.
-
-<a href="https://getaway.house"><img class="work-tech" src="/img/work/getaway.png" alt="Getaway House" title="Getaway House&#013;" /></a>
-</div>
 
 <div class="col-sm-6">
 <h2>Capsule Pharmacy</h2>
@@ -339,7 +340,7 @@ data-driven organizations such as JP Morgan, Microsoft and Deloitte.
       title="SQL - Structured Query Language&#013;"  />
   </div>
   <div>
-    <span>Segment - Conversion funnel optimization</span>
+    <span>Segment - Conversion Funnels</span>
     <img
       src="/img/work/segment.png"
       alt="Segment.io"
