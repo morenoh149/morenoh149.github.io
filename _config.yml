@@ -21,3 +21,5 @@ markdown: kramdown
 exclude: [app]
 
 plugins: [jekyll-sitemap, jekyll-paginate]
+
+theme: jekyll-theme-cayman
