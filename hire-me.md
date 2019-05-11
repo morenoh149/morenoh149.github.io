@@ -59,35 +59,6 @@ The client was <a href="https://www.sk-ii.com/">SK-II Japan</a> subsidiary of pr
 
 <div class="row">
 <div class="col-sm-6">
-<h2>Chronic Sickness</h2>
-
-<a href="https://chronicsickness.com" target="_blank">Chronic Sickness</a> is a Classification Model using Deep Learning. Specifically using tensorflow,
-transfer learning with the imagenet weights, AWS Sagemaker, Scrapy for scraping the images
-off forums, Flask and EC2. I presented the beta at defcon 2018.
-
-<div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
-  <a href="https://chronicsickness.com">
-    <label>Sick Weed</label>
-    <img class="work-tech" src="/img/work/chronicsickness.png" alt="Chronic Sickness Sick Weed" title="Chronic Sickness Sick Weed" />
-  </a>
-  <a href="https://chronicsickness.com">
-    <label>Not Weed</label>
-    <img class="work-tech" src="/img/work/chronicsickness-daisy.png" alt="Chronic Sickness Not Weed" title="Chronic Sickness Not Weed" />
-  </a>
-</div>
-
-<div class="videowrapper">
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/CsRYAUlb6_E"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-</div>
-
-
-<div class="col-sm-6">
 <h2>Capsule Pharmacy</h2>
 
 I helped start <a href="https://www.capsulecares.com">Capsule Pharmacy</a> as the fifth engineer. I helped grow the
@@ -97,9 +68,6 @@ where 30+ persons performed 40+ hours of work per week, built a go api, built a 
 documentation for all code and processes/procedures, performed on-call duties (devops), wrote
 sql reports for stakeholders and onboarded fellow engineers.
 
-<!--
-<a href="https://www.capsulecares.com"><img class="work-tech" src="/img/work/capsule-1.png" alt="Capsule Pharmacy landing page" title="Capsule Pharmacy landing page&#013;" /></a>
--->
 <a href="https://itunes.apple.com/us/app/capsule-pharmacy/id1092333652"><img class="work-tech" src="/img/work/capsule-2.png" alt="Capsule Pharmacy Mobile app" title="Capsule Pharmacy Mobile app&#013;" /></a>
 <div class="videowrapper">
   <iframe
@@ -110,9 +78,7 @@ sql reports for stakeholders and onboarded fellow engineers.
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>
-</div>
 
-<div class="row">
 <div class="col-sm-6">
 <h2>React Native Contacts</h2>
 
@@ -128,49 +94,10 @@ seeing how react native has evolved over the years. It is written in Java and Ob
 </div>
 </div>
 
-<div class="col-sm-6">
-<h2>Kaggle NYC</h2>
-
-<a href="https://kagglenyc.com" target="_blank">KaggleNYC</a> is a professional organization
-dedicated to teach and connect Data Scientists through data competitions. I
-founded it out of a desire to find a teammate to do deep learning with and
-has grown
-to be one of nyc's largest software communities. Currently at 1200+ members 
-and backed by corporate sponsorship, it serves as a talent pipeline for
-data-driven organizations such as JP Morgan, Microsoft and Deloitte.
-
-<a href="https://kagglenyc.com" target="_blank">
-<img class="work-tech" src="/img/work/kagglenyc.png"
-  alt="Kaggle nyc landing page"
-  title="Capsule Pharmacy landing page&#013;" />
-</a>
-
-</div>
 </div>
 
 ## Technologies I know
 <div class="work-grid">
-  <div>
-    <span>Wordpress</span>
-    <img
-      src="/img/work/wordpress.png"
-      alt="Wordpress"
-      title="Wordpress" />
-  </div>
-  <div>
-    <span>Shopify</span>
-    <img
-      src="/img/work/shopify.png"
-      alt="Shopify"
-      title="Shopify&#013;" />
-  </div>
-  <div>
-    <span>Squarespace</span>
-    <img
-      src="/img/work/squarespace.png"
-      alt="Squarespace"
-      title="Squarespace&#013;" />
-  </div>
   <div>
     <span>Facebook Login</span>
     <img
@@ -305,27 +232,6 @@ data-driven organizations such as JP Morgan, Microsoft and Deloitte.
       title="Java&#013;" />
   </div>
   <div>
-    <span>Objective-C</span>
-    <img
-      src="/img/work/objective-c.gif"
-      alt="Objective-C"
-      title="Objective-c&#013;" />
-  </div>
-  <div>
-    <span>PHP</span>
-    <img
-      src="/img/work/php.png"
-      alt="PHP"
-      title="PHP&#013;" />
-  </div>
-  <div>
-    <span>Solidity Smart Contracts</span>
-    <img
-      src="/img/work/solidity.jpg"
-      alt="Solidity - Smart Contracts"
-      title="Solidity - smart contracts&#013;" />
-  </div>
-  <div>
     <span>Go Language</span>
     <img
       src="/img/work/golang.png"
@@ -424,21 +330,6 @@ data-driven organizations such as JP Morgan, Microsoft and Deloitte.
       title="Elasticsearch&#013;" />
   </div>
   <div>
-    <span>Bitcoin</span>
-    <img
-      class="work-tech"
-      src="/img/work/bitcoin.svg"
-      alt="Bitcoin"
-      title="Bitcoin&#013;" />
-  </div>
-  <div>
-    <span>Ethereum smart contracts</span>
-    <img
-      src="/img/work/ethereum.png"
-      alt="Ethereum smart contracts"
-      title="Ethereum smart contracts&#013;" />
-  </div>
-  <div>
     <span>Amazon Alexa Skills</span>
     <img
       src="/img/work/alexa.png"
@@ -511,11 +402,11 @@ We discuss your needs and I write down notes.
 </li>
 
 <li>
-Estimate. After eliciting requirements I expect $100 paid for an estimate.
+Estimate. After eliciting requirements you send $200 for a detailed estimate.
 I sit down on my own and break down the product
 requirements into small technical tasks with a time estimate. I get back to you with
-a detailed project proposal on how to achieve the business goals, estimated cost and a timeline
-for the project.
+a detailed project proposal on how to achieve the business goals,
+estimated cost and a timeline for the project.
 </li>
 
 <li>
@@ -526,6 +417,6 @@ after major milestones and at the end.
 </ol>
 
 <h2>What I charge</h2>
-I generally work on a flat fee basis for each project. For clients with
-smaller tasks or lower budgets we can bill by the hour as needed.
+I generally work on an daily rate. For clients that prefer a flat-fee we can
+discuss that on a case by case basis.
 </div>

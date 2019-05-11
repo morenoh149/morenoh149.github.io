@@ -22,4 +22,4 @@ exclude: [app]
 
 plugins: [jekyll-sitemap, jekyll-paginate]
 
-theme: jekyll-theme-cayman
+#theme: jekyll-theme-cayman
