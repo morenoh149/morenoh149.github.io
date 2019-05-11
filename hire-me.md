@@ -506,18 +506,20 @@ I've done Fullstack software engineering, in Python, Go and Javascript. I like S
 <h2>My Process</h2>
 <ol>
 <li>
-Elicit requirements. I sit down with you (over the phone or over coffee).
-We discuss what your needs are and I give you my thoughts.
+Elicit requirements. I sit down with you (over the phone or face to face).
+We discuss your needs and I write down notes.
 </li>
 
 <li>
-Estimate. After the conversation I sit down on my own and break down the
-requirements into smaller tasks with a time estimate. I get back to you with
-a proposed timeline.
+Estimate. After eliciting requirements I expect $100 paid for an estimate.
+I sit down on my own and break down the product
+requirements into small technical tasks with a time estimate. I get back to you with
+a detailed project proposal on how to achieve the business goals, estimated cost and a timeline
+for the project.
 </li>
 
 <li>
-Build. If the timeline and budget are acceptable to us we begin the
+Build. If the timeline and cost are acceptable to us we begin the
 project. I usually require a portion of the budget at the beginning,
 after major milestones and at the end.
 </li>
