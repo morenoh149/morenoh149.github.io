@@ -21,14 +21,14 @@
           <h1><a class="post-title" href="{{ page.url }}">{{ page.title }}</a></h1>
           <strong>{{ page.date | date: "%d %B %Y" }}</strong>
 
-          <p>{{ content }}</p>
+          {{ content }}
+          {% include call-to-action.html %}
           <hr>
           <div>
             {% include tweet_this.html %}
             {% include linkedin_share.html %}
           </div>
           {% include newsletter_form.html %}
-          {% include call-to-action.html %}
           <hr>
 
           {% if site.github %}
