@@ -79,10 +79,10 @@ class PhotoViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         user_id = self.request.query_params.get("user_id", None)
-        if id is None and user_id is None:
+        if user_id is None:
             queryset = Photo.objects.none()
         else:
-            queryset = Photo.objects.all()
+            queryset = Photo.objects.filter(user=user_id)
         return queryset
 {% endhighlight %}
 
