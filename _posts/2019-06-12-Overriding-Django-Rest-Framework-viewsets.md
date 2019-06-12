@@ -21,7 +21,7 @@ This is powerful and fast to set up. However returning all the photos in a
 service might raise some privacy concerns. How can we return an empty response
 at the list endpoint instead?
 
-We can study the sourcecode for the viewsets. [ModelViewSet#list](http://www.cdrf.co/3.9/rest_framework.viewsets/ModelViewSet.html) docs. A safe way to approach
+We can study the sourcecode for the viewsets. [ModelViewSet#list](http://www.cdrf.co/3.9/rest_framework.viewsets/ModelViewSet.html#list) docs. A safe way to approach
 overriding code is to first paste in the original implementation.
 {% highlight python %}
 from rest_framework import viewsets
