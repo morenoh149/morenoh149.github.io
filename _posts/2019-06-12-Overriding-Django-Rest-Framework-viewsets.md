@@ -67,8 +67,8 @@ class PhotoViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
 {% endhighlight %}
-Here we intercepted the value of `queryset` and conditionally changed its value
-based off of our requirements.
+Here we intercepted the value of `queryset` and changed its value
+based off of the query param.
 
 This works. However we ran into issues later when we wanted to enforce similar
 constraints on other endpoints. We later refactored the endpoint to only
