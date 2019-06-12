@@ -86,4 +86,4 @@ class PhotoViewSet(viewsets.ModelViewSet):
         return queryset
 {% endhighlight %}
 
-By the way, to generate the diagram in the header install pylint for python3. Then `pyreverse -ASmy -o png your_file.py`
+By the way, to generate the diagram in the header install [pylint](https://www.pylint.org) for python3. Then `pyreverse -ASmy -o png your_file.py`
