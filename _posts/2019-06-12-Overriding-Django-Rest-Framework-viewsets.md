@@ -42,7 +42,7 @@ class PhotoViewSet(viewsets.ModelViewSet):
 {% endhighlight %}
 verify you haven't made any regressions.
 
-Then we can decide on how to secure
+Then we can decide on how to change
 the endpoint. You may decide to require a query param, if no query param is
 provided return an empty response.
 
