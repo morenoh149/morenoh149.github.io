@@ -9,7 +9,7 @@ is a very powerful framework for building APIs. It provides the typical actions
 (Create, Read, Update, Destroy) for your models. But what if
 you want to change the default behavior?
 
-Lets say your api has photo data. Such an endpoint would be implemented in DRF
+Lets say your API has photo data. Such an endpoint would be implemented in DRF
 like this:
 {% highlight python %}
 from rest_framework import viewsets
@@ -21,7 +21,7 @@ This is powerful and fast to set up. However returning all the photos in a
 service might raise some privacy concerns. How can we return an empty response
 at the list endpoint instead?
 
-We can study the sourcecode for the viewsets. [ModelViewSet#list](http://www.cdrf.co/3.9/rest_framework.viewsets/ModelViewSet.html#list) docs. A safe way to approach
+We can study the source code for the viewset. [ModelViewSet#list](http://www.cdrf.co/3.9/rest_framework.viewsets/ModelViewSet.html#list) docs. A safe way to approach
 overriding code is to first paste in the original implementation.
 {% highlight python %}
 from rest_framework import viewsets
@@ -67,11 +67,11 @@ class PhotoViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
 {% endhighlight %}
-Here we intercepted the value of `queryset` and changed its value
+Here we intercepted the value of `queryset` and changed the value
 based off of the query param.
 
 This works. However we ran into issues later when we wanted to enforce similar
-constraints on other endpoints. We later refactored the endpoint to only
+logic on other endpoints. We refactored the endpoint to only
 override the `get_queryset` method:
 {% highlight python %}
 class PhotoViewSet(viewsets.ModelViewSet):
@@ -86,4 +86,5 @@ class PhotoViewSet(viewsets.ModelViewSet):
         return queryset
 {% endhighlight %}
 
-By the way, to generate the diagram in the header install [pylint](https://www.pylint.org) for python3. Then `pyreverse -ASmy -o png your_file.py`
+By the way, to generate the diagram in the header install [pylint](https://www.pylint.org) for python3.
+Then run `pyreverse -ASmy -o png your_file.py`.
