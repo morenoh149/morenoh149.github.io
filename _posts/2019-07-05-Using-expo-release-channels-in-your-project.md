@@ -49,7 +49,7 @@ const environments = {
     segment: 'lygxjzklkt',
   },
   "staging-v2": {
-    apiHost: "https://staging.herokuapp.com",
+    apiHost: "https://staging.herokuapp.com/v2",
     amplitude: '4210166152',
     segment: 'kkfvmlgeft',
   },
