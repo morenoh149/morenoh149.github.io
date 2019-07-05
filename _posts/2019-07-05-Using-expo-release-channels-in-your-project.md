@@ -26,11 +26,12 @@ function getApiUrl(releaseChannel) {
 {% endhighlight %}
 
 I had several questions when reading this snippet. Is `releaseChannel` a global variable?
-Is `App` the component at the root of my project (`App.js`)?
+Is `App` the component at the root of my project (`App.js`)? Does this go in version control?
 
 The answers are:
 1. `releaseChannel` is an argument to this function. You can read the value from the [Constants](https://docs.expo.io/versions/v33.0.0/sdk/constants/) api.
 1. `App` here is an object holding all the environment variables.
+1. Yes this goes in version control. There is no way to add secrets to your app securely.
 
 After struggling to understand how to do this I ended up with the following approach.
 
