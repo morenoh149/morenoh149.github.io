@@ -1,11 +1,0 @@
---2019-05-11 00:47:44--  https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*B6_f-_SxscJ9FCuIjOrQAQ.jpeg
-Resolving proxy.duckduckgo.com (proxy.duckduckgo.com)... 23.21.193.199, 50.16.241.130
-Connecting to proxy.duckduckgo.com (proxy.duckduckgo.com)|23.21.193.199|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: unspecified [image/jpeg]
-Saving to: ‘index.html?u=https:%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*B6_f-_SxscJ9FCuIjOrQAQ.jpeg’
-
-            index.html?     [<=>                            ]       0  --.-KB/s               index.html?u=https:%2F%     [ <=>                           ]  25.91K  --.-KB/s    in 0.003s  
-
-2019-05-11 00:47:44 (7.69 MB/s) - ‘index.html?u=https:%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*B6_f-_SxscJ9FCuIjOrQAQ.jpeg’ saved [26533]
-
