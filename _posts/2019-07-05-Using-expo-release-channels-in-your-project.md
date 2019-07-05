@@ -16,8 +16,10 @@ Here they demonstrate using the code like this
 function getApiUrl(releaseChannel) {
   // since releaseChannels are undefined in dev, return your default.
   if (releaseChannel === undefined) return App.apiUrl.dev
+
   // this would pick up prod-v1, prod-v2, prod-v3
   if (releaseChannel.indexOf('prod') !== -1) return App.apiUrl.prod
+
   // return staging environment variables
   if (releaseChannel.indexOf('staging') !== -1) return App.apiUrl.staging
 }
@@ -57,6 +59,7 @@ const environments = {
     apiHost: "https://prod.herokuapp.com",
     amplitude: '3723012370',
     segment: 'pomuzuyxml',
+    facebookAppId: "189override884439",
   }
 };
 
@@ -68,8 +71,8 @@ const commonConfigs = {
 const env = Constants.manifest.releaseChannel || 'dev';
 
 export default {
-  ...environments[env],
   ...commonConfigs,
+  ...environments[env],
 };
 {% endhighlight %}
 
@@ -84,6 +87,7 @@ import config from "src/constants/config";
 Some advantages here:
 1. We use a single lookup variable (`environments`). You can get the environment by reading out the value by key.
 1. We factor out common values into `commonConfig`. This slims down the size of the lookup object.
+1. Its easy to override commonConfigs if a particular environment needs to.
 1. I actually demonstrate how to use the expo `Constants` api.
 
 One potential downside is that we don't do partial matching of the release channel name like in the expo docs. But in my experience relying on `.indexOf()` can be error prone and it's probably a better idea to be more explicit when matching your environments by name.
