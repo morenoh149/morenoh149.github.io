@@ -177,6 +177,13 @@ The client was <a href="https://www.sk-ii.com/">SK-II Japan</a> subsidiary of pr
       title="Stripe api &#013;" />
   </div>
   <div>
+    <span>Payeezy</span>
+    <img
+      src="/img/work/payeezy.jpg"
+      alt="Payeezy Credit Card processing"
+      title="Payeezy api" />
+  </div>
+  <div>
     <span>Heroku Cloud</span>
     <img
       src="/img/work/heroku.jpg"
@@ -289,18 +296,11 @@ The client was <a href="https://www.sk-ii.com/">SK-II Japan</a> subsidiary of pr
       title="Segment.io&#013;"  />
   </div>
   <div>
-    <span>Twilio - Telecommunications</span>
+    <span>Twilio - SMS text</span>
     <img
       src="/img/work/twilio.jpg"
       alt="Twilio"
       title="Twilio&#013;"  />
-  </div>
-  <div>
-    <span>Docker</span>
-    <img
-      src="/img/work/docker.png"
-      alt="Docker"
-      title="Docker&#013;"  />
   </div>
   <div>
     <span>Health Information Privacy and Portability Act Compliance</span>
@@ -393,15 +393,22 @@ The client was <a href="https://www.sk-ii.com/">SK-II Japan</a> subsidiary of pr
       alt="Clover Point of Sale"
       title="Clover POS system&#013;Merchant register device with apps" />
   </div>
+  <div>
+    <span>Expo phone apps</span>
+    <img
+      src="/img/work/expo.jpg"
+      alt="Expo phone apps"
+      title="Expo phone apps for ios and Android" />
+  </div>
 </div>
 
 
 <div class="col-sm-6">
 
 <h2 id="my-process">Who I am</h2>
-I am Harry Moreno a software engineer living in New York City. Born and raised
-in The Bronx, I've lived in Massachusetts and San Francisco, but New York is my
-home. Since 2013 I've worked with a wide range of companies, from
+I am Harry Moreno a software developer living in New York City. Born and raised
+in The Bronx, I've lived in Massachusetts and San Francisco. I now call Brooklyn
+my home. Since 2013 I've worked with a wide range of companies, from
 startups to world renowned marketing agencies. My focus is on delivering
 flexible reliable software that is useful to people and improves their lives.
 </div>
