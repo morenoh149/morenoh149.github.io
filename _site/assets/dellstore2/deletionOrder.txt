@@ -1,8 +1,0 @@
-products
-categories
-orderlines
-cust_hist
-reorder
-orders
-customers
-inventory
