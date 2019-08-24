@@ -1,0 +1,477 @@
+<html>
+  <head>
+  <title>How to read a Javascript Stack Trace</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Twitter cards -->
+<meta name="twitter:site"    content="@morenoh149">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title"   content="How to read a Javascript Stack Trace">
+
+
+<meta name="twitter:description" content="Harry Moreno | Machine Learning Freelancer
+">
+
+
+
+<meta name="twitter:card"  content="summary">
+<meta name="twitter:image" content="">
+
+<!-- end of Twitter cards -->
+
+<meta name="description" content="How to read a Javascript Stack Trace">
+<meta property="og:url" content="http://localhost:4000/2017/02/25/how-to-read-a-javascript-stack-trace.html" />
+<meta property="og:title" content="How to read a Javascript Stack Trace" />
+<meta property="og:description" content="How to read a Javascript Stack Trace" />
+<meta property="og:image" content="" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<!--
+use https://richpreview.com/
+to test link previews
+-->
+
+  <link rel="canonical" href="http://localhost:4000/2017/02/25/how-to-read-a-javascript-stack-trace.html">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/two.js/0.4.0/two.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/js/reveal.min.js"></script>
+<script src="/js/linkify-headers.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/syntax.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<meta http-equiv='Content-Type' name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+  name="description"
+  content="Harry Moreno Machine Learning Freelancer for hire."
+>
+<meta name="keywords" content="Consulting,Software,Consultant,Freelance,Python,Data Science,Machine Learning,Javascript,Reactjs,Django">
+<meta charset="utf-8">
+
+<!-- google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42985946-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+  <link rel="alternate" type="application/rss+xml" title="Harry Moreno | Machine Learning Freelancer" href="/feed.xml">
+  <script src="/node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
+</head>
+
+  <body>
+    <div class="content container-fluid">
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ad2_browser_banner -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:468px;height:60px"
+           data-ad-client="ca-pub-1904572159184995"
+           data-ad-slot="8672606566"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <div class="row">
+        <div class="post
+                    col-md-8 col-md-offset-1
+                    col-lg-7 col-lg-offset-2">
+
+          <h1><a class="post-title" href="/2017/02/25/how-to-read-a-javascript-stack-trace.html">How to read a Javascript Stack Trace</a></h1>
+          <strong>25 February 2017</strong>
+
+          <p>A Stack Trace is a report of the active stack frames at a certain point in time during the execution of a program.
+You should learn how to interpret these to debug live systems because in many cases a stack trace is all you have to solve a customer’s issue.</p>
+
+<p>You can think of a stack trace as a timeline of function calls that lead up to the error. Software programs typically have a runtime stack. When a function is
+invoked the runtime will create a new activation record and place that on “top” of the stack. In this
+way a program can weave in and out of function calls, many times entering the same function in a particular trace.</p>
+
+<h3 id="example">Example</h3>
+<p>The following is a minimal example of a program that encounters an error and shows a stack trace.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="c1">// stacktrace.js</span>
+<span class="nx">a</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">b</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nx">b</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">c</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nx">c</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">notDefined</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nx">a</span><span class="p">();</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>this program would produce the output</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>node stacktrace.js
+/Users/harrymoreno/stacktrace.js:9
+  notDefined<span class="o">()</span><span class="p">;</span>
+  ^
+
+ReferenceError: notDefined is not defined
+    at c <span class="o">(</span>/Users/harrymoreno/stacktrace.js:9:3<span class="o">)</span>
+    at b <span class="o">(</span>/Users/harrymoreno/stacktrace.js:6:3<span class="o">)</span>
+    at a <span class="o">(</span>/Users/harrymoreno/stacktrace.js:3:3<span class="o">)</span>
+    at Object.&lt;anonymous&gt; <span class="o">(</span>/Users/harrymoreno/stacktrace.js:11:1<span class="o">)</span>
+    at Module._compile <span class="o">(</span>module.js:541:32<span class="o">)</span>
+    at Object.Module._extensions..js <span class="o">(</span>module.js:550:10<span class="o">)</span>
+    at Module.load <span class="o">(</span>module.js:456:32<span class="o">)</span>
+    at tryModuleLoad <span class="o">(</span>module.js:415:12<span class="o">)</span>
+    at Function.Module._load <span class="o">(</span>module.js:407:3<span class="o">)</span>
+    at Function.Module.runMain <span class="o">(</span>module.js:575:10<span class="o">)</span></code></pre></figure>
+
+<p>From <a href="https://en.wikipedia.org/wiki/Stack_trace">Wikipedia</a> <em>“The stack trace shows where the error occurs, namely
+in the c function. It also shows that the c function was called by b, which was called by a, which was in turn
+called by the code on the last line of the program. The activation records for each of these three functions would
+be arranged in a stack such that the a function would occupy the bottom of the stack and the c function would
+occupy the top of the stack.”</em></p>
+
+<p>Notice that our code is near the top of the stack trace. Typically when reading a stack trace I do the following:</p>
+
+<ol>
+  <li><strong>Identify the frames that belong to me.</strong> Towards the bottom you’ll see module related frames from nodejs. When working
+with frameworks or libraries you’ll want to ignore frames that don’t belong to you. As it’s
+unlikely the issue lays in the dependencies. (Unless you’ve found a bug in your dependency in which case you should
+report the issue with the maintainers!).</li>
+  <li><strong>Start reading from the top.</strong> The stack trace will include all frames up to the error encountered, but that
+doesn’t always mean the problem lays there. The end of the stack trace is only a starting point in your search to fix
+the bug.</li>
+  <li><strong>The Type of Error.</strong> The type of error caught is listed. Above the runtime is complaining that <code class="highlighter-rouge">notDefined</code> was
+asked to be executed, but no such function is defined in the program. A <code class="highlighter-rouge">ReferenceError</code> is then raised.
+    <ul>
+      <li><em>Note</em> there are 5 <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-native-error-types-used-in-this-standard">Native Error Types</a> in Javascript,
+  <code class="highlighter-rouge">EvalError</code>, <code class="highlighter-rouge">RangeError</code>, <code class="highlighter-rouge">ReferenceError</code>, <code class="highlighter-rouge">SyntaxError</code>, <code class="highlighter-rouge">TypeError</code> and <code class="highlighter-rouge">URIError</code>.</li>
+    </ul>
+  </li>
+  <li><strong>Stack Frame entry point.</strong> Finally, the actual stack frame descriptions are listed. Each line is comprised of the
+filename where the function was executed (<code class="highlighter-rouge">/Users/harrymoreno/stacktrace.js</code>) as well as the line number in the
+file and the exact column in the line. Above you see <code class="highlighter-rouge">9:3</code> which indicates the final error was caught on line 9 of the
+file <code class="highlighter-rouge">stackrace.js</code> at column 3.</li>
+</ol>
+
+<h3 id="practical-example">Practical Example</h3>
+<p>In modern Single Page Applications certain optimizations are done that will make interpreting a stack trace much
+harder. You may get a trace like the following.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">value@https://www.foobar.com/main.1234.js:10:20000
+value@[native code]
+notifyAll@https://www.foobar.com/main.1234.js:11:20000
+close@https://www.foobar.com/main.1234.js:12:20000
+closeAll@https://www.foobar.com/main.1234.js:13:20000
+perform@https://www.foobar.com/main.1234.js:14:20000
+perform@https://www.foobar.com/main.1234.js:15:20000
+w@https://www.foobar.com/main.1234.js:16:20000
+w@[native code]
+closeAll@https://www.foobar.com/main.1234.js:17:20000
+perform@https://www.foobar.com/main.1234.js:18:20000
+l@https://www.foobar.com/main.1234.js:19:20000
+a@https://www.foobar.com/main.1234.js:11:20000
+enqueueSetState@https://www.foobar.com/main.1234.js:12:20000
+setState@https://www.foobar.com/main.1234.js:13:20000
+handleChange@https://www.foobar.com/main.1234.js:13:20000
+<span class="o">[</span>native code]
+u@https://www.foobar.com/main.1234.js:14:20000
+https://www.foobar.com/main.1234.js:15:20000
+s@https://cdn.thirdparty.lib/thirdparty.min.js:16:20000
+https://cdn.thirdparty.lib/thirdparty.min.js:17:20000
+r@https://cdn.thirdparty.lib/thirdparty.min.js:18:20000</code></pre></figure>
+
+<p>Notes:</p>
+
+<ul>
+  <li>Many folks run their program through a compression step like <a href="https://github.com/mishoo/UglifyJS2#usage">UglifyJS</a>.
+This reduces the size of the file downloaded by your visitors.
+    <ul>
+      <li>However, the stack trace produced becomes much harder to read as the function
+names are swapped for single character names. For example, functions like <code class="highlighter-rouge">notifyAllUsers</code> would be renamed to <code class="highlighter-rouge">l</code>.</li>
+      <li>you can prettify your bundle but then the line and columns noted in the stack trace become meaningless</li>
+    </ul>
+  </li>
+  <li>To avoid having the browser download every one of the .js files in your codebase we typically put them all into a
+single bundle. This reduces the number of http requests the browser needs to perform (and their associated overheads).
+    <ul>
+      <li>However, when you get a stack trace it’ll now point to code regions that are very deep in the file like line 14, column
+20,000.</li>
+      <li>The bundle itself may be over 1 MB in size. This is large enough to crash many code editors.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="stringify-error-objects-with-a-stack-trace">Stringify Error objects with a stack trace</h4>
+<p>When logging a client’s state a naive
+solution may be to process all objects through <code class="highlighter-rouge">JSON.stringify()</code>.
+One thing I was surprised to discover was stringification of Javascript Error objects don’t include the related stack
+trace by default. Instead it’s made available as a property <code class="highlighter-rouge">.stack</code>.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">error</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'testing'</span><span class="p">);</span>
+<span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>  <span class="c1">// produces {}</span></code></pre></figure>
+
+<p>You can solve this by adding a small <code class="highlighter-rouge">replacer</code> function as an argument to <code class="highlighter-rouge">stringify</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">replaceErrors</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="k">instanceof</span> <span class="nb">Error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">error</span> <span class="o">=</span> <span class="p">{};</span>
+        <span class="nb">Object</span><span class="p">.</span>
+          <span class="nx">getOwnPropertyNames</span><span class="p">(</span><span class="nx">value</span><span class="p">).</span>
+          <span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">error</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+          <span class="p">});</span>
+        <span class="k">return</span> <span class="nx">error</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">error</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'testing'</span><span class="p">);</span>
+<span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">replaceErrors</span><span class="p">);</span>
+<span class="c1">// produces</span>
+<span class="c1">// '{"stack":"Error: testing\\n    at repl:1:13\\n    at REPLServer.defaultEval (repl.js:272:27)\\n    at bound (domain.js:280:14)\\n    at REPLServer.runBound [as eval] (domain.js:293:12)\\n    at REPLServer.&lt;anonymous&gt; (repl.js:441:10)\\n    at emitOne (events.js:101:20)\\n    at REPLServer.emit (events.js:188:7)\\n    at REPLServer.Interface._onLine (readline.js:219:10)\\n    at REPLServer.Interface._line (readline.js:561:8)\\n    at REPLServer.Interface._ttyWrite (readline.js:838:14)","message":"testing"}'</span></code></pre></figure>
+
+<p>note it returns a serialized object with keys <code class="highlighter-rouge">message</code> and <code class="highlighter-rouge">stack</code>. (<a href="http://stackoverflow.com/questions/18391212/is-it-not-possible-to-stringify-an-error-using-json-stringify">Source Stackoverflow</a>).</p>
+
+<h4 id="stack-trace-reading-in-vim">Stack Trace reading in VIM</h4>
+<p>I noted above that js bundles may be cumbersome to inspect in some editors. VIM is able to handle large files well enough.</p>
+
+<p>Some tips:</p>
+
+<ul>
+  <li>navigate to a deep region of a file (<code class="highlighter-rouge">11:20000</code>) like so
+    <ul>
+      <li><code class="highlighter-rouge">[line number]gg</code> so for the above <code class="highlighter-rouge">11gg</code> will jump to the 11th line</li>
+      <li><code class="highlighter-rouge">[column number]l</code> so for the above <code class="highlighter-rouge">20000l</code> will advance the cursor to the 20000th column</li>
+    </ul>
+  </li>
+  <li>when serializing Error objects the newlines will be treated literally, <code class="highlighter-rouge">%s/,/,\r/g</code> will do a global replace on commas and insert a newline afterwards</li>
+</ul>
+
+          <p>
+  If you need help solving your business problems with
+  software read how to <a href="/hire-me">hire me</a>.
+</p>
+
+
+          <hr>
+          <div>
+            <div class='share-btn twitter'>
+  <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/2017/02/25/how-to-read-a-javascript-stack-trace.html&text=How to read a Javascript Stack Trace&via=morenoh149"
+     target="_blank">
+    Tweet <i class="fab fa-twitter"></i>
+  </a>
+</div>
+
+            <div class='share-btn linkedin'>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2017/02/25/how-to-read-a-javascript-stack-trace.html&title=How to read a Javascript Stack Trace&summary=A%20Stack%20Trace%20is%20a%20report%20of%20the%20active%20stack%20frames%20at%20a%20certain%20point%20in%20time%20during%20the%20execution%20of%20a%20program.%0AYou%20should%20learn%20how%20to%20interpret%20these%20to%20debug%20live%20systems%20because%20in%20many%20cases%20a%20stack%20trace%20is%20all%20you%20have%20to%20solve%20a%20customer%E2%80%99s%20issue.%0A%0A&source=HarryMoreno.com"
+     target="_blank">
+    LinkedIn <i class="fa fa-linkedin-square"></i>
+  </a>
+</div>
+
+          </div>
+          <form
+  action="https://tinyletter.com/morenoh149"
+  method="post"
+  target="popupwindow"
+  class="newsletter"
+  onsubmit="
+    window.open('https://tinyletter.com/morenoh149',
+               'popupwindow',
+               'scrollbars=yes,width=800,height=600');
+    return true;
+  "
+>
+ <input type="hidden" value="1" name="embed"/>
+ <span>
+   Want more goodness? Enter your email and I'll send you new posts every 4 months. You can unsubscribe at any time!
+ </span>
+ <div class="grid">
+   <input
+     type="text"
+     name="email"
+     id="tlemail"
+     placeholder="you@example.com"
+   />
+   <input type="submit" value="Subscribe" />
+  </div>
+</form>
+
+          <hr>
+
+          
+        </div>
+
+        <div class="sidebar
+                    col-md-2">
+          <div class="row">
+  <div class="col-xs-5 col-sm-12">
+    <h2>Top Posts</h2>
+    <ul class="list-unstyled">
+      <li>
+        <a href="/2015/12/27/event-delegation-in-javascript">
+          Event Delegation in JavaScript
+        </a>
+      </li>
+      <li>
+        <a href="http://harrymoreno.com/2016/08/26/Great-Papers-in-Computer-Science.html">
+          Great Papers in Computer Science
+        </a>
+      </li>
+      <li>
+        <a href="/2016/01/21/add-launcher-icon-to-react-native-android-app">
+          How to add app icons in React Native Android
+        </a>
+      </li>
+      <li>
+        <a href="/2016/06/30/How-to-learn-Golang-in-1-month">
+          Learn Golang in 1 Month
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-7 col-sm-12 sidebar-cta">
+    <h2>Contact</h2>
+    <p>
+      If you need help improving your business with
+      software,
+      <br />
+      read how to <a href="/hire-me">hire me</a>.
+    </p>
+  </div>
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-5 col-sm-12">
+    <h2>Blogroll</h2>
+    <ul class="list-unstyled">
+      <li><a href="http://thomashunter.name/">Thomas Hunter</a></li>
+      <li><a href="http://www.evanmiller.org/">Evan Miller</a></li>
+      <li><a href="http://www.chrisstucchio.com/blog/index.html">Chris Stucchio</a></li>
+      <li><a href="http://quirksmode.org/blog/">quirksmode</a></li>
+      <li><a href="http://www.kalzumeus.com/">Kalzumeus Software</a></li>
+      <li><a href="http://tympanus.net/codrops/">Codrops</a></li>
+      <li><a href="http://www.forbeslindesay.co.uk/">Forbes Lindesay</a></li>
+      <li><a href="http://blog.regehr.org/">Embedded in Academia</a></li>
+      <li><a href="http://unenumerated.blogspot.com/">Unenumerated (Nick Szabo)</a></li>
+      <li><a href="http://kemitchell.com/">Kyle Mitchell, attorney</a></li>
+      <li><a href="https://stratechery.com">Stratechery</a></li>
+      <li><a href="http://www.raymondcamden.com/">Raymond Camden</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-7 col-sm-12">
+    <h2>Social</h2>
+
+    <!-- rss -->
+    <a href="/feed.xml"><i class="fa fa-rss-square"></i> Subscribe via rss</a>
+
+    <!-- producthunt -->
+    <br>
+    <a href="https://www.producthunt.com/@morenoh149">Producthunt</a>
+
+    <br>
+
+    <!-- github -->
+    <iframe src="https://ghbtns.com/github-btn.html?user=morenoh149&type=follow"
+        allowtransparency="true" frameborder="0" scrolling="0" width="" height="20"
+        style="margin: 5px 0;"></iframe>
+    <br>
+
+    <!-- angellist -->
+    <a href="https://angel.co/harry-moreno?follow=1&type=User&id=218360"></a>
+    <script src="https://angel.co/javascripts/embed.js" type="text/javascript"></script>
+  </div>
+
+</div>
+
+        </div>
+
+      </div>
+
+      <!-- <p class="site-footer text-center">
+  Site powered by <br>
+  <a href="http://jekyllrb.com/">jekyll</a>,
+  <a href="http://getbootstrap.com/">Bootstrap</a> and
+  <a href="http://pages.github.com/">Github Pages</a>
+</p>
+ -->
+
+    </div><!-- container -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Harry Moreno</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <nav class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/hire-me">
+            <i class="fa fa-handshake"></i> Hire Me
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UC8zNZujHKLSRMu5Ep4hYDww" target="_blank">
+            <i class="fab fa-youtube"></i> Youtube
+          </a>
+        </li>
+        <li>
+          <input
+            style="margin: 15px 10px 0 10px;"
+            type="text"
+            id="search-input"
+            placeholder="Search">
+        </li>
+      </ul>
+    </div>
+    <ul id="results-container"></ul>
+  </div> <!-- end navbar fixed-to-top container -->
+</nav>
+<script>
+  SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/search.json',
+      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+      noResultsText: 'No results found',
+      limit: 10,
+      fuzzy: false,
+      exclude: ['Welcome']
+  })
+</script>
+
+  </body>
+</html>

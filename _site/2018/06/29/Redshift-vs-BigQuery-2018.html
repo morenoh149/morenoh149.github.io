@@ -1,0 +1,414 @@
+<html>
+  <head>
+  <title>BigQuery vs Redshift in 2018</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Twitter cards -->
+<meta name="twitter:site"    content="@morenoh149">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title"   content="BigQuery vs Redshift in 2018">
+
+
+<meta name="twitter:description" content="Harry Moreno | Machine Learning Freelancer
+">
+
+
+
+<meta name="twitter:card"  content="summary">
+<meta name="twitter:image" content="">
+
+<!-- end of Twitter cards -->
+
+<meta name="description" content="BigQuery vs Redshift in 2018">
+<meta property="og:url" content="http://localhost:4000/2018/06/29/Redshift-vs-BigQuery-2018.html" />
+<meta property="og:title" content="BigQuery vs Redshift in 2018" />
+<meta property="og:description" content="BigQuery vs Redshift in 2018" />
+<meta property="og:image" content="" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<!--
+use https://richpreview.com/
+to test link previews
+-->
+
+  <link rel="canonical" href="http://localhost:4000/2018/06/29/Redshift-vs-BigQuery-2018.html">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/two.js/0.4.0/two.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/js/reveal.min.js"></script>
+<script src="/js/linkify-headers.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/syntax.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<meta http-equiv='Content-Type' name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+  name="description"
+  content="Harry Moreno Machine Learning Freelancer for hire."
+>
+<meta name="keywords" content="Consulting,Software,Consultant,Freelance,Python,Data Science,Machine Learning,Javascript,Reactjs,Django">
+<meta charset="utf-8">
+
+<!-- google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42985946-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+  <link rel="alternate" type="application/rss+xml" title="Harry Moreno | Machine Learning Freelancer" href="/feed.xml">
+  <script src="/node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
+</head>
+
+  <body>
+    <div class="content container-fluid">
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ad2_browser_banner -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:468px;height:60px"
+           data-ad-client="ca-pub-1904572159184995"
+           data-ad-slot="8672606566"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <div class="row">
+        <div class="post
+                    col-md-8 col-md-offset-1
+                    col-lg-7 col-lg-offset-2">
+
+          <h1><a class="post-title" href="/2018/06/29/Redshift-vs-BigQuery-2018.html">BigQuery vs Redshift in 2018</a></h1>
+          <strong>29 June 2018</strong>
+
+          <p><img src="/img/2018-06-29-redshift_vs_bigquery.png" alt="AWS Redshift vs Google Big Query" />
+Big data analytics tools are a constantly shifting landscape. Most organizations want to be data driven,
+this means collecting your data into a data warehouse where it can be explored. The two biggest solutions
+in the space are AWS Redshift and Google BigQuery. Here is what your big data administrator needs to
+know to choose a solution.</p>
+
+<h2 id="architecture">Architecture</h2>
+<p>Both of these solutions are focused on OLAP (Online Analytical Processing) workloads. These are usually
+column store databases. They are designed for fast analytics, not transactions like your product’s main API.</p>
+
+<p>Redshift was launched October 2012. It runs a
+<a href="https://docs.aws.amazon.com/redshift/latest/dg/c_redshift-and-postgres-sql.html">forked version</a>
+of
+<a href="https://www.postgresql.org/">PostgreSQL</a> 8.0.2. It’s changed under the hood to perform better on analytical
+workloads and is missing some postgres 9.0 features. Redshift’s mental model is that of managing a cluster
+of nodes. You need to choose the number of CPUs and storage for your needs.</p>
+
+<p>BigQuery was launched May 2010. It is a productionized version of an internal Google Database called
+<a href="https://cloud.google.com/files/BigQueryTechnicalWP.pdf">Dremel</a>. It is a serverless model,
+there is no concept of hardware you create tables, upload your data and analyze it.</p>
+
+<p>You trade speed for flexibility.</p>
+
+<p>In Redshift you are given control over how to tune your big data database. You’ll want a dedicated
+person to tweak the data model and fine tune the cluster for the best performance and lowest infrastructure
+cost. The payoff is that frequently queried data becomes cheaper to analyze, this results in lower cost of
+generating reports and analysis.</p>
+
+<p>BigQuery is simpler. Use it if you are not sure what your analytical data model should look like or you
+have lots of data that is rarely queried. BigQuery could be more appropriate if you don’t project needing a
+large analytical team in your organization, or can’t afford to dedicate resources to build world-class
+analytics.
+If you are a Data Scientist working with a new dataset, you could build a prototype faster with BigQuery.
+Similarly if your organization isn’t a technology company, or you have “Medium Data”, BigQuery will
+be easier to get started with.</p>
+
+<h2 id="aws-vs-gcp">AWS vs GCP</h2>
+<p>Both Amazon and Google are competing to offer the most competitive cloud. This benefits consumers as you
+can assume pricing will be comparable for similar services. The differentiator will be the ecosystems
+and where your data is.</p>
+
+<p>Data exhibits a “gravitational” property. Say your main product’s database is on Amazon, there are very
+real cost incentives to use Redshift as Amazon will not bill for transferring the data within it’s cloud.
+Same goes for loading data into BigQuery from Google Cloud Storage.</p>
+
+<p>There’s also considerations for analysis. Do you plan on using Amazon Sagemaker for developing Machine Learning
+models or do you want to use Google’s ML Engine? Do you want to run analysis on unstructured data in S3
+with Amazon Athena?</p>
+
+<h2 id="bi-tools">BI tools</h2>
+<p>As the most popular datawarehouses in the space, both solutions have a mature ecosystem of
+Business Intelligence tools. Note before using any BI tool, you’ll want to build an ETL pipeline that copies the
+production data into the datawarehouse. One exception is if your building a prototype for a stakeholder
+and it’s main backend is a datawarehouse. BI tools should also be sandboxed by setting up a read-only user
+at the database level, this way your analysts cannot damage your data and are free to experiment.</p>
+
+<p><a href="https://metabase.com/">Metabase</a> - free open source BI tool. Popular with startups as you can install
+it in a VM for a BI solution.</p>
+
+<p><a href="https://looker.com/">Looker</a> - paid product. Uses proprietary SQL extension
+<a href="https://www.youtube.com/watch?v=tBlGzp7ewVI">LookML</a> for enhancing your SQL queries.</p>
+
+<p><a href="https://www.tableau.com/">Tableau</a> - enterprise BI solution. Here’s a
+<a href="https://10az.online.tableau.com/#/site/demodepot/views/Sales-ExecutiveSalesforce/SalesSummary/showcaseuser@showcasecompany.com/MOLPremium?:iid=1">demo of it’s UI</a>.</p>
+
+<p><a href="https://www.google.com/analytics/360-suite">Google Analytics 360</a> - enterprise
+version of Google Analytics. You used to have to have google cloud costs in excess of
+<a href="https://www.blastam.com/google-analytics-360-standard-comparison">$150,000/year</a>.
+They no longer state this on their pricing page.</p>
+
+<p>One of the advantages of Redshift was that it runs standard SQL. Meaning all SQL tooling works out of
+the box on Redshift. Whereas BigQuery ran a variation of SQL that had it’s incompatibilities.
+(BigQuery added
+<a href="https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql">standard SQL support</a>
+in 2016.) This could
+explain Redshift’s early dominance in the space. These days most BI tools support both platforms equally
+well.</p>
+
+<h2 id="trends">Trends</h2>
+<p><img src="/img/2018-06-29-trends-usa.png" alt="Google Trends - USA - Redshift - BigQuery" />
+<a href="https://trends.google.com/trends/explore?date=2011-05-29%202018-06-29&amp;q=%2Fm%2F0w30h97,%2Fm%2F0g5s7gf">Google Trends</a>
+show that Redshift is more popular than BigQuery in the United States. It seems that data is viewed
+as an area to invest in for many organizations. As such they are okay investing into developing
+their datawarehouse and having fulltime engineers work on this problem if it gives them
+a competitive advantage. The fact that BigQuery used a variant of SQL may explain why Redshift
+was able to overtake BigQuery despite it’s 2 year headstart.
+Investing in something that is nonstandard is viewed as more risky for an organization.
+<img src="/img/2018-06-29-trends-by-state.png" alt="Google Trends - USA by state - Redshift - BigQuery" />
+We see most search volume from the big tech hubs, Washington, California, New York. Interestingly, in Georgia
+more people are searching for BigQuery.</p>
+
+<p><img src="/img/2018-06-29-trends-global.png" alt="Google Trends - Global - Redshift - BigQuery" />
+Worldwide, interest in BigQuery was overtaken by Redshift and in recent years the gap has been closing.</p>
+
+<p><img src="/img/2018-06-29-trends-by-country.png" alt="Google Trends - Global - Redshift - BigQuery" />
+It seems like Redshift is more popular in the United States, India and Australia.
+BigQuery is more popular in South America and Europe.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Datawarehousing technology is a big decision for organizations. Leveraging your data effectively can
+be a competitive advantage. It’s not always clear for stakeholders how much to invest.</p>
+
+<p>When investing heavily organizations invest in Redshift due to it’s perceived safety. However
+for smaller organizations or projects, time-to-market would be faster with BigQuery. First determine what
+your current needs are and project what they will become. Then decide on the tool that is right
+for you.</p>
+
+<p>I hope this post helps your big data administrator decide which tool is right for you.
+If you need help assessing your existing software strategy or plan out a new project you can
+<a href="http://harrymoreno.com/about.html">contact me</a> here.</p>
+
+          <p>
+  If you need help solving your business problems with
+  software read how to <a href="/hire-me">hire me</a>.
+</p>
+
+
+          <hr>
+          <div>
+            <div class='share-btn twitter'>
+  <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/2018/06/29/Redshift-vs-BigQuery-2018.html&text=BigQuery vs Redshift in 2018&via=morenoh149"
+     target="_blank">
+    Tweet <i class="fab fa-twitter"></i>
+  </a>
+</div>
+
+            <div class='share-btn linkedin'>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2018/06/29/Redshift-vs-BigQuery-2018.html&title=BigQuery vs Redshift in 2018&summary=%0ABig%20data%20analytics%20tools%20are%20a%20constantly%20shifting%20landscape.%20Most%20organizations%20want%20to%20be%20data%20driven,%0Athis%20means%20collecting%20your%20data%20into%20a%20data%20warehouse%20where%20it%20can%20be%20explored.%20The%20two%20biggest%20solutions%0Ain%20the%20space%20are%20AWS%20Redshift%20and%20Google%20BigQuery.%20Here%20is%20what%20your%20big%20data%20administrator%20needs%20to%0Aknow%20to%20choose%20a%20solution.%0A%0A&source=HarryMoreno.com"
+     target="_blank">
+    LinkedIn <i class="fa fa-linkedin-square"></i>
+  </a>
+</div>
+
+          </div>
+          <form
+  action="https://tinyletter.com/morenoh149"
+  method="post"
+  target="popupwindow"
+  class="newsletter"
+  onsubmit="
+    window.open('https://tinyletter.com/morenoh149',
+               'popupwindow',
+               'scrollbars=yes,width=800,height=600');
+    return true;
+  "
+>
+ <input type="hidden" value="1" name="embed"/>
+ <span>
+   Want more goodness? Enter your email and I'll send you new posts every 4 months. You can unsubscribe at any time!
+ </span>
+ <div class="grid">
+   <input
+     type="text"
+     name="email"
+     id="tlemail"
+     placeholder="you@example.com"
+   />
+   <input type="submit" value="Subscribe" />
+  </div>
+</form>
+
+          <hr>
+
+          
+        </div>
+
+        <div class="sidebar
+                    col-md-2">
+          <div class="row">
+  <div class="col-xs-5 col-sm-12">
+    <h2>Top Posts</h2>
+    <ul class="list-unstyled">
+      <li>
+        <a href="/2015/12/27/event-delegation-in-javascript">
+          Event Delegation in JavaScript
+        </a>
+      </li>
+      <li>
+        <a href="http://harrymoreno.com/2016/08/26/Great-Papers-in-Computer-Science.html">
+          Great Papers in Computer Science
+        </a>
+      </li>
+      <li>
+        <a href="/2016/01/21/add-launcher-icon-to-react-native-android-app">
+          How to add app icons in React Native Android
+        </a>
+      </li>
+      <li>
+        <a href="/2016/06/30/How-to-learn-Golang-in-1-month">
+          Learn Golang in 1 Month
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-7 col-sm-12 sidebar-cta">
+    <h2>Contact</h2>
+    <p>
+      If you need help improving your business with
+      software,
+      <br />
+      read how to <a href="/hire-me">hire me</a>.
+    </p>
+  </div>
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-5 col-sm-12">
+    <h2>Blogroll</h2>
+    <ul class="list-unstyled">
+      <li><a href="http://thomashunter.name/">Thomas Hunter</a></li>
+      <li><a href="http://www.evanmiller.org/">Evan Miller</a></li>
+      <li><a href="http://www.chrisstucchio.com/blog/index.html">Chris Stucchio</a></li>
+      <li><a href="http://quirksmode.org/blog/">quirksmode</a></li>
+      <li><a href="http://www.kalzumeus.com/">Kalzumeus Software</a></li>
+      <li><a href="http://tympanus.net/codrops/">Codrops</a></li>
+      <li><a href="http://www.forbeslindesay.co.uk/">Forbes Lindesay</a></li>
+      <li><a href="http://blog.regehr.org/">Embedded in Academia</a></li>
+      <li><a href="http://unenumerated.blogspot.com/">Unenumerated (Nick Szabo)</a></li>
+      <li><a href="http://kemitchell.com/">Kyle Mitchell, attorney</a></li>
+      <li><a href="https://stratechery.com">Stratechery</a></li>
+      <li><a href="http://www.raymondcamden.com/">Raymond Camden</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-7 col-sm-12">
+    <h2>Social</h2>
+
+    <!-- rss -->
+    <a href="/feed.xml"><i class="fa fa-rss-square"></i> Subscribe via rss</a>
+
+    <!-- producthunt -->
+    <br>
+    <a href="https://www.producthunt.com/@morenoh149">Producthunt</a>
+
+    <br>
+
+    <!-- github -->
+    <iframe src="https://ghbtns.com/github-btn.html?user=morenoh149&type=follow"
+        allowtransparency="true" frameborder="0" scrolling="0" width="" height="20"
+        style="margin: 5px 0;"></iframe>
+    <br>
+
+    <!-- angellist -->
+    <a href="https://angel.co/harry-moreno?follow=1&type=User&id=218360"></a>
+    <script src="https://angel.co/javascripts/embed.js" type="text/javascript"></script>
+  </div>
+
+</div>
+
+        </div>
+
+      </div>
+
+      <!-- <p class="site-footer text-center">
+  Site powered by <br>
+  <a href="http://jekyllrb.com/">jekyll</a>,
+  <a href="http://getbootstrap.com/">Bootstrap</a> and
+  <a href="http://pages.github.com/">Github Pages</a>
+</p>
+ -->
+
+    </div><!-- container -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Harry Moreno</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <nav class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/hire-me">
+            <i class="fa fa-handshake"></i> Hire Me
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UC8zNZujHKLSRMu5Ep4hYDww" target="_blank">
+            <i class="fab fa-youtube"></i> Youtube
+          </a>
+        </li>
+        <li>
+          <input
+            style="margin: 15px 10px 0 10px;"
+            type="text"
+            id="search-input"
+            placeholder="Search">
+        </li>
+      </ul>
+    </div>
+    <ul id="results-container"></ul>
+  </div> <!-- end navbar fixed-to-top container -->
+</nav>
+<script>
+  SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/search.json',
+      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+      noResultsText: 'No results found',
+      limit: 10,
+      fuzzy: false,
+      exclude: ['Welcome']
+  })
+</script>
+
+  </body>
+</html>

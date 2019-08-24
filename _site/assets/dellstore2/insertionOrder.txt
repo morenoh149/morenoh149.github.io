@@ -1,0 +1,8 @@
+inventory
+customers
+orders
+reorder
+cust_hist
+orderlines
+categories
+products

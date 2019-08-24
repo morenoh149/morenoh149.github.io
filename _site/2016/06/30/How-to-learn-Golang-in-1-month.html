@@ -1,0 +1,470 @@
+<html>
+  <head>
+  <title>Learn Golang in 1 Month</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Twitter cards -->
+<meta name="twitter:site"    content="@morenoh149">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title"   content="Learn Golang in 1 Month">
+
+
+<meta name="twitter:description" content="Harry Moreno | Machine Learning Freelancer
+">
+
+
+
+<meta name="twitter:card"  content="summary">
+<meta name="twitter:image" content="">
+
+<!-- end of Twitter cards -->
+
+<meta name="description" content="Learn Golang in 1 Month">
+<meta property="og:url" content="http://localhost:4000/2016/06/30/How-to-learn-Golang-in-1-month.html" />
+<meta property="og:title" content="Learn Golang in 1 Month" />
+<meta property="og:description" content="Learn Golang in 1 Month" />
+<meta property="og:image" content="" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<!--
+use https://richpreview.com/
+to test link previews
+-->
+
+  <link rel="canonical" href="http://localhost:4000/2016/06/30/How-to-learn-Golang-in-1-month.html">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/two.js/0.4.0/two.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/js/reveal.min.js"></script>
+<script src="/js/linkify-headers.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/syntax.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<meta http-equiv='Content-Type' name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+  name="description"
+  content="Harry Moreno Machine Learning Freelancer for hire."
+>
+<meta name="keywords" content="Consulting,Software,Consultant,Freelance,Python,Data Science,Machine Learning,Javascript,Reactjs,Django">
+<meta charset="utf-8">
+
+<!-- google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42985946-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+  <link rel="alternate" type="application/rss+xml" title="Harry Moreno | Machine Learning Freelancer" href="/feed.xml">
+  <script src="/node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
+</head>
+
+  <body>
+    <div class="content container-fluid">
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ad2_browser_banner -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:468px;height:60px"
+           data-ad-client="ca-pub-1904572159184995"
+           data-ad-slot="8672606566"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <div class="row">
+        <div class="post
+                    col-md-8 col-md-offset-1
+                    col-lg-7 col-lg-offset-2">
+
+          <h1><a class="post-title" href="/2016/06/30/How-to-learn-Golang-in-1-month.html">Learn Golang in 1 Month</a></h1>
+          <strong>30 June 2016</strong>
+
+          <p>At my new job we have a Go backend. It’s a nice language with familiar syntax. Someone with C, C++, C# or Java experience
+will feel right at home. A language designed to make Software Engineering easier. At the same time it’s being sought out to address
+bottlenecks in Ruby, Perl, Node.js and Python codebases.</p>
+
+<p>We chose Go because it seemed like a useful tool to understand for building large software systems. The Scripting languages
+are among the slowest, Go is compiled into a binary so no runtime is spent interpreting. A binary also makes the
+deployment process painless as you can just scp the file around. Go is a modern language with first-class concurrency primitives.
+It’s been designed to leverage modern hardware with multiple cores.</p>
+
+<p>Go is a language designed in the service of software engineering. Other programming languages come from academia Haskell, OCAML, ML, etc.
+Go on the otherhand was designed to solve problems faced at Google. One such problem is software management. Meaning, how do we deal with
+codebases which are millions of lines long? How do we deal with version skew over time? Go is designed to be a very concise language. It’s
+spec is among the smallest of any language. Such conciseness allows for the creation of code reading tools. Tools like <code class="highlighter-rouge">gofmt</code>, <code class="highlighter-rouge">gofix</code> and
+<code class="highlighter-rouge">godoc</code>. The language also lacks class-inheritance favoring the gang-of-four’s 
+<a href="https://en.wikipedia.org/wiki/Composition_over_inheritance">Composition over Inheritance</a> pattern.</p>
+
+<p><img src="http://pbs.twimg.com/media/Ckhu1oJWYAAcG4t.jpg" alt="Go: 90% Perfect, 100% of the time" /></p>
+
+<p><em>Source: <a href="https://talks.golang.org/2016/applicative.slide#1">Program your next server in Go</a></em></p>
+
+<h3 id="syntax">Syntax</h3>
+<ul>
+  <li><a href="https://learnxinyminutes.com/docs/go/">Learn X in Y Minutes - Go</a></li>
+  <li><a href="https://play.golang.org/">Go Playground</a></li>
+  <li><a href="https://chrome.google.com/webstore/detail/better-go-playground/odfhkelcmblecfdnboahphiafolojmpl">Go Playground Chrome Extension</a></li>
+  <li><a href="http://www.evanmiller.org/four-days-of-go.html">Four days of Go</a> An experienced developer’s impression of the language.</li>
+</ul>
+
+<h3 id="getting-started">Getting Started</h3>
+<ul>
+  <li>Do <a href="https://golang.org/doc/code.html">How to write Go code</a> to get some basic environment issues out of the way and learn how to call go functions from different
+files and packages. Doing this first would have saved me some headaches.</li>
+  <li><a href="https://tour.golang.org/">Go Tour</a> The <strong>defacto</strong> tutorial for Go.</li>
+  <li><a href="https://gobyexample.com/hello-world">Go By Example</a> Learn Go by following examples</li>
+  <li><a href="http://openmymind.net/The-Little-Go-Book/">The little Go Book</a> A good self contained resource</li>
+</ul>
+
+<h3 id="community">Community</h3>
+<ul>
+  <li>IRC Freenode <code class="highlighter-rouge">#go-nuts</code> chat channel. They get pretty pedantic at times and frequently refer you to the <a href="https://golang.org/ref/spec">Spec</a>.</li>
+  <li><a href="https://gophersinvite.herokuapp.com/">Gophers Slack</a> has regional chatrooms as well as topic specific ones.</li>
+</ul>
+
+<h3 id="exercises">Exercises</h3>
+<ul>
+  <li><a href="http://go-database-sql.org/index.html">Stdlib SQL tutorial</a> If you’ll be using a database.</li>
+  <li><a href="http://whipperstacker.com/2015/10/05/3-trivial-concurrency-exercises-for-the-confused-newbie-gopher/">Concurrency Exercises for the confused newbie gopher</a></li>
+</ul>
+
+<h3 id="read-the-official-blog">Read the Official Blog</h3>
+<p>The Go team has developed a very good <a href="https://blog.golang.org/">blog</a>. All the articles are very good and
+essential actually for many useful go tools like <code class="highlighter-rouge">go test</code> and <code class="highlighter-rouge">go doc</code>. Useful for staying up to date on language news.</p>
+
+<ul>
+  <li><a href="https://blog.golang.org/cover">The Cover story</a> Test Coverage tool.</li>
+  <li><a href="https://blog.golang.org/go-slices-usage-and-internals">Go slices usage and internals</a> <em>How Slices (Arrays) work in Go.</em></li>
+  <li><a href="https://blog.golang.org/constants">Constants in Go</a></li>
+  <li><a href="https://blog.golang.org/pipelines">Go concurrency patterns: Pipelines</a></li>
+  <li><a href="https://blog.golang.org/strings">Strings</a></li>
+  <li><a href="https://github.com/golang/go/wiki/Learn">Go wiki learn page</a></li>
+  <li><a href="https://blog.golang.org/introducing-gofix">Introducing gofix</a></li>
+</ul>
+
+<h3 id="web-applications">Web applications</h3>
+<ul>
+  <li><a href="https://golang.org/doc/articles/wiki/">Writing Web applications</a> build a web app with just the standard library</li>
+  <li><a href="https://ant0ine.github.io/go-json-rest/">Go-json-rest</a> boilerplate json api</li>
+  <li><a href="http://apex.run/">Apex</a> a futuristic serverless deploy strategy for Amazon Web Services</li>
+</ul>
+
+<h3 id="json">JSON</h3>
+<ul>
+  <li><a href="http://blog.golang.org/json-and-go">JSON and Go</a></li>
+  <li><a href="https://eager.io/blog/go-and-json/">Go and JSON</a> This resource actually demos using field tags to unmarshal JSON with odd key names like <code class="highlighter-rouge">_foo</code>
+super useful</li>
+  <li><a href="https://play.golang.org/p/7FnyUrH_EV">Playground: unmarshal json</a></li>
+</ul>
+
+<h3 id="godoc">Godoc</h3>
+<p>Use Godoc to document your programs, it’s very good and everyone uses it. We use it at Capsule to generate our internal API
+documentation.</p>
+
+<ul>
+  <li>Work through <a href="https://blog.golang.org/godoc-documenting-go-code">Documenting Go Code</a></li>
+  <li><a href="https://godoc.org/golang.org/x/tools/cmd/godoc">godoc Godoc</a> Read the doc on the tool for usage.
+    <ul>
+      <li>Run <code class="highlighter-rouge">godoc -http=:6060 -goroot=.</code> assuming you’re in a project’s directory.
+godoc docs are designed to give you a snapshot of all go code on your machine. Once you have this running you can see the docs by navigating to <code class="highlighter-rouge">http://localhost:6060/</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="object-oriented">Object-Oriented</h3>
+<p>The way Object-Orientation is achieved in Go differs a bit from languages like Java or C#. The main facility is via interfaces. This approach helps avoid long
+class hierarchies.</p>
+
+<ul>
+  <li><a href="https://nathany.com/good/">Object Oriented Go</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Composition_over_inheritance">Wikipedia: Composition over Inheritance</a></li>
+</ul>
+
+<h3 id="go-playground">Go playground</h3>
+<p>Here are some code samples I’ve written over the past couple of months. Every time I learned something or made a new insight into Go as a
+noob I ended up making a playground demo and tweeting it. Hopefully some of them are useful to someone else.</p>
+
+<ul>
+  <li><a href="https://play.golang.org/p/tJpcp_L9iN">basic if else</a></li>
+  <li><a href="https://play.golang.org/p/GUsCboJuXC">Initialize a nested map</a></li>
+  <li><a href="http://play.golang.org/p/5Rm7Pty3-A">Sort slice of pointers to struct</a></li>
+  <li><a href="http://play.golang.org/p/aZ02JgTqFn">Newton’s method for finding square roots</a></li>
+  <li><a href="http://play.golang.org/p/__8Fj4AGXc">Slices Solution</a> solution to <a href="https://tour.golang.org/moretypes/18">Tour exercise: Slices</a></li>
+  <li><a href="http://play.golang.org/p/Pks6Lpz8qa">Pro solution to image problem</a></li>
+  <li><a href="http://play.golang.org/p/NAAoD75OYg">Golang Closures</a></li>
+  <li><a href="http://play.golang.org/p/txg1Zq_A6j">Consts and custom types</a> <code class="highlighter-rouge">printf("%T", var)</code> prints the type of a variable</li>
+  <li><a href="http://play.golang.org/p/tN0oGcQP2e">Structs must be declared before their use</a></li>
+  <li><a href="http://play.golang.org/p/bbGppY38-B">But placing the struct outside a function makes it available</a></li>
+  <li><a href="http://play.golang.org/p/l9JWXT-w8Q">interface inside a struct and run it</a></li>
+  <li><a href="http://play.golang.org/p/629DDZt9Dm">struct initialization must have a trailing curly on the same line as the last field :/</a></li>
+  <li><a href="http://play.golang.org/p/nGdO-FIka-">type assertions</a></li>
+  <li><a href="https://play.golang.org/p/Sdh-LpHrTx">make a green square</a></li>
+  <li><a href="https://play.golang.org/p/7FnyUrH_EV">unmarshal nested JSON</a></li>
+  <li><a href="https://play.golang.org/p/CNGUG55JZ4">how to find age from birthday</a></li>
+  <li><a href="https://play.golang.org/p/rFm6nk33-C">print day of week</a></li>
+  <li><a href="https://play.golang.org/p/-16mh78fpO">function arguments</a></li>
+  <li><a href="https://play.golang.org/p/k-rAwPzbxT">nil pointers</a></li>
+  <li><a href="https://play.golang.org/p/pP0O-CCPgu">cast integer to float and divide</a></li>
+  <li><a href="https://play.golang.org/p/YGZSi_8zLX">struct embedded and initialization</a></li>
+  <li><a href="https://play.golang.org/p/Mt7Bpw6qSB">round a floating point number to the nearest integer</a></li>
+</ul>
+
+<h3 id="videos">Videos</h3>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=ndmB0bj7eyw">Golang testing sydjs 2014</a></li>
+  <li><a href="https://vimeo.com/53221560">Web apps in go “Code that grows with grace”</a></li>
+  <li><a href="https://vimeo.com/53221558">Go: a simple programming environment</a> goes over some small go programs and interesting parts of the standard library
+I would transcribe the larger example he goes over towards the end. It’s a router that reads in a config file. It also demonstrates how to test such a
+server. <a href="https://github.com/nf/webfront">Source code</a>.</li>
+  <li><a href="https://youtu.be/yszygk1cpEc">Advanced Testing</a></li>
+</ul>
+
+<h3 id="advanced">Advanced</h3>
+<ul>
+  <li><a href="https://github.com/golang/example">Go Code Examples</a> medium sized Go sample go programs</li>
+  <li><a href="https://github.com/golang/example/tree/master/gotypes">type checking</a></li>
+  <li><a href="http://cs-fundamentals.com/c-programming/static-and-dynamic-linking-in-c.php">contrast Go linking with C linking</a></li>
+  <li><a href="https://blog.felixangell.com/an-introduction-to-llvm-in-go/">LLVM in Go</a></li>
+  <li><a href="https://github.com/golang/go/wiki/CodeReviewComments">Styleguide beyond goimports</a></li>
+  <li><a href="https://peter.bourgon.org/go-best-practices-2016">6 years of Go, best practices</a></li>
+  <li><a href="https://robots.thoughtbot.com/where-to-define-command-line-flags-in-go">How to use the <code class="highlighter-rouge">flag</code> stdlib package to give your software arguments</a></li>
+</ul>
+
+<h4 id="theory">Theory</h4>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Guarded_Command_Language">Wikipedia: Guarded Command Language</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Communicating_sequential_processes">Wikipedia: Communicating Sequential Processes</a></li>
+  <li><a href="http://dave.cheney.net/2014/03/19/channel-axioms">Go channel axioms</a></li>
+  <li><a href="https://docs.google.com/document/d/1gCsFxXamW8RRvOe5hECz98Ftk-tcRRJcDFANj2VwCB0/preview">Go Garbage Collector</a> A paper describing the upcoming garbage collector design</li>
+</ul>
+
+<h4 id="why-go-is-the-way-it-is">Why Go is the way it is</h4>
+<p>Some literature from one of the author’s of Go, Rob Pike, on Go’s design.</p>
+
+<ul>
+  <li><a href="https://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html">Less is Exponentially more</a></li>
+  <li><a href="https://talks.golang.org/2012/splash.article">Go at Google: Language Design in the Service of Software Engineering</a></li>
+</ul>
+
+          <p>
+  If you need help solving your business problems with
+  software read how to <a href="/hire-me">hire me</a>.
+</p>
+
+
+          <hr>
+          <div>
+            <div class='share-btn twitter'>
+  <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/2016/06/30/How-to-learn-Golang-in-1-month.html&text=Learn Golang in 1 Month&via=morenoh149"
+     target="_blank">
+    Tweet <i class="fab fa-twitter"></i>
+  </a>
+</div>
+
+            <div class='share-btn linkedin'>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2016/06/30/How-to-learn-Golang-in-1-month.html&title=Learn Golang in 1 Month&summary=At%20my%20new%20job%20we%20have%20a%20Go%20backend.%20It%E2%80%99s%20a%20nice%20language%20with%20familiar%20syntax.%20Someone%20with%20C,%20C++,%20C#%20or%20Java%20experience%0Awill%20feel%20right%20at%20home.%20A%20language%20designed%20to%20make%20Software%20Engineering%20easier.%20At%20the%20same%20time%20it%E2%80%99s%20being%20sought%20out%20to%20address%0Abottlenecks%20in%20Ruby,%20Perl,%20Node.js%20and%20Python%20codebases.%0A%0A&source=HarryMoreno.com"
+     target="_blank">
+    LinkedIn <i class="fa fa-linkedin-square"></i>
+  </a>
+</div>
+
+          </div>
+          <form
+  action="https://tinyletter.com/morenoh149"
+  method="post"
+  target="popupwindow"
+  class="newsletter"
+  onsubmit="
+    window.open('https://tinyletter.com/morenoh149',
+               'popupwindow',
+               'scrollbars=yes,width=800,height=600');
+    return true;
+  "
+>
+ <input type="hidden" value="1" name="embed"/>
+ <span>
+   Want more goodness? Enter your email and I'll send you new posts every 4 months. You can unsubscribe at any time!
+ </span>
+ <div class="grid">
+   <input
+     type="text"
+     name="email"
+     id="tlemail"
+     placeholder="you@example.com"
+   />
+   <input type="submit" value="Subscribe" />
+  </div>
+</form>
+
+          <hr>
+
+          
+        </div>
+
+        <div class="sidebar
+                    col-md-2">
+          <div class="row">
+  <div class="col-xs-5 col-sm-12">
+    <h2>Top Posts</h2>
+    <ul class="list-unstyled">
+      <li>
+        <a href="/2015/12/27/event-delegation-in-javascript">
+          Event Delegation in JavaScript
+        </a>
+      </li>
+      <li>
+        <a href="http://harrymoreno.com/2016/08/26/Great-Papers-in-Computer-Science.html">
+          Great Papers in Computer Science
+        </a>
+      </li>
+      <li>
+        <a href="/2016/01/21/add-launcher-icon-to-react-native-android-app">
+          How to add app icons in React Native Android
+        </a>
+      </li>
+      <li>
+        <a href="/2016/06/30/How-to-learn-Golang-in-1-month">
+          Learn Golang in 1 Month
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-7 col-sm-12 sidebar-cta">
+    <h2>Contact</h2>
+    <p>
+      If you need help improving your business with
+      software,
+      <br />
+      read how to <a href="/hire-me">hire me</a>.
+    </p>
+  </div>
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-5 col-sm-12">
+    <h2>Blogroll</h2>
+    <ul class="list-unstyled">
+      <li><a href="http://thomashunter.name/">Thomas Hunter</a></li>
+      <li><a href="http://www.evanmiller.org/">Evan Miller</a></li>
+      <li><a href="http://www.chrisstucchio.com/blog/index.html">Chris Stucchio</a></li>
+      <li><a href="http://quirksmode.org/blog/">quirksmode</a></li>
+      <li><a href="http://www.kalzumeus.com/">Kalzumeus Software</a></li>
+      <li><a href="http://tympanus.net/codrops/">Codrops</a></li>
+      <li><a href="http://www.forbeslindesay.co.uk/">Forbes Lindesay</a></li>
+      <li><a href="http://blog.regehr.org/">Embedded in Academia</a></li>
+      <li><a href="http://unenumerated.blogspot.com/">Unenumerated (Nick Szabo)</a></li>
+      <li><a href="http://kemitchell.com/">Kyle Mitchell, attorney</a></li>
+      <li><a href="https://stratechery.com">Stratechery</a></li>
+      <li><a href="http://www.raymondcamden.com/">Raymond Camden</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-7 col-sm-12">
+    <h2>Social</h2>
+
+    <!-- rss -->
+    <a href="/feed.xml"><i class="fa fa-rss-square"></i> Subscribe via rss</a>
+
+    <!-- producthunt -->
+    <br>
+    <a href="https://www.producthunt.com/@morenoh149">Producthunt</a>
+
+    <br>
+
+    <!-- github -->
+    <iframe src="https://ghbtns.com/github-btn.html?user=morenoh149&type=follow"
+        allowtransparency="true" frameborder="0" scrolling="0" width="" height="20"
+        style="margin: 5px 0;"></iframe>
+    <br>
+
+    <!-- angellist -->
+    <a href="https://angel.co/harry-moreno?follow=1&type=User&id=218360"></a>
+    <script src="https://angel.co/javascripts/embed.js" type="text/javascript"></script>
+  </div>
+
+</div>
+
+        </div>
+
+      </div>
+
+      <!-- <p class="site-footer text-center">
+  Site powered by <br>
+  <a href="http://jekyllrb.com/">jekyll</a>,
+  <a href="http://getbootstrap.com/">Bootstrap</a> and
+  <a href="http://pages.github.com/">Github Pages</a>
+</p>
+ -->
+
+    </div><!-- container -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Harry Moreno</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <nav class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/hire-me">
+            <i class="fa fa-handshake"></i> Hire Me
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UC8zNZujHKLSRMu5Ep4hYDww" target="_blank">
+            <i class="fab fa-youtube"></i> Youtube
+          </a>
+        </li>
+        <li>
+          <input
+            style="margin: 15px 10px 0 10px;"
+            type="text"
+            id="search-input"
+            placeholder="Search">
+        </li>
+      </ul>
+    </div>
+    <ul id="results-container"></ul>
+  </div> <!-- end navbar fixed-to-top container -->
+</nav>
+<script>
+  SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/search.json',
+      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+      noResultsText: 'No results found',
+      limit: 10,
+      fuzzy: false,
+      exclude: ['Welcome']
+  })
+</script>
+
+  </body>
+</html>

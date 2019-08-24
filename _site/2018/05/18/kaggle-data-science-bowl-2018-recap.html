@@ -1,0 +1,395 @@
+<html>
+  <head>
+  <title>Data Science Bowl 2018 Recap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Twitter cards -->
+<meta name="twitter:site"    content="@morenoh149">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title"   content="Data Science Bowl 2018 Recap">
+
+
+<meta name="twitter:description" content="Harry Moreno | Machine Learning Freelancer
+">
+
+
+
+<meta name="twitter:card"  content="summary">
+<meta name="twitter:image" content="">
+
+<!-- end of Twitter cards -->
+
+<meta name="description" content="Data Science Bowl 2018 Recap">
+<meta property="og:url" content="http://localhost:4000/2018/05/18/kaggle-data-science-bowl-2018-recap.html" />
+<meta property="og:title" content="Data Science Bowl 2018 Recap" />
+<meta property="og:description" content="Data Science Bowl 2018 Recap" />
+<meta property="og:image" content="" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<!--
+use https://richpreview.com/
+to test link previews
+-->
+
+  <link rel="canonical" href="http://localhost:4000/2018/05/18/kaggle-data-science-bowl-2018-recap.html">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/two.js/0.4.0/two.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/js/reveal.min.js"></script>
+<script src="/js/linkify-headers.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/syntax.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<meta http-equiv='Content-Type' name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+  name="description"
+  content="Harry Moreno Machine Learning Freelancer for hire."
+>
+<meta name="keywords" content="Consulting,Software,Consultant,Freelance,Python,Data Science,Machine Learning,Javascript,Reactjs,Django">
+<meta charset="utf-8">
+
+<!-- google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42985946-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+  <link rel="alternate" type="application/rss+xml" title="Harry Moreno | Machine Learning Freelancer" href="/feed.xml">
+  <script src="/node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
+</head>
+
+  <body>
+    <div class="content container-fluid">
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ad2_browser_banner -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:468px;height:60px"
+           data-ad-client="ca-pub-1904572159184995"
+           data-ad-slot="8672606566"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <div class="row">
+        <div class="post
+                    col-md-8 col-md-offset-1
+                    col-lg-7 col-lg-offset-2">
+
+          <h1><a class="post-title" href="/2018/05/18/kaggle-data-science-bowl-2018-recap.html">Data Science Bowl 2018 Recap</a></h1>
+          <strong>18 May 2018</strong>
+
+          <p><img src="/img/2018-05-04-kaggle-data-science-bowl-2018.png" alt="Kaggle Data Science Bowl 2018" />
+This year our team competed in the 2018 Kaggle Data Science Bowl. The goal of
+the competition was to identify cells in microscopic images. There can be zero,
+one or many cells in any given image. Our solution was a Convolutional Neural
+Network with skip connections.</p>
+
+<p>We used Google <a href="https://colab.research.google.com/">Colab</a> which is a free
+Jupyter notebook-like environment with a GPU. It offers realtime collaboration
+similar to google docs and google sheets. The
+<a href="https://colab.research.google.com/notebooks/basic_features_overview.ipynb">Overview of Colaboratory Features</a>
+is a good resource to learn this tool as well as the example notebooks.</p>
+
+<p>The dataset provided consisted of png images and masks.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">stage1_train</span>
+<span class="err">├──</span> <span class="mi">00071198</span><span class="n">d059ba7f5914a526d124d28e6d010c92466da21d4a04cd5413362552</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">images</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">└──</span> <span class="mi">00071198</span><span class="n">d059ba7f5914a526d124d28e6d010c92466da21d4a04cd5413362552</span><span class="p">.</span><span class="n">png</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="n">masks</span>
+<span class="err">│</span>       <span class="err">├──</span> <span class="n">f6eee5c69f54807923de1ceb1097fc3aa902a6b20d846f111e806988a4269ed0</span><span class="p">.</span><span class="n">png</span>
+<span class="err">│</span>       <span class="err">├──</span> <span class="n">ffae764df84788e8047c0942f55676c9663209f65da943814c6b3aca78d8e7f7</span><span class="p">.</span><span class="n">png</span>
+<span class="err">│</span>       <span class="p">...</span>
+<span class="err">├──</span> <span class="mi">003</span><span class="n">cee89357d9fe13516167fd67b609a164651b21934585648c740d2c3d86dc1</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">images</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">└──</span> <span class="mi">003</span><span class="n">cee89357d9fe13516167fd67b609a164651b21934585648c740d2c3d86dc1</span><span class="p">.</span><span class="n">png</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="n">masks</span>
+<span class="err">│</span>       <span class="err">├──</span> <span class="mi">23947</span><span class="n">be0224e633947e9a3935d8ecf89be3eb56f68f30db85c74d4bf07d3028b</span><span class="p">.</span><span class="n">png</span>
+<span class="err">│</span>       <span class="err">├──</span> <span class="mi">2</span><span class="n">a709842ce867d9b27281f9d8bec4968b88805afdff3de2ed0c8156f711483cd</span><span class="p">.</span><span class="n">png</span>
+<span class="err">│</span>       <span class="p">...</span>
+<span class="p">...</span></code></pre></figure>
+
+<p><img src="/img/2018-05-18-cells.png" alt="Cells" />
+Each training example would be provided as a directory containing the image as
+captured from the device.
+<img src="/img/2018-05-18-cell-mask.png" alt="Cell Mask" />
+And a set of masks showing where a cell was identified by an expert. For every
+training example you would be provided between 1 and ~300 masks.</p>
+
+<p>The submission criteria required us to
+<a href="https://en.wikipedia.org/wiki/Run-length_encoding">Run Length Encode</a>
+the model’s predictions. It is a technique that can communicate large runs of
+information more efficiently than jpeg.</p>
+
+<p>The approach we used was the same one as the winner of the ISBI cell tracking
+challenge 2015:
+<a href="https://arxiv.org/pdf/1505.04597.pdf">The U-net architecture</a>. It uses skip
+connections similar to LSTMs to keep track of ‘context’ in 2 dimensions. This
+context improves the performance of the model because it can better reason
+about the textures it is currently looking at while considering if it is
+looking at the inside of a cell or looking at a non-cell region of space.</p>
+
+<p>To learn more about skip connections in NNs see 
+<a href="http://www.deeplearningbook.org/contents/rnn.html">Deep Learning Section 10.9.1</a>
+and
+<a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTM Networks</a>.</p>
+
+<p>The U-net paper mentions Upsampling. This is the same as the term
+“Deconvolution” used in other Deep Learning literature. Deconvolution can be
+done in many ways. The method that ships with Keras is the
+<a href="https://keras.io/layers/convolutional/#conv2dtranspose">Conv2DTranspose</a>.</p>
+
+<p>Throughout the competition we learned the loss function is critical to the
+performance of the network. It may sound obvious but careful selection of an
+appropriate loss function will change the way the model behaves. For example,
+we engineered the loss function to segment cells better by giving larger
+penalty for misclassifying the cell boundaries. This worked because many cell
+images have cells overlapping and touching. Early versions of the model would
+have trouble learning the boundaries between cells. These boundaries should
+have been labeled as not being a cell, but would incorrectly be classified as a
+cell.</p>
+
+<p>We experimented with removing padding. The accuracy of the model went down.
+We believe this is because traditionally padding is used make the model give
+consideration to the pixels near the border of the image. This means that the
+border of the images have information that is useful for prediction.</p>
+
+<p>Jacob compiled separate notes on
+<a href="https://colab.research.google.com/drive/1H_CCNqv5z8P5bRD8uqMxg4LmwQiOLwMH">Convolutional NNs</a>.</p>
+
+<p>Our work is visible at
+<a href="https://colab.research.google.com/drive/1UuUte6WA0vzUdfTe0CdvSpCcuELZxx9i">N.Y.C. Kaggle DS Bowl Colab</a>,
+<a href="https://github.com/morenoh149/DATA-SCIENCE-BOWL-2018">github</a> and our
+<a href="https://drive.google.com/drive/u/0/folders/1eeCmqB1u7SL06R7kF3yKR7zABjUPrqqx">google drive</a>.</p>
+
+<p>Congratulations to this years
+<a href="https://datasciencebowl.com/2018tutorialwinners/">winning kernel</a>.</p>
+
+<p>And thank you to teammates
+<a href="https://www.linkedin.com/in/tqrahman/">Taraqur Rahman</a>,
+<a href="https://www.linkedin.com/in/jacobdpeters/">Jacob Peters</a> and
+<a href="https://www.linkedin.com/in/cal-orlando-almodovar-41b01258/">Cal Almodovar</a>.</p>
+
+          <p>
+  If you need help solving your business problems with
+  software read how to <a href="/hire-me">hire me</a>.
+</p>
+
+
+          <hr>
+          <div>
+            <div class='share-btn twitter'>
+  <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/2018/05/18/kaggle-data-science-bowl-2018-recap.html&text=Data Science Bowl 2018 Recap&via=morenoh149"
+     target="_blank">
+    Tweet <i class="fab fa-twitter"></i>
+  </a>
+</div>
+
+            <div class='share-btn linkedin'>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2018/05/18/kaggle-data-science-bowl-2018-recap.html&title=Data Science Bowl 2018 Recap&summary=%0AThis%20year%20our%20team%20competed%20in%20the%202018%20Kaggle%20Data%20Science%20Bowl.%20The%20goal%20of%0Athe%20competition%20was%20to%20identify%20cells%20in%20microscopic%20images.%20There%20can%20be%20zero,%0Aone%20or%20many%20cells%20in%20any%20given%20image.%20Our%20solution%20was%20a%20Convolutional%20Neural%0ANetwork%20with%20skip%20connections.%0A%0A&source=HarryMoreno.com"
+     target="_blank">
+    LinkedIn <i class="fa fa-linkedin-square"></i>
+  </a>
+</div>
+
+          </div>
+          <form
+  action="https://tinyletter.com/morenoh149"
+  method="post"
+  target="popupwindow"
+  class="newsletter"
+  onsubmit="
+    window.open('https://tinyletter.com/morenoh149',
+               'popupwindow',
+               'scrollbars=yes,width=800,height=600');
+    return true;
+  "
+>
+ <input type="hidden" value="1" name="embed"/>
+ <span>
+   Want more goodness? Enter your email and I'll send you new posts every 4 months. You can unsubscribe at any time!
+ </span>
+ <div class="grid">
+   <input
+     type="text"
+     name="email"
+     id="tlemail"
+     placeholder="you@example.com"
+   />
+   <input type="submit" value="Subscribe" />
+  </div>
+</form>
+
+          <hr>
+
+          
+        </div>
+
+        <div class="sidebar
+                    col-md-2">
+          <div class="row">
+  <div class="col-xs-5 col-sm-12">
+    <h2>Top Posts</h2>
+    <ul class="list-unstyled">
+      <li>
+        <a href="/2015/12/27/event-delegation-in-javascript">
+          Event Delegation in JavaScript
+        </a>
+      </li>
+      <li>
+        <a href="http://harrymoreno.com/2016/08/26/Great-Papers-in-Computer-Science.html">
+          Great Papers in Computer Science
+        </a>
+      </li>
+      <li>
+        <a href="/2016/01/21/add-launcher-icon-to-react-native-android-app">
+          How to add app icons in React Native Android
+        </a>
+      </li>
+      <li>
+        <a href="/2016/06/30/How-to-learn-Golang-in-1-month">
+          Learn Golang in 1 Month
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-7 col-sm-12 sidebar-cta">
+    <h2>Contact</h2>
+    <p>
+      If you need help improving your business with
+      software,
+      <br />
+      read how to <a href="/hire-me">hire me</a>.
+    </p>
+  </div>
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-5 col-sm-12">
+    <h2>Blogroll</h2>
+    <ul class="list-unstyled">
+      <li><a href="http://thomashunter.name/">Thomas Hunter</a></li>
+      <li><a href="http://www.evanmiller.org/">Evan Miller</a></li>
+      <li><a href="http://www.chrisstucchio.com/blog/index.html">Chris Stucchio</a></li>
+      <li><a href="http://quirksmode.org/blog/">quirksmode</a></li>
+      <li><a href="http://www.kalzumeus.com/">Kalzumeus Software</a></li>
+      <li><a href="http://tympanus.net/codrops/">Codrops</a></li>
+      <li><a href="http://www.forbeslindesay.co.uk/">Forbes Lindesay</a></li>
+      <li><a href="http://blog.regehr.org/">Embedded in Academia</a></li>
+      <li><a href="http://unenumerated.blogspot.com/">Unenumerated (Nick Szabo)</a></li>
+      <li><a href="http://kemitchell.com/">Kyle Mitchell, attorney</a></li>
+      <li><a href="https://stratechery.com">Stratechery</a></li>
+      <li><a href="http://www.raymondcamden.com/">Raymond Camden</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-7 col-sm-12">
+    <h2>Social</h2>
+
+    <!-- rss -->
+    <a href="/feed.xml"><i class="fa fa-rss-square"></i> Subscribe via rss</a>
+
+    <!-- producthunt -->
+    <br>
+    <a href="https://www.producthunt.com/@morenoh149">Producthunt</a>
+
+    <br>
+
+    <!-- github -->
+    <iframe src="https://ghbtns.com/github-btn.html?user=morenoh149&type=follow"
+        allowtransparency="true" frameborder="0" scrolling="0" width="" height="20"
+        style="margin: 5px 0;"></iframe>
+    <br>
+
+    <!-- angellist -->
+    <a href="https://angel.co/harry-moreno?follow=1&type=User&id=218360"></a>
+    <script src="https://angel.co/javascripts/embed.js" type="text/javascript"></script>
+  </div>
+
+</div>
+
+        </div>
+
+      </div>
+
+      <!-- <p class="site-footer text-center">
+  Site powered by <br>
+  <a href="http://jekyllrb.com/">jekyll</a>,
+  <a href="http://getbootstrap.com/">Bootstrap</a> and
+  <a href="http://pages.github.com/">Github Pages</a>
+</p>
+ -->
+
+    </div><!-- container -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Harry Moreno</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <nav class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/hire-me">
+            <i class="fa fa-handshake"></i> Hire Me
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UC8zNZujHKLSRMu5Ep4hYDww" target="_blank">
+            <i class="fab fa-youtube"></i> Youtube
+          </a>
+        </li>
+        <li>
+          <input
+            style="margin: 15px 10px 0 10px;"
+            type="text"
+            id="search-input"
+            placeholder="Search">
+        </li>
+      </ul>
+    </div>
+    <ul id="results-container"></ul>
+  </div> <!-- end navbar fixed-to-top container -->
+</nav>
+<script>
+  SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/search.json',
+      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+      noResultsText: 'No results found',
+      limit: 10,
+      fuzzy: false,
+      exclude: ['Welcome']
+  })
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,372 @@
+<html>
+  <head>
+  <title>Scraping links with just your browser</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Twitter cards -->
+<meta name="twitter:site"    content="@morenoh149">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title"   content="Scraping links with just your browser">
+
+
+<meta name="twitter:description" content="Harry Moreno | Machine Learning Freelancer
+">
+
+
+
+<meta name="twitter:card"  content="summary">
+<meta name="twitter:image" content="">
+
+<!-- end of Twitter cards -->
+
+<meta name="description" content="Scraping links with just your browser">
+<meta property="og:url" content="http://localhost:4000/2015/01/01/Scraping-links-with-your-browser.html" />
+<meta property="og:title" content="Scraping links with just your browser" />
+<meta property="og:description" content="Scraping links with just your browser" />
+<meta property="og:image" content="" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<!--
+use https://richpreview.com/
+to test link previews
+-->
+
+  <link rel="canonical" href="http://localhost:4000/2015/01/01/Scraping-links-with-your-browser.html">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/two.js/0.4.0/two.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/js/reveal.min.js"></script>
+<script src="/js/linkify-headers.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/syntax.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<meta http-equiv='Content-Type' name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+  name="description"
+  content="Harry Moreno Machine Learning Freelancer for hire."
+>
+<meta name="keywords" content="Consulting,Software,Consultant,Freelance,Python,Data Science,Machine Learning,Javascript,Reactjs,Django">
+<meta charset="utf-8">
+
+<!-- google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42985946-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+  <link rel="alternate" type="application/rss+xml" title="Harry Moreno | Machine Learning Freelancer" href="/feed.xml">
+  <script src="/node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
+</head>
+
+  <body>
+    <div class="content container-fluid">
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ad2_browser_banner -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:468px;height:60px"
+           data-ad-client="ca-pub-1904572159184995"
+           data-ad-slot="8672606566"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <div class="row">
+        <div class="post
+                    col-md-8 col-md-offset-1
+                    col-lg-7 col-lg-offset-2">
+
+          <h1><a class="post-title" href="/2015/01/01/Scraping-links-with-your-browser.html">Scraping links with just your browser</a></h1>
+          <strong>01 January 2015</strong>
+
+          <p>I recently came across a page with lots of links to txt files. I got frustrated
+when I wanted to look up something in these files but couldn’t because I’d have
+to download each one by one.</p>
+
+<p><br /></p>
+
+<h3 class="center" id="--enter-the-browser-console--">- ENTER THE BROWSER CONSOLE -</h3>
+
+<p class="right"><small><em>plus js friends</em></small></p>
+
+<p><br /></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Run all this code in your browser console aka dev tools</span>
+<span class="c1">// Grab all links on the current page</span>
+<span class="kd">var</span> <span class="nx">links</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'a'</span><span class="p">);</span></code></pre></figure>
+
+<p>This returns a jquery-like object. A bunch of key-value pairs. The values being
+DOM Objects. Sadly javascript doesn’t have a <code class="highlighter-rouge">.values()</code> method like
+<a href="http://www.ruby-doc.org/core-2.2.0/Hash.html#method-i-values">Ruby</a>. We could
+make our own using the following function</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">values</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">obj</span><span class="p">){</span>
+  <span class="k">return</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">obj</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+  <span class="p">});</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Then</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// make links an array of DOM anchor elements</span>
+<span class="nx">links</span> <span class="o">=</span> <span class="nx">values</span><span class="p">(</span><span class="nx">links</span><span class="p">);</span>
+
+<span class="c1">// Regex with criteria we're looking for</span>
+<span class="kd">var</span> <span class="nx">myregex</span> <span class="o">=</span> <span class="sr">/txt/</span><span class="p">;</span>
+
+<span class="c1">// Filter using the regex</span>
+<span class="nx">links</span> <span class="o">=</span> <span class="nx">links</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">anchor</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">myregex</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">anchor</span><span class="p">.</span><span class="nx">href</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// You can tell your browser to download these files by executing the</span>
+<span class="c1">// click() method</span>
+<span class="nx">links</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">click</span><span class="p">();</span></code></pre></figure>
+
+<p>But what if there are too many?
+You could try</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">goodlinks</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">element</span><span class="p">.</span><span class="nx">target</span> <span class="o">=</span> <span class="s2">"_blank"</span><span class="p">;</span>
+  <span class="nx">element</span><span class="p">.</span><span class="nx">click</span><span class="p">();</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Make sure that the anchor element has a
+target of <code class="highlighter-rouge">_blank</code> or browsers will prevent so many tabs from opening.
+If your browser is preventing too many tabs to open, or the site is throttling
+you, simulate pagination</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">20</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">links</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="nx">start</span><span class="p">].</span><span class="nx">target</span> <span class="o">=</span> <span class="s2">"_blank"</span><span class="p">;</span>
+  <span class="nx">links</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="nx">start</span><span class="p">].</span><span class="nx">click</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>and repeat calls to this after incrementing start. Say <code class="highlighter-rouge">start = 20</code> then
+<code class="highlighter-rouge">start = 40</code> and so on.</p>
+
+<p>Now on to building a
+<a href="http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/">Full-text search engine with Postgres</a>.</p>
+
+          <p>
+  If you need help solving your business problems with
+  software read how to <a href="/hire-me">hire me</a>.
+</p>
+
+
+          <hr>
+          <div>
+            <div class='share-btn twitter'>
+  <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/2015/01/01/Scraping-links-with-your-browser.html&text=Scraping links with just your browser&via=morenoh149"
+     target="_blank">
+    Tweet <i class="fab fa-twitter"></i>
+  </a>
+</div>
+
+            <div class='share-btn linkedin'>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2015/01/01/Scraping-links-with-your-browser.html&title=Scraping links with just your browser&summary=I%20recently%20came%20across%20a%20page%20with%20lots%20of%20links%20to%20txt%20files.%20I%20got%20frustrated%0Awhen%20I%20wanted%20to%20look%20up%20something%20in%20these%20files%20but%20couldn%E2%80%99t%20because%20I%E2%80%99d%20have%0Ato%20download%20each%20one%20by%20one.%0A%0A&source=HarryMoreno.com"
+     target="_blank">
+    LinkedIn <i class="fa fa-linkedin-square"></i>
+  </a>
+</div>
+
+          </div>
+          <form
+  action="https://tinyletter.com/morenoh149"
+  method="post"
+  target="popupwindow"
+  class="newsletter"
+  onsubmit="
+    window.open('https://tinyletter.com/morenoh149',
+               'popupwindow',
+               'scrollbars=yes,width=800,height=600');
+    return true;
+  "
+>
+ <input type="hidden" value="1" name="embed"/>
+ <span>
+   Want more goodness? Enter your email and I'll send you new posts every 4 months. You can unsubscribe at any time!
+ </span>
+ <div class="grid">
+   <input
+     type="text"
+     name="email"
+     id="tlemail"
+     placeholder="you@example.com"
+   />
+   <input type="submit" value="Subscribe" />
+  </div>
+</form>
+
+          <hr>
+
+          
+        </div>
+
+        <div class="sidebar
+                    col-md-2">
+          <div class="row">
+  <div class="col-xs-5 col-sm-12">
+    <h2>Top Posts</h2>
+    <ul class="list-unstyled">
+      <li>
+        <a href="/2015/12/27/event-delegation-in-javascript">
+          Event Delegation in JavaScript
+        </a>
+      </li>
+      <li>
+        <a href="http://harrymoreno.com/2016/08/26/Great-Papers-in-Computer-Science.html">
+          Great Papers in Computer Science
+        </a>
+      </li>
+      <li>
+        <a href="/2016/01/21/add-launcher-icon-to-react-native-android-app">
+          How to add app icons in React Native Android
+        </a>
+      </li>
+      <li>
+        <a href="/2016/06/30/How-to-learn-Golang-in-1-month">
+          Learn Golang in 1 Month
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-7 col-sm-12 sidebar-cta">
+    <h2>Contact</h2>
+    <p>
+      If you need help improving your business with
+      software,
+      <br />
+      read how to <a href="/hire-me">hire me</a>.
+    </p>
+  </div>
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-5 col-sm-12">
+    <h2>Blogroll</h2>
+    <ul class="list-unstyled">
+      <li><a href="http://thomashunter.name/">Thomas Hunter</a></li>
+      <li><a href="http://www.evanmiller.org/">Evan Miller</a></li>
+      <li><a href="http://www.chrisstucchio.com/blog/index.html">Chris Stucchio</a></li>
+      <li><a href="http://quirksmode.org/blog/">quirksmode</a></li>
+      <li><a href="http://www.kalzumeus.com/">Kalzumeus Software</a></li>
+      <li><a href="http://tympanus.net/codrops/">Codrops</a></li>
+      <li><a href="http://www.forbeslindesay.co.uk/">Forbes Lindesay</a></li>
+      <li><a href="http://blog.regehr.org/">Embedded in Academia</a></li>
+      <li><a href="http://unenumerated.blogspot.com/">Unenumerated (Nick Szabo)</a></li>
+      <li><a href="http://kemitchell.com/">Kyle Mitchell, attorney</a></li>
+      <li><a href="https://stratechery.com">Stratechery</a></li>
+      <li><a href="http://www.raymondcamden.com/">Raymond Camden</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-7 col-sm-12">
+    <h2>Social</h2>
+
+    <!-- rss -->
+    <a href="/feed.xml"><i class="fa fa-rss-square"></i> Subscribe via rss</a>
+
+    <!-- producthunt -->
+    <br>
+    <a href="https://www.producthunt.com/@morenoh149">Producthunt</a>
+
+    <br>
+
+    <!-- github -->
+    <iframe src="https://ghbtns.com/github-btn.html?user=morenoh149&type=follow"
+        allowtransparency="true" frameborder="0" scrolling="0" width="" height="20"
+        style="margin: 5px 0;"></iframe>
+    <br>
+
+    <!-- angellist -->
+    <a href="https://angel.co/harry-moreno?follow=1&type=User&id=218360"></a>
+    <script src="https://angel.co/javascripts/embed.js" type="text/javascript"></script>
+  </div>
+
+</div>
+
+        </div>
+
+      </div>
+
+      <!-- <p class="site-footer text-center">
+  Site powered by <br>
+  <a href="http://jekyllrb.com/">jekyll</a>,
+  <a href="http://getbootstrap.com/">Bootstrap</a> and
+  <a href="http://pages.github.com/">Github Pages</a>
+</p>
+ -->
+
+    </div><!-- container -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Harry Moreno</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <nav class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/hire-me">
+            <i class="fa fa-handshake"></i> Hire Me
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UC8zNZujHKLSRMu5Ep4hYDww" target="_blank">
+            <i class="fab fa-youtube"></i> Youtube
+          </a>
+        </li>
+        <li>
+          <input
+            style="margin: 15px 10px 0 10px;"
+            type="text"
+            id="search-input"
+            placeholder="Search">
+        </li>
+      </ul>
+    </div>
+    <ul id="results-container"></ul>
+  </div> <!-- end navbar fixed-to-top container -->
+</nav>
+<script>
+  SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/search.json',
+      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+      noResultsText: 'No results found',
+      limit: 10,
+      fuzzy: false,
+      exclude: ['Welcome']
+  })
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+// dot 2.38.0 on Mac OS X 10.11.4
+// SchemaSpy rev 590
+digraph "reorder" {
+  graph [
+    rankdir="RL"
+    bgcolor="#f7f7f7"
+    nodesep="0.18"
+    ranksep="0.46"
+    fontname="Helvetica"
+    fontsize="11"
+  ];
+  node [
+    fontname="Helvetica"
+    fontsize="11"
+    shape="plaintext"
+  ];
+  edge [
+    arrowsize="0.8"
+  ];
+  "reorder" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">reorder</TD></TR>
+      <TR><TD PORT="prod_id" COLSPAN="3" ALIGN="LEFT">prod_id</TD></TR>
+      <TR><TD PORT="date_low" COLSPAN="3" ALIGN="LEFT">date_low</TD></TR>
+      <TR><TD PORT="quan_low" COLSPAN="3" ALIGN="LEFT">quan_low</TD></TR>
+      <TR><TD PORT="date_reordered" COLSPAN="3" ALIGN="LEFT">date_reordered</TD></TR>
+      <TR><TD PORT="quan_reordered" COLSPAN="3" ALIGN="LEFT">quan_reordered</TD></TR>
+      <TR><TD PORT="date_expected" COLSPAN="3" ALIGN="LEFT">date_expected</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="tables/reorder.html"
+    tooltip="reorder"
+  ];
+}

@@ -1,0 +1,402 @@
+<html>
+  <head>
+  <title>Event Delegation in JavaScript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Twitter cards -->
+<meta name="twitter:site"    content="@morenoh149">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title"   content="Event Delegation in JavaScript">
+
+
+<meta name="twitter:description" content="Harry Moreno | Machine Learning Freelancer
+">
+
+
+
+<meta name="twitter:card"  content="summary">
+<meta name="twitter:image" content="">
+
+<!-- end of Twitter cards -->
+
+<meta name="description" content="Event Delegation in JavaScript">
+<meta property="og:url" content="http://localhost:4000/2015/12/27/event-delegation-in-javascript.html" />
+<meta property="og:title" content="Event Delegation in JavaScript" />
+<meta property="og:description" content="Event Delegation in JavaScript" />
+<meta property="og:image" content="" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<!--
+use https://richpreview.com/
+to test link previews
+-->
+
+  <link rel="canonical" href="http://localhost:4000/2015/12/27/event-delegation-in-javascript.html">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/two.js/0.4.0/two.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/js/reveal.min.js"></script>
+<script src="/js/linkify-headers.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/syntax.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<meta http-equiv='Content-Type' name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+  name="description"
+  content="Harry Moreno Machine Learning Freelancer for hire."
+>
+<meta name="keywords" content="Consulting,Software,Consultant,Freelance,Python,Data Science,Machine Learning,Javascript,Reactjs,Django">
+<meta charset="utf-8">
+
+<!-- google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42985946-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+  <link rel="alternate" type="application/rss+xml" title="Harry Moreno | Machine Learning Freelancer" href="/feed.xml">
+  <script src="/node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
+</head>
+
+  <body>
+    <div class="content container-fluid">
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ad2_browser_banner -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:468px;height:60px"
+           data-ad-client="ca-pub-1904572159184995"
+           data-ad-slot="8672606566"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <div class="row">
+        <div class="post
+                    col-md-8 col-md-offset-1
+                    col-lg-7 col-lg-offset-2">
+
+          <h1><a class="post-title" href="/2015/12/27/event-delegation-in-javascript.html">Event Delegation in JavaScript</a></h1>
+          <strong>27 December 2015</strong>
+
+          <p>Event delegation is a method of simplifying otherwise very verbose event
+handling code in browsers. The method allows you to leverage the browser’s
+built-in event propagation system to execute logic based on user or network
+input.</p>
+
+<p><img src="http://localhost:4000/img/eventflow.svg" alt="Event Flow" /></p>
+
+<p><em>(source: <a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM-level-3-Events</a>)</em></p>
+
+<p>The diagram above illustrates event propagation if a user were to click on a
+cell in a table on a webpage. It illustrates three phases the browser goes
+through:</p>
+
+<ol>
+  <li><strong>Capture</strong> - the browser fires all events set to capture mode from the root
+to the target</li>
+  <li><strong>Target</strong> - events registered at the target fire</li>
+  <li><strong>Bubbling</strong> - event propagates upwards. Most events are set to fire during
+this phase</li>
+</ol>
+
+<p>This is fundamental browser behavior, and as such, essential knowledge for web
+developers. Using this system we can write our programs more simply. We can
+place an event listener on an ancestor element to handle all events that occur
+below it. The classic example is placing a listener on a list (<code class="highlighter-rouge">&lt;ul&gt;</code>, <code class="highlighter-rouge">&lt;ol&gt;</code>)
+and capturing bubbling click events from the <code class="highlighter-rouge">&lt;li&gt;</code>s below it. This results in
+reduced RAM usage for the webpage and less code for developers to maintain.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">"tbody"</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+<span class="nx">table</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span> <span class="o">&amp;&amp;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">nodeName</span> <span class="o">==</span> <span class="s2">"TD"</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Cell clicked! Contents: '</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">textContent</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Here we add an event listener on the table body that can print out any cell’s
+contents. We introspect on <code class="highlighter-rouge">e.target</code> to identify the specific element that was
+clicked.</p>
+
+<p>The strategy may become cumbersome if your logic is looking for an intermediate
+element, say, trigger logic on <code class="highlighter-rouge">&lt;a&gt;</code> but <code class="highlighter-rouge">e.target</code> is a nested <code class="highlighter-rouge">&lt;span&gt;</code>. You’ll
+have to use <code class="highlighter-rouge">e.target.className.split(' ')</code> and look for specific classes.</p>
+
+<h2 id="usecapture">useCapture</h2>
+<p>Most events bubble. But some don’t. <code class="highlighter-rouge">focus</code>, <code class="highlighter-rouge">change</code>, <code class="highlighter-rouge">error</code> and <code class="highlighter-rouge">blur</code> for
+example.</p>
+
+<p>For these you can execute the event listener (function) during the capture phase
+instead. Simply provide <code class="highlighter-rouge">true</code> as the third argument to <code class="highlighter-rouge">addEventListener</code>.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">table</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span>
+  <span class="s1">'click'</span><span class="p">,</span>
+  <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'event target '</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span> <span class="p">},</span>
+  <span class="kc">true</span> <span class="c1">// &lt;- useCapture</span>
+<span class="p">);</span></code></pre></figure>
+
+<p>Interestingly <code class="highlighter-rouge">e.target</code> is still the initiating dom node. The browser must be
+computing that before the propagation phases are performed.</p>
+
+<h2 id="stopping">Stopping</h2>
+<p>If for whatever reason you want to stop an event from firing on any other
+nodes in the chain use <code class="highlighter-rouge">Event.stopPropagation()</code>. It even works on events triggered
+during the capture phase.</p>
+
+<p>More often though you’ll be using <code class="highlighter-rouge">Event.preventDefault()</code> as it prevents
+behavior such as toggling checkboxes and loading other pages after clicking
+links anchor tags.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// &lt;a href="foo.com"&gt;&lt;span&gt;text&lt;/span&gt;&lt;/a&gt;</span>
+
+<span class="nx">a</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>  <span class="c1">// &lt;- stops browser from following the link</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span>
+<span class="p">},</span> <span class="kc">true</span> <span class="p">);</span>
+
+<span class="nx">span</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// logic here will never execute</span>
+<span class="p">});</span></code></pre></figure>
+
+<h2 id="jquery">jQuery</h2>
+<p>If you are considering using jQuery for it’s event delegation and event
+normalization features consider the following lighter weight implementations of the
+<a href="https://github.com/shichuan/javascript-patterns/blob/master/jquery-patterns/event-delegation.html">Event Delegation Pattern</a></p>
+
+<ul>
+  <li>Google’s <a href="https://github.com/google/jsaction/">JsAction</a></li>
+  <li>The Financial Times’ <a href="https://github.com/ftlabs/ftdomdelegate">DOM Delegate</a></li>
+</ul>
+
+<h2 id="react">React</h2>
+<p>React provides a
+<a href="https://facebook.github.io/react/docs/events.html#syntheticevent">Synthetic Event</a>
+api which attempts to provide a more uniform interface for events.
+For example it sets all events to bubble by default.</p>
+
+<p>To define listeners that execute during the capture phase simply append
+<code class="highlighter-rouge">Capture</code> to the function name, e.g., <code class="highlighter-rouge">onFocusCapture</code> will execute the
+listener on <code class="highlighter-rouge">focus</code> during the capture phase.</p>
+
+          <p>
+  If you need help solving your business problems with
+  software read how to <a href="/hire-me">hire me</a>.
+</p>
+
+
+          <hr>
+          <div>
+            <div class='share-btn twitter'>
+  <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/2015/12/27/event-delegation-in-javascript.html&text=Event Delegation in JavaScript&via=morenoh149"
+     target="_blank">
+    Tweet <i class="fab fa-twitter"></i>
+  </a>
+</div>
+
+            <div class='share-btn linkedin'>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2015/12/27/event-delegation-in-javascript.html&title=Event Delegation in JavaScript&summary=Event%20delegation%20is%20a%20method%20of%20simplifying%20otherwise%20very%20verbose%20event%0Ahandling%20code%20in%20browsers.%20The%20method%20allows%20you%20to%20leverage%20the%20browser%E2%80%99s%0Abuilt-in%20event%20propagation%20system%20to%20execute%20logic%20based%20on%20user%20or%20network%0Ainput.%0A%0A&source=HarryMoreno.com"
+     target="_blank">
+    LinkedIn <i class="fa fa-linkedin-square"></i>
+  </a>
+</div>
+
+          </div>
+          <form
+  action="https://tinyletter.com/morenoh149"
+  method="post"
+  target="popupwindow"
+  class="newsletter"
+  onsubmit="
+    window.open('https://tinyletter.com/morenoh149',
+               'popupwindow',
+               'scrollbars=yes,width=800,height=600');
+    return true;
+  "
+>
+ <input type="hidden" value="1" name="embed"/>
+ <span>
+   Want more goodness? Enter your email and I'll send you new posts every 4 months. You can unsubscribe at any time!
+ </span>
+ <div class="grid">
+   <input
+     type="text"
+     name="email"
+     id="tlemail"
+     placeholder="you@example.com"
+   />
+   <input type="submit" value="Subscribe" />
+  </div>
+</form>
+
+          <hr>
+
+          
+        </div>
+
+        <div class="sidebar
+                    col-md-2">
+          <div class="row">
+  <div class="col-xs-5 col-sm-12">
+    <h2>Top Posts</h2>
+    <ul class="list-unstyled">
+      <li>
+        <a href="/2015/12/27/event-delegation-in-javascript">
+          Event Delegation in JavaScript
+        </a>
+      </li>
+      <li>
+        <a href="http://harrymoreno.com/2016/08/26/Great-Papers-in-Computer-Science.html">
+          Great Papers in Computer Science
+        </a>
+      </li>
+      <li>
+        <a href="/2016/01/21/add-launcher-icon-to-react-native-android-app">
+          How to add app icons in React Native Android
+        </a>
+      </li>
+      <li>
+        <a href="/2016/06/30/How-to-learn-Golang-in-1-month">
+          Learn Golang in 1 Month
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-7 col-sm-12 sidebar-cta">
+    <h2>Contact</h2>
+    <p>
+      If you need help improving your business with
+      software,
+      <br />
+      read how to <a href="/hire-me">hire me</a>.
+    </p>
+  </div>
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-5 col-sm-12">
+    <h2>Blogroll</h2>
+    <ul class="list-unstyled">
+      <li><a href="http://thomashunter.name/">Thomas Hunter</a></li>
+      <li><a href="http://www.evanmiller.org/">Evan Miller</a></li>
+      <li><a href="http://www.chrisstucchio.com/blog/index.html">Chris Stucchio</a></li>
+      <li><a href="http://quirksmode.org/blog/">quirksmode</a></li>
+      <li><a href="http://www.kalzumeus.com/">Kalzumeus Software</a></li>
+      <li><a href="http://tympanus.net/codrops/">Codrops</a></li>
+      <li><a href="http://www.forbeslindesay.co.uk/">Forbes Lindesay</a></li>
+      <li><a href="http://blog.regehr.org/">Embedded in Academia</a></li>
+      <li><a href="http://unenumerated.blogspot.com/">Unenumerated (Nick Szabo)</a></li>
+      <li><a href="http://kemitchell.com/">Kyle Mitchell, attorney</a></li>
+      <li><a href="https://stratechery.com">Stratechery</a></li>
+      <li><a href="http://www.raymondcamden.com/">Raymond Camden</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-7 col-sm-12">
+    <h2>Social</h2>
+
+    <!-- rss -->
+    <a href="/feed.xml"><i class="fa fa-rss-square"></i> Subscribe via rss</a>
+
+    <!-- producthunt -->
+    <br>
+    <a href="https://www.producthunt.com/@morenoh149">Producthunt</a>
+
+    <br>
+
+    <!-- github -->
+    <iframe src="https://ghbtns.com/github-btn.html?user=morenoh149&type=follow"
+        allowtransparency="true" frameborder="0" scrolling="0" width="" height="20"
+        style="margin: 5px 0;"></iframe>
+    <br>
+
+    <!-- angellist -->
+    <a href="https://angel.co/harry-moreno?follow=1&type=User&id=218360"></a>
+    <script src="https://angel.co/javascripts/embed.js" type="text/javascript"></script>
+  </div>
+
+</div>
+
+        </div>
+
+      </div>
+
+      <!-- <p class="site-footer text-center">
+  Site powered by <br>
+  <a href="http://jekyllrb.com/">jekyll</a>,
+  <a href="http://getbootstrap.com/">Bootstrap</a> and
+  <a href="http://pages.github.com/">Github Pages</a>
+</p>
+ -->
+
+    </div><!-- container -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Harry Moreno</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <nav class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/hire-me">
+            <i class="fa fa-handshake"></i> Hire Me
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UC8zNZujHKLSRMu5Ep4hYDww" target="_blank">
+            <i class="fab fa-youtube"></i> Youtube
+          </a>
+        </li>
+        <li>
+          <input
+            style="margin: 15px 10px 0 10px;"
+            type="text"
+            id="search-input"
+            placeholder="Search">
+        </li>
+      </ul>
+    </div>
+    <ul id="results-container"></ul>
+  </div> <!-- end navbar fixed-to-top container -->
+</nav>
+<script>
+  SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/search.json',
+      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+      noResultsText: 'No results found',
+      limit: 10,
+      fuzzy: false,
+      exclude: ['Welcome']
+  })
+</script>
+
+  </body>
+</html>
