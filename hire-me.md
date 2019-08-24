@@ -67,9 +67,12 @@ processes.
   <a href="https://itunes.apple.com/us/app/capsule-pharmacy/id1092333652">
     <img
       class="work-tech"
-      src="/img/work/capsule-2.png"
+      src="/img/work/capsule-1.png"
       alt="Capsule Pharmacy Mobile app"
       title="Capsule Pharmacy Mobile app&#013;" />
+  </a>
+  <a href="https://itunes.apple.com/us/app/capsule-pharmacy/id1092333652" target="_blank">
+    <img class="work-tech" src="/img/work/appStore.png" alt="Capsule App" title="Capsule App" />
   </a>
   <div class="videowrapper">
     <iframe
@@ -78,12 +81,8 @@ processes.
       src="https://www.youtube.com/embed/VBuBTr5YR74"
       frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
   </div>
 
-  <a href="https://itunes.apple.com/us/app/capsule-pharmacy/id1092333652" target="_blank">
-    <img class="work-tech" src="/img/work/appStore.png" alt="Capsule App" title="Capsule App" />
-  </a>
   </div>
 
 
