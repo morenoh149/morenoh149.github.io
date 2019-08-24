@@ -20,26 +20,29 @@
           </a>
         </li>
         <li>
-          <a href="https://www.codementor.io/morenoh149" target="_blank">
-            <i class="fas fa-phone"></i> Codementor
-          </a>
-        </li>
-        <li>
-          <a href="https://www.kaggle.com/morenoh149" target="_blank">
-            <span class="nav-item-icon">k</span> Kaggle
-          </a>
-        </li>
-        <li>
-          <a href="http://www.linkedin.com/in/harrymoreno" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-        </li>
-        <li>
           <a href="https://www.youtube.com/channel/UC8zNZujHKLSRMu5Ep4hYDww" target="_blank">
             <i class="fab fa-youtube"></i> Youtube
           </a>
         </li>
+        <input
+          style="margin: 15px 10px 0 10px;"
+          type="text"
+          id="search-input"
+          placeholder="Search">
       </ul>
     </div>
-  </div> <!-- end navbar fixed-to-bottom container -->
+    <ul id="results-container"></ul>
+  </div> <!-- end navbar fixed-to-top container -->
 </nav>
+<script>
+  SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/search.json',
+      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+      noResultsText: 'No results found',
+      limit: 10,
+      fuzzy: false,
+      exclude: ['Welcome']
+  })
+</script>

@@ -88,6 +88,13 @@ i.fa-link {
   padding: 0 5px;
 }
 
+#results-container {
+  margin: 0 10px 10px 10px;
+  background-color: white;
+  border-radius: 5px;
+  color: rgb(129, 19, 19);
+}
+
 img.feedly-icon {
   width: 25;
   height: 25;
