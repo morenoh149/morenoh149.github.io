@@ -35,6 +35,58 @@ processes.
 <a href="https://getaway.house"><img class="work-tech" src="/img/work/getaway.png" alt="Getaway House" title="Getaway House&#013;" /></a>
 </div>
 
+
+  <div class="col-sm-6">
+  <h2>React Native Contacts</h2>
+
+  <a href="https://github.com/rt2zz/react-native-contacts">react-native-contacts</a> was the first api bridge
+  for React Native that allowed you to load the phone's contacts. Oddly enough facebook chose
+  not to bridge this api and when I realized this for an app I was developing I solved
+  the problem and open sourced it. I still maintain the module and it's been interesting
+  seeing how react native has evolved over the years. It is written in Java and Objective-c.
+
+  <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
+    <a href="https://github.com/rt2zz/react-native-contacts"><img class="work-tech" src="http://githubbadges.com/star.svg?user=rt2zz&repo=react-native-contacts&background=007ecg&color=bbb&style=flat"></a>
+    <a href="https://github.com/rt2zz/react-native-contacts"><img class="work-tech" src="http://githubbadges.com/fork.svg?user=rt2zz&repo=react-native-contacts&background=007ecg&color=bbb&style=flat"></a>
+  </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-6">
+  <h2>Capsule Pharmacy</h2>
+
+  I helped start <a href="https://www.capsulecares.com">Capsule Pharmacy</a> as the fifth engineer. I helped grow the
+  business from 50 beta users, through launch, through series A fundraising, through +20,000 monthly
+  active users. We built the consumer facing page with e-commerce flow, the internal corporate CMS
+  where 30+ persons performed 40+ hours of work per week, built a go api, built a django api, wrote
+  documentation for all code and processes/procedures, performed on-call duties (devops), wrote
+  sql reports for stakeholders and onboarded fellow engineers.
+
+  <a href="https://itunes.apple.com/us/app/capsule-pharmacy/id1092333652">
+    <img
+      class="work-tech"
+      src="/img/work/capsule-2.png"
+      alt="Capsule Pharmacy Mobile app"
+      title="Capsule Pharmacy Mobile app&#013;" />
+  </a>
+  <div class="videowrapper">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/VBuBTr5YR74"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  </div>
+
+  <a href="https://itunes.apple.com/us/app/capsule-pharmacy/id1092333652" target="_blank">
+    <img class="work-tech" src="/img/work/appStore.png" alt="Capsule App" title="Capsule App" />
+  </a>
+  </div>
+
+
 <div class="col-sm-6">
 <h2>SK-II Japan store</h2>
 
@@ -68,8 +120,15 @@ The client was <a href="https://www.sk-ii.com/">SK-II Japan</a> subsidiary of pr
     neighborhood through events and profiles. It also has a b2b component where
     local businesses can pay to promote their events in the local feed.
 
-    <img class="work-tech" src="/img/work/litt2.png" alt="Litt webapp" title="Litt webapp" />
-    <img class="work-tech" src="/img/work/litt1.png" alt="Litt instagram" title="Litt instagram" />
+    <a href="https://getlitt.app" target="_blank">
+      <img class="work-tech" src="/img/work/litt2.png" alt="Litt webapp" title="Litt webapp" />
+    </a>
+    <a href="https://apps.apple.com/us/app/litt-mobile/id1471731638" target="_blank">
+      <img class="work-tech" src="/img/work/appStore.png" alt="Litt ios" title="Litt ios" />
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=app.getlitt.litt" target="_blank">
+      <img class="work-tech" src="/img/work/playStore.png" alt="Litt for android" title="Litt for Android" />
+    </a>
   </div>
 
   <div class="col-sm-6">
@@ -83,52 +142,10 @@ The client was <a href="https://www.sk-ii.com/">SK-II Japan</a> subsidiary of pr
     mvp for FCC in Ruby on Rails. I also advised on the migration from RoR to
     Node.js and MongoDB.
 
-    <img class="work-tech" src="/img/work/fcc1.jpeg" alt="Free code camp 1" title="Free code camp 1" />
-    <img class="work-tech" src="/img/work/fcc2.jpeg" alt="Free code camp 2" title="Free code camp 2" />
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-6">
-  <h2>Capsule Pharmacy</h2>
-
-  I helped start <a href="https://www.capsulecares.com">Capsule Pharmacy</a> as the fifth engineer. I helped grow the
-  business from 50 beta users, through launch, through series A fundraising, through +20,000 monthly
-  active users. We built the consumer facing page with e-commerce flow, the internal corporate CMS
-  where 30+ persons performed 40+ hours of work per week, built a go api, built a django api, wrote
-  documentation for all code and processes/procedures, performed on-call duties (devops), wrote
-  sql reports for stakeholders and onboarded fellow engineers.
-
-  <a href="https://itunes.apple.com/us/app/capsule-pharmacy/id1092333652">
-    <img
-      class="work-tech"
-      src="/img/work/capsule-2.png"
-      alt="Capsule Pharmacy Mobile app"
-      title="Capsule Pharmacy Mobile app&#013;" />
-  </a>
-  <div class="videowrapper">
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/VBuBTr5YR74"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  </div>
-
-  <div class="col-sm-6">
-  <h2>React Native Contacts</h2>
-
-  <a href="https://github.com/rt2zz/react-native-contacts">react-native-contacts</a> was the first api bridge
-  for React Native that allowed you to load the phone's contacts. Oddly enough facebook chose
-  not to bridge this api and when I realized this for an app I was developing I solved
-  the problem and open sourced it. I still maintain the module and it's been interesting
-  seeing how react native has evolved over the years. It is written in Java and Objective-c.
-
-  <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
-    <a href="https://github.com/rt2zz/react-native-contacts"><img class="work-tech" src="http://githubbadges.com/star.svg?user=rt2zz&repo=react-native-contacts&background=007ecg&color=bbb&style=flat"></a>
-    <a href="https://github.com/rt2zz/react-native-contacts"><img class="work-tech" src="http://githubbadges.com/fork.svg?user=rt2zz&repo=react-native-contacts&background=007ecg&color=bbb&style=flat"></a>
-  </div>
+    <a href="https://freecodecamp.com" target="_blank">
+      <img class="work-tech" src="/img/work/fcc1.jpeg" alt="Free code camp 1" title="Free code camp 1" />
+      <img class="work-tech" src="/img/work/fcc2.jpeg" alt="Free code camp 2" title="Free code camp 2" />
+    </a>
   </div>
 </div>
 
