@@ -1,6 +1,6 @@
 ---
 layout: hire-me
-title: Hire Me
+title: Harry Moreno | Hire Me
 ---
 
 <div style="text-align: center; font-size: 2em;">
