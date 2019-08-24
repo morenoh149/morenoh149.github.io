@@ -38,3 +38,5 @@ app/_bower_components
 dist
 .tmp
 .jekyll-metadata
+_site
+node_modules
