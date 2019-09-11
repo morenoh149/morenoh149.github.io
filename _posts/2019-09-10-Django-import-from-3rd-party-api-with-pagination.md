@@ -20,7 +20,7 @@ The following is an example of a django management command that queries a blog a
 traverses pagination to get all of the posts, processes and stores the data
 in the database.
 
-{% highlight javascript %}
+{% highlight python %}
 # app/management/commands/import_articles.py
 import json, logging, os, traceback
 from datetime import datetime, timedelta
@@ -121,7 +121,7 @@ class Command(BaseCommand):
 
 And below is the logging configuration that sends the management command's logs to
 stdout in development.
-{% highlight javascript %}
+{% highlight python %}
 # settings.py
 LOGGING = {
     'version': 1,
