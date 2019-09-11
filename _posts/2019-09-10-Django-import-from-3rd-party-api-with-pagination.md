@@ -87,15 +87,8 @@ class Command(BaseCommand):
             result_set.append(data)
 
         # store data into our api
-        super_user = get_user_model().objects.get(username='admin')
         for article in result_set:
-            post = Post(
-              author=super_user,
-              body=article['body'],
-              publish_date=article['publish_date'],
-              title=article['title'],
-              is_published=False,
-            )
+            post = Post(body=article['body'], is_published=False)
             try:
                 post.save() 
                 if article.get('logo') and article['logo'].get('url'):
