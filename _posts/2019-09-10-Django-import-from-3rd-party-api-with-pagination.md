@@ -7,10 +7,10 @@ image: /img/2019-09-10-api-to-db.png
 Async tasks are an intermediate backend engineering problem. Most public facing
 apis need to return an answer under 1 second for a good user experience. However
 many real world tasks require more than 1 second to complete or need to be scheduled
-to repeat. The solution is typically to create a task that can run asynchronously.
+to repeat. The solution is usually to create a task that can run asynchronously.
 In [Django](https://www.djangoproject.com) one way to accomplish this is by writing a management command.
 
-APIs are also typically paginated. Pagination means that only a portion of the matching
+Real APIs are typically paginated. Pagination means that only a portion of the matching
 data is sent back at a time. Sending all of the results without pagination could
 overwhelm the requesting program and bog down the service returning the
 data. Since most real-world apis are paginated, learning how to traverse and consume
