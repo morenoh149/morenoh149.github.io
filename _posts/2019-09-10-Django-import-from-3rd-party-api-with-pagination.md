@@ -31,7 +31,7 @@ from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
 from django.db.utils import IntegrityError
 
-from polls.models import Photo, Post
+from app.models import Photo, Post
 
 class Command(BaseCommand):
     """
@@ -53,7 +53,7 @@ class Command(BaseCommand):
         parser.add_argument('--end_date', action='store', default=None, help='end of data to import')
 
     def handle(self, *args, **options):
-        logger = logging.getLogger('polls.management.commands')
+        logger = logging.getLogger('app.management.commands')
         API_KEY = os.environ.get("API_KEY", "token")
         base_url='https://www.blog.com/v3/data/search'
 
@@ -144,21 +144,21 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers': ['console'],                                                                                   
-            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),                                                            
-        },                                                                                                             
-        'polls.management.commands': {                                                                                 
-            'handlers': ['console'],                                                                                   
-            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),                                                            
-        }                                                                                                              
-    }                                                                                                                  
-} 
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+        },
+        'app.management.commands': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+        }
+    }
+}
 {% endhighlight %}
 
 Things to note:
 
 1. Our imports are separated by type - stdlib, nonstandard libs, django classes and project-specific classes.
 1. We show how to specify optional arguments so we can change the behavior at runtime needed.
-1. We name the logger `polls.management.commands`. If you use `__name__`, as mentioned in the django docs, you will have to make a logger for each management command and that seems silly. Instead we use the same logger for all management commands.
+1. We name the logger `app.management.commands`. If you use `__name__`, as mentioned in the django docs, you will have to make a logger for each management command and that seems silly. Instead we use the same logger for all management commands.
 1. We use a requests Session and process each page-worth of results using generators. This keeps the ram required to just the amount needed to handle a page-worth. A solution without generators would consume more memory because it would keep more items around until all the pages are processed.
 1. We wrap our data storing calls (`model.save()`) in a try except. In the except clauses we log our error and continue. If we simply allow errors to be raised the job stop if even only one item has a problem. You can have your logging system send you an alert if the job has run into issues.
