@@ -18,7 +18,7 @@ pagination is a good thing to master.
 
 The following is an example of a django management command that queries a blog api,
 traverses pagination to get all of the posts, processes and stores the data
-in the database.
+in the database. Be sure to read the notes at the end of the post.
 
 {% highlight python %}
 # app/management/commands/import_articles.py
