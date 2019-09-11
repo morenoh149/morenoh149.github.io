@@ -28,8 +28,6 @@ from datetime import datetime, timedelta
 import requests
 
 from django.core.management.base import BaseCommand
-from django.contrib.auth import get_user_model
-from django.db.utils import IntegrityError
 
 from app.models import Photo, Post
 
