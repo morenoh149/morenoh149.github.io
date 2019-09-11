@@ -99,13 +99,8 @@ class Command(BaseCommand):
             try:
                 post.save() 
                 if article.get('logo') and article['logo'].get('url'):
-                    photo = Photo(
-                        post=post,
-                        img_url=article['logo']['url']
-                    )
+                    photo = Photo(post=post, img_url=article['logo']['url'])
                     photo.save()
-            except IntegrityError as error:
-                logger.warning('Failed to import data. Check Post. %s %s', error, post)
             except:
                 trace_back = traceback.format_exc()
                 logger.warning('Failed to import data. %s', trace_back)
@@ -120,10 +115,6 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
-            'style': '{',
-        },
         'simple': {
             'format': '{levelname} {message}',
             'style': '{',
@@ -132,7 +123,7 @@ LOGGING = {
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
-            'formatter': 'verbose'
+            'formatter': 'simple'
         },
     },
     'loggers': {
