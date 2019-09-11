@@ -60,7 +60,7 @@ class Command(BaseCommand):
         else:
             end_date = begin_date + timedelta(days=7)
 
-        # api request params to be used
+        # request params to be used
         payload={
             'token': API_KEY,
             'start_date.range_start': begin_date.isoformat(timespec='seconds'),
