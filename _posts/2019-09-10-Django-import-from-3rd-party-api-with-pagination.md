@@ -35,16 +35,9 @@ from app.models import Photo, Post
 
 class Command(BaseCommand):
     """
-    Imports articles from 3rd party api.
-
     Usage:
     $ python manage.py import_articles
     $ python manage.py import_articles --begin_date 2019-09-09T09:30:00 --end_date 2019-09-10T09:30:00  
-
-    curl -s 'https://www.blog.com/v3/articles/search/?
-    &start_date.range_start=2019-09-08T09:30:00
-    &start_date.range_end=2019-09-22T09:30:00
-    &token=token
     """
     help = 'Import articles from 3rd party api.'
 
