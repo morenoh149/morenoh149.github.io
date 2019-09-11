@@ -87,7 +87,7 @@ class Command(BaseCommand):
                 next_page = session.get(base_url, params=new_payload).json()
                 yield next_page
 
-        # issue pagination api requests accumulating results into results_set
+        # issue pagination api requests accumulating results into result_set
         result_set = []
         for page in get_jobs():
             data = page.get('data', [])
