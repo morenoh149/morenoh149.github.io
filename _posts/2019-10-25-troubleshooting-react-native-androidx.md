@@ -186,4 +186,7 @@ modern gradle version.
 
 ## Conclusion
 
-If you have any tips I missed please share them. One final [gist](https://gist.github.com/nadesh-git/908b9714f9c7f20b66dfb13b49ba346a) that helped on this project.
+If you have any tips I missed please share them.
+You can use the [upgrade helper](https://react-native-community.github.io/upgrade-helper)
+to know what to change.
+One final [gist](https://gist.github.com/nadesh-git/908b9714f9c7f20b66dfb13b49ba346a) that helped on this project.
