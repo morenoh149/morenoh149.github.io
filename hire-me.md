@@ -193,11 +193,11 @@ title: Harry Moreno | Hire Me
         src="https://raw.githubusercontent.com/AutoViML/AutoViz/master/logo.png" />
       </a>
     <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
-      <a href="https://github.com/AutoViML/react-native-contacts">
+      <a href="https://github.com/AutoViML/AutoViz">
         <img class="work-tech"
           src="http://githubbadges.com/star.svg?user=AutoViML&repo=AutoViz">
       </a>
-      <a href="https://github.com/rt2zz/react-native-contacts">
+      <a href="https://github.com/AutoViML/AutoViz">
         <img class="work-tech"
           src="https://githubbadges.com/fork.svg?user=AutoViML&repo=AutoViz">
       </a>
