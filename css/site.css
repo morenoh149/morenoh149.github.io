@@ -51,11 +51,11 @@ p {
   font-weight: bold;
 }
 .post h3 {
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: bold;
 }
 .post h4 {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -103,7 +103,15 @@ img.feedly-icon {
 }
 img {
   text-align: right;
-  max-width: 80%;
+  max-width: 60%;
+}
+img.hire-me-app-download {
+  text-align: right;
+  max-width: 40%;
+}
+img.hire-me-work-img {
+  text-align: right;
+  max-width: 40%;
 }
 .thumbnail img { max-height: 400px; }
 .thumbnail img.applogo { max-height: 150px; }
@@ -222,6 +230,7 @@ form.newsletter input[type="submit"] {
 div.work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding-top: 1em;
 }
 @media (min-width: 768px) {
   div.work-grid {
