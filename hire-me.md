@@ -16,10 +16,6 @@ title: Harry Moreno | Hire Me
   customers
   do or making sure different departments of your business get the insights
   they need to make decisions.
-
-  <br />
-  <br />
-  Some projects that you <i>can</i> see:
   </div>
 </div>
 
@@ -165,7 +161,8 @@ title: Harry Moreno | Hire Me
     <a href="https://github.com/rt2zz/react-native-contacts">
       <img
         class="hire-me-work-img"
-        src="/img/work/react-native.png"
+        src="/img/work/react-native-contacts.png"
+        style="max-width: 100%"
       />
     </a>
     <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
@@ -219,7 +216,7 @@ title: Harry Moreno | Hire Me
     <a href="https://github.com/morenoh149/fullstack-apollo-react-native-boilerplate">
       <img
         class="hire-me-work-img"
-        src="/img/work/graphql.jpg"
+        src="/img/work/graphql-boilerplate.jpg"
       />
     </a>
     <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
