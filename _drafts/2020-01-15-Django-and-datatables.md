@@ -17,4 +17,4 @@ passed back to the api for processing
 
 4. searching across multiple columns with the `name` arg https://github.com/izimobil/django-rest-framework-datatables/issues/6#issuecomment-569148406
 
-
+5. changing the display of dates with render functions and orthogonal data https://datatables.net/manual/data/orthogonal-data#HTML-5 and https://datatables.net/manual/data/renderers
