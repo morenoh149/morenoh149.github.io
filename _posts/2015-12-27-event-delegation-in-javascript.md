@@ -31,11 +31,14 @@ reduced RAM usage for the webpage and less code for developers to maintain.
 
 {% highlight javascript %}
 var table = document.getElementsByTagName("tbody")[0];
-table.addEventListener('click', function(e) {
-	if(e.target && e.target.nodeName == "TD") {
-		console.log('Cell clicked! Contents: ', e.target.textContent);
-	}
-});
+table.addEventListener(
+  'click',
+  function(e) {
+    if (e.target && e.target.nodeName == "TD") {
+      console.log('Cell clicked! Contents: ', e.target.textContent);
+    }
+  }
+);
 {% endhighlight %}
 
 Here we add an event listener on the table body that can print out any cell's
@@ -76,14 +79,21 @@ links anchor tags.
 {% highlight javascript %}
 // <a href="foo.com"><span>text</span></a>
 
-a.addEventListener('click', function(e) {
-  e.preventDefault();  // <- stops browser from following the link
-  e.stopPropagation();
-}, true );
+a.addEventListener(
+  'click',
+  function(e) {
+    e.preventDefault();  // <- stops browser from following the link
+    e.stopPropagation();
+  },
+  true
+);
 
-span.addEventListener('click', function(e) {
-  // logic here will never execute
-});
+span.addEventListener(
+  'click',
+  function(e) {
+    // logic here will never execute
+  }
+);
 {% endhighlight %}
 
 ## jQuery
