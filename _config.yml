@@ -1,9 +1,9 @@
 # Site settings
-title: Harry Moreno | Website and app Freelancer
-name: Harry Moreno | Website and app Freelancer
+title: Website and Phone App Strategy for Tech Companies | Harry Moreno
+name: Website and Phone App Strategy for Tech Companies | Harry Moreno
 email: morenoh149@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Harry Moreno | Website and app Freelancer
+  Website and Phone App Strategy for Tech Companies | Harry Moreno
 
 # Serving
 detach:  false
@@ -15,6 +15,7 @@ show_dir_listing: false
 twitter_username: morenoh149
 github_username: morenoh149
 paginate: 10
+paginate_path: "/blog/page:num/"
 
 # Build settings
 markdown: kramdown

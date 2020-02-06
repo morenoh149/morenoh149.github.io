@@ -105,6 +105,10 @@ img {
   text-align: right;
   max-width: 60%;
 }
+img#headshot {
+  max-width: unset;
+  width: 100%;
+}
 img.hire-me-app-download {
   text-align: right;
   max-width: 40%;
@@ -258,4 +262,10 @@ div.work-grid {
     left: 0;
     width: 100%;
     height: 100%;
+}
+.landing-section p {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 100;
+  line-height: 25px;
 }

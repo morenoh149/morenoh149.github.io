@@ -1,0 +1,75 @@
+---
+layout: blog-index
+title: Harry Moreno | Blog
+---
+
+<div class="col-sm-8 col-sm-offset-1 col-md-7 col-md-offset-2">
+  <dl>
+    {% for post in paginator.posts %}
+      <dt>
+        <h2>
+          <a class="post-title" href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h2>
+        {{ post.date | date: "%d %B %Y" }}
+      </dt>
+
+      <dd class="post">
+        {{ post.excerpt }}
+      </dd>
+    {% endfor %}
+  </dl>
+
+  <!-- pagination -->
+  <nav class="pager flexrow">
+    {% if not-paginator.previous_page %}
+      <div class="previous">
+        <a href="{{ paginator.previous_page_path }}">
+          <span aria-hidden="true">&larr;</span>
+          Newer
+        </a>
+      </div>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% capture page_url %}
+        {% if page == 1 %}
+          /
+        {% else %}
+          /page{{ page }}
+        {% endif %}
+      {% endcapture %}
+      {% if page == paginator.page %}
+        <div class="page-num active">
+          <a>
+      {% else %}
+        <div class="page-num">
+          <a href="{{ page_url }}">
+      {% endif %}
+            <span>{{ page }}</span>
+          </a>
+        </div>
+    {% endfor %}
+
+    {% if not-paginator.next_page %}
+      <div class="next">
+        <a href="{{ paginator.next_page_path }}">
+          Older
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    {% endif %}
+  </nav>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- ad1_browser -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-1904572159184995"
+       data-ad-slot="4921063812"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
