@@ -1,6 +1,9 @@
 /* TODO come up with rem / em font-size strategy */
 /* use css-grid and deprecate bootstrap layout */
 
+/* main-color: b10000 */
+/* complimentary: E8D18B */
+
 /* site-wide styles */
 body {
   padding-top: 50px;
@@ -234,6 +237,7 @@ form.newsletter input[type="submit"] {
 .headline {
   font-size: 36px;
   font-weight: bold;
+  padding: 40px 0;
 }
 @media (min-width: 768px) {
   .headline {
@@ -282,8 +286,41 @@ div.work-grid {
   }
 }
 .landing-section p {
-  font-size: 25px;
+  font-size: 20px;
   font-family: sans-serif;
   font-weight: 100;
-  line-height: 25px;
+}
+.landing-section-1 p {
+  font-size: 25px;
+  padding: 30px 0;
+  line-height: 45px;
+}
+.landing-section-2 {
+  padding: 150px 0;
+}
+.landing-section-3 {
+  padding: 150px 0;
+  background-color: rgba(3,3,28,.15);
+}
+.landing-section-3 li {
+  font-size: 30px;
+}
+.landing-section-4 {
+  padding: 0 0 50px 0;
+  background-color: #E8D18B;
+}
+.article-container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .article-container {
+    flex-direction: row;
+  }
+}
+.landing-page-article {
+  background-color: white;
+  border-radius: 5px;
+  min-height: 300px;
+  margin: 5px;
 }
