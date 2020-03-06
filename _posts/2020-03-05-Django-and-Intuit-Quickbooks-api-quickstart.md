@@ -13,7 +13,7 @@ intuits servers and the django api endpoints.
 Overview
 
 1. Make an intuit app
-1. Clone https://github.com/IntuitDeveloper/SampleOAuth2_UsingPythonClient
+1. Clone [https://github.com/IntuitDeveloper/SampleOAuth2_UsingPythonClient](https://github.com/IntuitDeveloper/SampleOAuth2_UsingPythonClient)
 1. Copy the client id and secret into settings.py
 1. Copy the django callback endpoint into the intuit app
 1. run the Django
