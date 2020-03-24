@@ -321,21 +321,27 @@ div.work-grid {
   font-family: sans-serif;
 }
 .landing-section-1 p {
-  font-size: 25px;
-  padding: 30px 0;
-  line-height: 45px;
+  font-size: 1.5em;
+  padding: 0;
+}
+.landing-section-1 .landing-section {
+  padding: 30px 20px;
 }
 .landing-section-2 {
-  padding: 150px 0;
+  background-color: rgba(3, 3, 28, 0.15);
+  padding: 40px 0;
 }
 .landing-section-3 {
   padding: 150px 0;
-  background-color: rgba(3, 3, 28, 0.15);
-}
-.landing-section-3 li {
-  font-size: 30px;
 }
 .landing-section-4 {
+  padding: 150px 0;
+  background-color: rgba(3, 3, 28, 0.15);
+}
+.landing-section-4 li {
+  font-size: 30px;
+}
+.landing-section-5 {
   padding: 0 0 50px 0;
   background-color: #e8d18b;
 }
@@ -360,6 +366,9 @@ div.work-grid {
   color: white;
   padding: 40px 0;
   text-align: center;
+}
+#footer p {
+  font-family: sans-serif;
 }
 #footer-row {
   display: flex;
