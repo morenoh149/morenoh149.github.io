@@ -80,14 +80,6 @@ li.needs_top_padding {
   padding-top: 15px;
 }
 
-.site-footer {
-  margin: 0 auto 0 auto;
-  padding: 5px 0;
-  background-color: #f5f5f5;
-  border: solid #ccc 2px;
-  border-radius: 20px;
-}
-
 .navbar-inverse .navbar-brand {
   color: #eee;
 }
@@ -362,4 +354,32 @@ div.work-grid {
   min-height: 300px;
   margin: 5px;
   right: 5px;
+}
+#footer {
+  background-color: rgb(177, 0, 0);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+#footer-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#footer-row div {
+  flex-basis: 200px;
+}
+#footer i {
+  font-size: 4em;
+}
+#footer a {
+  color: white;
+  text-decoration: none;
+}
+#footer a:hover {
+  color: #ccc;
+}
+.donate img {
+  width: 50px;
 }
