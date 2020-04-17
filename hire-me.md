@@ -340,6 +340,13 @@ title: Harry Moreno | Hire Me
       title="Postgres sql&#013;" />
   </div>
   <div>
+    <span>Post GIS</span>
+    <img
+      src="/img/work/postgis.png"
+      alt="PostGIS"
+      title="PostGIS for powering maps in webapps" />
+  </div>
+  <div>
     <span>MySql</span>
     <img
       src="/img/work/mysql.jpg"
@@ -499,6 +506,13 @@ title: Harry Moreno | Hire Me
       src="/img/work/datatables.jpg"
       alt="Datatables"
       title="Datatables for displaying large amounts of data" />
+  </div>
+  <div>
+    <span>Intuit Quickbooks API</span>
+    <img
+      src="/img/work/quickbooks.png"
+      alt="Quickbooks api"
+      title="Quickbooks developer api for building marketplace apps and login with quickbooks" />
   </div>
 </div>
 
