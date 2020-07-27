@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Troubleshooting React Native projects and AndroidX"
+image: /img/work/react-native.png
 ---
+![React Native](/img/work/react-native.png)
 I recently worked on a legacy React Native app that had issues running on
 Android. Like many software projects there is never enough time nor enough
 engineers so the project was not tested for Android. When they finally got

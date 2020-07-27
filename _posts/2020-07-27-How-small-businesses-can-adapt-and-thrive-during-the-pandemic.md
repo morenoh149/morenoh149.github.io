@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "How Small Businesses Can Adapt and Thrive During the Pandemic"
+image: /img/2020-07-27-woman.jpg
 ---
-
+![Woman in mask](/img/2020-07-27-woman.jpg)
 The pandemic has been damaging for a number of industries and has hit small business owners especially hard. The best way forward is to adapt to the new reality, which involves finding ways to grow your online presence, or if you have a physical business, enacting safety measures to keep your staff and customers healthy. 
 
 _This is a guest post by Katie Conroy of [advicemine](https://advicemine.com)._

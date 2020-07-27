@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Django and Intuit Quickbooks api Quickstart"
+image: /img/work/quickbooks.png
 ---
-
+![Login with Quickbooks](/img/work/quickbooks.png)
 I recently had a client that wanted a primer on the quickbooks api for oauth.
 Below find a short video tutorial of how to copy, configure and run a django
 api that uses login with quickbooks. I also go over the oauth flow between

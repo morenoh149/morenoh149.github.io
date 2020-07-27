@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Setting placeholder text for Django TextField"
+image: /img/work/django.png
 ---
+![Django](/img/work/django.png)
 Recently I struggled with a Django form. The requirement was to specify a placeholder
 html data attribute. This task is very standard but the search terms involved made it
 tricky to find a solution online. I provide it here to help others.
