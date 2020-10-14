@@ -3,6 +3,7 @@ layout: post
 title: "Django Email Management Command"
 image: /img/2020-10-14-email.png
 ---
+
 ![Email](/img/2020-10-14-email.png)
 Here we share a small django management command that sends an email.
 This command is useful because it will use the same email credentials the rest
@@ -27,7 +28,7 @@ class Command(BaseCommand):
         parser.add_argument("emails", nargs="+")
 
     def handle(self, *args, **options):
-        print("from", settings.EMAIL_FROM_FIELD)
+        self.stdout.write(f"send_email from: {settings.EMAIL_FROM_FIELD}")
         for email in options["emails"]:
             try:
                 send_mail(
@@ -37,7 +38,8 @@ class Command(BaseCommand):
                     [email],
                 )
             except BaseException as e:
-                print(f"problem sending email: {e}")
+                self.stdout.write(f"Problem sending email: {e}")
+
 {% endhighlight %}
 
 To use this ssh into your api and run:
