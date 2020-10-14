@@ -12,10 +12,10 @@ to see if your settings are correct.
 
 {% highlight python %}
 # <your app>/management/commands/send_email.py
+
 from django.conf import settings
 from django.core.mail import send_mail
 from django.core.management.base import BaseCommand
-
 
 class Command(BaseCommand):
     """
@@ -39,7 +39,6 @@ class Command(BaseCommand):
                 )
             except BaseException as e:
                 self.stdout.write(f"Problem sending email: {e}")
-
 {% endhighlight %}
 
 To use this ssh into your api and run:
