@@ -115,9 +115,13 @@ img.feedly-icon {
   height: 25;
   margin: -6px 0 0 -4px;
 }
-img {
+div.post p:nth-of-type(1) img {
   text-align: right;
   max-width: 60%;
+}
+div.post p img {
+  text-align: right;
+  max-width: 90%;
 }
 img#headshot {
   max-width: unset;
