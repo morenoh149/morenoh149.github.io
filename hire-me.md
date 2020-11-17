@@ -34,6 +34,7 @@ title: Harry Moreno | Hire Me
       <img class="work-tech" src="/img/work/getaway.png"
         alt="Getaway House" title="Getaway House&#013;" />
     </a>
+
   </div>
   <div class="col-sm-6">
     <h3>Free Code Camp</h3>
@@ -50,6 +51,7 @@ title: Harry Moreno | Hire Me
       <img class="work-tech" src="/img/work/fcc2.jpeg"
         alt="Free code camp 2" title="Free code camp 2" />
     </a>
+
   </div>
 </div>
 
@@ -83,6 +85,7 @@ title: Harry Moreno | Hire Me
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+
   </div>
 
   <div class="col-sm-6">
@@ -106,6 +109,7 @@ title: Harry Moreno | Hire Me
         allowfullscreen>
       </iframe>
     </div>
+
   </div>
 </div>
 
@@ -131,6 +135,7 @@ title: Harry Moreno | Hire Me
       <img class="hire-me-app-download"
         src="/img/work/playStore.png" alt="Litt for android" title="Litt for Android" />
     </a>
+
   </div>
   <div class="col-sm-6">
     <h3>Hedgefund</h3>
@@ -143,6 +148,7 @@ title: Harry Moreno | Hire Me
 
     <img class="work-tech" src="/img/work/hedgefund.jpg"
       alt="Hedgefund" title="Hedgefund&#013;" />
+
   </div>
 </div>
 
@@ -175,6 +181,7 @@ title: Harry Moreno | Hire Me
           src="https://githubbadges.com/fork.svg?user=rt2zz&repo=react-native-contacts">
       </a>
     </div>
+
   </div>
   <div class="col-sm-6 col-md-4">
     <h3>AutoViML</h3>
@@ -199,6 +206,7 @@ title: Harry Moreno | Hire Me
           src="https://githubbadges.com/fork.svg?user=AutoViML&repo=AutoViz">
       </a>
     </div>
+
   </div>
   <div class="col-sm-6 col-md-4">
     <h3>Fullstack Apollo GraphQL React Native Boilerplate</h3>
@@ -229,10 +237,12 @@ title: Harry Moreno | Hire Me
           src="https://githubbadges.com/fork.svg?user=morenoh149&repo=fullstack-apollo-react-native-boilerplate">
       </a>
     </div>
+
   </div>
 </div>
 
 ## Technologies I know
+
 <div class="work-grid">
   <div>
     <span>Facebook Login</span>
@@ -540,17 +550,17 @@ flexible reliable software that is useful to people and improves their lives.
 <div class="col-sm-8 col-sm-offset-2">
   <h2>What I do</h2>
 
-  My experience is in growing small software companies into larger software
-  companies.
-  I specialize in solving unique problems with custom software. Whether that's
-  a phone app, headless cloud software or a website.
+My experience is in growing small software companies into larger software
+companies.
+I specialize in solving unique problems with custom software. Whether that's
+a phone app, headless cloud software or a website.
 
-  In general I prefer working on new projects where I can sit down with you and
-  elicit all the software requirements. This gives me the flexibility to
-  work with the best tools for the job.
+In general I prefer working on new projects where I can sit down with you and
+elicit all the software requirements. This gives me the flexibility to
+work with the best tools for the job.
 
-  I've done Fullstack software engineering, in Python, Go and Javascript.
-  I like SQL, Deep Learning and launching products.
+I've done Fullstack software engineering, in Python, Go and Javascript.
+I like SQL, Deep Learning and launching products.
 
   <h2>My Process</h2>
   <ol>

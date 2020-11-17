@@ -28,6 +28,12 @@ p {
 .post img {
   display: block;
   margin: 10px auto;
+  max-width: 300px;
+}
+@media (min-width: 768px) {
+  .post img {
+    max-width: 600px;
+  }
 }
 
 .center {
@@ -126,6 +132,9 @@ div.post p img {
 img#headshot {
   max-width: unset;
   width: 100%;
+}
+#hire-me img {
+  max-width: 300px;
 }
 img.hire-me-app-download {
   text-align: right;
@@ -279,21 +288,12 @@ form.newsletter input[type="submit"] {
     font-size: 60px;
   }
 }
-div.work-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding-top: 1em;
+#hire-me .work-grid div {
+  display: inline-block;
+  max-width: 100px;
 }
-@media (min-width: 768px) {
-  div.work-grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-.work-grid div {
-  text-align: center;
-}
-.work-grid div span {
-  font-weight: 600;
+#hire-me .work-grid img {
+  max-width: 100px;
 }
 .videowrapper {
   float: none;
@@ -317,7 +317,7 @@ div.work-grid {
 }
 @media (min-width: 768px) {
   .landing-section-1 {
-    padding: 150px 0 330px 0;
+    padding: 150px 80px 330px 80px;
   }
 }
 .landing-section p {
@@ -327,9 +327,6 @@ div.work-grid {
 .landing-section-1 p {
   font-size: 1.5em;
   padding: 0;
-}
-.landing-section-1 .landing-section {
-  padding: 30px 20px;
 }
 .landing-section-2 {
   background-color: rgba(3, 3, 28, 0.15);
