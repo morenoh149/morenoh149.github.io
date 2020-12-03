@@ -13,7 +13,7 @@ I needed to schedule microservice calls based on some business logic. We know wi
 async tasks its better to add a field to your model with a time to
 be acted on rather than delaying tasks ([5. Using a Long countdown or an eta in the Far Future.](https://adamj.eu/tech/2020/02/03/common-celery-issues-on-django-projects/)). So with an hourly task, its pretty
 natural to want to find all records that should be acted upon at that hour. The
-following example shows running some operation when an Event starts and ends 🤗.
+following example shows running some operation when an Event starts 🤗.
 
 {% highlight python %}
 
