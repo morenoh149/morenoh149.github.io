@@ -46,6 +46,14 @@ def do_for_events_this_hour():
 
 This basically truncates the datetime start to the nearest hour. And because we
 run the task every hour we don't have to worry about the minutes and seconds.
+
+The `crontab(minute=15)` bit makes the task run at the 15th minute of every hour.
+The [celery crontab](https://docs.celeryproject.org/en/stable/reference/celery.schedules.html#celery.schedules.crontab) api provides an asterisk for the default values of args like `hour`,
+`day_of_week`, etc. So an invocation like `crontab(minute=15)` is evaluated like
+`crontab(minute=15, hour='*', day_of_week='*', day_of_month='*', month_of_year='*')`,
+which is analagous to `15 * * * *`. [See in crontab](https://crontab.guru/#15_*_*_*_*).
+
+
 My original approach involved tracking start and end times
 {% highlight python %}
 start = timezone.now()
