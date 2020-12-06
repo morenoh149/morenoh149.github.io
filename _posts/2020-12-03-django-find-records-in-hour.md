@@ -6,7 +6,7 @@ title: "Django Find Records in an Hour"
 Here we show how to select all records that occur in an hour. This is useful for
 cases where you are running an async task at some interval smaller than a day.
 My first attempts at doing this type of filtering involved providing a start and
-end datetime. But theres a way to do it more simply by leveraging some database
+end datetime. But there is a way to do it more simply by leveraging some database
 functions.
 
 I needed to schedule microservice calls based on some business logic. We know with
