@@ -1,10 +1,8 @@
 ---
 layout: post
 title: "How to Test TLS in SWAKS"
-image: /img/2020-04-3
 ---
 
-![](/img/2020-0)
 In this post we detail how to use Swaks for testing emails over tls. This
 post picks up where the manual page leaves off and more explicitly goes
 over how to send a test email over tls. Swaks is a popular tool in penetration
