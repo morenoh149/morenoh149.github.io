@@ -24,7 +24,7 @@ TODO
 ```
 % bundle
 % bundle exec jekyll s
-% bundle exec jekyll s --drafts
+% bundle exec jekyll s --drafts --future
 ```
 
 ## Testing on mobile
