@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "Monitoring Django with Tracing and OpenTelemetry"
+image: /img/2022-09-22-uptrace.png
 ---
-
-[Distributed tracing](https://opentelemetry.uptrace.dev/guide/distributed-tracing.html) allows to observe requests as they propagate through distributed systems, especially those built using a microservices architecture.
-
-In a distributed environment, tracing also helps you understand relationships and interactions between microservices. Distributed tracing gives an insight into how a particular microservice is performing and how that service affects other microservices.
+![Uptrace tracing tool](/img/2022-09-22-uptrace.png)
+[Distributed tracing](https://opentelemetry.uptrace.dev/guide/distributed-tracing.html) allows to observe requests as they propagate through distributed systems, especially those built using a microservices architecture. In a distributed environment, tracing also helps you understand relationships and interactions between microservices. Distributed tracing gives an insight into how a particular microservice is performing and how that service affects other microservices.
 
 ![Tracing](/img/2022-09-22-tracing-graph.png)
 
