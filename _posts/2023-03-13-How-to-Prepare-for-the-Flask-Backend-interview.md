@@ -15,13 +15,13 @@ Review [Flask documentation](https://devdocs.io/flask~2.2/): It's important to h
 
 Understand Flask Architecture: Flask follows the [Model-View-Controller](https://developer.mozilla.org/en-US/docs/Glossary/MVC) (MVC) architecture. Make sure you understand the basics of the architecture and how it's implemented in Flask.
 
-Practice Flask basics: Start practicing Flask basics such as creating [routes](https://devdocs.io/flask~2.2/api/index#flask.Flask.route), templates, views, and handling requests. Review the differences between Flask and Django and how they handle these concepts.
+Practice Flask basics: Start practicing Flask basics such as creating [routes](https://devdocs.io/flask~2.2/api/index#flask.Flask.route), templates, views, and handling requests. Review the differences between Flask and Django and how they handle these concepts. All of these topics are covered in the [quickstart](https://flask.palletsprojects.com/en/2.2.x/quickstart/).
 
 Review [Flask extensions](https://python.plainenglish.io/some-useful-python-flask-plugins-3ac57faaca7e): Flask has many extensions that can help you build your application more easily. Some examples of popular extensions include Flask-WTF, Flask-Login, Flask-Mail, Flask-SQLAlchemy, and Flask-RESTful. Review the extensions that you might be using and how to use them.
 
 Prepare for database and ORM questions: Flask supports multiple ORMs, such as SQLAlchemy, Peewee, and [PonyORM](https://docs.ponyorm.org/). Prepare yourself with basic ORM concepts and review how to use Flask's most popular orm [SQLAlchemy](https://docs.sqlalchemy.org/en/20/orm/quickstart.html).
 
-Understand Flask's security features: Flask has built-in security features, such as password hashing, CSRF protection, and [session management](https://devdocs.io/flask~2.2/api/index#flask.session). It's important to understand how these features work and how to implement them.
+Understand Flask's security features: Flask has built-in security features, such as password hashing, CSRF protection, and [session management](https://devdocs.io/flask~2.2/api/index#flask.session). It's important to understand how these features work and how to use them.
 
 Build sample projects: Build some sample projects using Flask to demonstrate your understanding of the framework. You can start with a simple CRUD application and gradually move on to more complex projects like an ETL pipeline. This will help you gain more experience and confidence in working with Flask.
 
