@@ -78,27 +78,27 @@ def find_customers(customers: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFram
 First I merge the `customer` and `orders` table on the ids
 
 {% highlight python %}
-    pd = customers.merge(orders, left_on='id', right_on='customerId', how='left')
+pd = customers.merge(orders, left_on='id', right_on='customerId', how='left')
 {% endhighlight %}
 
 Then I get all ids for the customers that made no orders with `.isnull()`
 
 {% highlight python %}
-    no_order_ids = pd[pd.isnull().any(axis=1)]['id_x']
+no_order_ids = pd[pd.isnull().any(axis=1)]['id_x']
 {% endhighlight %}
 
 Then we use `.query()` to get all the customers in the original dataframe that
 we know have no orders (are in the no_order_ids series)
 
 {% highlight python %}
-    names = customers.query(f'id in {list(no_order_ids)}')
+names = customers.query(f'id in {list(no_order_ids)}')
 {% endhighlight %}
 
 Finally we narrow down the original `names` dataframe to get the customer's name
 and rename the column to fit the problem requirements.
 
 {% highlight python %}
-    return names[['name']].rename(columns={'name': 'Customers'})
+return names[['name']].rename(columns={'name': 'Customers'})
 {% endhighlight %}
 
 By the way, there is more than one way to solve each problem. You are allowed
