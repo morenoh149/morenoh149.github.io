@@ -5,7 +5,8 @@ image: /img/2023- - -stopwatch.png
 ---
 ![Stopwatch running a marathon](/img/2023- - -stopwatch.png)
 It is important to keep track of the performance of your application. One
-popular way to do this is to log slow queries.
+popular way to do this is to log slow queries. Below is how to do this in Django
+python.
 
 {% highlight python %}
 LOGGING = {
