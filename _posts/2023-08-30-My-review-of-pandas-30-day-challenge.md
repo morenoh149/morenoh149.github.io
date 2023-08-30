@@ -114,7 +114,7 @@ The 30 pandas questions are split into 6 section.
 1. Data Aggregation
 1. Data Integration
 
-In the following sections I'll list the pandas apis needed to solve the problems.
+In the following sections we list the pandas apis we used to solve the problems.
 
 ### Data Filtering
 * [Boolean Indexing](https://pandas.pydata.org/docs/user_guide/10min.html#boolean-indexing)
