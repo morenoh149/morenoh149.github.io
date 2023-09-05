@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
+# refer to gem versions supported at https://pages.github.com/versions/
+gem 'jekyll', '~> 3.9.3'
 gem 'jekyll-sitemap'
 gem 'jekyll-paginate'
 
