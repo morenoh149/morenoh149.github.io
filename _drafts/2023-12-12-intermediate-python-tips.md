@@ -9,3 +9,7 @@
 9. .copy() protocol, https://github.com/neetcode-gh/leetcode/blob/main/python/0787-cheapest-flights-within-k-stops.py
 10.
 
+links to python things to know
+1. https://stackoverflow.com/questions/13675296/how-to-overcome-typeerror-unhashable-type-list
+2. https://stackoverflow.com/questions/2209755/python-operation-vs-is-not
+3. 
