@@ -4,6 +4,7 @@ Harry Moreno now has a blog [morenoh149.github.io](http://morenoh149.github.io)
 This blog is built using github pages, twitter bootstrap, jekyll, yeoman jekyllrb generator.
 
 TODO
+* fix linkify headers error, we accidentally deleted the .js file for that
 * prevent sidebar horizontal scroll on mobile
 * revise about page
   * should double as a CV
