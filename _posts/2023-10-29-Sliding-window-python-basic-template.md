@@ -8,9 +8,10 @@ a basic template for sliding windows. It is a good starting point for adding
 other features like counting characters or tracking the largest size of the window.
 
 This template takes a basic two-pointer approach. But it reads better from top to
-bottom. First we increase the window size by shifting the right pointer `r`.
+bottom and generalizes more than other solutions I have seen. First we increase the window size by shifting the right pointer `r`.
 If the window reaches the max size we slide it by incrementing pointer `r` and
-the left pointer `l`. If we reach the right side we shrink the pointer.
+the left pointer `l`. If we reach the right side we shrink the window by increasing
+the left pointer `l`.
 
 {% highlight python %}
 s = "ABCDEFG"
