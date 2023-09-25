@@ -7,20 +7,25 @@ I often find myself having to reimplement the sliding window algorithm. Here is
 a basic template for sliding windows. It is a good starting point for adding
 other features like counting characters or tracking the largest size of the window.
 
+This template takes a basic two-pointer approach. But it reads better from top to
+bottom. First we increase the window size by shifting the right pointer `r`.
+If the window reaches the max size we slide it by incrementing pointer `r` and
+the left pointer `l`. If we reach the right side we shrink the pointer.
+
 {% highlight python %}
 s = "ABCDEFG"
 window_length = 3
-ptr_a, ptr_b = 0, 1
-while ptr_a < ptr_b:
-    win = s[ptr_a:ptr_b]
-    print(win)
-    if ptr_b == len(s):
-        ptr_a += 1
-    elif ptr_b - ptr_a < window_length:
-        ptr_b += 1
+l = r = 0
+while l < len(s):
+    if r - l < window_length and r < len(s):
+        r += 1
+    elif r - l == window_length and r < len(s):
+        r += 1
+        l += 1
     else:
-        ptr_b += 1
-        ptr_a += 1
+        l += 1
+    win = s[l:r]
+    print(win)
 {% endhighlight %}
 output
 {% highlight bash %}
@@ -39,17 +44,17 @@ We can rewrite this as a generator if you prefer
 {% highlight python %}
 # sliding_window.py
 def sliding_window_generator(s, window_length):
-    ptr_a, ptr_b = 0, 1
-    while ptr_a < ptr_b:
-        win = s[ptr_a:ptr_b]
-        yield(win)
-        if ptr_b == len(s):
-            ptr_a += 1
-        elif ptr_b - ptr_a < window_length:
-            ptr_b += 1
+    l = r = 0
+    while l < len(s):
+        if r - l < window_length and r < len(s):
+            r += 1
+        elif r - l == window_length and r < len(s):
+            r += 1
+            l += 1
         else:
-            ptr_b += 1
-            ptr_a += 1
+            l += 1
+        win = s[l:r]
+        yield(win)
 {% endhighlight %}
 interaction
 {% highlight bash %}
