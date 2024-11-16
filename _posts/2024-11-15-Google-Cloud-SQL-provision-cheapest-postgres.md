@@ -49,7 +49,7 @@ You can bypass this by specifying a lower tier for edition
 
 {% highlight shell %}
 gcloud sql instances create myinstance \
-  a--project $PROJECT_ID \
+  --project $PROJECT_ID \
   --database-version POSTGRES_16 \
   --tier db-f1-micro \
   --region $REGION \
