@@ -29,21 +29,31 @@ You can change the postgres engine version to something modern like `POSTGRES_16
 When you run
 
 {% highlight shell %}
-gcloud sql instances create myinstance --project $PROJECT_ID \
-  --database-version POSTGRES_16 --tier db-f1-micro --region $REGION
+gcloud sql instances create myinstance \
+  --project $PROJECT_ID \
+  --database-version POSTGRES_16 \
+  --tier db-f1-micro \
+  --region $REGION
 {% endhighlight %}
 
-I got the error
+you get the error
 
 {% highlight shell %}
-ERROR: (gcloud.sql.instances.create) HTTPError 400: Invalid request: Invalid Tier (db-f1-micro) for (ENTERPRISE_PLUS) Edition. Use a predefined Tier like db-perf-optimized-N-* instead. Learn more at https://cloud.google.com/sql/docs/postgres/create-instance#machine-types.
+ERROR: (gcloud.sql.instances.create) HTTPError 400: Invalid request:
+Invalid Tier (db-f1-micro) for (ENTERPRISE_PLUS) Edition.
+Use a predefined Tier like db-perf-optimized-N-* instead.
+Learn more at https://cloud.google.com/sql/docs/postgres/create-instance#machine-types.
 {% endhighlight %}
 
 You can bypass this by specifying a lower tier for edition
 
 {% highlight shell %}
-gcloud sql instances create myinstance --project $PROJECT_ID \
-  --database-version POSTGRES_16 --tier db-f1-micro --region $REGION --edition=ENTERPRISE
+gcloud sql instances create myinstance \
+  a--project $PROJECT_ID \
+  --database-version POSTGRES_16 \
+  --tier db-f1-micro \
+  --region $REGION \
+  --edition=ENTERPRISE
 {% endhighlight %}
 
 In the pricing calculator you can get the cost of the database down to [$10.60 per month](https://cloud.google.com/products/calculator/?hl=en&dl=CjhDaVEzTm1GaE56WmxNaTFoTURVeUxUUXhZekV0WVdWaVpTMDFZek00TWpCbE5UQTJORElRQVE9PRAHGiRFNDlBQzE5NC04REM1LTRBQ0YtQkY5QS04RTBGQzAwRTZEQUQ). I did this by choosing a shared vcpu database
