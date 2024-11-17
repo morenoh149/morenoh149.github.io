@@ -63,3 +63,9 @@ In the pricing calculator you can get the cost of the database down to [$10.60 p
 and lowering the disk size to 16gb.
 
 ![pricing list](/img/2024-11-15-pricing-list.png)
+
+Delete your database to avoid being billed
+
+{% highlight shell %}
+gcloud sql instances delete myinstance 
+{% endhighlight %}
