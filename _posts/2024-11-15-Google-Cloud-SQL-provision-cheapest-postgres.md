@@ -12,7 +12,7 @@ gcloud sql instances create myinstance \
   --database-version POSTGRES_16 \
   --tier db-f1-micro \
   --region your-region \
-  --edition=ENTERPRISE
+  --edition ENTERPRISE
 {% endhighlight %}
 
 Notes:
@@ -53,7 +53,7 @@ gcloud sql instances create myinstance \
   --database-version POSTGRES_16 \
   --tier db-f1-micro \
   --region $REGION \
-  --edition=ENTERPRISE
+  --edition ENTERPRISE
 {% endhighlight %}
 
 In the pricing calculator you can get the cost of the database down to [$10.60 per month](https://cloud.google.com/products/calculator/?hl=en&dl=CjhDaVEzTm1GaE56WmxNaTFoTURVeUxUUXhZekV0WVdWaVpTMDFZek00TWpCbE5UQTJORElRQVE9PRAHGiRFNDlBQzE5NC04REM1LTRBQ0YtQkY5QS04RTBGQzAwRTZEQUQ). I did this by choosing a shared vcpu database
