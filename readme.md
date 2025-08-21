@@ -27,6 +27,7 @@ TODO
 % bundle exec jekyll s
 % bundle exec jekyll s --drafts --future
 ```
+open http://127.0.0.1:4000/
 
 ## Testing on mobile
 
