@@ -453,10 +453,6 @@ form.newsletter input[type="submit"] {
   align-items: center;
 }
 
-#footer-row div {
-  flex-basis: 200px;
-}
-
 #footer i {
   font-size: 4em;
 }
