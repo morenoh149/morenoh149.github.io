@@ -184,31 +184,6 @@ title: Harry Moreno | Hire Me
 
   </div>
   <div class="col-sm-6 col-md-4">
-    <h3>AutoViML</h3>
-
-    <a href="https://github.com/AutoViML">AutoViML</a> automates most of the
-    mundane tasks for a data scientist regarding model selection and building
-    plots. I advise the author Ram Seshadri on best software engineering
-    practices when it comes to python libraries. And he helps me when I am
-    stuck on hard datascience problems.
-
-    <a href="https://github.com/AutoViML">
-      <img class="work-tech"
-        src="https://raw.githubusercontent.com/AutoViML/AutoViz/master/logo.png" />
-      </a>
-    <div class="work-grid" style="grid-template-columns: repeat(2, 1fr);">
-      <a href="https://github.com/AutoViML/AutoViz">
-        <img class="work-tech"
-          src="http://githubbadges.com/star.svg?user=AutoViML&repo=AutoViz">
-      </a>
-      <a href="https://github.com/AutoViML/AutoViz">
-        <img class="work-tech"
-          src="https://githubbadges.com/fork.svg?user=AutoViML&repo=AutoViz">
-      </a>
-    </div>
-
-  </div>
-  <div class="col-sm-6 col-md-4">
     <h3>Fullstack Apollo GraphQL React Native Boilerplate</h3>
 
     The
