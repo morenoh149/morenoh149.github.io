@@ -5,7 +5,10 @@ This blog is built using github pages, twitter bootstrap, jekyll, yeoman jekyllr
 
 TODO
 * prevent sidebar horizontal scroll on mobile
+* replace simple-jekyll-search with Algolia DocSearch
 * remove bootstrap entirely
+* add About page (personal story)
+* Contact page
 * fix up hire-me page, add autostrat experience
 * rename twitter to X button
 * add mailinglist
